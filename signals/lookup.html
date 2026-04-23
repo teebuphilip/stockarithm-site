@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Signal Lookup — Stockarithm</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+         background: #0a0a0a; color: #e8e8e8; min-height: 100vh; padding: 2rem; }
+
+  .container { max-width: 680px; margin: 0 auto; }
+
+  h1 { font-size: 1.6rem; font-weight: 600; margin-bottom: 0.4rem; }
+  .subtitle { color: #888; font-size: 0.9rem; margin-bottom: 2rem; }
+
+  .search-row { display: flex; gap: 0.5rem; margin-bottom: 2rem; }
+  .search-row input {
+    flex: 1; padding: 0.75rem 1rem; font-size: 1.1rem; font-weight: 600;
+    background: #1a1a1a; border: 1px solid #333; border-radius: 8px;
+    color: #fff; text-transform: uppercase; letter-spacing: 0.05em;
+    outline: none;
+  }
+  .search-row input:focus { border-color: #555; }
+  .search-row button {
+    padding: 0.75rem 1.5rem; background: #e8e8e8; color: #0a0a0a;
+    border: none; border-radius: 8px; font-size: 0.9rem; font-weight: 600;
+    cursor: pointer;
+  }
+  .search-row button:hover { background: #fff; }
+
+  /* ── Verdict card ── */
+  .verdict { display: none; background: #141414; border: 1px solid #2a2a2a;
+             border-radius: 12px; padding: 1.5rem; margin-bottom: 1.5rem; }
+  .verdict.visible { display: block; }
+
+  .verdict-header { display: flex; align-items: center;
+                    justify-content: space-between; margin-bottom: 1.25rem; }
+  .ticker-badge { font-size: 1.4rem; font-weight: 700; }
+  .sector-tag { font-size: 0.8rem; color: #888; background: #1e1e1e;
+                padding: 0.3rem 0.7rem; border-radius: 4px; }
+
+  .composite-row { display: flex; align-items: baseline;
+                   gap: 0.75rem; margin-bottom: 0.5rem; }
+  .composite-num { font-size: 2.8rem; font-weight: 700; line-height: 1; }
+  .composite-num.green  { color: #4ade80; }
+  .composite-num.red    { color: #f87171; }
+  .composite-num.yellow { color: #fbbf24; }
+  .composite-label { font-size: 0.85rem; color: #888; }
+
+  .signal-bar { height: 6px; background: #222; border-radius: 3px;
+                margin: 0.75rem 0 1rem; overflow: hidden; }
+  .signal-bar-fill { height: 100%; border-radius: 3px; transition: width 0.5s ease; }
+  .signal-bar-fill.green  { background: #4ade80; }
+  .signal-bar-fill.red    { background: #f87171; }
+  .signal-bar-fill.yellow { background: #fbbf24; }
+
+  .counts-row { display: flex; gap: 1.5rem; font-size: 0.82rem; color: #666;
+                margin-bottom: 1.25rem; }
+  .counts-row span { display: flex; align-items: center; gap: 0.3rem; }
+  .context-row { color: #666; font-size: 0.78rem; line-height: 1.5;
+                 margin: -0.35rem 0 1.25rem; }
+  .dot { width: 7px; height: 7px; border-radius: 50%; display: inline-block; }
+  .dot.green  { background: #4ade80; }
+  .dot.red    { background: #f87171; }
+  .dot.yellow { background: #888; }
+
+  /* ── Breakdown (paid gate) ── */
+  .breakdown-section { border-top: 1px solid #1e1e1e; padding-top: 1.25rem; }
+  .breakdown-title { font-size: 0.78rem; color: #555; text-transform: uppercase;
+                     letter-spacing: 0.08em; margin-bottom: 0.75rem; }
+
+  .algo-row { display: flex; align-items: center; justify-content: space-between;
+              padding: 0.45rem 0; border-bottom: 1px solid #1a1a1a;
+              font-size: 0.83rem; }
+  .algo-row:last-child { border-bottom: none; }
+  .algo-name { color: #ccc; flex: 1; }
+  .algo-days { color: #555; font-size: 0.75rem; min-width: 60px; text-align: right; }
+  .algo-dir  { font-weight: 600; font-size: 0.78rem; min-width: 70px;
+               text-align: right; }
+  .algo-dir.BULLISH { color: #4ade80; }
+  .algo-dir.BEARISH { color: #f87171; }
+  .algo-dir.NEUTRAL { color: #555; }
+
+  .paywall { text-align: center; padding: 2rem 1rem; }
+  .paywall p { color: #666; font-size: 0.9rem; margin-bottom: 1rem; }
+  .paywall a { display: inline-block; padding: 0.65rem 1.5rem;
+               background: #e8e8e8; color: #0a0a0a; border-radius: 6px;
+               text-decoration: none; font-weight: 600; font-size: 0.88rem; }
+
+  /* ── Not found ── */
+  .not-found { display: none; text-align: center; padding: 2rem;
+               background: #141414; border: 1px solid #2a2a2a;
+               border-radius: 12px; margin-bottom: 1.5rem; }
+  .not-found.visible { display: block; }
+  .not-found p { color: #666; font-size: 0.9rem; }
+
+  /* ── Loading ── */
+  .loading { display: none; text-align: center; color: #555;
+             padding: 2rem; font-size: 0.9rem; }
+  .loading.visible { display: block; }
+
+  /* ── Disclaimer ── */
+  .disclaimer { font-size: 0.72rem; color: #3a3a3a; line-height: 1.5;
+                margin-top: 2rem; padding-top: 1rem;
+                border-top: 1px solid #1a1a1a; }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <h1>Signal Lookup</h1>
+  <p class="subtitle">Type a ticker. See what 163 weird signals think about its sector.</p>
+
+  <div class="search-row">
+    <input type="text" id="ticker-input" placeholder="NVDA"
+           maxlength="10" autocomplete="off" autocorrect="off"
+           autocapitalize="characters" spellcheck="false">
+    <button onclick="lookup()">Check</button>
+  </div>
+
+  <div class="loading" id="loading">Checking signals...</div>
+
+  <div class="verdict" id="verdict">
+    <div class="verdict-header">
+      <span class="ticker-badge" id="v-ticker">NVDA</span>
+      <span class="sector-tag" id="v-sector">Technology · XLK</span>
+    </div>
+
+    <div class="composite-row">
+      <span class="composite-num" id="v-num">—</span>
+      <span class="composite-label" id="v-label">signals BULLISH on this sector</span>
+    </div>
+
+    <div class="signal-bar">
+      <div class="signal-bar-fill" id="v-bar" style="width:0%"></div>
+    </div>
+
+    <div class="counts-row">
+      <span><span class="dot green"></span><span id="v-bull">0</span> bullish</span>
+      <span><span class="dot red"></span><span id="v-bear">0</span> bearish</span>
+      <span><span class="dot yellow"></span><span id="v-neut">0</span> neutral</span>
+    </div>
+    <div class="context-row" id="v-context"></div>
+
+    <!-- Public preview: full breakdown comes later -->
+    <div class="breakdown-section" id="breakdown-section"></div>
+  </div>
+
+  <div class="not-found" id="not-found">
+    <p id="not-found-msg">Ticker not found in S&P 500 coverage.</p>
+  </div>
+
+  <p class="disclaimer" id="disclaimer">
+    <strong>Signal Lab Notice:</strong> Experimental research only. Signals can and will fail. Do not interpret any signal as a recommendation.<br>
+    <strong>Data Disclaimer:</strong> Third-party data may be incomplete, delayed, inaccurate, or revised. Use at your own risk.<br>
+    <strong>Not financial advice:</strong> Do your own research. You are responsible for your own decisions. Paper-traded only &mdash; no real money at risk.
+  </p>
+</div>
+
+<script>
+// ── Config ──────────────────────────────────────────────────────────────────
+const SIGNALS_BASE = '/signals';   // adjust if deploying to subpath
+const IS_PAID = checkPaidStatus(); // replace with auth check after launch access exists
+const DEFAULT_DISCLAIMER =
+  'This is an experimental signal lab. Not financial advice. Signals can and will fail. ' +
+  'Third-party data may be incomplete, delayed, inaccurate, or revised. Do your own research. Paper-traded only — no real money at risk.';
+
+function checkPaidStatus() {
+  // Check for auth cookie after paid access exists.
+  // Until launch access exists, visitors should join the mailing list.
+  const cookies = Object.fromEntries(
+    document.cookie.split('; ').map(c => c.split('='))
+  );
+  return cookies['csa_member'] === 'true';
+}
+
+// ── Lookup ───────────────────────────────────────────────────────────────────
+async function lookup() {
+  const raw    = document.getElementById('ticker-input').value.trim().toUpperCase();
+  const ticker = raw.replace(/[^A-Z0-9\-]/, '');
+  if (!ticker) return;
+
+  document.getElementById('verdict').classList.remove('visible');
+  document.getElementById('not-found').classList.remove('visible');
+  document.getElementById('loading').classList.add('visible');
+
+  try {
+    const url = `${SIGNALS_BASE}/${ticker}.json`;
+    const res = await fetch(url, { cache: 'no-cache' });
+
+    if (!res.ok) {
+      showNotFound(ticker);
+      return;
+    }
+
+    const data = await res.json();
+    renderVerdict(ticker, data);
+
+  } catch (e) {
+    showNotFound(ticker, 'Network error. Please try again.');
+  } finally {
+    document.getElementById('loading').classList.remove('visible');
+  }
+}
+
+// ── Render ───────────────────────────────────────────────────────────────────
+function renderVerdict(ticker, data) {
+  const color = data.composite_color || 'yellow';
+
+  document.getElementById('v-ticker').textContent  = ticker;
+  document.getElementById('v-sector').textContent  =
+    `${data.sector || '—'} · ${data.sector_etf || '—'}`;
+
+  // Composite number
+  const numEl = document.getElementById('v-num');
+  numEl.textContent  = data.composite || '—';
+  numEl.className    = `composite-num ${color}`;
+
+  document.getElementById('v-label').textContent =
+    `signals ${data.composite_label || ''} on this sector`;
+
+  // Bar
+  const barEl = document.getElementById('v-bar');
+  barEl.style.width  = (data.bullish_pct || 0) + '%';
+  barEl.className    = `signal-bar-fill ${color}`;
+
+  // Counts
+  document.getElementById('v-bull').textContent = data.bullish || 0;
+  document.getElementById('v-bear').textContent = data.bearish || 0;
+  document.getElementById('v-neut').textContent = data.neutral || 0;
+  const totalSignals = data.total_signals || 0;
+  const activeSignals = data.total_active || 0;
+  const neutralSignals = data.neutral || 0;
+  document.getElementById('v-context').textContent =
+    `${activeSignals} of ${totalSignals} signals contributed a bullish/bearish read; ${neutralSignals} are neutral/HOLD. Generated ${data.generated || 'unknown'}.`;
+
+  // Breakdown or mailing-list prompt
+  const section = document.getElementById('breakdown-section');
+  if (IS_PAID && data.breakdown && data.breakdown.length) {
+    section.innerHTML = renderBreakdown(data.breakdown);
+  } else if (!IS_PAID) {
+    section.innerHTML = renderPaywall();
+  } else {
+    section.innerHTML = '';
+  }
+
+  // Disclaimer
+  document.getElementById('disclaimer').textContent =
+    data.disclaimer || DEFAULT_DISCLAIMER;
+
+  document.getElementById('verdict').classList.add('visible');
+}
+
+function renderBreakdown(breakdown) {
+  const rows = breakdown
+    .sort((a, b) => {
+      const order = { BULLISH: 0, BEARISH: 1, NEUTRAL: 2 };
+      return (order[a.direction] ?? 3) - (order[b.direction] ?? 3);
+    })
+    .map(a => `
+      <div class="algo-row">
+        <span class="algo-name">${escHtml(a.name)}</span>
+        <span class="algo-days">${a.days_running}d</span>
+        <span class="algo-dir ${a.direction}">${a.direction}</span>
+      </div>
+    `).join('');
+
+  return `
+    <p class="breakdown-title">Signal Breakdown</p>
+    ${rows}
+  `;
+}
+
+function renderPaywall() {
+  return `
+    <div class="paywall">
+      <p>Full signal breakdowns come later. For now, get the lab notes and launch updates.</p>
+      <a href="../landing.html#waitlist">Join our mailing list</a>
+    </div>
+  `;
+}
+
+function showNotFound(ticker, msg) {
+  const el = document.getElementById('not-found');
+  document.getElementById('not-found-msg').textContent =
+    msg || `${ticker} not found. Coverage: S&P 500 tickers only.`;
+  el.classList.add('visible');
+  document.getElementById('loading').classList.remove('visible');
+}
+
+function escHtml(str) {
+  return String(str)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;');
+}
+
+// ── Enter key ────────────────────────────────────────────────────────────────
+document.getElementById('ticker-input').addEventListener('keydown', e => {
+  if (e.key === 'Enter') lookup();
+});
+
+// ── Auto-lookup if ticker in URL param ──────────────────────────────────────
+window.addEventListener('DOMContentLoaded', () => {
+  const params = new URLSearchParams(window.location.search);
+  const t = params.get('t') || params.get('ticker');
+  if (t) {
+    document.getElementById('ticker-input').value = t.toUpperCase();
+    lookup();
+  }
+});
+</script>
+</body>
+</html>

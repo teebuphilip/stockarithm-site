@@ -1,0 +1,258 @@
+{
+  "schema_version": "v1",
+  "generated_at": "2026-04-22T23:26:16Z",
+  "algos": [
+    {
+      "schema_version": "v1",
+      "key": "crazy:xlb-weekly-rss-news-count-spike-on-commodity-shortage",
+      "algo_type": "crazy",
+      "algo_id": "xlb-weekly-rss-news-count-spike-on-commodity-shortage",
+      "name": "Xlb Weekly Rss News Count Spike On Commodity Shortage",
+      "family": "attention_sentiment",
+      "status": "parked",
+      "evidence_class": "pending_seed",
+      "rebalance_frequency": "weekly",
+      "ytd_pct": -0.07,
+      "days_running": 73,
+      "beat_spy": false,
+      "spy_pct": 4.39,
+      "alpha_pct": -4.46,
+      "ret_30d_pct": -0.07,
+      "spy_delta_30d_pct": -8.59,
+      "last_snapshot": "2026-04-22",
+      "new_algo_date": null,
+      "comparator": {
+        "primary_etf": "XLB",
+        "signals": {
+          "momentum_5d": {
+            "direction": "UP",
+            "confidence": 0.175,
+            "return_pct": 0.876
+          },
+          "momentum_20d": {
+            "direction": "UP",
+            "confidence": 1.0,
+            "return_pct": 6.976
+          }
+        },
+        "summary": "both_up"
+      }
+    },
+    {
+      "schema_version": "v1",
+      "key": "crazy:retail-roulette",
+      "algo_type": "crazy",
+      "algo_id": "retail-roulette",
+      "name": "Retail Roulette",
+      "family": "consumer_stress",
+      "status": "failed",
+      "evidence_class": "v1_backtested",
+      "rebalance_frequency": "daily",
+      "ytd_pct": -0.09,
+      "days_running": 73,
+      "beat_spy": false,
+      "spy_pct": 4.39,
+      "alpha_pct": -4.48,
+      "ret_30d_pct": -0.09,
+      "spy_delta_30d_pct": -8.61,
+      "last_snapshot": "2026-04-22",
+      "new_algo_date": null,
+      "comparator": {
+        "primary_etf": "XLY",
+        "signals": {
+          "momentum_5d": {
+            "direction": "UP",
+            "confidence": 0.127,
+            "return_pct": 0.635
+          },
+          "momentum_20d": {
+            "direction": "UP",
+            "confidence": 1.0,
+            "return_pct": 8.434
+          }
+        },
+        "summary": "both_up"
+      }
+    },
+    {
+      "schema_version": "v1",
+      "key": "crazy:xle-weekly-drawdown-rebound-signal",
+      "algo_type": "crazy",
+      "algo_id": "xle-weekly-drawdown-rebound-signal",
+      "name": "Xle Weekly Drawdown Rebound Signal",
+      "family": "macro_input_pressure",
+      "status": "parked",
+      "evidence_class": "pending_seed",
+      "rebalance_frequency": "weekly",
+      "ytd_pct": -0.33,
+      "days_running": 73,
+      "beat_spy": false,
+      "spy_pct": 4.39,
+      "alpha_pct": -4.72,
+      "ret_30d_pct": -0.18,
+      "spy_delta_30d_pct": -8.7,
+      "last_snapshot": "2026-04-22",
+      "new_algo_date": null,
+      "comparator": {
+        "primary_etf": "XLE",
+        "signals": {
+          "momentum_5d": {
+            "direction": "UP",
+            "confidence": 0.28,
+            "return_pct": 1.399
+          },
+          "momentum_20d": {
+            "direction": "DOWN",
+            "confidence": 1.0,
+            "return_pct": -7.068
+          }
+        },
+        "summary": "mixed"
+      }
+    },
+    {
+      "schema_version": "v1",
+      "key": "crazy:xlc-weekly-google-trends-surge-in-5g-rollout",
+      "algo_type": "crazy",
+      "algo_id": "xlc-weekly-google-trends-surge-in-5g-rollout",
+      "name": "Xlc Weekly Google Trends Surge In 5g Rollout",
+      "family": "attention_sentiment",
+      "status": "parked",
+      "evidence_class": "pending_seed",
+      "rebalance_frequency": "weekly",
+      "ytd_pct": -0.41,
+      "days_running": 73,
+      "beat_spy": false,
+      "spy_pct": 4.39,
+      "alpha_pct": -4.8,
+      "ret_30d_pct": 0.04,
+      "spy_delta_30d_pct": -8.48,
+      "last_snapshot": "2026-04-22",
+      "new_algo_date": null,
+      "comparator": {
+        "primary_etf": "XLC",
+        "signals": {
+          "momentum_5d": {
+            "direction": "UP",
+            "confidence": 0.089,
+            "return_pct": 0.443
+          },
+          "momentum_20d": {
+            "direction": "UP",
+            "confidence": 1.0,
+            "return_pct": 6.074
+          }
+        },
+        "summary": "both_up"
+      }
+    },
+    {
+      "schema_version": "v1",
+      "key": "crazy:xlb-daily-volatility-contraction-breakout",
+      "algo_type": "crazy",
+      "algo_id": "xlb-daily-volatility-contraction-breakout",
+      "name": "Xlb Daily Volatility Contraction Breakout",
+      "family": "macro_input_pressure",
+      "status": "parked",
+      "evidence_class": "pending_seed",
+      "rebalance_frequency": "daily",
+      "ytd_pct": 0.0,
+      "days_running": 73,
+      "beat_spy": false,
+      "spy_pct": 4.39,
+      "alpha_pct": -4.39,
+      "ret_30d_pct": 0.0,
+      "spy_delta_30d_pct": -8.52,
+      "last_snapshot": "2026-04-22",
+      "new_algo_date": null,
+      "comparator": {
+        "primary_etf": "XLB",
+        "signals": {
+          "momentum_5d": {
+            "direction": "UP",
+            "confidence": 0.175,
+            "return_pct": 0.876
+          },
+          "momentum_20d": {
+            "direction": "UP",
+            "confidence": 1.0,
+            "return_pct": 6.976
+          }
+        },
+        "summary": "both_up"
+      }
+    },
+    {
+      "schema_version": "v1",
+      "key": "crazy:materials-sector-weekly-volatility-contraction-breakout",
+      "algo_type": "crazy",
+      "algo_id": "materials-sector-weekly-volatility-contraction-breakout",
+      "name": "Materials Sector Weekly Volatility Contraction Breakout",
+      "family": "political_insider_filing",
+      "status": "parked",
+      "evidence_class": "pending_seed",
+      "rebalance_frequency": "weekly",
+      "ytd_pct": 0.0,
+      "days_running": 68,
+      "beat_spy": false,
+      "spy_pct": 4.39,
+      "alpha_pct": -4.39,
+      "ret_30d_pct": 0.0,
+      "spy_delta_30d_pct": -8.52,
+      "last_snapshot": "2026-04-22",
+      "new_algo_date": null,
+      "comparator": {
+        "primary_etf": "XLB",
+        "signals": {
+          "momentum_5d": {
+            "direction": "UP",
+            "confidence": 0.175,
+            "return_pct": 0.876
+          },
+          "momentum_20d": {
+            "direction": "UP",
+            "confidence": 1.0,
+            "return_pct": 6.976
+          }
+        },
+        "summary": "both_up"
+      }
+    },
+    {
+      "schema_version": "v1",
+      "key": "crazy:energy-sector-sudden-weekly-volatility-spike",
+      "algo_type": "crazy",
+      "algo_id": "energy-sector-sudden-weekly-volatility-spike",
+      "name": "Energy Sector Sudden Weekly Volatility Spike",
+      "family": "political_insider_filing",
+      "status": "parked",
+      "evidence_class": "pending_seed",
+      "rebalance_frequency": "weekly",
+      "ytd_pct": 0.0,
+      "days_running": 68,
+      "beat_spy": false,
+      "spy_pct": 4.39,
+      "alpha_pct": -4.39,
+      "ret_30d_pct": 0.0,
+      "spy_delta_30d_pct": -8.52,
+      "last_snapshot": "2026-04-22",
+      "new_algo_date": null,
+      "comparator": {
+        "primary_etf": "XLE",
+        "signals": {
+          "momentum_5d": {
+            "direction": "UP",
+            "confidence": 0.28,
+            "return_pct": 1.399
+          },
+          "momentum_20d": {
+            "direction": "DOWN",
+            "confidence": 1.0,
+            "return_pct": -7.068
+          }
+        },
+        "summary": "mixed"
+      }
+    }
+  ]
+}

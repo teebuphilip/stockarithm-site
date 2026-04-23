@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Stockarithm — Daily Report</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;600&display=swap');
+  :root {
+    --bg: #0a0a0a;
+    --bg2: #111;
+    --card: #161616;
+    --border: rgba(255,255,255,0.08);
+    --accent: #19d38f;
+    --accent-dim: #12a06b;
+    --red: #ef4444;
+    --red-dim: #991b1b;
+    --yellow: #eab308;
+    --gold: #d4a017;
+    --purple: #a855f7;
+    --muted: #888;
+    --text: #e8e8e8;
+    --mono: 'IBM Plex Mono', ui-monospace, monospace;
+    --sans: 'Space Grotesk', system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: var(--sans); color: var(--text); background: var(--bg); line-height: 1.5; -webkit-font-smoothing: antialiased; }
+  .hero { text-align: center; padding: 60px 24px 48px; background: radial-gradient(800px 400px at 50% 0%, rgba(25,211,143,0.06), transparent), var(--bg); border-bottom: 1px solid var(--border); }
+  .hero-badge { display: inline-block; font-family: var(--mono); font-size: 12px; color: var(--accent); border: 1px solid var(--accent-dim); border-radius: 20px; padding: 4px 14px; margin-bottom: 16px; letter-spacing: 0.5px; }
+  .hero h1 { font-size: clamp(28px, 5vw, 48px); font-weight: 700; letter-spacing: -0.5px; margin-bottom: 12px; }
+  .hero h1 span { color: var(--accent); }
+  .hero-sub { font-family: var(--mono); font-size: 14px; color: var(--muted); margin-bottom: 8px; }
+  .hero-stats { display: flex; justify-content: center; gap: 32px; margin: 24px 0; flex-wrap: wrap; }
+  .hero-stat { text-align: center; }
+  .hero-stat .num { font-size: 32px; font-weight: 700; font-family: var(--mono); color: var(--accent); }
+  .hero-stat .label { font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; }
+  .cta { display: inline-block; margin-top: 20px; padding: 12px 32px; background: var(--accent); color: #000; font-weight: 700; font-size: 15px; border: none; border-radius: 8px; cursor: pointer; text-decoration: none; transition: background 0.2s; }
+  .cta:hover { background: #1ee89e; }
+  .cta-sub { display: block; font-size: 12px; color: var(--muted); margin-top: 8px; }
+  .hero-strip { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; }
+  .pill { font-size: 12px; color: var(--muted); border: 1px solid rgba(255,255,255,0.08); border-radius: 999px; padding: 6px 10px; }
+  .pill a { color: inherit; text-decoration: none; }
+  .pill a:hover { text-decoration: underline; }
+  .wrap { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+  section { padding: 48px 0; }
+  section + section { border-top: 1px solid var(--border); }
+  .section-title { font-size: 22px; font-weight: 700; margin-bottom: 6px; }
+  .section-sub { font-size: 13px; color: var(--muted); margin-bottom: 24px; }
+  .heatmap { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 10px; }
+  .sector-tile { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 14px; text-align: center; cursor: default; transition: transform 0.15s, border-color 0.15s; position: relative; }
+  .sector-tile:hover { transform: translateY(-2px); border-color: rgba(255,255,255,0.15); }
+  .sector-tile .etf { font-family: var(--mono); font-size: 16px; font-weight: 700; }
+  .sector-tile .sector-name { font-size: 11px; color: var(--muted); margin: 4px 0 8px; }
+  .sector-tile .verdict { font-family: var(--mono); font-size: 11px; font-weight: 600; padding: 3px 10px; border-radius: 4px; display: inline-block; letter-spacing: 0.5px; }
+  .verdict-BULLISH { background: rgba(25,211,143,0.15); color: var(--accent); }
+  .verdict-BEARISH { background: rgba(239,68,68,0.15); color: var(--red); }
+  .verdict-MIXED { background: rgba(234,179,8,0.15); color: var(--yellow); }
+  .sector-tooltip { display: none; position: absolute; bottom: calc(100% + 8px); left: 50%; transform: translateX(-50%); background: #222; border: 1px solid var(--border); border-radius: 6px; padding: 8px 12px; font-family: var(--mono); font-size: 11px; color: var(--muted); white-space: nowrap; z-index: 10; pointer-events: none; }
+  .sector-tile:hover .sector-tooltip { display: block; }
+  .table-wrap { overflow-x: auto; border-radius: 10px; border: 1px solid var(--border); background: var(--card); }
+  table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  thead th { text-align: left; padding: 12px 16px; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: var(--muted); border-bottom: 1px solid var(--border); white-space: nowrap; font-weight: 600; }
+  tbody td { padding: 12px 16px; border-bottom: 1px solid rgba(255,255,255,0.04); white-space: nowrap; }
+  tbody tr:last-child td { border-bottom: none; }
+  tbody tr:hover { background: rgba(255,255,255,0.02); }
+  .rank { color: var(--muted); font-family: var(--mono); width: 40px; }
+  .algo-name { font-weight: 600; display: flex; align-items: center; gap: 8px; }
+  .algo-emoji { font-size: 18px; }
+  .algo-type-badge { font-family: var(--mono); font-size: 10px; padding: 2px 6px; border-radius: 3px; background: rgba(255,255,255,0.06); color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; }
+  .return-pos { color: var(--accent); font-family: var(--mono); font-weight: 600; }
+  .return-neg { color: var(--red); font-family: var(--mono); font-weight: 600; }
+  .return-zero { color: var(--muted); font-family: var(--mono); }
+  .vs-spy { font-family: var(--mono); font-size: 12px; }
+  .vs-spy-pos { color: var(--accent); }
+  .vs-spy-neg { color: var(--red); }
+  .days { font-family: var(--mono); color: var(--muted); }
+  .status-beat { font-family: var(--mono); font-size: 11px; color: var(--accent); background: rgba(25,211,143,0.1); padding: 3px 8px; border-radius: 4px; letter-spacing: 0.3px; }
+  .status-lag { font-family: var(--mono); font-size: 11px; color: var(--red); background: rgba(239,68,68,0.1); padding: 3px 8px; border-radius: 4px; letter-spacing: 0.3px; }
+  .comparator-pack { display: flex; gap: 6px; flex-wrap: wrap; }
+  .comp-badge { font-family: var(--mono); font-size: 10px; padding: 3px 6px; border-radius: 4px; letter-spacing: 0.3px; border: 1px solid rgba(255,255,255,0.08); }
+  .comp-up { color: var(--accent); background: rgba(25,211,143,0.1); }
+  .comp-down { color: var(--red); background: rgba(239,68,68,0.1); }
+  .comp-neutral { color: var(--yellow); background: rgba(234,179,8,0.12); }
+  .comparator-na { color: var(--muted); font-family: var(--mono); font-size: 11px; }
+  .row-biscotti { border-left: 3px solid var(--gold) !important; }
+  .row-baileymol { border-left: 3px solid var(--purple) !important; }
+  .name-tooltip { position: relative; cursor: help; }
+  .name-tooltip .tip { display: none; position: absolute; bottom: calc(100% + 6px); left: 0; background: #222; border: 1px solid var(--border); border-radius: 6px; padding: 8px 12px; font-size: 12px; font-weight: 400; color: var(--muted); white-space: nowrap; z-index: 20; pointer-events: none; }
+  .name-tooltip:hover .tip { display: block; }
+  .ticker-check { max-width: 480px; }
+  .ticker-input-wrap { display: flex; gap: 10px; margin-bottom: 16px; }
+  .ticker-input { flex: 1; padding: 12px 16px; font-family: var(--mono); font-size: 16px; background: var(--card); border: 1px solid var(--border); border-radius: 8px; color: var(--text); outline: none; text-transform: uppercase; }
+  .ticker-input::placeholder { color: rgba(255,255,255,0.2); }
+  .ticker-input:focus { border-color: var(--accent-dim); }
+  .ticker-btn { padding: 12px 20px; background: var(--accent); color: #000; font-weight: 700; font-size: 14px; border: none; border-radius: 8px; cursor: pointer; font-family: var(--sans); transition: background 0.2s; }
+  .ticker-btn:hover { background: #1ee89e; }
+  .ticker-result { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 20px; display: none; }
+  .ticker-result.show { display: block; }
+  .ticker-result .tr-ticker { font-family: var(--mono); font-size: 24px; font-weight: 700; }
+  .ticker-result .tr-sector { font-size: 13px; color: var(--muted); margin: 4px 0 12px; }
+  .ticker-result .tr-verdict { font-family: var(--mono); font-size: 14px; font-weight: 600; padding: 6px 14px; border-radius: 6px; display: inline-block; }
+  .ticker-result .tr-unlock { display: block; margin-top: 16px; font-size: 13px; color: var(--muted); }
+  .ticker-result .tr-unlock a { color: var(--accent); text-decoration: none; }
+  .ticker-result .tr-unlock a:hover { text-decoration: underline; }
+  .ticker-error { color: var(--red); font-family: var(--mono); font-size: 13px; display: none; }
+  .ticker-error.show { display: block; }
+  footer { border-top: 1px solid var(--border); padding: 32px 20px; text-align: center; font-size: 12px; color: var(--muted); line-height: 1.8; }
+  footer a { color: var(--accent-dim); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+  .memorial { margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--border); font-style: italic; color: rgba(255,255,255,0.3); }
+  .rank-note { border: 1px solid var(--border); border-radius: 12px; background: rgba(255,255,255,0.035); padding: 14px 16px; margin: 14px 0 18px; color: var(--muted); font-size: 13px; line-height: 1.65; }
+  .rank-note strong { color: var(--text); }
+  .rank-note code { font-family: var(--mono); color: var(--gold); background: rgba(255,204,102,0.08); padding: 1px 5px; border-radius: 4px; }
+  .pulse { background: rgba(25,211,143,0.04); border-top: 1px solid rgba(25,211,143,0.14); border-bottom: 1px solid rgba(25,211,143,0.14); padding: 12px 0; }
+  .pulse .wrap { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+  .pulse-label { font-family: var(--mono); font-size: 10px; color: var(--accent); letter-spacing: 1.5px; text-transform: uppercase; white-space: nowrap; flex-shrink: 0; }
+  .pulse-items { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+  .pulse-item { font-family: var(--mono); font-size: 13px; color: var(--text); }
+  .pulse-sep { color: var(--muted); font-size: 13px; }
+  .pulse-date { color: var(--muted); font-size: 11px; }
+  .cred-strip { display: flex; justify-content: center; gap: 6px; align-items: center; flex-wrap: wrap; margin-top: 12px; padding-top: 12px; border-top: 1px solid rgba(255,255,255,0.06); }
+  .cred-strip .cred-item { font-family: var(--mono); font-size: 11px; color: var(--muted); }
+  .cred-strip .cred-dot { color: rgba(255,255,255,0.2); font-size: 11px; }
+  @media (max-width: 600px) {
+    .hero { padding: 40px 16px 32px; }
+    .hero-stats { gap: 20px; }
+    .hero-stat .num { font-size: 24px; }
+    table { font-size: 13px; }
+    thead th, tbody td { padding: 10px 10px; }
+    .heatmap { grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); gap: 8px; }
+    .sector-tile { padding: 10px; }
+  }
+</style>
+</head>
+<body>
+<div class="hero">
+  <div class="hero-badge">DAILY REPORT</div>
+  <h1><span>2026-04-22</span> nightly snapshot</h1>
+  <p class="hero-sub">What changed in the lab after the nightly run.</p>
+</div>
+<div class="pulse">
+  <div class="wrap">
+    <span class="pulse-label">TODAY IN THE LAB</span>
+    <div class="pulse-items"><span class="pulse-item">Algo Baileymol (Chaos Monger): +6.65% YTD</span> <span class="pulse-sep">&middot;</span> <span class="pulse-item"><strong>112</strong> algos tracked</span> <span class="pulse-sep">&middot;</span> <span class="pulse-item">XLK strongest consensus</span> <span class="pulse-sep">&middot;</span> <span class="pulse-item">XLRE weakest consensus</span> <span class="pulse-sep">&middot;</span> <span class="pulse-item pulse-date">2026-04-22</span></div>
+  </div>
+</div>
+<section>
+  <div class="wrap">
+    <h2 class="section-title">Counts</h2>
+    <p class="section-sub">Current product layer totals.</p>
+    <div class="hero-stats">
+      <div class="hero-stat"><div class="num">112</div><div class="label">Total</div></div>
+      <div class="hero-stat"><div class="num">35</div><div class="label">Watchlist</div></div>
+      <div class="hero-stat"><div class="num">5</div><div class="label">Promoted</div></div>
+      <div class="hero-stat"><div class="num">7</div><div class="label">Graveyard</div></div>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="wrap">
+    <div class="rank-note">
+      <strong>Comparator note:</strong> The lab now tracks simple always-on baselines in `docs/comparison/`.
+      Today that means <code>momentum_5d</code> and <code>momentum_20d</code>.
+      They are there to answer one question: does a signal add anything beyond price momentum alone?
+    </div>
+  </div>
+</section>
+<section>
+  <div class="wrap">
+    <h2 class="section-title">Top Live YTD</h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>#</th><th>Algorithm</th><th>Family</th><th>Return</th><th>Alpha vs SPY</th></tr></thead>
+        <tbody><tr><td>1</td><td>Algo Baileymol (Chaos Monger)</td><td>core_rotation</td><td class="return-pos">+6.65%</td><td class="vs-spy vs-spy-pos">+2.26%</td></tr><tr><td>2</td><td>Antonacci Dual Momentum Sector Rotation</td><td>core_rotation</td><td class="return-pos">+4.53%</td><td class="vs-spy vs-spy-pos">+0.15%</td></tr><tr><td>3</td><td>Faber Momentum Rotation</td><td>core_rotation</td><td class="return-pos">+3.85%</td><td class="vs-spy vs-spy-neg">-0.54%</td></tr><tr><td>4</td><td>Retail Sales Momentum</td><td>consumer_stress</td><td class="return-pos">+0.74%</td><td class="vs-spy vs-spy-neg">-3.65%</td></tr><tr><td>5</td><td>Insider Trading Signals</td><td>political_insider_filing</td><td class="return-pos">+0.16%</td><td class="vs-spy vs-spy-neg">-4.23%</td></tr><tr><td>6</td><td>Semiconductor Moonshot Warning</td><td>macro_input_pressure</td><td class="return-pos">+0.05%</td><td class="vs-spy vs-spy-neg">-4.34%</td></tr><tr><td>7</td><td>FINRA Dark Pool Signal</td><td>political_insider_filing</td><td class="return-pos">+0.05%</td><td class="vs-spy vs-spy-neg">-4.34%</td></tr><tr><td>8</td><td>Earthquake Aftershock Amplifier</td><td>macro_input_pressure</td><td class="return-pos">+0.05%</td><td class="vs-spy vs-spy-neg">-4.34%</td></tr><tr><td>9</td><td>Materials Sector Weekly Positive Correlation Breakdown With Xlb</td><td>political_insider_filing</td><td class="return-pos">+0.03%</td><td class="vs-spy vs-spy-neg">-4.36%</td></tr><tr><td>10</td><td>Staples Sector Drawdown Rapid Recovery</td><td>political_insider_filing</td><td class="return-pos">+0.02%</td><td class="vs-spy vs-spy-neg">-4.36%</td></tr></tbody>
+      </table>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="wrap">
+    <h2 class="section-title">Rolling 30D Leaders</h2>
+    <ul style="margin-left: 20px; line-height: 1.9;"><li><strong>Algo Baileymol (Chaos Monger)</strong> <span class="return-pos">+7.45%</span> <span class="days">vs SPY -1.07%</span></li><li><strong>Algo Biscotti (Unconditional Loyalty)</strong> <span class="return-pos">+5.94%</span> <span class="days">vs SPY -2.58%</span></li><li><strong>VIX Term Structure</strong> <span class="return-pos">+4.99%</span> <span class="days">vs SPY -3.53%</span></li><li><strong>Antonacci Dual Momentum Sector Rotation</strong> <span class="return-pos">+4.38%</span> <span class="days">vs SPY -4.13%</span></li><li><strong>Chaos Rotation Lab</strong> <span class="return-pos">+3.10%</span> <span class="days">vs SPY -5.42%</span></li><li><strong>VIX Fear Rotation</strong> <span class="return-pos">+1.72%</span> <span class="days">vs SPY -6.80%</span></li><li><strong>Faber Momentum Rotation</strong> <span class="return-pos">+1.22%</span> <span class="days">vs SPY -7.29%</span></li><li><strong>Algo Biscotti (Unconditional Loyalty)</strong> <span class="return-pos">+1.12%</span> <span class="days">vs SPY -7.40%</span></li><li><strong>Retail Sales Momentum</strong> <span class="return-pos">+0.74%</span> <span class="days">vs SPY -7.78%</span></li><li><strong>Insider Trading Signals</strong> <span class="return-pos">+0.16%</span> <span class="days">vs SPY -8.36%</span></li></ul>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div><strong>stockarithm.com</strong> &mdash; Daily report</div>
+    <div>Last updated: 2026-04-23T11:56:27Z</div>
+    <div style="margin-top:8px;"><a href="landing.html">Home</a> &middot; <a href="leaderboard.html">Leaderboard</a> &middot; <a href="families.html">Families</a> &middot; <a href="daily.html">Daily Report</a> &middot; <a href="premium.html">Premium Preview</a> &middot; <a href="blog/index.html">Blog</a> &middot; <a href="legal.html">Legal</a></div>
+    <div style="margin-top:8px;">
+      <strong>Signal Lab Notice:</strong> Experimental research only. Signals can and will fail. Do not interpret any signal as a recommendation.<br>
+      <strong>Performance Disclosure:</strong> Leaderboards are model/simulation outputs and may not reflect slippage, fees, liquidity, execution delays, or market impact.<br>
+      <strong>Data Disclaimer:</strong> Third-party data may be incomplete, delayed, inaccurate, or revised. Use at your own risk.<br>
+      <strong>Not financial advice:</strong> Do your own research. You are responsible for your own decisions. Paper-traded only &mdash; no real money at risk.
+    </div>
+    <div class="memorial">In loving memory of Biscotti (2008&ndash;2026). Good boy. Best algo. &hearts;</div>
+  </div>
+</footer>
+</body>
+</html>

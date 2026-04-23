@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Stockarithm — Legal</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;600&display=swap');
+  :root {
+    --bg: #0a0a0a;
+    --bg2: #111;
+    --card: #161616;
+    --border: rgba(255,255,255,0.08);
+    --accent: #19d38f;
+    --accent-dim: #12a06b;
+    --red: #ef4444;
+    --red-dim: #991b1b;
+    --yellow: #eab308;
+    --gold: #d4a017;
+    --purple: #a855f7;
+    --muted: #888;
+    --text: #e8e8e8;
+    --mono: 'IBM Plex Mono', ui-monospace, monospace;
+    --sans: 'Space Grotesk', system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: var(--sans); color: var(--text); background: var(--bg); line-height: 1.5; -webkit-font-smoothing: antialiased; }
+  .hero { text-align: center; padding: 60px 24px 48px; background: radial-gradient(800px 400px at 50% 0%, rgba(25,211,143,0.06), transparent), var(--bg); border-bottom: 1px solid var(--border); }
+  .hero-badge { display: inline-block; font-family: var(--mono); font-size: 12px; color: var(--accent); border: 1px solid var(--accent-dim); border-radius: 20px; padding: 4px 14px; margin-bottom: 16px; letter-spacing: 0.5px; }
+  .hero h1 { font-size: clamp(28px, 5vw, 48px); font-weight: 700; letter-spacing: -0.5px; margin-bottom: 12px; }
+  .hero h1 span { color: var(--accent); }
+  .hero-sub { font-family: var(--mono); font-size: 14px; color: var(--muted); margin-bottom: 8px; }
+  .hero-stats { display: flex; justify-content: center; gap: 32px; margin: 24px 0; flex-wrap: wrap; }
+  .hero-stat { text-align: center; }
+  .hero-stat .num { font-size: 32px; font-weight: 700; font-family: var(--mono); color: var(--accent); }
+  .hero-stat .label { font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; }
+  .cta { display: inline-block; margin-top: 20px; padding: 12px 32px; background: var(--accent); color: #000; font-weight: 700; font-size: 15px; border: none; border-radius: 8px; cursor: pointer; text-decoration: none; transition: background 0.2s; }
+  .cta:hover { background: #1ee89e; }
+  .cta-sub { display: block; font-size: 12px; color: var(--muted); margin-top: 8px; }
+  .hero-strip { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; }
+  .pill { font-size: 12px; color: var(--muted); border: 1px solid rgba(255,255,255,0.08); border-radius: 999px; padding: 6px 10px; }
+  .pill a { color: inherit; text-decoration: none; }
+  .pill a:hover { text-decoration: underline; }
+  .wrap { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+  section { padding: 48px 0; }
+  section + section { border-top: 1px solid var(--border); }
+  .section-title { font-size: 22px; font-weight: 700; margin-bottom: 6px; }
+  .section-sub { font-size: 13px; color: var(--muted); margin-bottom: 24px; }
+  .heatmap { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 10px; }
+  .sector-tile { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 14px; text-align: center; cursor: default; transition: transform 0.15s, border-color 0.15s; position: relative; }
+  .sector-tile:hover { transform: translateY(-2px); border-color: rgba(255,255,255,0.15); }
+  .sector-tile .etf { font-family: var(--mono); font-size: 16px; font-weight: 700; }
+  .sector-tile .sector-name { font-size: 11px; color: var(--muted); margin: 4px 0 8px; }
+  .sector-tile .verdict { font-family: var(--mono); font-size: 11px; font-weight: 600; padding: 3px 10px; border-radius: 4px; display: inline-block; letter-spacing: 0.5px; }
+  .verdict-BULLISH { background: rgba(25,211,143,0.15); color: var(--accent); }
+  .verdict-BEARISH { background: rgba(239,68,68,0.15); color: var(--red); }
+  .verdict-MIXED { background: rgba(234,179,8,0.15); color: var(--yellow); }
+  .sector-tooltip { display: none; position: absolute; bottom: calc(100% + 8px); left: 50%; transform: translateX(-50%); background: #222; border: 1px solid var(--border); border-radius: 6px; padding: 8px 12px; font-family: var(--mono); font-size: 11px; color: var(--muted); white-space: nowrap; z-index: 10; pointer-events: none; }
+  .sector-tile:hover .sector-tooltip { display: block; }
+  .table-wrap { overflow-x: auto; border-radius: 10px; border: 1px solid var(--border); background: var(--card); }
+  table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  thead th { text-align: left; padding: 12px 16px; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: var(--muted); border-bottom: 1px solid var(--border); white-space: nowrap; font-weight: 600; }
+  tbody td { padding: 12px 16px; border-bottom: 1px solid rgba(255,255,255,0.04); white-space: nowrap; }
+  tbody tr:last-child td { border-bottom: none; }
+  tbody tr:hover { background: rgba(255,255,255,0.02); }
+  .rank { color: var(--muted); font-family: var(--mono); width: 40px; }
+  .algo-name { font-weight: 600; display: flex; align-items: center; gap: 8px; }
+  .algo-emoji { font-size: 18px; }
+  .algo-type-badge { font-family: var(--mono); font-size: 10px; padding: 2px 6px; border-radius: 3px; background: rgba(255,255,255,0.06); color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; }
+  .return-pos { color: var(--accent); font-family: var(--mono); font-weight: 600; }
+  .return-neg { color: var(--red); font-family: var(--mono); font-weight: 600; }
+  .return-zero { color: var(--muted); font-family: var(--mono); }
+  .vs-spy { font-family: var(--mono); font-size: 12px; }
+  .vs-spy-pos { color: var(--accent); }
+  .vs-spy-neg { color: var(--red); }
+  .days { font-family: var(--mono); color: var(--muted); }
+  .status-beat { font-family: var(--mono); font-size: 11px; color: var(--accent); background: rgba(25,211,143,0.1); padding: 3px 8px; border-radius: 4px; letter-spacing: 0.3px; }
+  .status-lag { font-family: var(--mono); font-size: 11px; color: var(--red); background: rgba(239,68,68,0.1); padding: 3px 8px; border-radius: 4px; letter-spacing: 0.3px; }
+  .comparator-pack { display: flex; gap: 6px; flex-wrap: wrap; }
+  .comp-badge { font-family: var(--mono); font-size: 10px; padding: 3px 6px; border-radius: 4px; letter-spacing: 0.3px; border: 1px solid rgba(255,255,255,0.08); }
+  .comp-up { color: var(--accent); background: rgba(25,211,143,0.1); }
+  .comp-down { color: var(--red); background: rgba(239,68,68,0.1); }
+  .comp-neutral { color: var(--yellow); background: rgba(234,179,8,0.12); }
+  .comparator-na { color: var(--muted); font-family: var(--mono); font-size: 11px; }
+  .row-biscotti { border-left: 3px solid var(--gold) !important; }
+  .row-baileymol { border-left: 3px solid var(--purple) !important; }
+  .name-tooltip { position: relative; cursor: help; }
+  .name-tooltip .tip { display: none; position: absolute; bottom: calc(100% + 6px); left: 0; background: #222; border: 1px solid var(--border); border-radius: 6px; padding: 8px 12px; font-size: 12px; font-weight: 400; color: var(--muted); white-space: nowrap; z-index: 20; pointer-events: none; }
+  .name-tooltip:hover .tip { display: block; }
+  .ticker-check { max-width: 480px; }
+  .ticker-input-wrap { display: flex; gap: 10px; margin-bottom: 16px; }
+  .ticker-input { flex: 1; padding: 12px 16px; font-family: var(--mono); font-size: 16px; background: var(--card); border: 1px solid var(--border); border-radius: 8px; color: var(--text); outline: none; text-transform: uppercase; }
+  .ticker-input::placeholder { color: rgba(255,255,255,0.2); }
+  .ticker-input:focus { border-color: var(--accent-dim); }
+  .ticker-btn { padding: 12px 20px; background: var(--accent); color: #000; font-weight: 700; font-size: 14px; border: none; border-radius: 8px; cursor: pointer; font-family: var(--sans); transition: background 0.2s; }
+  .ticker-btn:hover { background: #1ee89e; }
+  .ticker-result { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 20px; display: none; }
+  .ticker-result.show { display: block; }
+  .ticker-result .tr-ticker { font-family: var(--mono); font-size: 24px; font-weight: 700; }
+  .ticker-result .tr-sector { font-size: 13px; color: var(--muted); margin: 4px 0 12px; }
+  .ticker-result .tr-verdict { font-family: var(--mono); font-size: 14px; font-weight: 600; padding: 6px 14px; border-radius: 6px; display: inline-block; }
+  .ticker-result .tr-unlock { display: block; margin-top: 16px; font-size: 13px; color: var(--muted); }
+  .ticker-result .tr-unlock a { color: var(--accent); text-decoration: none; }
+  .ticker-result .tr-unlock a:hover { text-decoration: underline; }
+  .ticker-error { color: var(--red); font-family: var(--mono); font-size: 13px; display: none; }
+  .ticker-error.show { display: block; }
+  footer { border-top: 1px solid var(--border); padding: 32px 20px; text-align: center; font-size: 12px; color: var(--muted); line-height: 1.8; }
+  footer a { color: var(--accent-dim); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+  .memorial { margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--border); font-style: italic; color: rgba(255,255,255,0.3); }
+  .rank-note { border: 1px solid var(--border); border-radius: 12px; background: rgba(255,255,255,0.035); padding: 14px 16px; margin: 14px 0 18px; color: var(--muted); font-size: 13px; line-height: 1.65; }
+  .rank-note strong { color: var(--text); }
+  .rank-note code { font-family: var(--mono); color: var(--gold); background: rgba(255,204,102,0.08); padding: 1px 5px; border-radius: 4px; }
+  .pulse { background: rgba(25,211,143,0.04); border-top: 1px solid rgba(25,211,143,0.14); border-bottom: 1px solid rgba(25,211,143,0.14); padding: 12px 0; }
+  .pulse .wrap { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+  .pulse-label { font-family: var(--mono); font-size: 10px; color: var(--accent); letter-spacing: 1.5px; text-transform: uppercase; white-space: nowrap; flex-shrink: 0; }
+  .pulse-items { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+  .pulse-item { font-family: var(--mono); font-size: 13px; color: var(--text); }
+  .pulse-sep { color: var(--muted); font-size: 13px; }
+  .pulse-date { color: var(--muted); font-size: 11px; }
+  .cred-strip { display: flex; justify-content: center; gap: 6px; align-items: center; flex-wrap: wrap; margin-top: 12px; padding-top: 12px; border-top: 1px solid rgba(255,255,255,0.06); }
+  .cred-strip .cred-item { font-family: var(--mono); font-size: 11px; color: var(--muted); }
+  .cred-strip .cred-dot { color: rgba(255,255,255,0.2); font-size: 11px; }
+  @media (max-width: 600px) {
+    .hero { padding: 40px 16px 32px; }
+    .hero-stats { gap: 20px; }
+    .hero-stat .num { font-size: 24px; }
+    table { font-size: 13px; }
+    thead th, tbody td { padding: 10px 10px; }
+    .heatmap { grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); gap: 8px; }
+    .sector-tile { padding: 10px; }
+  }
+</style>
+</head>
+<body>
+<div class="hero">
+  <div class="hero-badge">LEGAL</div>
+  <h1><span>Disclaimers</span> and disclosures</h1>
+  <p class="hero-sub">The plain-English rules for using this site and its signals.</p>
+</div>
+<section><div class="wrap"><h2 class="section-title">Master Disclaimer</h2><p>The information provided by this website, its tools, and any associated content (collectively, the &quot;Service&quot;) is for informational and educational purposes only. Nothing contained in the Service constitutes financial, investment, legal, or tax advice.</p>
+<p>The Service publishes experimental signals, research outputs, and historical observations. These are not recommendations to buy, sell, or hold any asset.</p>
+<p>Trading and investing involve significant risk, including the possible loss of principal. Past performance does not guarantee future results. Any signals, models, or results presented may be incomplete, incorrect, delayed, or subject to revision.</p>
+<p>You are solely responsible for your own financial decisions. You should conduct your own research and consult a qualified professional before making any investment decisions.</p>
+<p>By using this Service, you agree that the operators of this Service are not liable for any losses, damages, or decisions made based on the information provided.</p></div></section><section><div class="wrap"><h2 class="section-title">Signal Lab Notice</h2><p>This platform operates as a signal research laboratory.</p>
+<p>Signals are generated, tracked, and evaluated as part of an experimental system. Many signals will fail. Some signals may appear to perform well due to randomness or limited sample size.</p>
+<p>The purpose of this system is to explore patterns and publish transparent results -- including failures -- not to provide actionable trading advice.</p>
+<p>Do not interpret any signal as a recommendation. Treat all outputs as experimental data.</p></div></section><section><div class="wrap"><h2 class="section-title">Performance Disclosure</h2><p>Performance metrics, leaderboards, and historical results presented on this platform are based on model outputs, simulated conditions, or simplified assumptions.</p>
+<p>These results may not reflect real-world trading conditions, including but not limited to slippage, liquidity constraints, execution delays, fees, or market impact.</p>
+<p>Reported performance may differ materially from actual results achieved in live trading.</p>
+<p>No representation is made that any strategy or signal will achieve similar results in the future.</p></div></section><section><div class="wrap"><h2 class="section-title">Data Disclaimer</h2><p>This Service relies on third-party data sources. Data may be incomplete, delayed, inaccurate, or subject to revision without notice.</p>
+<p>We do not guarantee the accuracy, completeness, or timeliness of any data presented.</p>
+<p>Use of this data is at your own risk.</p></div></section><section><div class="wrap"><h2 class="section-title">Short Inline Disclaimer</h2><p>This is an experimental signal lab. Not financial advice. Signals can and will fail. Do your own research.</p></div></section>
+
+<footer>
+  <div class="wrap">
+    <div><strong>stockarithm.com</strong> &mdash; Legal / disclosures</div>
+    <div>Last updated: </div>
+    <div style="margin-top:8px;"><a href="landing.html">Home</a> &middot; <a href="leaderboard.html">Leaderboard</a> &middot; <a href="families.html">Families</a> &middot; <a href="daily.html">Daily Report</a> &middot; <a href="premium.html">Premium Preview</a> &middot; <a href="blog/index.html">Blog</a> &middot; <a href="legal.html">Legal</a></div>
+    <div style="margin-top:8px;">
+      <strong>Signal Lab Notice:</strong> Experimental research only. Signals can and will fail. Do not interpret any signal as a recommendation.<br>
+      <strong>Performance Disclosure:</strong> Leaderboards are model/simulation outputs and may not reflect slippage, fees, liquidity, execution delays, or market impact.<br>
+      <strong>Data Disclaimer:</strong> Third-party data may be incomplete, delayed, inaccurate, or revised. Use at your own risk.<br>
+      <strong>Not financial advice:</strong> Do your own research. You are responsible for your own decisions. Paper-traded only &mdash; no real money at risk.
+    </div>
+    <div class="memorial">In loving memory of Biscotti (2008&ndash;2026). Good boy. Best algo. &hearts;</div>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Stockarithm Premium App</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;600&display=swap');
+  :root { --bg:#0a0a0a; --card:#161616; --border:rgba(255,255,255,.08); --accent:#19d38f; --red:#ef4444; --muted:#888; --text:#e8e8e8; --mono:'IBM Plex Mono',ui-monospace,monospace; --sans:'Space Grotesk',system-ui,sans-serif; }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family:var(--sans); color:var(--text); background:radial-gradient(900px 500px at 50% -10%, rgba(25,211,143,.08), transparent), var(--bg); line-height:1.5; }
+  header { padding:46px 22px 34px; text-align:center; border-bottom:1px solid var(--border); }
+  h1 { margin:0; font-size:clamp(30px,5vw,52px); letter-spacing:-.04em; }
+  h1 span { color:var(--accent); }
+  p { color:var(--muted); }
+  .wrap { max-width:1100px; margin:0 auto; padding:24px 20px; }
+  .card { background:var(--card); border:1px solid var(--border); border-radius:14px; padding:18px; margin-bottom:16px; }
+  .status { font-family:var(--mono); font-size:13px; }
+  .cta { display:inline-block; margin-top:10px; padding:10px 14px; border-radius:8px; border:1px solid var(--accent); color:var(--accent); text-decoration:none; font-weight:700; }
+  table { width:100%; border-collapse:collapse; font-size:14px; }
+  th,td { padding:10px 12px; border-bottom:1px solid rgba(255,255,255,.06); text-align:left; white-space:nowrap; }
+  th { color:var(--muted); font-family:var(--mono); font-size:11px; text-transform:uppercase; }
+  .pos { color:var(--accent); font-family:var(--mono); }
+  .neg { color:var(--red); font-family:var(--mono); }
+  .muted { color:var(--muted); }
+  .table-wrap { overflow-x:auto; }
+  footer { border-top:1px solid var(--border); padding:24px 20px; color:var(--muted); font-size:12px; text-align:center; line-height:1.7; }
+</style>
+</head>
+<body>
+<header>
+  <h1><span>Premium</span> lab view</h1>
+  <p>Full Stockarithm access will live here once Stripe checkout is real.</p>
+</header>
+<div class="wrap">
+  <div class="card">
+    <div class="status" id="status">Checking entitlement...</div>
+    <a class="cta" id="subscribe" href="landing.html#waitlist" style="display:none;">Get weekly lab notes</a>
+  </div>
+  <div class="card" id="premium" style="display:none;">
+    <h2>Premium Leaderboard</h2>
+    <p class="muted">Served by the Railway API after signed-cookie entitlement check.</p>
+    <div class="table-wrap"><table id="leaderboard"><thead><tr><th>#</th><th>Algorithm</th><th>Type</th><th>Return</th><th>vs SPY</th><th>Status</th></tr></thead><tbody></tbody></table></div>
+  </div>
+</div>
+<footer>
+  <strong>Signal Lab Notice:</strong> Experimental research only. Not financial advice. Paper-traded outputs may be wrong, delayed, incomplete, or revised.
+</footer>
+<script>
+(function () {
+  var api = window.STOCKARITHM_API_BASE || localStorage.getItem('stockarithm_api_base') || 'https://api.stockarithm.com';
+  var status = document.getElementById('status');
+  var premium = document.getElementById('premium');
+  var subscribe = document.getElementById('subscribe');
+  function fmt(n) {
+    var x = Number(n);
+    if (!isFinite(x)) return 'n/a';
+    return (x > 0 ? '+' : '') + x.toFixed(2) + '%';
+  }
+  function cls(n) { return Number(n) >= 0 ? 'pos' : 'neg'; }
+  fetch(api + '/api/me/status', { credentials: 'include' })
+    .then(function (r) { return r.json(); })
+    .then(function (me) {
+      if (!me.entitled) {
+        status.textContent = me.authenticated ? 'Signed in, but no active premium entitlement.' : 'No premium session found.';
+        subscribe.style.display = 'inline-block';
+        return null;
+      }
+      status.textContent = 'Premium active for ' + (me.email || 'this browser') + '.';
+      return fetch(api + '/api/premium/leaderboard', { credentials: 'include' });
+    })
+    .then(function (r) { return r ? r.json() : null; })
+    .then(function (data) {
+      if (!data) return;
+      premium.style.display = 'block';
+      var tbody = document.querySelector('#leaderboard tbody');
+      tbody.innerHTML = (data.algos || []).slice(0, 50).map(function (a, i) {
+        return '<tr><td>' + (i + 1) + '</td><td>' + (a.name || a.algo_id || '') + '</td><td>' + (a.algo_type || '') + '</td><td class="' + cls(a.ytd_pct) + '">' + fmt(a.ytd_pct) + '</td><td class="' + cls(a.alpha_pct) + '">' + fmt(a.alpha_pct) + '</td><td>' + (a.status || '') + '</td></tr>';
+      }).join('');
+    })
+    .catch(function (err) {
+      status.textContent = 'Premium API unavailable: ' + err.message;
+      subscribe.style.display = 'inline-block';
+    });
+})();
+</script>
+</body>
+</html>

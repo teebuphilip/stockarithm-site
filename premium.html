@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Stockarithm — Premium Preview</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;600&display=swap');
+  :root {
+    --bg: #0a0a0a;
+    --bg2: #111;
+    --card: #161616;
+    --border: rgba(255,255,255,0.08);
+    --accent: #19d38f;
+    --accent-dim: #12a06b;
+    --red: #ef4444;
+    --red-dim: #991b1b;
+    --yellow: #eab308;
+    --gold: #d4a017;
+    --purple: #a855f7;
+    --muted: #888;
+    --text: #e8e8e8;
+    --mono: 'IBM Plex Mono', ui-monospace, monospace;
+    --sans: 'Space Grotesk', system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: var(--sans); color: var(--text); background: var(--bg); line-height: 1.5; -webkit-font-smoothing: antialiased; }
+  .hero { text-align: center; padding: 60px 24px 48px; background: radial-gradient(800px 400px at 50% 0%, rgba(25,211,143,0.06), transparent), var(--bg); border-bottom: 1px solid var(--border); }
+  .hero-badge { display: inline-block; font-family: var(--mono); font-size: 12px; color: var(--accent); border: 1px solid var(--accent-dim); border-radius: 20px; padding: 4px 14px; margin-bottom: 16px; letter-spacing: 0.5px; }
+  .hero h1 { font-size: clamp(28px, 5vw, 48px); font-weight: 700; letter-spacing: -0.5px; margin-bottom: 12px; }
+  .hero h1 span { color: var(--accent); }
+  .hero-sub { font-family: var(--mono); font-size: 14px; color: var(--muted); margin-bottom: 8px; }
+  .hero-stats { display: flex; justify-content: center; gap: 32px; margin: 24px 0; flex-wrap: wrap; }
+  .hero-stat { text-align: center; }
+  .hero-stat .num { font-size: 32px; font-weight: 700; font-family: var(--mono); color: var(--accent); }
+  .hero-stat .label { font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; }
+  .cta { display: inline-block; margin-top: 20px; padding: 12px 32px; background: var(--accent); color: #000; font-weight: 700; font-size: 15px; border: none; border-radius: 8px; cursor: pointer; text-decoration: none; transition: background 0.2s; }
+  .cta:hover { background: #1ee89e; }
+  .cta-sub { display: block; font-size: 12px; color: var(--muted); margin-top: 8px; }
+  .hero-strip { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; }
+  .pill { font-size: 12px; color: var(--muted); border: 1px solid rgba(255,255,255,0.08); border-radius: 999px; padding: 6px 10px; }
+  .pill a { color: inherit; text-decoration: none; }
+  .pill a:hover { text-decoration: underline; }
+  .wrap { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+  section { padding: 48px 0; }
+  section + section { border-top: 1px solid var(--border); }
+  .section-title { font-size: 22px; font-weight: 700; margin-bottom: 6px; }
+  .section-sub { font-size: 13px; color: var(--muted); margin-bottom: 24px; }
+  .heatmap { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 10px; }
+  .sector-tile { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 14px; text-align: center; cursor: default; transition: transform 0.15s, border-color 0.15s; position: relative; }
+  .sector-tile:hover { transform: translateY(-2px); border-color: rgba(255,255,255,0.15); }
+  .sector-tile .etf { font-family: var(--mono); font-size: 16px; font-weight: 700; }
+  .sector-tile .sector-name { font-size: 11px; color: var(--muted); margin: 4px 0 8px; }
+  .sector-tile .verdict { font-family: var(--mono); font-size: 11px; font-weight: 600; padding: 3px 10px; border-radius: 4px; display: inline-block; letter-spacing: 0.5px; }
+  .verdict-BULLISH { background: rgba(25,211,143,0.15); color: var(--accent); }
+  .verdict-BEARISH { background: rgba(239,68,68,0.15); color: var(--red); }
+  .verdict-MIXED { background: rgba(234,179,8,0.15); color: var(--yellow); }
+  .sector-tooltip { display: none; position: absolute; bottom: calc(100% + 8px); left: 50%; transform: translateX(-50%); background: #222; border: 1px solid var(--border); border-radius: 6px; padding: 8px 12px; font-family: var(--mono); font-size: 11px; color: var(--muted); white-space: nowrap; z-index: 10; pointer-events: none; }
+  .sector-tile:hover .sector-tooltip { display: block; }
+  .table-wrap { overflow-x: auto; border-radius: 10px; border: 1px solid var(--border); background: var(--card); }
+  table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  thead th { text-align: left; padding: 12px 16px; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: var(--muted); border-bottom: 1px solid var(--border); white-space: nowrap; font-weight: 600; }
+  tbody td { padding: 12px 16px; border-bottom: 1px solid rgba(255,255,255,0.04); white-space: nowrap; }
+  tbody tr:last-child td { border-bottom: none; }
+  tbody tr:hover { background: rgba(255,255,255,0.02); }
+  .rank { color: var(--muted); font-family: var(--mono); width: 40px; }
+  .algo-name { font-weight: 600; display: flex; align-items: center; gap: 8px; }
+  .algo-emoji { font-size: 18px; }
+  .algo-type-badge { font-family: var(--mono); font-size: 10px; padding: 2px 6px; border-radius: 3px; background: rgba(255,255,255,0.06); color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; }
+  .return-pos { color: var(--accent); font-family: var(--mono); font-weight: 600; }
+  .return-neg { color: var(--red); font-family: var(--mono); font-weight: 600; }
+  .return-zero { color: var(--muted); font-family: var(--mono); }
+  .vs-spy { font-family: var(--mono); font-size: 12px; }
+  .vs-spy-pos { color: var(--accent); }
+  .vs-spy-neg { color: var(--red); }
+  .days { font-family: var(--mono); color: var(--muted); }
+  .status-beat { font-family: var(--mono); font-size: 11px; color: var(--accent); background: rgba(25,211,143,0.1); padding: 3px 8px; border-radius: 4px; letter-spacing: 0.3px; }
+  .status-lag { font-family: var(--mono); font-size: 11px; color: var(--red); background: rgba(239,68,68,0.1); padding: 3px 8px; border-radius: 4px; letter-spacing: 0.3px; }
+  .comparator-pack { display: flex; gap: 6px; flex-wrap: wrap; }
+  .comp-badge { font-family: var(--mono); font-size: 10px; padding: 3px 6px; border-radius: 4px; letter-spacing: 0.3px; border: 1px solid rgba(255,255,255,0.08); }
+  .comp-up { color: var(--accent); background: rgba(25,211,143,0.1); }
+  .comp-down { color: var(--red); background: rgba(239,68,68,0.1); }
+  .comp-neutral { color: var(--yellow); background: rgba(234,179,8,0.12); }
+  .comparator-na { color: var(--muted); font-family: var(--mono); font-size: 11px; }
+  .row-biscotti { border-left: 3px solid var(--gold) !important; }
+  .row-baileymol { border-left: 3px solid var(--purple) !important; }
+  .name-tooltip { position: relative; cursor: help; }
+  .name-tooltip .tip { display: none; position: absolute; bottom: calc(100% + 6px); left: 0; background: #222; border: 1px solid var(--border); border-radius: 6px; padding: 8px 12px; font-size: 12px; font-weight: 400; color: var(--muted); white-space: nowrap; z-index: 20; pointer-events: none; }
+  .name-tooltip:hover .tip { display: block; }
+  .paywall-row td { color: rgba(255,255,255,0.15) !important; user-select: none; pointer-events: none; }
+  .paywall-row .algo-name { filter: blur(4px); }
+  .paywall-cta-row td { text-align: center; padding: 16px; border-bottom: none; }
+  .paywall-cta-row a { color: var(--accent); font-weight: 600; text-decoration: none; font-size: 14px; }
+  .paywall-cta-row a:hover { text-decoration: underline; }
+  .ticker-check { max-width: 480px; }
+  .ticker-input-wrap { display: flex; gap: 10px; margin-bottom: 16px; }
+  .ticker-input { flex: 1; padding: 12px 16px; font-family: var(--mono); font-size: 16px; background: var(--card); border: 1px solid var(--border); border-radius: 8px; color: var(--text); outline: none; text-transform: uppercase; }
+  .ticker-input::placeholder { color: rgba(255,255,255,0.2); }
+  .ticker-input:focus { border-color: var(--accent-dim); }
+  .ticker-btn { padding: 12px 20px; background: var(--accent); color: #000; font-weight: 700; font-size: 14px; border: none; border-radius: 8px; cursor: pointer; font-family: var(--sans); transition: background 0.2s; }
+  .ticker-btn:hover { background: #1ee89e; }
+  .ticker-result { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 20px; display: none; }
+  .ticker-result.show { display: block; }
+  .ticker-result .tr-ticker { font-family: var(--mono); font-size: 24px; font-weight: 700; }
+  .ticker-result .tr-sector { font-size: 13px; color: var(--muted); margin: 4px 0 12px; }
+  .ticker-result .tr-verdict { font-family: var(--mono); font-size: 14px; font-weight: 600; padding: 6px 14px; border-radius: 6px; display: inline-block; }
+  .ticker-result .tr-unlock { display: block; margin-top: 16px; font-size: 13px; color: var(--muted); }
+  .ticker-result .tr-unlock a { color: var(--accent); text-decoration: none; }
+  .ticker-result .tr-unlock a:hover { text-decoration: underline; }
+  .ticker-error { color: var(--red); font-family: var(--mono); font-size: 13px; display: none; }
+  .ticker-error.show { display: block; }
+  footer { border-top: 1px solid var(--border); padding: 32px 20px; text-align: center; font-size: 12px; color: var(--muted); line-height: 1.8; }
+  footer a { color: var(--accent-dim); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+  .memorial { margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--border); font-style: italic; color: rgba(255,255,255,0.3); }
+  .rank-note { border: 1px solid var(--border); border-radius: 12px; background: rgba(255,255,255,0.035); padding: 14px 16px; margin: 14px 0 18px; color: var(--muted); font-size: 13px; line-height: 1.65; }
+  .rank-note strong { color: var(--text); }
+  .rank-note code { font-family: var(--mono); color: var(--gold); background: rgba(255,204,102,0.08); padding: 1px 5px; border-radius: 4px; }
+  .pulse { background: rgba(25,211,143,0.04); border-top: 1px solid rgba(25,211,143,0.14); border-bottom: 1px solid rgba(25,211,143,0.14); padding: 12px 0; }
+  .pulse .wrap { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+  .pulse-label { font-family: var(--mono); font-size: 10px; color: var(--accent); letter-spacing: 1.5px; text-transform: uppercase; white-space: nowrap; flex-shrink: 0; }
+  .pulse-items { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+  .pulse-item { font-family: var(--mono); font-size: 13px; color: var(--text); }
+  .pulse-sep { color: var(--muted); font-size: 13px; }
+  .pulse-date { color: var(--muted); font-size: 11px; }
+  .cred-strip { display: flex; justify-content: center; gap: 6px; align-items: center; flex-wrap: wrap; margin-top: 12px; padding-top: 12px; border-top: 1px solid rgba(255,255,255,0.06); }
+  .cred-strip .cred-item { font-family: var(--mono); font-size: 11px; color: var(--muted); }
+  .cred-strip .cred-dot { color: rgba(255,255,255,0.2); font-size: 11px; }
+  @media (max-width: 600px) {
+    .hero { padding: 40px 16px 32px; }
+    .hero-stats { gap: 20px; }
+    .hero-stat .num { font-size: 24px; }
+    table { font-size: 13px; }
+    thead th, tbody td { padding: 10px 10px; }
+    .heatmap { grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); gap: 8px; }
+    .sector-tile { padding: 10px; }
+  }
+
+  .premium-badge { display: inline-block; font-family: var(--mono); font-size: 11px; color: var(--gold); border: 1px solid var(--gold); border-radius: 4px; padding: 2px 8px; margin-left: 8px; letter-spacing: 0.5px; vertical-align: middle; }
+  .family-badge { font-family: var(--mono); font-size: 10px; padding: 2px 6px; border-radius: 3px; background: rgba(168,85,247,0.1); color: var(--purple); border: 1px solid rgba(168,85,247,0.2); }
+  .ev-badge { font-family: var(--mono); font-size: 10px; padding: 2px 6px; border-radius: 3px; background: rgba(25,211,143,0.08); color: var(--accent-dim); border: 1px solid rgba(25,211,143,0.15); }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="hero-badge">PREMIUM PREVIEW</div>
+  <h1><span>July 1</span> premium launch</h1>
+  <p class="hero-sub">June 15 is free public launch. July 1 adds the paid operating layer.</p>
+  <div class="hero-stats">
+    <div class="hero-stat">
+      <div class="num">112</div>
+      <div class="label">Total Algos</div>
+    </div>
+    <div class="hero-stat">
+      <div class="num">2/112</div>
+      <div class="label">Beating SPY</div>
+    </div>
+    <div class="hero-stat">
+      <div class="num">35</div>
+      <div class="label">Watchlist</div>
+    </div>
+  </div>
+  <a class="cta" href="landing.html#waitlist">Join the waitlist</a>
+  <span class="cta-sub">No checkout yet. Waitlist first, paid launch July 1.</span>
+</div>
+
+<section>
+  <div class="wrap">
+    <h2 class="section-title">What Premium Will Add</h2>
+    <p class="section-sub">This page is a teaser, not a gated member area yet.</p>
+    <div class="hero-stats" style="justify-content:flex-start; gap:20px; margin:0 0 24px;">
+      <div class="hero-stat">
+        <div class="num">5</div>
+        <div class="label">Promoted</div>
+      </div>
+      <div class="hero-stat">
+        <div class="num">7</div>
+        <div class="label">Graveyard</div>
+      </div>
+      <div class="hero-stat">
+        <div class="num">11</div>
+        <div class="label">Sectors</div>
+      </div>
+    </div>
+    <div class="rank-note">
+      <strong>Free on June 15:</strong> blog, stripped leaderboard, families, promoted/watchlist summaries, graveyard, public daily report, and public ticker pages.
+      <br>
+      <strong>Paid on July 1:</strong> full leaderboard, full per-algo detail, full per-ticker detail, trade history, equity curves, and premium summaries.
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2 class="section-title">Sector Heatmap</h2>
+    <p class="section-sub">This stays in the free public site. Premium adds the deeper operating layer around it.</p>
+    <div class="heatmap">
+<div class="sector-tile"><div class="sector-tooltip">Composite: 7 of 19 &bull; 37% bullish</div><div class="etf">XLK</div><div class="sector-name">Technology</div><span class="verdict verdict-MIXED">MIXED</span></div>
+<div class="sector-tile"><div class="sector-tooltip">Composite: 0 of 18 &bull; 0% bullish</div><div class="etf">XLF</div><div class="sector-name">Financial Services</div><span class="verdict verdict-BEARISH">BEARISH</span></div>
+<div class="sector-tile"><div class="sector-tooltip">Composite: 0 of 21 &bull; 0% bullish</div><div class="etf">XLV</div><div class="sector-name">Healthcare</div><span class="verdict verdict-BEARISH">BEARISH</span></div>
+<div class="sector-tile"><div class="sector-tooltip">Composite: 6 of 21 &bull; 29% bullish</div><div class="etf">XLY</div><div class="sector-name">Consumer Cyclical</div><span class="verdict verdict-BEARISH">BEARISH</span></div>
+<div class="sector-tile"><div class="sector-tooltip">Composite: 5 of 20 &bull; 25% bullish</div><div class="etf">XLI</div><div class="sector-name">Industrials</div><span class="verdict verdict-BEARISH">BEARISH</span></div>
+<div class="sector-tile"><div class="sector-tooltip">Composite: 1 of 19 &bull; 5% bullish</div><div class="etf">XLC</div><div class="sector-name">Communication Services</div><span class="verdict verdict-BEARISH">BEARISH</span></div>
+<div class="sector-tile"><div class="sector-tooltip">Composite: 5 of 19 &bull; 26% bullish</div><div class="etf">XLP</div><div class="sector-name">Consumer Defensive</div><span class="verdict verdict-BEARISH">BEARISH</span></div>
+<div class="sector-tile"><div class="sector-tooltip">Composite: 1 of 21 &bull; 5% bullish</div><div class="etf">XLE</div><div class="sector-name">Energy</div><span class="verdict verdict-BEARISH">BEARISH</span></div>
+<div class="sector-tile"><div class="sector-tooltip">Composite: 4 of 21 &bull; 19% bullish</div><div class="etf">XLB</div><div class="sector-name">Basic Materials</div><span class="verdict verdict-BEARISH">BEARISH</span></div>
+<div class="sector-tile"><div class="sector-tooltip">Composite: 1 of 19 &bull; 5% bullish</div><div class="etf">XLRE</div><div class="sector-name">Real Estate</div><span class="verdict verdict-BEARISH">BEARISH</span></div>
+<div class="sector-tile"><div class="sector-tooltip">Composite: 3 of 20 &bull; 15% bullish</div><div class="etf">XLU</div><div class="sector-name">Utilities</div><span class="verdict verdict-BEARISH">BEARISH</span></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2 class="section-title">Premium Preview <span class="premium-badge">COMING JULY 1</span></h2>
+    <p class="section-sub">Preview of the table shape. The live paid layer does not launch until July 1.</p>
+    <div class="rank-note">
+      <strong>Force rank</strong> = full-window/since-seed return. <strong>Rolling 30D</strong> = trailing 30-day return.
+      <code>Family</code> = strategy category. <code>Evidence</code> = validation status.
+      Free stays intentionally lighter. Premium is where the full operating detail goes.
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>#</th><th>Algorithm</th><th>Type</th>
+            <th>Return</th><th>vs SPY</th><th>30D</th><th>Days</th><th>Status</th>
+            <th>Family</th><th>Evidence</th>
+          </tr>
+        </thead>
+        <tbody>
+<tr class="row-baileymol"><td class="rank">1</td><td><span class="name-tooltip"><span class="algo-name"><span class="algo-emoji">⚡</span>Algo Baileymol (Chaos Monger)</span><span class="tip">The Chaos Monger — thrives on volatility spikes</span></span></td><td><span class="algo-type-badge">normal</span></td><td class="return-pos">+6.65%</td><td class="vs-spy vs-spy-pos">+2.26%</td><td class="return-pos">+7.45%</td><td class="days">78d</td><td><span class="status-beat">BEATING SPY</span></td><td><span class="family-badge">core_rotation</span></td><td><span class="ev-badge">v1_backtested</span></td></tr>
+<tr class=""><td class="rank">2</td><td><span class="algo-name">Antonacci Dual Momentum Sector Rotation</span></td><td><span class="algo-type-badge">normal</span></td><td class="return-pos">+4.53%</td><td class="vs-spy vs-spy-pos">+0.14%</td><td class="return-pos">+4.38%</td><td class="days">78d</td><td><span class="status-beat">BEATING SPY</span></td><td><span class="family-badge">core_rotation</span></td><td><span class="ev-badge">live_receipts_only</span></td></tr>
+<tr class=""><td class="rank">3</td><td><span class="algo-name">Faber Momentum Rotation</span></td><td><span class="algo-type-badge">normal</span></td><td class="return-pos">+3.85%</td><td class="vs-spy vs-spy-neg">-0.54%</td><td class="return-pos">+1.22%</td><td class="days">78d</td><td><span class="status-lag">LAGGING</span></td><td><span class="family-badge">core_rotation</span></td><td><span class="ev-badge">v1_backtested</span></td></tr>
+<tr class=""><td class="rank">4</td><td><span class="algo-name">Retail Sales Momentum</span></td><td><span class="algo-type-badge">crazy</span></td><td class="return-pos">+0.74%</td><td class="vs-spy vs-spy-neg">-3.65%</td><td class="return-pos">+0.74%</td><td class="days">77d</td><td><span class="status-lag">LAGGING</span></td><td><span class="family-badge">consumer_stress</span></td><td><span class="ev-badge">live_receipts_only</span></td></tr>
+<tr class=""><td class="rank">5</td><td><span class="algo-name">Insider Trading Signals</span></td><td><span class="algo-type-badge">crazy</span></td><td class="return-pos">+0.16%</td><td class="vs-spy vs-spy-neg">-4.23%</td><td class="return-pos">+0.16%</td><td class="days">77d</td><td><span class="status-lag">LAGGING</span></td><td><span class="family-badge">political_insider_filing</span></td><td><span class="ev-badge">live_receipts_only</span></td></tr>
+<tr class=""><td class="rank">6</td><td><span class="algo-name">Semiconductor Moonshot Warning</span></td><td><span class="algo-type-badge">crazy</span></td><td class="return-pos">+0.05%</td><td class="vs-spy vs-spy-neg">-4.34%</td><td class="return-pos">+0.05%</td><td class="days">71d</td><td><span class="status-lag">LAGGING</span></td><td><span class="family-badge">macro_input_pressure</span></td><td><span class="ev-badge">v1_backtested</span></td></tr>
+<tr class=""><td class="rank">7</td><td><span class="algo-name">FINRA Dark Pool Signal</span></td><td><span class="algo-type-badge">crazy</span></td><td class="return-pos">+0.05%</td><td class="vs-spy vs-spy-neg">-4.34%</td><td class="return-pos">+0.05%</td><td class="days">68d</td><td><span class="status-lag">LAGGING</span></td><td><span class="family-badge">political_insider_filing</span></td><td><span class="ev-badge">live_receipts_only</span></td></tr>
+<tr class=""><td class="rank">8</td><td><span class="algo-name">Earthquake Aftershock Amplifier</span></td><td><span class="algo-type-badge">crazy</span></td><td class="return-pos">+0.05%</td><td class="vs-spy vs-spy-neg">-4.34%</td><td class="return-pos">+0.06%</td><td class="days">71d</td><td><span class="status-lag">LAGGING</span></td><td><span class="family-badge">macro_input_pressure</span></td><td><span class="ev-badge">live_receipts_only</span></td></tr>
+<tr class=""><td class="rank">9</td><td><span class="algo-name">Materials Sector Weekly Positive Correlation Breakdown With Xlb</span></td><td><span class="algo-type-badge">crazy</span></td><td class="return-pos">+0.03%</td><td class="vs-spy vs-spy-neg">-4.36%</td><td class="return-zero">0.00%</td><td class="days">71d</td><td><span class="status-lag">LAGGING</span></td><td><span class="family-badge">political_insider_filing</span></td><td><span class="ev-badge">v1_backtested</span></td></tr>
+<tr class=""><td class="rank">10</td><td><span class="algo-name">Staples Sector Drawdown Rapid Recovery</span></td><td><span class="algo-type-badge">crazy</span></td><td class="return-pos">+0.02%</td><td class="vs-spy vs-spy-neg">-4.37%</td><td class="return-zero">0.00%</td><td class="days">71d</td><td><span class="status-lag">LAGGING</span></td><td><span class="family-badge">political_insider_filing</span></td><td><span class="ev-badge">v1_backtested</span></td></tr>
+<tr class=""><td class="rank">11</td><td><span class="algo-name">News Sentiment Rotation Fade Trade</span></td><td><span class="algo-type-badge">crazy</span></td><td class="return-neg">-0.01%</td><td class="vs-spy vs-spy-neg">n/a</td><td class="return-neg">-0.01%</td><td class="days">0d</td><td><span class="status-lag">LAGGING</span></td><td><span class="family-badge">attention_sentiment</span></td><td><span class="ev-badge">live_receipts_only</span></td></tr>
+<tr class=""><td class="rank">12</td><td><span class="algo-name">Industrial Sector Weekly Earthquake Activity Correlation Dip</span></td><td><span class="algo-type-badge">crazy</span></td><td class="return-neg">-0.03%</td><td class="vs-spy vs-spy-neg">-4.42%</td><td class="return-neg">-0.03%</td><td class="days">71d</td><td><span class="status-lag">LAGGING</span></td><td><span class="family-badge">political_insider_filing</span></td><td><span class="ev-badge">live_receipts_only</span></td></tr>
+<tr class=""><td class="rank">13</td><td><span class="algo-name">Consumer Discretionary Google Trends Surge For Sale Keywords</span></td><td><span class="algo-type-badge">crazy</span></td><td class="return-neg">-0.04%</td><td class="vs-spy vs-spy-neg">-4.43%</td><td class="return-neg">-0.01%</td><td class="days">71d</td><td><span class="status-lag">LAGGING</span></td><td><span class="family-badge">consumer_stress</span></td><td><span class="ev-badge">live_receipts_only</span></td></tr>
+<tr class=""><td class="rank">14</td><td><span class="algo-name">Real Estate Sector Weekly Google Trends Home Buying Surge</span></td><td><span class="algo-type-badge">crazy</span></td><td class="return-neg">-0.05%</td><td class="vs-spy vs-spy-neg">-4.44%</td><td class="return-zero">0.00%</td><td class="days">75d</td><td><span class="status-lag">LAGGING</span></td><td><span class="family-badge">political_insider_filing</span></td><td><span class="ev-badge">live_receipts_only</span></td></tr>
+<tr class=""><td class="rank">15</td><td><span class="algo-name">Xlb Weekly Rss News Count Spike On Commodity Shortage</span></td><td><span class="algo-type-badge">crazy</span></td><td class="return-neg">-0.07%</td><td class="vs-spy vs-spy-neg">-4.46%</td><td class="return-neg">-0.07%</td><td class="days">73d</td><td><span class="status-lag">LAGGING</span></td><td><span class="family-badge">attention_sentiment</span></td><td><span class="ev-badge">pending_seed</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div style="margin-top:18px;">
+      <a class="cta" href="landing.html#waitlist">Join the waitlist</a>
+      <span class="cta-sub">Free launch first. Paid layer starts July 1.</span>
+    </div>
+  </div>
+</section>
+
+
+<footer>
+  <div class="wrap">
+    <div><strong>stockarithm.com</strong> &mdash; Premium preview</div>
+    <div>Last updated: 2026-04-23T11:56:27Z</div>
+    <div style="margin-top:8px;"><a href="landing.html">Home</a> &middot; <a href="leaderboard.html">Leaderboard</a> &middot; <a href="families.html">Families</a> &middot; <a href="daily.html">Daily Report</a> &middot; <a href="premium.html">Premium Preview</a> &middot; <a href="blog/index.html">Blog</a> &middot; <a href="legal.html">Legal</a></div>
+    <div style="margin-top:8px;">
+      <strong>Signal Lab Notice:</strong> Experimental research only. Signals can and will fail. Do not interpret any signal as a recommendation.<br>
+      <strong>Performance Disclosure:</strong> Leaderboards are model/simulation outputs and may not reflect slippage, fees, liquidity, execution delays, or market impact.<br>
+      <strong>Data Disclaimer:</strong> Third-party data may be incomplete, delayed, inaccurate, or revised. Use at your own risk.<br>
+      <strong>Not financial advice:</strong> Do your own research. You are responsible for your own decisions. Paper-traded only &mdash; no real money at risk.
+    </div>
+    <div class="memorial">In loving memory of Biscotti (2008&ndash;2026). Good boy. Best algo. &hearts;</div>
+  </div>
+</footer>
+
+</body>
+</html>

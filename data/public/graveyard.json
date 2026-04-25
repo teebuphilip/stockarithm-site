@@ -1,43 +1,7 @@
 {
   "schema_version": "v1",
-  "generated_at": "2026-04-22T23:26:16Z",
+  "generated_at": "2026-04-25T09:57:48Z",
   "algos": [
-    {
-      "schema_version": "v1",
-      "key": "crazy:xlb-weekly-rss-news-count-spike-on-commodity-shortage",
-      "algo_type": "crazy",
-      "algo_id": "xlb-weekly-rss-news-count-spike-on-commodity-shortage",
-      "name": "Xlb Weekly Rss News Count Spike On Commodity Shortage",
-      "family": "attention_sentiment",
-      "status": "parked",
-      "evidence_class": "pending_seed",
-      "rebalance_frequency": "weekly",
-      "ytd_pct": -0.07,
-      "days_running": 73,
-      "beat_spy": false,
-      "spy_pct": 4.39,
-      "alpha_pct": -4.46,
-      "ret_30d_pct": -0.07,
-      "spy_delta_30d_pct": -8.59,
-      "last_snapshot": "2026-04-22",
-      "new_algo_date": null,
-      "comparator": {
-        "primary_etf": "XLB",
-        "signals": {
-          "momentum_5d": {
-            "direction": "UP",
-            "confidence": 0.175,
-            "return_pct": 0.876
-          },
-          "momentum_20d": {
-            "direction": "UP",
-            "confidence": 1.0,
-            "return_pct": 6.976
-          }
-        },
-        "summary": "both_up"
-      }
-    },
     {
       "schema_version": "v1",
       "key": "crazy:retail-roulette",
@@ -49,26 +13,62 @@
       "evidence_class": "v1_backtested",
       "rebalance_frequency": "daily",
       "ytd_pct": -0.09,
-      "days_running": 73,
+      "days_running": 78,
       "beat_spy": false,
-      "spy_pct": 4.39,
-      "alpha_pct": -4.48,
+      "spy_pct": 4.79,
+      "alpha_pct": -4.88,
       "ret_30d_pct": -0.09,
-      "spy_delta_30d_pct": -8.61,
-      "last_snapshot": "2026-04-22",
+      "spy_delta_30d_pct": -8.78,
+      "last_snapshot": "2026-04-25",
       "new_algo_date": null,
       "comparator": {
         "primary_etf": "XLY",
         "signals": {
           "momentum_5d": {
-            "direction": "UP",
-            "confidence": 0.127,
-            "return_pct": 0.635
+            "direction": "DOWN",
+            "confidence": 0.286,
+            "return_pct": -1.428
           },
           "momentum_20d": {
             "direction": "UP",
             "confidence": 1.0,
-            "return_pct": 8.434
+            "return_pct": 9.06
+          }
+        },
+        "summary": "mixed"
+      }
+    },
+    {
+      "schema_version": "v1",
+      "key": "crazy:xlb-weekly-rss-news-count-spike-on-commodity-shortage",
+      "algo_type": "crazy",
+      "algo_id": "xlb-weekly-rss-news-count-spike-on-commodity-shortage",
+      "name": "Xlb Weekly Rss News Count Spike On Commodity Shortage",
+      "family": "attention_sentiment",
+      "status": "parked",
+      "evidence_class": "pending_seed",
+      "rebalance_frequency": "weekly",
+      "ytd_pct": -0.13,
+      "days_running": 78,
+      "beat_spy": false,
+      "spy_pct": 4.79,
+      "alpha_pct": -4.92,
+      "ret_30d_pct": -0.13,
+      "spy_delta_30d_pct": -8.83,
+      "last_snapshot": "2026-04-25",
+      "new_algo_date": null,
+      "comparator": {
+        "primary_etf": "XLB",
+        "signals": {
+          "momentum_5d": {
+            "direction": "UP",
+            "confidence": 0.015,
+            "return_pct": 0.077
+          },
+          "momentum_20d": {
+            "direction": "UP",
+            "confidence": 1.0,
+            "return_pct": 5.765
           }
         },
         "summary": "both_up"
@@ -85,26 +85,26 @@
       "evidence_class": "pending_seed",
       "rebalance_frequency": "weekly",
       "ytd_pct": -0.33,
-      "days_running": 73,
+      "days_running": 78,
       "beat_spy": false,
-      "spy_pct": 4.39,
-      "alpha_pct": -4.72,
-      "ret_30d_pct": -0.18,
-      "spy_delta_30d_pct": -8.7,
-      "last_snapshot": "2026-04-22",
+      "spy_pct": 4.79,
+      "alpha_pct": -5.12,
+      "ret_30d_pct": -0.28,
+      "spy_delta_30d_pct": -8.97,
+      "last_snapshot": "2026-04-25",
       "new_algo_date": null,
       "comparator": {
         "primary_etf": "XLE",
         "signals": {
           "momentum_5d": {
             "direction": "UP",
-            "confidence": 0.28,
-            "return_pct": 1.399
+            "confidence": 0.672,
+            "return_pct": 3.362
           },
           "momentum_20d": {
             "direction": "DOWN",
             "confidence": 1.0,
-            "return_pct": -7.068
+            "return_pct": -7.559
           }
         },
         "summary": "mixed"
@@ -121,29 +121,29 @@
       "evidence_class": "pending_seed",
       "rebalance_frequency": "weekly",
       "ytd_pct": -0.41,
-      "days_running": 73,
+      "days_running": 78,
       "beat_spy": false,
-      "spy_pct": 4.39,
-      "alpha_pct": -4.8,
-      "ret_30d_pct": 0.04,
-      "spy_delta_30d_pct": -8.48,
-      "last_snapshot": "2026-04-22",
+      "spy_pct": 4.79,
+      "alpha_pct": -5.2,
+      "ret_30d_pct": 0.05,
+      "spy_delta_30d_pct": -8.65,
+      "last_snapshot": "2026-04-25",
       "new_algo_date": null,
       "comparator": {
         "primary_etf": "XLC",
         "signals": {
           "momentum_5d": {
-            "direction": "UP",
-            "confidence": 0.089,
-            "return_pct": 0.443
+            "direction": "DOWN",
+            "confidence": 0.598,
+            "return_pct": -2.989
           },
           "momentum_20d": {
             "direction": "UP",
             "confidence": 1.0,
-            "return_pct": 6.074
+            "return_pct": 6.185
           }
         },
-        "summary": "both_up"
+        "summary": "mixed"
       }
     },
     {
@@ -157,26 +157,26 @@
       "evidence_class": "pending_seed",
       "rebalance_frequency": "daily",
       "ytd_pct": 0.0,
-      "days_running": 73,
+      "days_running": 78,
       "beat_spy": false,
-      "spy_pct": 4.39,
-      "alpha_pct": -4.39,
+      "spy_pct": 4.79,
+      "alpha_pct": -4.79,
       "ret_30d_pct": 0.0,
-      "spy_delta_30d_pct": -8.52,
-      "last_snapshot": "2026-04-22",
+      "spy_delta_30d_pct": -8.7,
+      "last_snapshot": "2026-04-25",
       "new_algo_date": null,
       "comparator": {
         "primary_etf": "XLB",
         "signals": {
           "momentum_5d": {
             "direction": "UP",
-            "confidence": 0.175,
-            "return_pct": 0.876
+            "confidence": 0.015,
+            "return_pct": 0.077
           },
           "momentum_20d": {
             "direction": "UP",
             "confidence": 1.0,
-            "return_pct": 6.976
+            "return_pct": 5.765
           }
         },
         "summary": "both_up"
@@ -193,26 +193,26 @@
       "evidence_class": "pending_seed",
       "rebalance_frequency": "weekly",
       "ytd_pct": 0.0,
-      "days_running": 68,
+      "days_running": 73,
       "beat_spy": false,
-      "spy_pct": 4.39,
-      "alpha_pct": -4.39,
+      "spy_pct": 4.79,
+      "alpha_pct": -4.79,
       "ret_30d_pct": 0.0,
-      "spy_delta_30d_pct": -8.52,
-      "last_snapshot": "2026-04-22",
+      "spy_delta_30d_pct": -8.7,
+      "last_snapshot": "2026-04-25",
       "new_algo_date": null,
       "comparator": {
         "primary_etf": "XLB",
         "signals": {
           "momentum_5d": {
             "direction": "UP",
-            "confidence": 0.175,
-            "return_pct": 0.876
+            "confidence": 0.015,
+            "return_pct": 0.077
           },
           "momentum_20d": {
             "direction": "UP",
             "confidence": 1.0,
-            "return_pct": 6.976
+            "return_pct": 5.765
           }
         },
         "summary": "both_up"
@@ -229,26 +229,26 @@
       "evidence_class": "pending_seed",
       "rebalance_frequency": "weekly",
       "ytd_pct": 0.0,
-      "days_running": 68,
+      "days_running": 73,
       "beat_spy": false,
-      "spy_pct": 4.39,
-      "alpha_pct": -4.39,
+      "spy_pct": 4.79,
+      "alpha_pct": -4.79,
       "ret_30d_pct": 0.0,
-      "spy_delta_30d_pct": -8.52,
-      "last_snapshot": "2026-04-22",
+      "spy_delta_30d_pct": -8.7,
+      "last_snapshot": "2026-04-25",
       "new_algo_date": null,
       "comparator": {
         "primary_etf": "XLE",
         "signals": {
           "momentum_5d": {
             "direction": "UP",
-            "confidence": 0.28,
-            "return_pct": 1.399
+            "confidence": 0.672,
+            "return_pct": 3.362
           },
           "momentum_20d": {
             "direction": "DOWN",
             "confidence": 1.0,
-            "return_pct": -7.068
+            "return_pct": -7.559
           }
         },
         "summary": "mixed"

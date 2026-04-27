@@ -45,6 +45,14 @@
   .cta-primary:hover { background: #33e3a3; }
   .hero-strip { margin-top: 16px; display: flex; gap: 10px; flex-wrap: wrap; }
   .pill { font-size: 12px; color: var(--muted); border: 1px solid rgba(255,255,255,0.08); border-radius: 999px; padding: 6px 10px; }
+  .mini-chart-wrap { display: flex; flex-direction: column; gap: 10px; }
+  .mini-chart-meta { display: flex; flex-direction: column; gap: 4px; }
+  .mini-chart-title { font-size: 18px; font-weight: 700; }
+  .mini-chart-note { color: var(--muted); font-size: 14px; line-height: 1.4; }
+  .mini-chart { width: 100%; height: auto; display: block; }
+  .mini-chart-legend { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; font-size: 12px; color: var(--muted); }
+  .mini-chart-legend span { display: inline-flex; align-items: center; gap: 6px; }
+  .mini-chart-legend i { display: inline-block; width: 10px; height: 10px; border-radius: 999px; }
   @media (max-width: 560px) { .waitlist-form { grid-template-columns: 1fr; } }
 </style>
 </head>
@@ -66,6 +74,28 @@
 
   <div class="wrap">
     <div class="grid">
+      <div class="card">
+        
+    <div class="mini-chart-wrap">
+      <div class="mini-chart-meta">
+        <div class="mini-chart-title">Biscotti vs SPY</div>
+        <div class="mini-chart-note">A simple chart is enough here: one live algo against the benchmark it has to beat.</div>
+      </div>
+      <svg class="mini-chart" viewBox="0 0 640 240" role="img" aria-label="Biscotti versus SPY chart">
+        <rect x="0" y="0" width="640" height="240" rx="14" fill="#0f1c18" stroke="rgba(255,255,255,0.08)"/>
+        <line x1="28" y1="216" x2="612" y2="216" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+        <path d="M 28.0 198.5 L 86.4 147.3 L 144.8 77.0 L 203.2 70.3 L 261.6 38.4 L 320.0 43.8 L 378.4 61.3 L 436.8 34.3 L 495.2 44.8 L 553.6 24.0 L 612.0 24.0" fill="none" stroke="#7da7ff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M 28.0 198.5 L 86.4 180.7 L 144.8 203.5 L 203.2 216.0 L 261.6 169.2 L 320.0 163.5 L 378.4 199.7 L 436.8 205.6 L 495.2 161.0 L 553.6 184.5 L 612.0 184.5" fill="none" stroke="#19d38f" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <div class="mini-chart-legend">
+        <span><i style="background:#19d38f;"></i>Biscotti 100.6</span>
+        <span><i style="background:#7da7ff;"></i>SPY 106.9</span>
+        <span><a href="biscotti.html">Meet Biscotti</a></span>
+      </div>
+    </div>
+    
+      </div>
+
       <div class="card">
         <h2>What you're looking at</h2>
         <p>Each row is one live paper-traded signal. Some are working. Some are failing. One of them is named after my dog. That is the point.</p>

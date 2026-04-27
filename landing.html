@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Stockarithm</title>
+<title>StockArithm</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;600&display=swap');
   :root {
@@ -51,16 +51,16 @@
 <body>
   <header>
     <h1>Weird market signals, run in public.</h1>
-    <p>Stockarithm tracks paper-traded algos against SPY. The wins, misses, idle names, and dead signals all stay visible.</p>
+    <p>StockArithm is a public paper-trading lab for weird market signals. Some are working. Some are failing. All of them stay visible.</p>
     <div class="hero-actions">
       <a class="cta cta-primary" href="leaderboard.html">See the public leaderboard</a>
       <a class="cta" href="daily.html">Read tonight's snapshot</a>
-      <a class="cta" href="#waitlist">Get weekly lab notes</a>
+      <a class="cta" href="#waitlist">Get the weekly lab notes</a>
     </div>
     <div class="hero-strip">
       <span class="pill">133 algos tracked</span>
-      <span class="pill">133 public signals</span>
-      <span class="pill">Paper-traded only</span>
+      <span class="pill">Updated nightly</span>
+      <span class="pill">Paper-traded in public</span>
       <span class="pill">Failures stay visible</span>
     </div>
   </header>
@@ -68,15 +68,15 @@
   <div class="wrap">
     <div class="grid">
       <div class="card">
-        <h2>What This Is</h2>
-        <p>A transparent signal research lab. We generate unconventional ideas, paper-track them, compare them to SPY, and keep the failures visible.</p>
+        <h2>What you're looking at</h2>
+        <p>Each row is one live paper-traded signal. Some are working. Some are failing. One of them is named after my dog. That is the point.</p>
         <a class="cta" href="leaderboard.html">See the leaderboard</a>
       </div>
 
       <div class="card">
-        <h2>How Signals Are Labeled</h2>
-        <p>Every signal stays visible as some combination of sandbox, live-only, backtested, promoted, idle, or failed. Nothing gets deleted to make the stats look prettier.</p>
-        <a class="cta" href="families.html">Browse signal families</a>
+        <h2>Start with the public leaderboard.</h2>
+        <p>See what is working, what is failing, and which signals are getting weird.</p>
+        <a class="cta" href="leaderboard.html">View the leaderboard</a>
       </div>
 
       <div class="card winners">
@@ -110,24 +110,18 @@
 
 
     <div class="card" id="pricing" style="border-color: rgba(25,211,143,0.3);">
-      <h2>Premium &mdash; $19.99/month</h2>
-      <p>Free proves the lab is real. Premium is the deeper operating layer.</p>
-      <ul style="margin: 0 0 12px; padding-left: 16px; color: var(--muted); font-size: 14px; line-height: 1.8;">
-        <li>Full leaderboard (all 133 algos, not just top 10)</li>
-        <li>Rolling 30D column + family + evidence class per algo</li>
-        <li>Full per-algo and per-ticker detail</li>
-        <li>Trade history and equity curves after paid launch</li>
-      </ul>
-      <a class="cta" href="#waitlist">Join the mailing list &rarr;</a>
+      <h2>Premium is not open yet</h2>
+      <p>For now, the public site is the proof. Paid access comes later, after the free surface is stable and worth charging for.</p>
+      <a class="cta" href="#waitlist">Join the mailing list for updates</a>
       <div style="margin-top: 8px; font-size: 12px; color: var(--muted);">
-        Free public launch comes first. Paid access starts July 1 after checkout is real.
+        Free public launch comes first. Paid access starts after the public surface earns it.
       </div>
     </div>
 
 
     <div class="card waitlist" id="waitlist">
-      <h2>Get the weekly lab notes</h2>
-      <p>See which weird signals are surviving, which are dead, and which are still unresolved.</p>
+      <h2>Get the weekly lab notes.</h2>
+      <p>A short weekly note on which signals are holding up, which are breaking, and what the lab learned.</p>
       <form
         class="waitlist-form"
         id="mailerlite-waitlist-form"
@@ -139,10 +133,10 @@
         <input type="hidden" name="fields[source]" value="landing" />
         <input type="hidden" name="ml-submit" value="1" />
         <input type="hidden" name="anticsrf" value="true" />
-        <button type="submit">Join waitlist</button>
+        <button type="submit">Get the weekly notes</button>
       </form>
       <iframe name="mailerlite-waitlist-frame" title="Mailing list signup" style="display:none"></iframe>
-      <div class="notice">No hype. No AI stock-picking claims. Just the receipts.</div>
+      <div class="notice">No hype. Just the state of the lab.</div>
     </div>
 
     <div class="card waitlist" id="disclaimer">
@@ -159,7 +153,7 @@
 
 <footer>
   <div class="wrap">
-    <div><strong>stockarithm.com</strong> &mdash; Free public launch surface</div>
+    <div><strong>StockArithm</strong> powered by R&amp;B AlgoLabs, LLC. &mdash; Free public launch surface</div>
     <div>Last updated: 2026-04-25T09:57:57Z</div>
     <div style="margin-top:8px;"><a href="landing.html">Home</a> &middot; <a href="leaderboard.html">Leaderboard</a> &middot; <a href="families.html">Families</a> &middot; <a href="daily.html">Daily Report</a> &middot; <a href="premium.html">Premium Preview</a> &middot; <a href="blog/index.html">Blog</a> &middot; <a href="legal.html">Legal</a></div>
     <div style="margin-top:8px;">

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Algo Biscotti</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;600&display=swap');
+  :root {
+    --bg: #0c0f12;
+    --bg-2: #141b1f;
+    --card: #1a242b;
+    --accent: #f7b267;
+    --muted: #9aa6ad;
+    --text: #eef2f4;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+    color: var(--text);
+    background:
+      radial-gradient(900px 500px at 15% -10%, #2a3b46, transparent),
+      radial-gradient(800px 500px at 90% 0%, #24333d, transparent),
+      var(--bg);
+  }
+  header {
+    padding: 28px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+  header h1 {
+    margin: 0;
+    font-size: 30px;
+  }
+  header p {
+    margin: 6px 0 0;
+    color: var(--muted);
+    font-family: 'IBM Plex Mono', ui-monospace, monospace;
+    font-size: 12px;
+  }
+  .wrap { padding: 24px; max-width: 900px; }
+  .card {
+    background: var(--card);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 14px;
+    padding: 18px;
+    box-shadow: 0 14px 30px rgba(0,0,0,0.22);
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 18px;
+  }
+  .photo {
+    width: 100%;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.1);
+    background: #111;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+  }
+  .label {
+    color: var(--muted);
+    font-size: 12px;
+    font-family: 'IBM Plex Mono', ui-monospace, monospace;
+  }
+  .section { margin-top: 16px; }
+  .section h2 {
+    margin: 0 0 8px;
+    font-size: 18px;
+  }
+  ul { margin: 0; padding-left: 18px; }
+  .accent { color: var(--accent); font-weight: 600; }
+  blockquote {
+    margin: 14px 0;
+    padding: 14px 16px;
+    border-left: 4px solid var(--accent);
+    background: rgba(247,178,103,0.08);
+    border-radius: 10px;
+    font-size: 20px;
+    line-height: 1.35;
+  }
+  @media (max-width: 760px) {
+    .grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+  <header>
+    <h1>Algo Biscotti</h1>
+    <p>Unconditional loyalty. A monthly contrarian rotation.</p>
+  </header>
+
+  <div class="wrap">
+    <div class="card">
+      <div class="grid">
+        <div>
+          <img class="photo" src="biscotti.jpg" alt="Biscotti" />
+          <div class="label">Biscotti. The original signal.</div>
+        </div>
+        <div>
+          <p><span class="accent">17.75 years.</span> He showed up every day. This algo does the same.</p>
+          <blockquote>"the best there is, the best there was and the best that ever will be."</blockquote>
+          <div class="section">
+            <h2>Thesis</h2>
+            <p>Find the most beaten‑down sector and show up for it. No filters. No hesitation. Pure loyalty to the unloved.</p>
+          </div>
+          <div class="section">
+            <h2>Signal</h2>
+            <ul>
+              <li>Last trading day of each month</li>
+              <li>Rank all 11 SPDR sector ETFs by 30‑day return</li>
+              <li>Buy the single biggest loser (100% allocation)</li>
+              <li>Hold for one month. Repeat.</li>
+            </ul>
+          </div>
+          <div class="section">
+            <h2>Notes</h2>
+            <ul>
+              <li>Runs in both standard and crazy tracks</li>
+              <li>Unconditional by design</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

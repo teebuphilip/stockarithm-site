@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>StockArithm — Signals Index</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;600&display=swap');
+  :root {
+    --bg: #0d1412;
+    --bg-2: #13231f;
+    --card: #182b26;
+    --accent: #19d38f;
+    --muted: #9ab0a7;
+    --text: #ecf5f2;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: 'Space Grotesk', system-ui, sans-serif; color: var(--text); background: radial-gradient(1000px 600px at 15% -10%, #1e3f35, transparent), radial-gradient(900px 500px at 90% 0%, #1b352f, transparent), var(--bg); }
+  header { padding: 28px; border-bottom: 1px solid rgba(255,255,255,0.08); }
+  header h1 { margin: 0; font-size: 30px; letter-spacing: 0.5px; }
+  header p { margin: 6px 0 0; color: var(--muted); font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 12px; }
+  .wrap { padding: 24px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
+  .card { background: var(--card); border: 1px solid rgba(255,255,255,0.08); border-radius: 14px; padding: 16px; box-shadow: 0 14px 30px rgba(0,0,0,0.22); }
+  .card h2 { margin: 0 0 8px; font-size: 18px; }
+  .card p { margin: 0 0 12px; color: var(--muted); font-size: 14px; line-height: 1.4; }
+  .cta { display: inline-block; padding: 10px 12px; border-radius: 8px; border: 1px solid var(--accent); color: var(--accent); text-decoration: none; font-weight: 600; font-size: 13px; }
+  .cta:hover { background: rgba(25, 211, 143, 0.1); }
+  .winners h3 { margin: 0 0 8px; font-size: 16px; }
+  .winners ul { margin: 0; padding: 0; list-style: none; }
+  .winners li { padding: 6px 0; border-bottom: 1px solid rgba(255,255,255,0.06); font-size: 14px; }
+  .winners li:last-child { border-bottom: none; }
+  .muted { color: var(--muted); font-size: 12px; }
+  .ret-pos { color: #19d38f; font-family: 'IBM Plex Mono', monospace; }
+  .ret-neg { color: #ef4444; font-family: 'IBM Plex Mono', monospace; }
+  .waitlist { margin-top: 16px; border: 1px solid rgba(25, 211, 143, 0.28); }
+  .waitlist-form { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 8px; margin-top: 12px; }
+  .waitlist-form input { min-width: 0; border: 1px solid rgba(255,255,255,0.14); border-radius: 8px; background: #0f1c18; color: var(--text); padding: 10px 12px; font: inherit; font-size: 14px; }
+  .waitlist-form button { border: 1px solid var(--accent); border-radius: 8px; background: transparent; color: var(--accent); padding: 10px 12px; font: inherit; font-size: 13px; font-weight: 700; cursor: pointer; }
+  .waitlist-form button:hover { background: rgba(25, 211, 143, 0.1); }
+  .notice { margin-top: 10px; color: var(--muted); font-size: 12px; line-height: 1.4; }
+  .hero-actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 14px; }
+  .hero-actions .cta { padding: 10px 14px; }
+  .cta-primary { background: var(--accent); color: #062018; font-weight: 700; }
+  .cta-primary:hover { background: #33e3a3; }
+  .hero-strip { margin-top: 16px; display: flex; gap: 10px; flex-wrap: wrap; }
+  .pill { font-size: 12px; color: var(--muted); border: 1px solid rgba(255,255,255,0.08); border-radius: 999px; padding: 6px 10px; }
+  .mini-chart-wrap { display: flex; flex-direction: column; gap: 10px; }
+  .mini-chart-meta { display: flex; flex-direction: column; gap: 4px; }
+  .mini-chart-title { font-size: 18px; font-weight: 700; }
+  .mini-chart-note { color: var(--muted); font-size: 14px; line-height: 1.4; }
+  .mini-chart { width: 100%; height: auto; display: block; }
+  .mini-chart-legend { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; font-size: 12px; color: var(--muted); }
+  .mini-chart-legend span { display: inline-flex; align-items: center; gap: 6px; }
+  .mini-chart-legend i { display: inline-block; width: 10px; height: 10px; border-radius: 999px; }
+  @media (max-width: 560px) { .waitlist-form { grid-template-columns: 1fr; } }
+
+  .table-wrap { overflow-x: auto; border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; }
+  table { width: 100%; border-collapse: collapse; min-width: 760px; background: rgba(255,255,255,0.02); }
+  thead th { text-align: left; font-size: 12px; letter-spacing: 0.04em; text-transform: uppercase; color: var(--muted); padding: 12px 14px; border-bottom: 1px solid rgba(255,255,255,0.08); }
+  tbody td { padding: 12px 14px; border-bottom: 1px solid rgba(255,255,255,0.06); font-size: 14px; vertical-align: top; }
+  tbody tr:last-child td { border-bottom: none; }
+  tbody td strong { color: var(--text); }
+  .signal-note { color: var(--muted); font-size: 14px; line-height: 1.5; margin-top: 8px; }
+  .signal-table-sub { margin: 0 0 14px; color: var(--muted); font-size: 14px; }
+</style>
+</head>
+<body>
+    <header>
+    <h1>All signals, no scoreboard.</h1>
+    <p>StockArithm's public inventory: names, families, and status only. No rank and no returns.</p>
+    <div class="hero-actions">
+      <a class="cta cta-primary" href="/leaderboard.html">See the public leaderboard</a>
+      <a class="cta" href="/families.html">Browse families</a>
+    </div>
+    <div class="hero-strip">
+      <span class="pill">133 signals listed</span>
+      <span class="pill">Alphabetical order</span>
+      <span class="pill">No returns shown</span>
+      <span class="pill">No rank shown</span>
+    </div>
+  </header>
+
+  <div class="wrap">
+    <div class="card">
+      <h2>Public signal index</h2>
+      <p class="signal-table-sub">This is the full public list. It exists so the site does not feel like it is hiding the inventory.</p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Type</th>
+              <th>Family</th>
+              <th>Status</th>
+              <th>Frequency</th>
+            </tr>
+          </thead>
+          <tbody>
+<tr><td><strong>311 Call Rotation</strong></td><td>alternative</td><td>Local Economy Signals</td><td>Sandbox</td><td>weekly</td></tr>
+<tr><td><strong>Airline Load Factor Proxy</strong></td><td>alternative</td><td>Travel &amp; Mobility</td><td>Sandbox</td><td>monthly</td></tr>
+<tr><td><strong>Airport Security Surge</strong></td><td>alternative</td><td>Travel &amp; Mobility</td><td>Sandbox</td><td>daily</td></tr>
+<tr><td><strong>Airport Shopping Spree</strong></td><td>alternative</td><td>Travel &amp; Mobility</td><td>Sandbox</td><td>daily</td></tr>
+<tr><td><strong>Algo Baileymol (Chaos Monger)</strong></td><td>normal</td><td>Core Rotation</td><td>Promoted</td><td>weekly</td></tr>
+<tr><td><strong>Algo Biscotti (Unconditional Loyalty)</strong></td><td>alternative</td><td>Macro Input Pressure</td><td>Live Only</td><td>monthly_eom</td></tr>
+<tr><td><strong>Algo Biscotti (Unconditional Loyalty)</strong></td><td>normal</td><td>Core Rotation</td><td>Promoted</td><td>monthly_eom</td></tr>
+<tr><td><strong>Antonacci Dual Momentum Sector Rotation</strong></td><td>normal</td><td>Core Rotation</td><td>Promoted</td><td>monthly_eom</td></tr>
+<tr><td><strong>Attention Sentiment Spike Daily Surge In News Rss Counts Mentioning Cyberattack Triggers Bullish Xlc</strong></td><td>alternative</td><td>Attention &amp; Sentiment</td><td>Live Only</td><td>daily</td></tr>
+<tr><td><strong>Bank Stress Index Volatility Fear Crush Reversal</strong></td><td>alternative</td><td>Attention &amp; Sentiment</td><td>Live Only</td><td>daily</td></tr>
+<tr><td><strong>Bankruptcy Filing Rate</strong></td><td>alternative</td><td>Political &amp; Insider Filings</td><td>Sandbox</td><td>monthly</td></tr>
+<tr><td><strong>Cardboard Box Index</strong></td><td>alternative</td><td>Freight &amp; Logistics</td><td>Sandbox</td><td>monthly</td></tr>
+<tr><td><strong>Chaos Rotation Lab</strong></td><td>alternative</td><td>Macro Input Pressure</td><td>Live Only</td><td>weekly</td></tr>
+<tr><td><strong>Cloud Storage Demand Surge</strong></td><td>alternative</td><td>Macro Input Pressure</td><td>Sandbox</td><td>daily</td></tr>
+<tr><td><strong>Congress Trading Fade</strong></td><td>alternative</td><td>Political &amp; Insider Filings</td><td>Sandbox</td><td>daily</td></tr>
+<tr><td><strong>Consumer Discretionary Google Trends Surge For Sale Keywords</strong></td><td>alternative</td><td>Consumer Stress</td><td>Live Only</td><td>weekly</td></tr>
+<tr><td><strong>Consumer Sentiment</strong></td><td>alternative</td><td>Consumer Stress</td><td>Sandbox</td><td>monthly</td></tr>
+<tr><td><strong>Copper Momentum</strong></td><td>alternative</td><td>Macro Input Pressure</td><td>Live Only</td><td>monthly</td></tr>
+<tr><td><strong>Craigslist Desperation Index</strong></td><td>alternative</td><td>Local Economy Signals</td><td>Sandbox</td><td>weekly</td></tr>
+<tr><td><strong>Credit Card Delinquency</strong></td><td>alternative</td><td>Consumer Stress</td><td>Sandbox</td><td>quarterly</td></tr>
+<tr><td><strong>Crypto Capitulation Countdown</strong></td><td>alternative</td><td>Macro Input Pressure</td><td>Sandbox</td><td>daily</td></tr>
+<tr><td><strong>Crypto Derivative Arbitrage</strong></td><td>alternative</td><td>Macro Input Pressure</td><td>Sandbox</td><td>daily</td></tr>
+<tr><td><strong>Daily Spike In Daily Earthquake Activity Near Major Logistics Hubs Signals Bearish Xli</strong></td><td>alternative</td><td>Local Economy Signals</td><td>Live Only</td><td>daily</td></tr>
+<tr><td><strong>Daily Spike In Freight Logistics Rss News Volume Mentioning Port Labor Strike Triggers Bearish Xli</strong></td><td>alternative</td><td>Freight &amp; Logistics</td><td>Sandbox</td><td>daily</td></tr>
+<tr><td><strong>Daily Spike In Rss Counts For Cybersecurity Breach News Triggers Bearish Xlk</strong></td><td>alternative</td><td>Attention &amp; Sentiment</td><td>Live Only</td><td>daily</td></tr>
+<tr><td><strong>Daily Spike In Rss News Counts Around Labor Union Contract Negotiation Signals Bearish Xlf</strong></td><td>alternative</td><td>Labor &amp; Jobs</td><td>Live Only</td><td>daily</td></tr>
+<tr><td><strong>Daily Spike In Rss News Counts Mentioning Politician Insider Buying Tech Stock Signals Bullish Xlk</strong></td><td>alternative</td><td>Political &amp; Insider Filings</td><td>Sandbox</td><td>daily</td></tr>
+<tr><td><strong>Earthquake Aftershock Amplifier</strong></td><td>alternative</td><td>Macro Input Pressure</td><td>Live Only</td><td>daily</td></tr>
+<tr><td><strong>Earthquake Energy Demand Indicator</strong></td><td>alternative</td><td>Macro Input Pressure</td><td>Sandbox</td><td>daily</td></tr>
+<tr><td><strong>Electric Vehicle Charge Station Density</strong></td><td>alternative</td><td>Macro Input Pressure</td><td>Sandbox</td><td>daily</td></tr>
+<tr><td><strong>Electricity Consumption</strong></td><td>alternative</td><td>Macro Input Pressure</td><td>Live Only</td><td>weekly</td></tr>
+<tr><td><strong>Electricity Enlightenment</strong></td><td>alternative</td><td>Macro Input Pressure</td><td>Live Only</td><td>weekly</td></tr>
+<tr><td><strong>Energy Sector Sudden Weekly Volatility Spike</strong></td><td>alternative</td><td>Political &amp; Insider Filings</td><td>Parked</td><td>weekly</td></tr>
+<tr><td><strong>Energy Sector Weekly Drawdown Exhaustion</strong></td><td>alternative</td><td>Political &amp; Insider Filings</td><td>Backtest Weak</td><td>weekly</td></tr>
+<tr><td><strong>Ev Charger Density Saturation Play</strong></td><td>alternative</td><td>Travel &amp; Mobility</td><td>Sandbox</td><td>daily</td></tr>
+<tr><td><strong>Ev Charger Network Expansion Sprint Demand Surge</strong></td><td>alternative</td><td>Travel &amp; Mobility</td><td>Sandbox</td><td>daily</td></tr>
+<tr><td><strong>Ev Charging Boom</strong></td><td>alternative</td><td>Macro Input Pressure</td><td>Sandbox</td><td>weekly</td></tr>
+<tr><td><strong>Ev Charging Station Stampede</strong></td><td>alternative</td><td>Macro Input Pressure</td><td>Sandbox</td><td>weekly</td></tr>
+<tr><td><strong>Ev Euphoria</strong></td><td>alternative</td><td>Macro Input Pressure</td><td>Sandbox</td><td>daily</td></tr>
+<tr><td><strong>Faber Momentum Rotation</strong></td><td>normal</td><td>Core Rotation</td><td>Promoted</td><td>monthly_eom</td></tr>
+<tr><td><strong>Financial Sector Momentum Divergence With Spy</strong></td><td>alternative</td><td>Political &amp; Insider Filings</td><td>Sandbox</td><td>daily</td></tr>
+<tr><td><strong>FINRA Dark Pool Signal</strong></td><td>alternative</td><td>Political &amp; Insider Filings</td><td>Live Only</td><td>weekly</td></tr>
+<tr><td><strong>Fintech Disruption Wave</strong></td><td>alternative</td><td>Macro Input Pressure</td><td>Sandbox</td><td>daily</td></tr>
+<tr><td><strong>Freight Rail Carloads</strong></td><td>alternative</td><td>Freight &amp; Logistics</td><td>Sandbox</td><td>monthly</td></tr>
+<tr><td><strong>Glassdoor Misery Gradient</strong></td><td>alternative</td><td>Labor &amp; Jobs</td><td>Sandbox</td><td>monthly</td></tr>
+<tr><td><strong>Global Tech Earnings Momentum</strong></td><td>alternative</td><td>Macro Input Pressure</td><td>Sandbox</td><td>weekly</td></tr>
+<tr><td><strong>Google Gusts</strong></td><td>alternative</td><td>Macro Input Pressure</td><td>Live Only</td><td>weekly</td></tr>
+<tr><td><strong>Grocery Store Foot Traffic Collapse Signal</strong></td><td>alternative</td><td>Consumer Stress</td><td>Live Only</td><td>weekly</td></tr>
+<tr><td><strong>Healthcare Cost Shock Google Search Spike</strong></td><td>alternative</td><td>Consumer Stress</td><td>Live Only</td><td>weekly</td></tr>
+<tr><td><strong>Healthcare Sector Google Trends Spike In Flu Symptoms</strong></td><td>alternative</td><td>Political &amp; Insider Filings</td><td>Live Only</td><td>weekly</td></tr>
+<tr><td><strong>High Yield Spread Regime</strong></td><td>alternative</td><td>Macro Input Pressure</td><td>Sandbox</td><td>monthly</td></tr>
+<tr><td><strong>Housing Permit Velocity</strong></td><td>alternative</td><td>Macro Input Pressure</td><td>Sandbox</td><td>monthly</td></tr>
+<tr><td><strong>Industrial Sector Weekly Earthquake Activity Correlation Dip</strong></td><td>alternative</td><td>Political &amp; Insider Filings</td><td>Live Only</td><td>weekly</td></tr>
+<tr><td><strong>Insider Trading Signals</strong></td><td>alternative</td><td>Political &amp; Insider Filings</td><td>Live Only</td><td>weekly</td></tr>
+<tr><td><strong>Job Posting Acceleration</strong></td><td>alternative</td><td>Labor &amp; Jobs</td><td>Sandbox</td><td>monthly</td></tr>
+<tr><td><strong>LinkedIn Layoff Propagation</strong></td><td>alternative</td><td>Labor &amp; Jobs</td><td>Sandbox</td><td>monthly</td></tr>
+<tr><td><strong>Liquor Store Leading Indicator</strong></td><td>alternative</td><td>Local Economy Signals</td><td>Sandbox</td><td>monthly</td></tr>
+<tr><td><strong>Lumber Futures Rollercoaster</strong></td><td>alternative</td><td>Macro Input Pressure</td><td>Sandbox</td><td>daily</td></tr>
+<tr><td><strong>Lumber Momentum</strong></td><td>alternative</td><td>Macro Input Pressure</td><td>Live Only</td><td>monthly</td></tr>
+<tr><td><strong>Materials Sector Weekly Positive Correlation Breakdown With Xlb</strong></td><td>alternative</td><td>Political &amp; Insider Filings</td><td>Live Only</td><td>weekly</td></tr>
+<tr><td><strong>Materials Sector Weekly Volatility Contraction Breakout</strong></td><td>alternative</td><td>Political &amp; Insider Filings</td><td>Parked</td><td>weekly</td></tr>
+<tr><td><strong>Misery Rotation</strong></td><td>alternative</td><td>Macro Input Pressure</td><td>Sandbox</td><td>monthly</td></tr>
+<tr><td><strong>Mortgage Rate Housing Proxy</strong></td><td>alternative</td><td>Consumer Stress</td><td>Live Only</td><td>monthly</td></tr>
+<tr><td><strong>News Sentiment Rotation Fade Trade</strong></td><td>alternative</td><td>Attention &amp; Sentiment</td><td>Live Only</td><td>daily</td></tr>
+<tr><td><strong>Online Ad Impression Volatility Trader</strong></td><td>alternative</td><td>Macro Input Pressure</td><td>Sandbox</td><td>daily</td></tr>
+<tr><td><strong>Patent Filing Velocity</strong></td><td>alternative</td><td>Political &amp; Insider Filings</td><td>Sandbox</td><td>monthly</td></tr>
+<tr><td><strong>Pet Food Supply Chain Disruption</strong></td><td>alternative</td><td>Macro Input Pressure</td><td>Sandbox</td><td>daily</td></tr>
+<tr><td><strong>Port Congestion Squeeze</strong></td><td>alternative</td><td>Freight &amp; Logistics</td><td>Sandbox</td><td>weekly</td></tr>
+<tr><td><strong>Port Container Volume</strong></td><td>alternative</td><td>Freight &amp; Logistics</td><td>Sandbox</td><td>monthly</td></tr>
+<tr><td><strong>Quantified Simple Monthly Rotation</strong></td><td>normal</td><td>Core Rotation</td><td>Promoted</td><td>monthly_eom</td></tr>
+<tr><td><strong>Real Estate Sector Weekly Google Trends Home Buying Surge</strong></td><td>alternative</td><td>Political &amp; Insider Filings</td><td>Live Only</td><td>weekly</td></tr>
+<tr><td><strong>Reddit Emoji Sentiment Spike</strong></td><td>alternative</td><td>Attention &amp; Sentiment</td><td>Sandbox</td><td>daily</td></tr>
+<tr><td><strong>Reddit Gaming Thread Spike</strong></td><td>alternative</td><td>Attention &amp; Sentiment</td><td>Sandbox</td><td>daily</td></tr>
+<tr><td><strong>Reddit Mentions Volatility Spike</strong></td><td>alternative</td><td>Attention &amp; Sentiment</td><td>Sandbox</td><td>daily</td></tr>
+<tr><td><strong>Reddit Sentiment Spike</strong></td><td>alternative</td><td>Attention &amp; Sentiment</td><td>Sandbox</td><td>daily</td></tr>
+<tr><td><strong>Reddit Sentiment Spike Trend</strong></td><td>alternative</td><td>Attention &amp; Sentiment</td><td>Sandbox</td><td>daily</td></tr>
+<tr><td><strong>Reddit Sentiment Volatility Spike</strong></td><td>alternative</td><td>Attention &amp; Sentiment</td><td>Sandbox</td><td>daily</td></tr>
+<tr><td><strong>Reddit Subreddit Mention Spike</strong></td><td>alternative</td><td>Attention &amp; Sentiment</td><td>Sandbox</td><td>daily</td></tr>
+<tr><td><strong>Reddit Subreddit Sentiment Spike</strong></td><td>alternative</td><td>Attention &amp; Sentiment</td><td>Sandbox</td><td>daily</td></tr>
+<tr><td><strong>Reddit Subreddit Surge Momentum</strong></td><td>alternative</td><td>Attention &amp; Sentiment</td><td>Sandbox</td><td>daily</td></tr>
+<tr><td><strong>Reddit Volatility Spike</strong></td><td>alternative</td><td>Attention &amp; Sentiment</td><td>Sandbox</td><td>daily</td></tr>
+<tr><td><strong>Rental Car Shortage Volatility Spike</strong></td><td>alternative</td><td>Travel &amp; Mobility</td><td>Sandbox</td><td>weekly</td></tr>
+<tr><td><strong>Retail Roulette</strong></td><td>alternative</td><td>Consumer Stress</td><td>Failed</td><td>daily</td></tr>
+<tr><td><strong>Retail Rush Ahead Of Holidays</strong></td><td>alternative</td><td>Consumer Stress</td><td>Sandbox</td><td>weekly</td></tr>
+<tr><td><strong>Retail Sales Momentum</strong></td><td>alternative</td><td>Consumer Stress</td><td>Live Only</td><td>monthly</td></tr>
+<tr><td><strong>Rss Roar</strong></td><td>alternative</td><td>Attention &amp; Sentiment</td><td>Sandbox</td><td>daily</td></tr>
+<tr><td><strong>Seismic Activity Construction Halt Signal</strong></td><td>alternative</td><td>Local Economy Signals</td><td>Live Only</td><td>daily</td></tr>
+<tr><td><strong>Semiconductor Moonshot Warning</strong></td><td>alternative</td><td>Macro Input Pressure</td><td>Backtest Weak</td><td>daily</td></tr>
+<tr><td><strong>Shipping Container Squeeze Play</strong></td><td>alternative</td><td>Freight &amp; Logistics</td><td>Sandbox</td><td>weekly</td></tr>
+<tr><td><strong>Small Business Formation</strong></td><td>alternative</td><td>Consumer Stress</td><td>Sandbox</td><td>monthly</td></tr>
+<tr><td><strong>Social Media Sentiment Spike</strong></td><td>alternative</td><td>Attention &amp; Sentiment</td><td>Sandbox</td><td>daily</td></tr>
+<tr><td><strong>Solar Storm Scorcher</strong></td><td>alternative</td><td>Macro Input Pressure</td><td>Sandbox</td><td>daily</td></tr>
+<tr><td><strong>Staples Sector Drawdown Rapid Recovery</strong></td><td>alternative</td><td>Political &amp; Insider Filings</td><td>Backtest Weak</td><td>daily</td></tr>
+<tr><td><strong>Superbowl Futures Trade</strong></td><td>alternative</td><td>Macro Input Pressure</td><td>Sandbox</td><td>daily</td></tr>
+<tr><td><strong>Technology Sector Daily Ev Charger Count Surge</strong></td><td>alternative</td><td>Political &amp; Insider Filings</td><td>Sandbox</td><td>daily</td></tr>
+<tr><td><strong>Temperature Extremes Power Demand Spike Utility Boost</strong></td><td>alternative</td><td>Macro Input Pressure</td><td>Sandbox</td><td>daily</td></tr>
+<tr><td><strong>Temperature Shock Energy Demand Flip</strong></td><td>alternative</td><td>Macro Input Pressure</td><td>Sandbox</td><td>daily</td></tr>
+<tr><td><strong>Tremor Tension</strong></td><td>alternative</td><td>Macro Input Pressure</td><td>Live Only</td><td>daily</td></tr>
+<tr><td><strong>Truck Tonnage Index</strong></td><td>alternative</td><td>Freight &amp; Logistics</td><td>Sandbox</td><td>monthly</td></tr>
+<tr><td><strong>TSA Body Count</strong></td><td>alternative</td><td>Travel &amp; Mobility</td><td>Sandbox</td><td>daily</td></tr>
+<tr><td><strong>Twitter Sentiment Spike</strong></td><td>alternative</td><td>Attention &amp; Sentiment</td><td>Sandbox</td><td>daily</td></tr>
+<tr><td><strong>Uber Mobility Index</strong></td><td>alternative</td><td>Travel &amp; Mobility</td><td>Live Only</td><td>weekly</td></tr>
+<tr><td><strong>Utilities Sector Negative Price Gap Fill</strong></td><td>alternative</td><td>Political &amp; Insider Filings</td><td>Backtest Weak</td><td>daily</td></tr>
+<tr><td><strong>Utilities Sector Weekly Temperature Drop Signal</strong></td><td>alternative</td><td>Political &amp; Insider Filings</td><td>Sandbox</td><td>weekly</td></tr>
+<tr><td><strong>Utility Power Grid Stress</strong></td><td>alternative</td><td>Macro Input Pressure</td><td>Sandbox</td><td>weekly</td></tr>
+<tr><td><strong>VIX Fear Rotation</strong></td><td>alternative</td><td>Attention &amp; Sentiment</td><td>Live Only</td><td>daily</td></tr>
+<tr><td><strong>VIX Term Structure</strong></td><td>alternative</td><td>Attention &amp; Sentiment</td><td>Live Only</td><td>daily</td></tr>
+<tr><td><strong>Volatility Spike Follow-Through</strong></td><td>alternative</td><td>Macro Input Pressure</td><td>Sandbox</td><td>daily</td></tr>
+<tr><td><strong>Weather Disruption Ripple Effects</strong></td><td>alternative</td><td>Macro Input Pressure</td><td>Sandbox</td><td>daily</td></tr>
+<tr><td><strong>Weather Volatility Spike</strong></td><td>alternative</td><td>Macro Input Pressure</td><td>Sandbox</td><td>daily</td></tr>
+<tr><td><strong>Weather Windfall</strong></td><td>alternative</td><td>Macro Input Pressure</td><td>Sandbox</td><td>daily</td></tr>
+<tr><td><strong>Weekly Increase In Google Trends Searches For Bulk Shipping Delay Signals Bearish Xlb</strong></td><td>alternative</td><td>Freight &amp; Logistics</td><td>Sandbox</td><td>weekly</td></tr>
+<tr><td><strong>Weekly Rise In Google Trends Interest For Food Delivery Delay Signals Bearish Xlp</strong></td><td>alternative</td><td>Consumer Stress</td><td>Live Only</td><td>weekly</td></tr>
+<tr><td><strong>Weekly Rise In Google Trends Searches For Gas Price Protest Signals Bearish Xle</strong></td><td>alternative</td><td>Macro Input Pressure</td><td>Sandbox</td><td>weekly</td></tr>
+<tr><td><strong>Weekly Spike In Google Trends For Home Cooling Failure Signals Bearish Xlu</strong></td><td>alternative</td><td>Local Economy Signals</td><td>Sandbox</td><td>weekly</td></tr>
+<tr><td><strong>Weekly Spike In Google Trends Searches For Warehouse Automation Failure Signals Bearish Xli</strong></td><td>alternative</td><td>Freight &amp; Logistics</td><td>Live Only</td><td>weekly</td></tr>
+<tr><td><strong>Weekly Surge In Google Trends Searches For City Water Outage Signals Bearish Xlre</strong></td><td>alternative</td><td>Local Economy Signals</td><td>Live Only</td><td>weekly</td></tr>
+<tr><td><strong>Weekly Surge In Google Trends Searches For Commuting Strike Signals Bearish Xly</strong></td><td>alternative</td><td>Travel &amp; Mobility</td><td>Sandbox</td><td>weekly</td></tr>
+<tr><td><strong>Weekly Surge In Google Trends Searches For Diy Electronics Repair Signals Bullish Xlk</strong></td><td>alternative</td><td>Consumer Stress</td><td>Sandbox</td><td>weekly</td></tr>
+<tr><td><strong>Weekly Surge In Google Trends Searches For Diy Home Repair Signals Consumer Stress Lifting Xly</strong></td><td>alternative</td><td>Consumer Stress</td><td>Live Only</td><td>weekly</td></tr>
+<tr><td><strong>Weekly Surge In Google Trends Searches For Home Improvement Loan Signals Consumer Stress Lifting Xly</strong></td><td>alternative</td><td>Consumer Stress</td><td>Sandbox</td><td>weekly</td></tr>
+<tr><td><strong>Weekly Surge In Job Postings For Warehouse Workers Signals Bullish Xli</strong></td><td>alternative</td><td>Labor &amp; Jobs</td><td>Live Only</td><td>weekly</td></tr>
+<tr><td><strong>Weekly Surge In Openchargemap Ev Charger Installations Signals Bullish Xlc</strong></td><td>alternative</td><td>Macro Input Pressure</td><td>Sandbox</td><td>weekly</td></tr>
+<tr><td><strong>Work From Home Frenzy</strong></td><td>alternative</td><td>Macro Input Pressure</td><td>Sandbox</td><td>weekly</td></tr>
+<tr><td><strong>Xlb Daily Volatility Contraction Breakout</strong></td><td>alternative</td><td>Macro Input Pressure</td><td>Parked</td><td>daily</td></tr>
+<tr><td><strong>Xlb Weekly Rss News Count Spike On Commodity Shortage</strong></td><td>alternative</td><td>Attention &amp; Sentiment</td><td>Parked</td><td>weekly</td></tr>
+<tr><td><strong>Xlc Weekly Google Trends Surge In 5g Rollout</strong></td><td>alternative</td><td>Attention &amp; Sentiment</td><td>Parked</td><td>weekly</td></tr>
+<tr><td><strong>Xle Weekly Drawdown Rebound Signal</strong></td><td>alternative</td><td>Macro Input Pressure</td><td>Parked</td><td>weekly</td></tr>
+<tr><td><strong>Xlu Daily Electricity Demand Surge</strong></td><td>alternative</td><td>Macro Input Pressure</td><td>Live Only</td><td>daily</td></tr>
+<tr><td><strong>Xlu Weekly Cold Snap Weather Correlation</strong></td><td>alternative</td><td>Macro Input Pressure</td><td>Sandbox</td><td>weekly</td></tr>
+<tr><td><strong>Xlv Google Trends Flu Search Spike</strong></td><td>alternative</td><td>Attention &amp; Sentiment</td><td>Sandbox</td><td>weekly</td></tr>
+<tr><td><strong>Yelp Closure Velocity</strong></td><td>alternative</td><td>Local Economy Signals</td><td>Sandbox</td><td>weekly</td></tr>
+<tr><td><strong>Yield Curve Regime</strong></td><td>alternative</td><td>Macro Input Pressure</td><td>Sandbox</td><td>monthly</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="signal-note">Premium will link into the full per-algo pages later. This page stays public and stays scorecard-free.</p>
+    </div>
+  </div>
+
+
+<footer>
+  <div class="wrap">
+    <div class="footer-nav"><a href="/landing.html">Home</a><span class="footer-sep">&middot;</span><a href="/leaderboard.html">Leaderboard</a><span class="footer-sep">&middot;</span><a href="/signals/index.html">Signals</a><span class="footer-sep">&middot;</span><a href="/families.html">Families</a><span class="footer-sep">&middot;</span><a href="/daily.html">Daily Report</a><span class="footer-sep">&middot;</span><a href="/premium.html">Premium Preview</a><span class="footer-sep">&middot;</span><a href="/blog/index.html">Blog</a><span class="footer-sep">&middot;</span><a href="/legal.html">Legal</a><span class="footer-sep">*</span><a href="/biscotti.html">Biscotti</a></div>
+    <div style="width:100%;max-width:520px;height:1px;margin:14px auto 14px;background:rgba(255,255,255,0.10);"></div>
+    <div style="display:block;width:100%;text-align:center;font-size:11px;font-style:italic;letter-spacing:0.2px;color:rgba(255,255,255,0.58);margin:0 auto 10px;">
+      StockArithm powered by R&amp;B AlgoLabs, LLC.
+    </div>
+    <div style="text-align:center;font-size:11px;font-style:italic;letter-spacing:0.2px;color:rgba(255,255,255,0.50);margin-bottom:14px;">Last updated: 2026-04-25T09:57:57Z</div>
+    <div style="margin-top:12px;max-width:920px;margin-left:auto;margin-right:auto;text-align:center;font-size:11px;font-style:italic;letter-spacing:0.2px;color:rgba(255,255,255,0.58);">
+      <strong>Signal Lab Notice:</strong> Experimental research only. Signals can and will fail. Do not interpret any signal as a recommendation.<br>
+      <strong>Performance Disclosure:</strong> Leaderboards are model/simulation outputs and may not reflect slippage, fees, liquidity, execution delays, or market impact.<br>
+      <strong>Data Disclaimer:</strong> Third-party data may be incomplete, delayed, inaccurate, or revised. Use at your own risk.<br>
+      <strong>Not financial advice:</strong> Do your own research. You are responsible for your own decisions. Paper-traded only &mdash; no real money at risk.
+    </div>
+    <div style="margin:20px auto 0;padding-top:16px;border-top:1px solid var(--border);max-width:720px;text-align:center;font-size:10px;font-style:italic;letter-spacing:0.15px;color:rgba(255,255,255,0.42);">
+      In loving memory of Biscotti (2008&ndash;2026). Good boy. Best algo. &hearts;
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

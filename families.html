@@ -55,6 +55,10 @@
   .mini-chart-legend i { display: inline-block; width: 10px; height: 10px; border-radius: 999px; }
   @media (max-width: 560px) { .waitlist-form { grid-template-columns: 1fr; } }
 </style>
+<style>
+  .family-legend ul { margin: 10px 0 0 18px; line-height: 1.7; }
+  .family-grid { margin-top: 20px; }
+</style>
 </head>
 <body>
   <header>
@@ -63,17 +67,19 @@
   </header>
   <div class="wrap">
     
-    <div class="rank-note">
+    <div class="rank-note family-legend">
       <strong>Status legend:</strong>
-      <code>live_only</code> means the signal is live and publishing receipts, but does not have a clean enough history for a strict backtest.
-      <code>sandbox</code> means visible in public on purpose, but still waiting on enough data or a first live trade.
-      <code>parked</code> means temporarily set aside while the input, build, or deployment path gets cleaned up.
-      <code>promoted</code> means strong enough to feature publicly.
-      <code>backtest_weak</code> means the historical test exists but has not earned much trust.
-      <code>graveyard</code> means the idea failed badly enough that we keep it visible as a dead end.
+      <ul>
+        <li><code>live_only</code> means the signal is live and publishing receipts, but does not have a clean enough history for a strict backtest.</li>
+        <li><code>sandbox</code> means visible in public on purpose, but still waiting on enough data or a first live trade.</li>
+        <li><code>parked</code> means temporarily set aside while the input, build, or deployment path gets cleaned up.</li>
+        <li><code>promoted</code> means strong enough to feature publicly.</li>
+        <li><code>backtest_weak</code> means the historical test exists but has not earned much trust.</li>
+        <li><code>graveyard</code> means the idea failed badly enough that we keep it visible as a dead end.</li>
+      </ul>
     </div>
     
-    <div class="grid">
+    <div class="grid family-grid">
 
       <div class="card">
         <h2>Attention &amp; Sentiment</h2>
@@ -161,7 +167,7 @@
 
 <footer>
   <div class="wrap">
-    <div class="footer-nav"><a href="/landing.html">Home</a><span class="footer-sep">&middot;</span><a href="/leaderboard.html">Leaderboard</a><span class="footer-sep">&middot;</span><a href="/signals/index.html">Signals</a><span class="footer-sep">&middot;</span><a href="/families.html">Families</a><span class="footer-sep">&middot;</span><a href="/daily.html">Daily Report</a><span class="footer-sep">&middot;</span><a href="/premium.html">Premium Preview</a><span class="footer-sep">&middot;</span><a href="/blog/index.html">Blog</a><span class="footer-sep">&middot;</span><a href="/legal.html">Legal</a><span class="footer-sep">*</span><a href="/biscotti.html">Biscotti</a></div>
+    <div class="footer-nav"><a href="/landing.html">Home</a><span class="footer-sep">&middot;</span><a href="/leaderboard.html">Leaderboard</a><span class="footer-sep">&middot;</span><a href="/signals/index.html">Signals</a><span class="footer-sep">&middot;</span><a href="/families.html">Families</a><span class="footer-sep">&middot;</span><a href="/daily.html">Daily Report</a><span class="footer-sep">&middot;</span><a href="/premium.html">Premium Preview</a><span class="footer-sep">&middot;</span><a href="/blog/index.html">Blog</a><span class="footer-sep">&middot;</span><a href="/legal.html">Legal</a><span class="footer-sep">&middot;</span><a href="/biscotti.html">Biscotti</a></div>
     <div style="width:100%;max-width:520px;height:1px;margin:14px auto 14px;background:rgba(255,255,255,0.10);"></div>
     <div style="display:block;width:100%;text-align:center;font-size:11px;font-style:italic;letter-spacing:0.2px;color:rgba(255,255,255,0.58);margin:0 auto 10px;">
       StockArithm powered by R&amp;B AlgoLabs, LLC.

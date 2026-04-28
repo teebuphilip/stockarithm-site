@@ -26,9 +26,6 @@
     header { padding: 32px 24px; border-bottom: 1px solid var(--border); }
     header h1 { margin: 0 0 8px; font-size: 34px; }
     header p { margin: 0; color: var(--muted); font-family: var(--mono); font-size: 13px; }
-    .actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 16px; }
-    .actions a { display: inline-block; padding: 10px 14px; border: 1px solid var(--accent); border-radius: 8px; color: var(--accent); text-decoration: none; font-size: 13px; font-weight: 600; }
-    .actions a:hover { background: rgba(25,211,143,0.1); }
     .wrap { max-width: 960px; margin: 0 auto; padding: 24px; }
     .intro { margin-bottom: 20px; color: var(--muted); line-height: 1.6; }
     .post-list { display: grid; gap: 16px; }
@@ -38,21 +35,60 @@
     .post a:hover { color: var(--accent); }
     .meta { color: var(--muted); font-family: var(--mono); font-size: 12px; margin-bottom: 10px; }
     .summary { color: #d8e7e1; line-height: 1.6; margin: 0; }
-    footer { border-top: 1px solid var(--border); padding: 32px 24px; text-align: center; color: var(--muted); font-size: 12px; line-height: 1.8; margin-top: 28px; }
-    footer a { color: var(--accent); text-decoration: none; }
-    footer a:hover { text-decoration: underline; }
+    footer { border-top: 1px solid var(--border); padding: 28px 24px 32px; text-align: center; color: var(--muted); font-size: 12px; line-height: 1.8; margin-top: 28px; }
+    .footer-nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0 8px;
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.2px;
+      color: rgba(255,255,255,0.58);
+    }
+    .footer-nav a,
+    .footer-nav a:visited {
+      color: rgba(255,255,255,0.58);
+      text-decoration: none;
+      white-space: nowrap;
+    }
+    .footer-nav .footer-sep { color: rgba(255,255,255,0.40); }
+    .footer-nav a:hover { text-decoration: underline; }
+    .footer-divider {
+      width: min(520px, 100%);
+      height: 1px;
+      margin: 14px auto;
+      background: rgba(255,255,255,0.10);
+    }
+    .footer-attrib {
+      font-size: 11px;
+      font-style: italic;
+      color: rgba(255,255,255,0.58);
+      margin-bottom: 8px;
+    }
+    .footer-note {
+      font-size: 11px;
+      font-style: italic;
+      color: rgba(255,255,255,0.50);
+      margin: 0 auto 12px;
+      max-width: 760px;
+    }
+    .footer-memorial {
+      font-size: 10px;
+      font-style: italic;
+      color: rgba(255,255,255,0.42);
+      margin: 18px auto 0;
+      padding-top: 14px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      max-width: 720px;
+    }
   </style>
 </head>
 <body>
   <header>
     <h1>Blog / Lab Notes</h1>
     <p>Build logs, failures, receipts, and what changed in the lab.</p>
-    <div class="actions">
-      <a href="../landing.html">Home</a>
-      <a href="../leaderboard.html">Leaderboard</a>
-      <a href="../daily.html">Daily Report</a>
-      <a href="../legal.html">Legal</a>
-    </div>
   </header>
 
   <div class="wrap">
@@ -91,13 +127,21 @@
   </div>
 
   <footer>
-    <div style="text-align:center;font-size:11px;font-style:italic;color:var(--muted);margin-bottom:8px;"><strong>StockArithm</strong> powered by R&amp;B AlgoLabs, LLC.</div>
-    <div>public lab notebook</div>
-    <div><a href="../landing.html">Home</a> &middot; <a href="../leaderboard.html">Leaderboard</a> &middot; <a href="../families.html">Families</a> &middot; <a href="../daily.html">Daily Report</a> &middot; <a href="../legal.html">Legal</a></div>
-    <div>
-      <strong>Signal Lab Notice:</strong> Experimental research only. Signals can and will fail.<br>
-      <strong>Not financial advice:</strong> Do your own research. Paper-traded only — no real money at risk.
+    <div class="footer-nav">
+      <a href="../landing.html">Home</a><span class="footer-sep">&middot;</span>
+      <a href="../leaderboard.html">Leaderboard</a><span class="footer-sep">&middot;</span>
+      <a href="../signals/index.html">Signals</a><span class="footer-sep">&middot;</span>
+      <a href="../families.html">Families</a><span class="footer-sep">&middot;</span>
+      <a href="../daily.html">Daily Report</a><span class="footer-sep">&middot;</span>
+      <a href="../premium.html">Premium Preview</a><span class="footer-sep">&middot;</span>
+      <a href="../blog/index.html">Blog</a><span class="footer-sep">&middot;</span>
+      <a href="../legal.html">Legal</a><span class="footer-sep">&middot;</span>
+      <a href="../biscotti.html">Biscotti</a>
     </div>
+    <div class="footer-divider"></div>
+    <div class="footer-attrib">StockArithm powered by R&amp;B AlgoLabs, LLC.</div>
+    <div class="footer-note">Signal Lab Notice: Experimental research only. Signals can and will fail. Do not interpret any signal as a recommendation.<br>Performance Disclosure: Leaderboards are model/simulation outputs and may not reflect slippage, fees, liquidity, execution delays, or market impact.<br>Data Disclaimer: Third-party data may be incomplete, delayed, inaccurate, or revised. Use at your own risk.<br>Not financial advice: Do your own research. You are responsible for your own decisions. Paper-traded only &mdash; no real money at risk.</div>
+    <div class="footer-memorial">In loving memory of Biscotti (2008&ndash;2026). Good boy. Best algo. &hearts;</div>
   </footer>
 </body>
 </html>

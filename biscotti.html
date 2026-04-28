@@ -80,6 +80,61 @@
     font-size: 20px;
     line-height: 1.35;
   }
+  footer {
+    border-top: 1px solid rgba(255,255,255,0.08);
+    margin-top: 28px;
+    padding: 24px 18px 30px;
+    text-align: center;
+    color: var(--muted);
+    line-height: 1.8;
+  }
+  .footer-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0 8px;
+    font-family: 'IBM Plex Mono', ui-monospace, monospace;
+    font-size: 11px;
+    letter-spacing: 0.2px;
+    color: rgba(255,255,255,0.58);
+  }
+  .footer-nav a,
+  .footer-nav a:visited {
+    color: rgba(255,255,255,0.58);
+    text-decoration: none;
+    white-space: nowrap;
+  }
+  .footer-nav .footer-sep { color: rgba(255,255,255,0.40); }
+  .footer-nav a:hover { text-decoration: underline; }
+  .footer-divider {
+    width: min(520px, 100%);
+    height: 1px;
+    margin: 14px auto;
+    background: rgba(255,255,255,0.10);
+  }
+  .footer-attrib {
+    font-size: 11px;
+    font-style: italic;
+    color: rgba(255,255,255,0.58);
+    margin-bottom: 8px;
+  }
+  .footer-note {
+    font-size: 11px;
+    font-style: italic;
+    color: rgba(255,255,255,0.50);
+    margin: 0 auto 12px;
+    max-width: 760px;
+  }
+  .footer-memorial {
+    font-size: 10px;
+    font-style: italic;
+    color: rgba(255,255,255,0.42);
+    margin: 18px auto 0;
+    padding-top: 14px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    max-width: 720px;
+  }
   @media (max-width: 760px) {
     .grid { grid-template-columns: 1fr; }
   }
@@ -125,5 +180,22 @@
       </div>
     </div>
   </div>
+  <footer>
+    <div class="footer-nav">
+      <a href="/landing.html">Home</a><span class="footer-sep">&middot;</span>
+      <a href="/leaderboard.html">Leaderboard</a><span class="footer-sep">&middot;</span>
+      <a href="/signals/index.html">Signals</a><span class="footer-sep">&middot;</span>
+      <a href="/families.html">Families</a><span class="footer-sep">&middot;</span>
+      <a href="/daily.html">Daily Report</a><span class="footer-sep">&middot;</span>
+      <a href="/premium.html">Premium Preview</a><span class="footer-sep">&middot;</span>
+      <a href="/blog/index.html">Blog</a><span class="footer-sep">&middot;</span>
+      <a href="/legal.html">Legal</a><span class="footer-sep">&middot;</span>
+      <a href="/biscotti.html">Biscotti</a>
+    </div>
+    <div class="footer-divider"></div>
+    <div class="footer-attrib">StockArithm powered by R&amp;B AlgoLabs, LLC.</div>
+    <div class="footer-note">Signal Lab Notice: Experimental research only. Signals can and will fail. Do not interpret any signal as a recommendation.<br>Performance Disclosure: Leaderboards are model/simulation outputs and may not reflect slippage, fees, liquidity, execution delays, or market impact.<br>Data Disclaimer: Third-party data may be incomplete, delayed, inaccurate, or revised. Use at your own risk.<br>Not financial advice: Do your own research. You are responsible for your own decisions. Paper-traded only &mdash; no real money at risk.</div>
+    <div class="footer-memorial">In loving memory of Biscotti (2008&ndash;2026). Good boy. Best algo. &hearts;</div>
+  </footer>
 </body>
 </html>

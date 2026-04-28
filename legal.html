@@ -7,9 +7,9 @@
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;600&display=swap');
   :root {
-    --bg: #0d1412;
-    --bg2: #13231f;
-    --card: #182b26;
+    --bg: #0a0a0a;
+    --bg2: #111;
+    --card: #161616;
     --border: rgba(255,255,255,0.08);
     --accent: #19d38f;
     --accent-dim: #12a06b;
@@ -18,13 +18,13 @@
     --yellow: #eab308;
     --gold: #d4a017;
     --purple: #a855f7;
-    --muted: #9ab0a7;
-    --text: #ecf5f2;
+    --muted: #888;
+    --text: #e8e8e8;
     --mono: 'IBM Plex Mono', ui-monospace, monospace;
     --sans: 'Space Grotesk', system-ui, sans-serif;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { font-family: var(--sans); color: var(--text); background: radial-gradient(1000px 600px at 15% -10%, #1e3f35, transparent), radial-gradient(900px 500px at 90% 0%, #1b352f, transparent), var(--bg); line-height: 1.5; -webkit-font-smoothing: antialiased; }
+  body { font-family: var(--sans); color: var(--text); background: var(--bg); line-height: 1.5; -webkit-font-smoothing: antialiased; }
   .hero { text-align: center; padding: 60px 24px 48px; background: radial-gradient(800px 400px at 50% 0%, rgba(25,211,143,0.06), transparent), var(--bg); border-bottom: 1px solid var(--border); }
   .hero-badge { display: inline-block; font-family: var(--mono); font-size: 12px; color: var(--accent); border: 1px solid var(--accent-dim); border-radius: 20px; padding: 4px 14px; margin-bottom: 16px; letter-spacing: 0.5px; }
   .hero h1 { font-size: clamp(28px, 5vw, 48px); font-weight: 700; letter-spacing: -0.5px; margin-bottom: 12px; }
@@ -87,7 +87,7 @@
   .name-tooltip { position: relative; cursor: help; }
   .name-tooltip .tip { display: none; position: absolute; bottom: calc(100% + 6px); left: 0; background: #222; border: 1px solid var(--border); border-radius: 6px; padding: 8px 12px; font-size: 12px; font-weight: 400; color: var(--muted); white-space: nowrap; z-index: 20; pointer-events: none; }
   .name-tooltip:hover .tip { display: block; }
-  .ticker-check { max-width: 480px; margin: 0 auto; }
+  .ticker-check { max-width: 480px; }
   .ticker-input-wrap { display: flex; gap: 10px; margin-bottom: 16px; }
   .ticker-input { flex: 1; padding: 12px 16px; font-family: var(--mono); font-size: 16px; background: var(--card); border: 1px solid var(--border); border-radius: 8px; color: var(--text); outline: none; text-transform: uppercase; }
   .ticker-input::placeholder { color: rgba(255,255,255,0.2); }
@@ -105,12 +105,10 @@
   .ticker-error { color: var(--red); font-family: var(--mono); font-size: 13px; display: none; }
   .ticker-error.show { display: block; }
   footer { border-top: 1px solid var(--border); padding: 32px 20px; text-align: center; font-size: 12px; color: var(--muted); line-height: 1.8; }
-  .footer-nav { margin-top: 8px; display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 0 8px; width: 100%; font-family: var(--mono); font-size: 11px; line-height: 1.6; letter-spacing: 0.2px; color: rgba(255,255,255,0.58); }
-  .footer-nav a, .footer-nav a:visited { color: rgba(255,255,255,0.58); text-decoration: none; white-space: nowrap; }
+  .footer-nav { margin-top: 8px; display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 0 8px; font-family: var(--mono); font-size: 11px; line-height: 1.6; letter-spacing: 0.2px; color: rgba(255,255,255,0.58); }
+  .footer-nav a { color: inherit; text-decoration: none; white-space: nowrap; }
   .footer-nav .footer-sep { color: rgba(255,255,255,0.40); }
   .footer-nav a:hover { text-decoration: underline; }
-  .section-title { text-align: center; }
-  .section-sub { text-align: center; }
   .rank-note { border: 1px solid var(--border); border-radius: 12px; background: rgba(255,255,255,0.035); padding: 14px 16px; margin: 14px 0 18px; color: var(--muted); font-size: 13px; line-height: 1.65; }
   .rank-note strong { color: var(--text); }
   .rank-note code { font-family: var(--mono); color: var(--gold); background: rgba(255,204,102,0.08); padding: 1px 5px; border-radius: 4px; }
@@ -153,11 +151,11 @@
 <p>Reported performance may differ materially from actual results achieved in live trading.</p>
 <p>No representation is made that any strategy or signal will achieve similar results in the future.</p></div></section><section><div class="wrap"><h2 class="section-title">Data Disclaimer</h2><p>This Service relies on third-party data sources. Data may be incomplete, delayed, inaccurate, or subject to revision without notice.</p>
 <p>We do not guarantee the accuracy, completeness, or timeliness of any data presented.</p>
-<p>Use of this data is at your own risk.</p></div></section><section><div class="wrap"><h2 class="section-title">Short Disclaimer</h2><p>This is an experimental signal lab. Not financial advice. Signals can and will fail. Do your own research.</p></div></section>
+<p>Use of this data is at your own risk.</p></div></section><section><div class="wrap"><h2 class="section-title">Short Inline Disclaimer</h2><p>This is an experimental signal lab. Not financial advice. Signals can and will fail. Do your own research.</p></div></section>
 
 <footer>
   <div class="wrap">
-    <div class="footer-nav"><a href="/landing.html">Home</a><span class="footer-sep">&middot;</span><a href="/leaderboard.html">Leaderboard</a><span class="footer-sep">&middot;</span><a href="/signals/index.html">Signals</a><span class="footer-sep">&middot;</span><a href="/families.html">Families</a><span class="footer-sep">&middot;</span><a href="/daily.html">Daily Report</a><span class="footer-sep">&middot;</span><a href="/premium.html">Premium Preview</a><span class="footer-sep">&middot;</span><a href="/blog/index.html">Blog</a><span class="footer-sep">&middot;</span><a href="/legal.html">Legal</a><span class="footer-sep">&middot;</span><a href="/biscotti.html">Biscotti</a></div>
+    <div class="footer-nav"><a href="/landing.html">Home</a><span class="footer-sep">&middot;</span><a href="/leaderboard.html">Leaderboard</a><span class="footer-sep">&middot;</span><a href="/signals/index.html">Signals</a><span class="footer-sep">&middot;</span><a href="/families.html">Families</a><span class="footer-sep">&middot;</span><a href="/daily.html">Daily Report</a><span class="footer-sep">&middot;</span><a href="/premium.html">Premium Preview</a><span class="footer-sep">&middot;</span><a href="/blog/index.html">Blog</a><span class="footer-sep">&middot;</span><a href="/legal.html">Legal</a><span class="footer-sep">*</span><a href="/biscotti.html">Biscotti</a></div>
     <div style="width:100%;max-width:520px;height:1px;margin:14px auto 14px;background:rgba(255,255,255,0.10);"></div>
     <div style="display:block;width:100%;text-align:center;font-size:11px;font-style:italic;letter-spacing:0.2px;color:rgba(255,255,255,0.58);margin:0 auto 10px;">
       StockArithm powered by R&amp;B AlgoLabs, LLC.

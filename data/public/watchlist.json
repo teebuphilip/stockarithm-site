@@ -1,6 +1,6 @@
 {
   "schema_version": "v1",
-  "generated_at": "2026-04-27T23:18:33Z",
+  "generated_at": "2026-04-27T23:21:18Z",
   "algos": [
     {
       "schema_version": "v1",
@@ -856,6 +856,42 @@
     },
     {
       "schema_version": "v1",
+      "key": "crazy:weekly-google-trends-spike-for-diy-car-repair-signals-bullis",
+      "algo_type": "crazy",
+      "algo_id": "weekly-google-trends-spike-for-diy-car-repair-signals-bullis",
+      "name": "Weekly Google Trends Spike For Diy Car Repair Signals Bullish Xly",
+      "family": "consumer_stress",
+      "status": "live_only",
+      "evidence_class": "live_receipts_only",
+      "rebalance_frequency": "weekly",
+      "ytd_pct": -0.11,
+      "days_running": 0,
+      "beat_spy": null,
+      "spy_pct": null,
+      "alpha_pct": null,
+      "ret_30d_pct": 0.07,
+      "spy_delta_30d_pct": -13.1,
+      "last_snapshot": "2026-04-27",
+      "new_algo_date": null,
+      "comparator": {
+        "primary_etf": "XLY",
+        "signals": {
+          "momentum_5d": {
+            "direction": "DOWN",
+            "confidence": 0.339,
+            "return_pct": -1.694
+          },
+          "momentum_20d": {
+            "direction": "UP",
+            "confidence": 1.0,
+            "return_pct": 11.506
+          }
+        },
+        "summary": "mixed"
+      }
+    },
+    {
+      "schema_version": "v1",
       "key": "crazy:tremor-tension",
       "algo_type": "crazy",
       "algo_id": "tremor-tension",
@@ -1000,6 +1036,42 @@
     },
     {
       "schema_version": "v1",
+      "key": "crazy:oil-price-momentum-reversal-energy-sector-bounce",
+      "algo_type": "crazy",
+      "algo_id": "oil-price-momentum-reversal-energy-sector-bounce",
+      "name": "Oil Price Momentum Reversal Energy Sector Bounce",
+      "family": "macro_input_pressure",
+      "status": "live_only",
+      "evidence_class": "live_receipts_only",
+      "rebalance_frequency": "daily",
+      "ytd_pct": -0.17,
+      "days_running": 0,
+      "beat_spy": null,
+      "spy_pct": null,
+      "alpha_pct": null,
+      "ret_30d_pct": -0.03,
+      "spy_delta_30d_pct": -13.2,
+      "last_snapshot": "2026-04-27",
+      "new_algo_date": null,
+      "comparator": {
+        "primary_etf": "XLE",
+        "signals": {
+          "momentum_5d": {
+            "direction": "UP",
+            "confidence": 0.617,
+            "return_pct": 3.087
+          },
+          "momentum_20d": {
+            "direction": "DOWN",
+            "confidence": 1.0,
+            "return_pct": -9.255
+          }
+        },
+        "summary": "mixed"
+      }
+    },
+    {
+      "schema_version": "v1",
       "key": "crazy:daily-spike-in-daily-earthquake-activity-near-major-logistic",
       "algo_type": "crazy",
       "algo_id": "daily-spike-in-daily-earthquake-activity-near-major-logistic",
@@ -1101,6 +1173,42 @@
             "direction": "UP",
             "confidence": 0.137,
             "return_pct": 0.685
+          }
+        },
+        "summary": "mixed"
+      }
+    },
+    {
+      "schema_version": "v1",
+      "key": "crazy:weekly-surge-in-google-trends-for-inflation-hedge-gold-signa",
+      "algo_type": "crazy",
+      "algo_id": "weekly-surge-in-google-trends-for-inflation-hedge-gold-signa",
+      "name": "Weekly Surge In Google Trends For Inflation Hedge Gold Signals Bullish Xlb",
+      "family": "macro_input_pressure",
+      "status": "live_only",
+      "evidence_class": "live_receipts_only",
+      "rebalance_frequency": "weekly",
+      "ytd_pct": -0.24,
+      "days_running": 0,
+      "beat_spy": null,
+      "spy_pct": null,
+      "alpha_pct": null,
+      "ret_30d_pct": 0.0,
+      "spy_delta_30d_pct": -13.17,
+      "last_snapshot": "2026-04-27",
+      "new_algo_date": null,
+      "comparator": {
+        "primary_etf": "XLB",
+        "signals": {
+          "momentum_5d": {
+            "direction": "DOWN",
+            "confidence": 0.172,
+            "return_pct": -0.862
+          },
+          "momentum_20d": {
+            "direction": "UP",
+            "confidence": 1.0,
+            "return_pct": 5.868
           }
         },
         "summary": "mixed"

@@ -1,8 +1,8 @@
 {
   "schema_version": "v1",
-  "generated_at": "2026-04-27T23:18:39Z",
+  "generated_at": "2026-04-27T23:21:18Z",
   "counts": {
-    "total": 133,
+    "total": 138,
     "beating_spy": 2
   },
   "algos": [
@@ -896,6 +896,42 @@
     },
     {
       "schema_version": "v1",
+      "key": "crazy:weekly-google-trends-spike-for-diy-car-repair-signals-bullis",
+      "algo_type": "crazy",
+      "algo_id": "weekly-google-trends-spike-for-diy-car-repair-signals-bullis",
+      "name": "Weekly Google Trends Spike For Diy Car Repair Signals Bullish Xly",
+      "family": "consumer_stress",
+      "status": "live_only",
+      "evidence_class": "live_receipts_only",
+      "rebalance_frequency": "weekly",
+      "ytd_pct": -0.11,
+      "days_running": 0,
+      "beat_spy": null,
+      "spy_pct": null,
+      "alpha_pct": null,
+      "ret_30d_pct": 0.07,
+      "spy_delta_30d_pct": -13.1,
+      "last_snapshot": "2026-04-27",
+      "new_algo_date": null,
+      "comparator": {
+        "primary_etf": "XLY",
+        "signals": {
+          "momentum_5d": {
+            "direction": "DOWN",
+            "confidence": 0.339,
+            "return_pct": -1.694
+          },
+          "momentum_20d": {
+            "direction": "UP",
+            "confidence": 1.0,
+            "return_pct": 11.506
+          }
+        },
+        "summary": "mixed"
+      }
+    },
+    {
+      "schema_version": "v1",
       "key": "crazy:xlb-weekly-rss-news-count-spike-on-commodity-shortage",
       "algo_type": "crazy",
       "algo_id": "xlb-weekly-rss-news-count-spike-on-commodity-shortage",
@@ -1076,6 +1112,42 @@
     },
     {
       "schema_version": "v1",
+      "key": "crazy:oil-price-momentum-reversal-energy-sector-bounce",
+      "algo_type": "crazy",
+      "algo_id": "oil-price-momentum-reversal-energy-sector-bounce",
+      "name": "Oil Price Momentum Reversal Energy Sector Bounce",
+      "family": "macro_input_pressure",
+      "status": "live_only",
+      "evidence_class": "live_receipts_only",
+      "rebalance_frequency": "daily",
+      "ytd_pct": -0.17,
+      "days_running": 0,
+      "beat_spy": null,
+      "spy_pct": null,
+      "alpha_pct": null,
+      "ret_30d_pct": -0.03,
+      "spy_delta_30d_pct": -13.2,
+      "last_snapshot": "2026-04-27",
+      "new_algo_date": null,
+      "comparator": {
+        "primary_etf": "XLE",
+        "signals": {
+          "momentum_5d": {
+            "direction": "UP",
+            "confidence": 0.617,
+            "return_pct": 3.087
+          },
+          "momentum_20d": {
+            "direction": "DOWN",
+            "confidence": 1.0,
+            "return_pct": -9.255
+          }
+        },
+        "summary": "mixed"
+      }
+    },
+    {
+      "schema_version": "v1",
       "key": "crazy:daily-spike-in-daily-earthquake-activity-near-major-logistic",
       "algo_type": "crazy",
       "algo_id": "daily-spike-in-daily-earthquake-activity-near-major-logistic",
@@ -1177,6 +1249,42 @@
             "direction": "UP",
             "confidence": 0.137,
             "return_pct": 0.685
+          }
+        },
+        "summary": "mixed"
+      }
+    },
+    {
+      "schema_version": "v1",
+      "key": "crazy:weekly-surge-in-google-trends-for-inflation-hedge-gold-signa",
+      "algo_type": "crazy",
+      "algo_id": "weekly-surge-in-google-trends-for-inflation-hedge-gold-signa",
+      "name": "Weekly Surge In Google Trends For Inflation Hedge Gold Signals Bullish Xlb",
+      "family": "macro_input_pressure",
+      "status": "live_only",
+      "evidence_class": "live_receipts_only",
+      "rebalance_frequency": "weekly",
+      "ytd_pct": -0.24,
+      "days_running": 0,
+      "beat_spy": null,
+      "spy_pct": null,
+      "alpha_pct": null,
+      "ret_30d_pct": 0.0,
+      "spy_delta_30d_pct": -13.17,
+      "last_snapshot": "2026-04-27",
+      "new_algo_date": null,
+      "comparator": {
+        "primary_etf": "XLB",
+        "signals": {
+          "momentum_5d": {
+            "direction": "DOWN",
+            "confidence": 0.172,
+            "return_pct": -0.862
+          },
+          "momentum_20d": {
+            "direction": "UP",
+            "confidence": 1.0,
+            "return_pct": 5.868
           }
         },
         "summary": "mixed"
@@ -3878,6 +3986,78 @@
       "last_snapshot": "2026-04-27",
       "new_algo_date": null,
       "comparator": null
+    },
+    {
+      "schema_version": "v1",
+      "key": "crazy:ev-charger-network-density-surge-bullish-signal",
+      "algo_type": "crazy",
+      "algo_id": "ev-charger-network-density-surge-bullish-signal",
+      "name": "Ev Charger Network Density Surge Bullish Signal",
+      "family": "macro_input_pressure",
+      "status": "sandbox",
+      "evidence_class": "needs_history",
+      "rebalance_frequency": "daily",
+      "ytd_pct": 0.0,
+      "days_running": 0,
+      "beat_spy": null,
+      "spy_pct": null,
+      "alpha_pct": null,
+      "ret_30d_pct": 0.0,
+      "spy_delta_30d_pct": -13.17,
+      "last_snapshot": "2026-04-27",
+      "new_algo_date": null,
+      "comparator": {
+        "primary_etf": "XLK",
+        "signals": {
+          "momentum_5d": {
+            "direction": "UP",
+            "confidence": 0.778,
+            "return_pct": 3.888
+          },
+          "momentum_20d": {
+            "direction": "UP",
+            "confidence": 1.0,
+            "return_pct": 23.591
+          }
+        },
+        "summary": "both_up"
+      }
+    },
+    {
+      "schema_version": "v1",
+      "key": "crazy:daily-spike-in-ev-charger-installations-signals-bullish-xlc",
+      "algo_type": "crazy",
+      "algo_id": "daily-spike-in-ev-charger-installations-signals-bullish-xlc",
+      "name": "Daily Spike In Ev Charger Installations Signals Bullish Xlc",
+      "family": "local_economy_weirdness",
+      "status": "sandbox",
+      "evidence_class": "needs_history",
+      "rebalance_frequency": "daily",
+      "ytd_pct": 0.0,
+      "days_running": 0,
+      "beat_spy": null,
+      "spy_pct": null,
+      "alpha_pct": null,
+      "ret_30d_pct": 0.0,
+      "spy_delta_30d_pct": -13.17,
+      "last_snapshot": "2026-04-27",
+      "new_algo_date": null,
+      "comparator": {
+        "primary_etf": "XLC",
+        "signals": {
+          "momentum_5d": {
+            "direction": "DOWN",
+            "confidence": 0.495,
+            "return_pct": -2.476
+          },
+          "momentum_20d": {
+            "direction": "UP",
+            "confidence": 1.0,
+            "return_pct": 8.193
+          }
+        },
+        "summary": "mixed"
+      }
     }
   ]
 }

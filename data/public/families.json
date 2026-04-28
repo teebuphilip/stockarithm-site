@@ -1,6 +1,6 @@
 {
   "schema_version": "v1",
-  "generated_at": "2026-04-27T23:18:33Z",
+  "generated_at": "2026-04-27T23:21:18Z",
   "families": {
     "attention_sentiment": {
       "family": "attention_sentiment",
@@ -125,14 +125,14 @@
     },
     "consumer_stress": {
       "family": "consumer_stress",
-      "count": 14,
+      "count": 15,
       "by_status": {
         "failed": 1,
-        "live_only": 7,
+        "live_only": 8,
         "sandbox": 6
       },
       "by_evidence_class": {
-        "live_receipts_only": 7,
+        "live_receipts_only": 8,
         "needs_history": 6,
         "v1_backtested": 1
       },
@@ -693,37 +693,16 @@
     },
     "local_economy_weirdness": {
       "family": "local_economy_weirdness",
-      "count": 8,
+      "count": 9,
       "by_status": {
         "live_only": 3,
-        "sandbox": 5
+        "sandbox": 6
       },
       "by_evidence_class": {
         "live_receipts_only": 3,
-        "needs_history": 5
+        "needs_history": 6
       },
       "leaders": [
-        {
-          "schema_version": "v1",
-          "key": "crazy:yelp-closure-velocity",
-          "algo_type": "crazy",
-          "algo_id": "yelp-closure-velocity",
-          "name": "Yelp Closure Velocity",
-          "family": "local_economy_weirdness",
-          "status": "sandbox",
-          "evidence_class": "needs_history",
-          "rebalance_frequency": "weekly",
-          "ytd_pct": 0.0,
-          "days_running": 74,
-          "beat_spy": false,
-          "spy_pct": 4.97,
-          "alpha_pct": -4.97,
-          "ret_30d_pct": 0.0,
-          "spy_delta_30d_pct": -13.17,
-          "last_snapshot": "2026-04-27",
-          "new_algo_date": null,
-          "comparator": null
-        },
         {
           "schema_version": "v1",
           "key": "crazy:weekly-spike-in-google-trends-for-home-cooling-failure-signa",
@@ -822,21 +801,57 @@
           "last_snapshot": "2026-04-27",
           "new_algo_date": null,
           "comparator": null
+        },
+        {
+          "schema_version": "v1",
+          "key": "crazy:daily-spike-in-ev-charger-installations-signals-bullish-xlc",
+          "algo_type": "crazy",
+          "algo_id": "daily-spike-in-ev-charger-installations-signals-bullish-xlc",
+          "name": "Daily Spike In Ev Charger Installations Signals Bullish Xlc",
+          "family": "local_economy_weirdness",
+          "status": "sandbox",
+          "evidence_class": "needs_history",
+          "rebalance_frequency": "daily",
+          "ytd_pct": 0.0,
+          "days_running": 0,
+          "beat_spy": null,
+          "spy_pct": null,
+          "alpha_pct": null,
+          "ret_30d_pct": 0.0,
+          "spy_delta_30d_pct": -13.17,
+          "last_snapshot": "2026-04-27",
+          "new_algo_date": null,
+          "comparator": {
+            "primary_etf": "XLC",
+            "signals": {
+              "momentum_5d": {
+                "direction": "DOWN",
+                "confidence": 0.495,
+                "return_pct": -2.476
+              },
+              "momentum_20d": {
+                "direction": "UP",
+                "confidence": 1.0,
+                "return_pct": 8.193
+              }
+            },
+            "summary": "mixed"
+          }
         }
       ]
     },
     "macro_input_pressure": {
       "family": "macro_input_pressure",
-      "count": 43,
+      "count": 46,
       "by_status": {
         "backtest_weak": 1,
-        "live_only": 10,
+        "live_only": 12,
         "parked": 2,
-        "sandbox": 30
+        "sandbox": 31
       },
       "by_evidence_class": {
-        "live_receipts_only": 10,
-        "needs_history": 28,
+        "live_receipts_only": 12,
+        "needs_history": 29,
         "pending_seed": 2,
         "v1_backtested": 3
       },

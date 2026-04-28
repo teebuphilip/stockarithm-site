@@ -8,9 +8,9 @@
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;600&display=swap');
   :root {
-    --bg: #0a0a0a;
-    --bg2: #111;
-    --card: #161616;
+    --bg: #0d1412;
+    --bg2: #13231f;
+    --card: #182b26;
     --border: rgba(255,255,255,0.08);
     --accent: #19d38f;
     --accent-dim: #12a06b;
@@ -19,13 +19,13 @@
     --yellow: #eab308;
     --gold: #d4a017;
     --purple: #a855f7;
-    --muted: #888;
-    --text: #e8e8e8;
+    --muted: #9ab0a7;
+    --text: #ecf5f2;
     --mono: 'IBM Plex Mono', ui-monospace, monospace;
     --sans: 'Space Grotesk', system-ui, sans-serif;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { font-family: var(--sans); color: var(--text); background: var(--bg); line-height: 1.5; -webkit-font-smoothing: antialiased; }
+  body { font-family: var(--sans); color: var(--text); background: radial-gradient(1000px 600px at 15% -10%, #1e3f35, transparent), radial-gradient(900px 500px at 90% 0%, #1b352f, transparent), var(--bg); line-height: 1.5; -webkit-font-smoothing: antialiased; }
   .hero { text-align: center; padding: 60px 24px 48px; background: radial-gradient(800px 400px at 50% 0%, rgba(25,211,143,0.06), transparent), var(--bg); border-bottom: 1px solid var(--border); }
   .hero-badge { display: inline-block; font-family: var(--mono); font-size: 12px; color: var(--accent); border: 1px solid var(--accent-dim); border-radius: 20px; padding: 4px 14px; margin-bottom: 16px; letter-spacing: 0.5px; }
   .hero h1 { font-size: clamp(28px, 5vw, 48px); font-weight: 700; letter-spacing: -0.5px; margin-bottom: 12px; }
@@ -93,7 +93,7 @@
   .paywall-cta-row td { text-align: center; padding: 16px; border-bottom: none; }
   .paywall-cta-row a { color: var(--accent); font-weight: 600; text-decoration: none; font-size: 14px; }
   .paywall-cta-row a:hover { text-decoration: underline; }
-  .ticker-check { max-width: 480px; }
+  .ticker-check { max-width: 480px; margin: 0 auto; }
   .ticker-input-wrap { display: flex; gap: 10px; margin-bottom: 16px; }
   .ticker-input { flex: 1; padding: 12px 16px; font-family: var(--mono); font-size: 16px; background: var(--card); border: 1px solid var(--border); border-radius: 8px; color: var(--text); outline: none; text-transform: uppercase; }
   .ticker-input::placeholder { color: rgba(255,255,255,0.2); }

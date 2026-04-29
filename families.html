@@ -55,6 +55,10 @@
   .mini-chart-legend i { display: inline-block; width: 10px; height: 10px; border-radius: 999px; }
   @media (max-width: 560px) { .waitlist-form { grid-template-columns: 1fr; } }
 </style>
+<style>
+  .family-legend ul { margin: 10px 0 0 18px; line-height: 1.7; }
+  .family-grid { margin-top: 20px; }
+</style>
 </head>
 <body>
   <header>
@@ -63,17 +67,19 @@
   </header>
   <div class="wrap">
     
-    <div class="rank-note">
+    <div class="rank-note family-legend">
       <strong>Status legend:</strong>
-      <code>live_only</code> means the signal is live and publishing receipts, but does not have a clean enough history for a strict backtest.
-      <code>sandbox</code> means visible in public on purpose, but still waiting on enough data or a first live trade.
-      <code>parked</code> means temporarily set aside while the input, build, or deployment path gets cleaned up.
-      <code>promoted</code> means strong enough to feature publicly.
-      <code>backtest_weak</code> means the historical test exists but has not earned much trust.
-      <code>graveyard</code> means the idea failed badly enough that we keep it visible as a dead end.
+      <ul>
+        <li><code>live_only</code> means the signal is live and publishing receipts, but does not have a clean enough history for a strict backtest.</li>
+        <li><code>sandbox</code> means visible in public on purpose, but still waiting on enough data or a first live trade.</li>
+        <li><code>parked</code> means temporarily set aside while the input, build, or deployment path gets cleaned up.</li>
+        <li><code>promoted</code> means strong enough to feature publicly.</li>
+        <li><code>backtest_weak</code> means the historical test exists but has not earned much trust.</li>
+        <li><code>graveyard</code> means the idea failed badly enough that we keep it visible as a dead end.</li>
+      </ul>
     </div>
     
-    <div class="grid">
+    <div class="grid family-grid">
 
       <div class="card">
         <h2>Attention &amp; Sentiment</h2>
@@ -86,11 +92,11 @@
       </div>
       <div class="card">
         <h2>Consumer Stress</h2>
-        <p class="muted">Signals: 15</p>
+        <p class="muted">Signals: 18</p>
         <p class="muted" style="margin-top:8px;">Signals built around consumer pressure, housing, rates, and spending strain before that stress fully shows up in sector prices.</p>
-        <div style="margin: 10px 0 2px;"><span class="algo-type-badge">Failed: 1</span> <span class="algo-type-badge">Live Only: 9</span> <span class="algo-type-badge">Sandbox: 5</span></div>
+        <div style="margin: 10px 0 2px;"><span class="algo-type-badge">Failed: 1</span> <span class="algo-type-badge">Live Only: 11</span> <span class="algo-type-badge">Sandbox: 6</span></div>
         <ul style="margin: 12px 0 0 18px; line-height: 1.8;">
-          <li><strong>Mortgage Rate Housing Proxy</strong> <span class="return-pos">+0.34%</span> <span class="days">(Live Only)</span></li><li><strong>Retail Sales Momentum</strong> <span class="return-pos">+0.04%</span> <span class="days">(Live Only)</span></li><li><strong>Retail Rush Ahead Of Holidays</strong> <span class="return-zero">0.00%</span> <span class="days">(Sandbox)</span></li><li><strong>Credit Card Delinquency</strong> <span class="return-zero">0.00%</span> <span class="days">(Sandbox)</span></li><li><strong>Consumer Sentiment</strong> <span class="return-zero">0.00%</span> <span class="days">(Sandbox)</span></li>
+          <li><strong>Retail Sales Momentum</strong> <span class="return-pos">+0.26%</span> <span class="days">(Live Only)</span></li><li><strong>Weekly Surge In Google Trends Searches For Diy Electronics Repair Signals Bullish Xlk</strong> <span class="return-pos">+0.01%</span> <span class="days">(Live Only)</span></li><li><strong>Retail Rush Ahead Of Holidays</strong> <span class="return-zero">0.00%</span> <span class="days">(Sandbox)</span></li><li><strong>Credit Card Delinquency</strong> <span class="return-zero">0.00%</span> <span class="days">(Sandbox)</span></li><li><strong>Consumer Sentiment</strong> <span class="return-zero">0.00%</span> <span class="days">(Sandbox)</span></li>
         </ul>
       </div>
       <div class="card">
@@ -99,7 +105,7 @@
         <p class="muted" style="margin-top:8px;">The cleaner baseline rotation rules: momentum, trend, and other simple sector-switching logic with fewer alternative inputs.</p>
         <div style="margin: 10px 0 2px;"><span class="algo-type-badge">Promoted: 5</span></div>
         <ul style="margin: 12px 0 0 18px; line-height: 1.8;">
-          <li><strong>Algo Baileymol (Chaos Monger)</strong> <span class="return-pos">+5.50%</span> <span class="days">(Promoted)</span></li><li><strong>Antonacci Dual Momentum Sector Rotation</strong> <span class="return-pos">+4.96%</span> <span class="days">(Promoted)</span></li><li><strong>Faber Momentum Rotation</strong> <span class="return-pos">+3.85%</span> <span class="days">(Promoted)</span></li><li><strong>Algo Biscotti (Unconditional Loyalty)</strong> <span class="return-neg">-1.89%</span> <span class="days">(Promoted)</span></li><li><strong>Quantified Simple Monthly Rotation</strong> <span class="return-zero">0.00%</span> <span class="days">(Promoted)</span></li>
+          <li><strong>Algo Baileymol (Chaos Monger)</strong> <span class="return-pos">+5.72%</span> <span class="days">(Promoted)</span></li><li><strong>Antonacci Dual Momentum Sector Rotation</strong> <span class="return-pos">+5.57%</span> <span class="days">(Promoted)</span></li><li><strong>Faber Momentum Rotation</strong> <span class="return-pos">+3.85%</span> <span class="days">(Promoted)</span></li><li><strong>Algo Biscotti (Unconditional Loyalty)</strong> <span class="return-neg">-2.49%</span> <span class="days">(Promoted)</span></li><li><strong>Quantified Simple Monthly Rotation</strong> <span class="return-zero">0.00%</span> <span class="days">(Promoted)</span></li>
         </ul>
       </div>
       <div class="card">
@@ -113,11 +119,11 @@
       </div>
       <div class="card">
         <h2>Labor &amp; Jobs</h2>
-        <p class="muted">Signals: 5</p>
+        <p class="muted">Signals: 7</p>
         <p class="muted" style="margin-top:8px;">Signals watching layoffs, hiring, labor stress, and job demand for clues about sector weakness or resilience.</p>
-        <div style="margin: 10px 0 2px;"><span class="algo-type-badge">Live Only: 2</span> <span class="algo-type-badge">Sandbox: 3</span></div>
+        <div style="margin: 10px 0 2px;"><span class="algo-type-badge">Live Only: 4</span> <span class="algo-type-badge">Sandbox: 3</span></div>
         <ul style="margin: 12px 0 0 18px; line-height: 1.8;">
-          <li><strong>Daily Spike In Rss News Counts Around Labor Union Contract Negotiation Signals Bearish Xlf</strong> <span class="return-pos">+0.01%</span> <span class="days">(Live Only)</span></li><li><strong>Weekly Surge In Job Postings For Warehouse Workers Signals Bullish Xli</strong> <span class="return-neg">-0.02%</span> <span class="days">(Live Only)</span></li><li><strong>LinkedIn Layoff Propagation</strong> <span class="return-zero">0.00%</span> <span class="days">(Sandbox)</span></li><li><strong>Job Posting Acceleration</strong> <span class="return-zero">0.00%</span> <span class="days">(Sandbox)</span></li><li><strong>Glassdoor Misery Gradient</strong> <span class="return-zero">0.00%</span> <span class="days">(Sandbox)</span></li>
+          <li><strong>Recession Whisper Google Trends Unemployment Search Surge</strong> <span class="return-pos">+0.07%</span> <span class="days">(Live Only)</span></li><li><strong>LinkedIn Layoff Propagation</strong> <span class="return-zero">0.00%</span> <span class="days">(Sandbox)</span></li><li><strong>Job Posting Acceleration</strong> <span class="return-zero">0.00%</span> <span class="days">(Sandbox)</span></li><li><strong>Glassdoor Misery Gradient</strong> <span class="return-zero">0.00%</span> <span class="days">(Sandbox)</span></li><li><strong>Daily Spike In Rss News Counts Around Labor Union Contract Negotiation Signals Bearish Xlf</strong> <span class="return-zero">-0.00%</span> <span class="days">(Live Only)</span></li>
         </ul>
       </div>
       <div class="card">
@@ -133,7 +139,7 @@
         <h2>Macro Input Pressure</h2>
         <p class="muted">Signals: 46</p>
         <p class="muted" style="margin-top:8px;">Signals tied to macro shocks like volatility, weather, commodities, energy, and other broad external pressure inputs.</p>
-        <div style="margin: 10px 0 2px;"><span class="algo-type-badge">Backtest Weak: 1</span> <span class="algo-type-badge">Live Only: 12</span> <span class="algo-type-badge">Parked: 2</span> <span class="algo-type-badge">Sandbox: 31</span></div>
+        <div style="margin: 10px 0 2px;"><span class="algo-type-badge">Backtest Weak: 1</span> <span class="algo-type-badge">Live Only: 13</span> <span class="algo-type-badge">Parked: 2</span> <span class="algo-type-badge">Sandbox: 30</span></div>
         <ul style="margin: 12px 0 0 18px; line-height: 1.8;">
           <li><strong>Semiconductor Moonshot Warning</strong> <span class="return-pos">+0.05%</span> <span class="days">(Backtest Weak)</span></li><li><strong>Earthquake Aftershock Amplifier</strong> <span class="return-pos">+0.05%</span> <span class="days">(Live Only)</span></li><li><strong>Crypto Derivative Arbitrage</strong> <span class="return-zero">0.00%</span> <span class="days">(Sandbox)</span></li><li><strong>Crypto Capitulation Countdown</strong> <span class="return-zero">0.00%</span> <span class="days">(Sandbox)</span></li><li><strong>Cloud Storage Demand Surge</strong> <span class="return-zero">0.00%</span> <span class="days">(Sandbox)</span></li>
         </ul>
@@ -144,16 +150,16 @@
         <p class="muted" style="margin-top:8px;">Signals built from insider flows, political filings, and dark-pool style positioning clues before the market fully reacts.</p>
         <div style="margin: 10px 0 2px;"><span class="algo-type-badge">Backtest Weak: 3</span> <span class="algo-type-badge">Live Only: 7</span> <span class="algo-type-badge">Parked: 2</span> <span class="algo-type-badge">Sandbox: 6</span></div>
         <ul style="margin: 12px 0 0 18px; line-height: 1.8;">
-          <li><strong>FINRA Dark Pool Signal</strong> <span class="return-pos">+1.12%</span> <span class="days">(Live Only)</span></li><li><strong>Insider Trading Signals</strong> <span class="return-pos">+0.61%</span> <span class="days">(Live Only)</span></li><li><strong>Materials Sector Weekly Positive Correlation Breakdown With Xlb</strong> <span class="return-pos">+0.03%</span> <span class="days">(Live Only)</span></li><li><strong>Staples Sector Drawdown Rapid Recovery</strong> <span class="return-pos">+0.02%</span> <span class="days">(Backtest Weak)</span></li><li><strong>Bankruptcy Filing Rate</strong> <span class="return-zero">0.00%</span> <span class="days">(Sandbox)</span></li>
+          <li><strong>FINRA Dark Pool Signal</strong> <span class="return-pos">+0.60%</span> <span class="days">(Live Only)</span></li><li><strong>Insider Trading Signals</strong> <span class="return-pos">+0.52%</span> <span class="days">(Live Only)</span></li><li><strong>Materials Sector Weekly Positive Correlation Breakdown With Xlb</strong> <span class="return-pos">+0.03%</span> <span class="days">(Live Only)</span></li><li><strong>Staples Sector Drawdown Rapid Recovery</strong> <span class="return-pos">+0.02%</span> <span class="days">(Backtest Weak)</span></li><li><strong>Bankruptcy Filing Rate</strong> <span class="return-zero">0.00%</span> <span class="days">(Sandbox)</span></li>
         </ul>
       </div>
       <div class="card">
         <h2>Travel &amp; Mobility</h2>
-        <p class="muted">Signals: 9</p>
+        <p class="muted">Signals: 10</p>
         <p class="muted" style="margin-top:8px;">Signals using movement, travel, transit, and mobility behavior as an early read on consumer and cyclical activity.</p>
-        <div style="margin: 10px 0 2px;"><span class="algo-type-badge">Live Only: 2</span> <span class="algo-type-badge">Sandbox: 7</span></div>
+        <div style="margin: 10px 0 2px;"><span class="algo-type-badge">Live Only: 2</span> <span class="algo-type-badge">Sandbox: 8</span></div>
         <ul style="margin: 12px 0 0 18px; line-height: 1.8;">
-          <li><strong>Uber Mobility Index</strong> <span class="return-pos">+0.98%</span> <span class="days">(Live Only)</span></li><li><strong>Ev Charger Density Saturation Play</strong> <span class="return-zero">0.00%</span> <span class="days">(Sandbox)</span></li><li><strong>Airport Shopping Spree</strong> <span class="return-zero">0.00%</span> <span class="days">(Sandbox)</span></li><li><strong>Airport Security Surge</strong> <span class="return-zero">0.00%</span> <span class="days">(Sandbox)</span></li><li><strong>Airline Load Factor Proxy</strong> <span class="return-zero">0.00%</span> <span class="days">(Sandbox)</span></li>
+          <li><strong>Uber Mobility Index</strong> <span class="return-pos">+0.52%</span> <span class="days">(Live Only)</span></li><li><strong>Ev Charger Density Saturation Play</strong> <span class="return-zero">0.00%</span> <span class="days">(Sandbox)</span></li><li><strong>Airport Shopping Spree</strong> <span class="return-zero">0.00%</span> <span class="days">(Sandbox)</span></li><li><strong>Airport Security Surge</strong> <span class="return-zero">0.00%</span> <span class="days">(Sandbox)</span></li><li><strong>Airline Load Factor Proxy</strong> <span class="return-zero">0.00%</span> <span class="days">(Sandbox)</span></li>
         </ul>
       </div>
     </div>
@@ -161,12 +167,12 @@
 
 <footer>
   <div class="wrap">
-    <div class="footer-nav"><a href="/landing.html">Home</a><span class="footer-sep">&middot;</span><a href="/leaderboard.html">Leaderboard</a><span class="footer-sep">&middot;</span><a href="/signals/index.html">Signals</a><span class="footer-sep">&middot;</span><a href="/families.html">Families</a><span class="footer-sep">&middot;</span><a href="/daily.html">Daily Report</a><span class="footer-sep">&middot;</span><a href="/premium.html">Premium Preview</a><span class="footer-sep">&middot;</span><a href="/blog/index.html">Blog</a><span class="footer-sep">&middot;</span><a href="/legal.html">Legal</a><span class="footer-sep">*</span><a href="/biscotti.html">Biscotti</a></div>
+    <div class="footer-nav"><a href="/landing.html">Home</a><span class="footer-sep">&middot;</span><a href="/leaderboard.html">Leaderboard</a><span class="footer-sep">&middot;</span><a href="/signals/index.html">Signals</a><span class="footer-sep">&middot;</span><a href="/families.html">Families</a><span class="footer-sep">&middot;</span><a href="/daily.html">Daily Report</a><span class="footer-sep">&middot;</span><a href="/premium.html">Premium Preview</a><span class="footer-sep">&middot;</span><a href="/blog/index.html">Blog</a><span class="footer-sep">&middot;</span><a href="/legal.html">Legal</a><span class="footer-sep">&middot;</span><a href="/biscotti.html">Biscotti</a></div>
     <div style="width:100%;max-width:520px;height:1px;margin:14px auto 14px;background:rgba(255,255,255,0.10);"></div>
     <div style="display:block;width:100%;text-align:center;font-size:11px;font-style:italic;letter-spacing:0.2px;color:rgba(255,255,255,0.58);margin:0 auto 10px;">
       StockArithm powered by R&amp;B AlgoLabs, LLC.
     </div>
-    <div style="text-align:center;font-size:11px;font-style:italic;letter-spacing:0.2px;color:rgba(255,255,255,0.50);margin-bottom:14px;">Last updated: 2026-04-28T23:31:10Z</div>
+    <div style="text-align:center;font-size:11px;font-style:italic;letter-spacing:0.2px;color:rgba(255,255,255,0.50);margin-bottom:14px;">Last updated: 2026-04-29T23:31:09Z</div>
     <div style="margin-top:12px;max-width:920px;margin-left:auto;margin-right:auto;text-align:center;font-size:11px;font-style:italic;letter-spacing:0.2px;color:rgba(255,255,255,0.58);">
       <strong>Signal Lab Notice:</strong> Experimental research only. Signals can and will fail. Do not interpret any signal as a recommendation.<br>
       <strong>Performance Disclosure:</strong> Leaderboards are model/simulation outputs and may not reflect slippage, fees, liquidity, execution delays, or market impact.<br>

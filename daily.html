@@ -7,9 +7,9 @@
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;600&display=swap');
   :root {
-    --bg: #0a0a0a;
-    --bg2: #111;
-    --card: #161616;
+    --bg: #0d1412;
+    --bg2: #13231f;
+    --card: #182b26;
     --border: rgba(255,255,255,0.08);
     --accent: #19d38f;
     --accent-dim: #12a06b;
@@ -18,13 +18,13 @@
     --yellow: #eab308;
     --gold: #d4a017;
     --purple: #a855f7;
-    --muted: #888;
-    --text: #e8e8e8;
+    --muted: #9ab0a7;
+    --text: #ecf5f2;
     --mono: 'IBM Plex Mono', ui-monospace, monospace;
     --sans: 'Space Grotesk', system-ui, sans-serif;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { font-family: var(--sans); color: var(--text); background: var(--bg); line-height: 1.5; -webkit-font-smoothing: antialiased; }
+  body { font-family: var(--sans); color: var(--text); background: radial-gradient(1000px 600px at 15% -10%, #1e3f35, transparent), radial-gradient(900px 500px at 90% 0%, #1b352f, transparent), var(--bg); line-height: 1.5; -webkit-font-smoothing: antialiased; }
   .hero { text-align: center; padding: 60px 24px 48px; background: radial-gradient(800px 400px at 50% 0%, rgba(25,211,143,0.06), transparent), var(--bg); border-bottom: 1px solid var(--border); }
   .hero-badge { display: inline-block; font-family: var(--mono); font-size: 12px; color: var(--accent); border: 1px solid var(--accent-dim); border-radius: 20px; padding: 4px 14px; margin-bottom: 16px; letter-spacing: 0.5px; }
   .hero h1 { font-size: clamp(28px, 5vw, 48px); font-weight: 700; letter-spacing: -0.5px; margin-bottom: 12px; }
@@ -87,7 +87,7 @@
   .name-tooltip { position: relative; cursor: help; }
   .name-tooltip .tip { display: none; position: absolute; bottom: calc(100% + 6px); left: 0; background: #222; border: 1px solid var(--border); border-radius: 6px; padding: 8px 12px; font-size: 12px; font-weight: 400; color: var(--muted); white-space: nowrap; z-index: 20; pointer-events: none; }
   .name-tooltip:hover .tip { display: block; }
-  .ticker-check { max-width: 480px; }
+  .ticker-check { max-width: 480px; margin: 0 auto; }
   .ticker-input-wrap { display: flex; gap: 10px; margin-bottom: 16px; }
   .ticker-input { flex: 1; padding: 12px 16px; font-family: var(--mono); font-size: 16px; background: var(--card); border: 1px solid var(--border); border-radius: 8px; color: var(--text); outline: none; text-transform: uppercase; }
   .ticker-input::placeholder { color: rgba(255,255,255,0.2); }
@@ -105,10 +105,12 @@
   .ticker-error { color: var(--red); font-family: var(--mono); font-size: 13px; display: none; }
   .ticker-error.show { display: block; }
   footer { border-top: 1px solid var(--border); padding: 32px 20px; text-align: center; font-size: 12px; color: var(--muted); line-height: 1.8; }
-  .footer-nav { margin-top: 8px; display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 0 8px; font-family: var(--mono); font-size: 11px; line-height: 1.6; letter-spacing: 0.2px; color: rgba(255,255,255,0.58); }
-  .footer-nav a { color: inherit; text-decoration: none; white-space: nowrap; }
+  .footer-nav { margin-top: 8px; display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 0 8px; width: 100%; font-family: var(--mono); font-size: 11px; line-height: 1.6; letter-spacing: 0.2px; color: rgba(255,255,255,0.58); }
+  .footer-nav a, .footer-nav a:visited { color: rgba(255,255,255,0.58); text-decoration: none; white-space: nowrap; }
   .footer-nav .footer-sep { color: rgba(255,255,255,0.40); }
   .footer-nav a:hover { text-decoration: underline; }
+  .section-title { text-align: center; }
+  .section-sub { text-align: center; }
   .rank-note { border: 1px solid var(--border); border-radius: 12px; background: rgba(255,255,255,0.035); padding: 14px 16px; margin: 14px 0 18px; color: var(--muted); font-size: 13px; line-height: 1.65; }
   .rank-note strong { color: var(--text); }
   .rank-note code { font-family: var(--mono); color: var(--gold); background: rgba(255,204,102,0.08); padding: 1px 5px; border-radius: 4px; }
@@ -132,17 +134,23 @@
     .sector-tile { padding: 10px; }
   }
 </style>
+<style>
+  .daily-title { color: var(--accent); }
+  .wrap-table table { width: 100%; min-width: 0; table-layout: fixed; }
+  .wrap-table th, .wrap-table td { white-space: normal; word-break: break-word; }
+  .daily-list { margin: 0 auto; max-width: 680px; padding-left: 0; list-style-position: inside; text-align: center; line-height: 1.9; }
+</style>
 </head>
 <body>
 <div class="hero">
   <div class="hero-badge">DAILY REPORT</div>
-  <h1><span>2026-04-28</span> nightly snapshot</h1>
+  <h1 class="daily-title">2026-04-29 nightly snapshot</h1>
   <p class="hero-sub">What changed in the lab after the nightly run.</p>
 </div>
 <div class="pulse">
   <div class="wrap">
     <span class="pulse-label">TODAY IN THE LAB</span>
-    <div class="pulse-items"><span class="pulse-item">Algo Baileymol (Chaos Monger): +5.50% YTD</span> <span class="pulse-sep">&middot;</span> <span class="pulse-item"><strong>138</strong> algos tracked</span> <span class="pulse-sep">&middot;</span> <span class="pulse-item">XLK strongest consensus</span> <span class="pulse-sep">&middot;</span> <span class="pulse-item">XLV weakest consensus</span> <span class="pulse-sep">&middot;</span> <span class="pulse-item pulse-date">2026-04-28</span></div>
+    <div class="pulse-items"><span class="pulse-item">Algo Baileymol (Chaos Monger): +5.72% YTD</span> <span class="pulse-sep">&middot;</span> <span class="pulse-item"><strong>144</strong> algos tracked</span> <span class="pulse-sep">&middot;</span> <span class="pulse-item">XLK strongest consensus</span> <span class="pulse-sep">&middot;</span> <span class="pulse-item">XLF weakest consensus</span> <span class="pulse-sep">&middot;</span> <span class="pulse-item pulse-date">2026-04-29</span></div>
   </div>
 </div>
 <section>
@@ -150,8 +158,8 @@
     <h2 class="section-title">Counts</h2>
     <p class="section-sub">Current product layer totals.</p>
     <div class="hero-stats">
-      <div class="hero-stat"><div class="num">138</div><div class="label">Total</div></div>
-      <div class="hero-stat"><div class="num">51</div><div class="label">Watchlist</div></div>
+      <div class="hero-stat"><div class="num">144</div><div class="label">Total</div></div>
+      <div class="hero-stat"><div class="num">56</div><div class="label">Watchlist</div></div>
       <div class="hero-stat"><div class="num">5</div><div class="label">Promoted</div></div>
       <div class="hero-stat"><div class="num">7</div><div class="label">Graveyard</div></div>
     </div>
@@ -169,10 +177,11 @@
 <section>
   <div class="wrap">
     <h2 class="section-title">Top Live YTD</h2>
-    <div class="table-wrap">
+    <p class="section-sub">Top live performers by year-to-date return.</p>
+    <div class="table-wrap wrap-table">
       <table>
         <thead><tr><th>#</th><th>Algorithm</th><th>Family</th><th>Return</th><th>Alpha vs SPY</th></tr></thead>
-        <tbody><tr><td>1</td><td>Algo Baileymol (Chaos Monger)</td><td>core_rotation</td><td class="return-pos">+5.50%</td><td class="vs-spy vs-spy-pos">+1.04%</td></tr><tr><td>2</td><td>Antonacci Dual Momentum Sector Rotation</td><td>core_rotation</td><td class="return-pos">+4.96%</td><td class="vs-spy vs-spy-pos">+0.50%</td></tr><tr><td>3</td><td>Faber Momentum Rotation</td><td>core_rotation</td><td class="return-pos">+3.85%</td><td class="vs-spy vs-spy-neg">-0.61%</td></tr><tr><td>4</td><td>FINRA Dark Pool Signal</td><td>political_insider_filing</td><td class="return-pos">+1.12%</td><td class="vs-spy vs-spy-neg">-3.34%</td></tr><tr><td>5</td><td>Uber Mobility Index</td><td>travel_mobility</td><td class="return-pos">+0.98%</td><td class="vs-spy vs-spy-neg">-3.48%</td></tr><tr><td>6</td><td>Insider Trading Signals</td><td>political_insider_filing</td><td class="return-pos">+0.61%</td><td class="vs-spy vs-spy-neg">-3.84%</td></tr><tr><td>7</td><td>Mortgage Rate Housing Proxy</td><td>consumer_stress</td><td class="return-pos">+0.34%</td><td class="vs-spy vs-spy-neg">-4.12%</td></tr><tr><td>8</td><td>Semiconductor Moonshot Warning</td><td>macro_input_pressure</td><td class="return-pos">+0.05%</td><td class="vs-spy vs-spy-neg">-4.41%</td></tr><tr><td>9</td><td>Earthquake Aftershock Amplifier</td><td>macro_input_pressure</td><td class="return-pos">+0.05%</td><td class="vs-spy vs-spy-neg">-4.41%</td></tr><tr><td>10</td><td>Retail Sales Momentum</td><td>consumer_stress</td><td class="return-pos">+0.04%</td><td class="vs-spy vs-spy-neg">-4.42%</td></tr></tbody>
+        <tbody><tr><td>1</td><td>Algo Baileymol (Chaos Monger)</td><td>core_rotation</td><td class="return-pos">+5.72%</td><td class="vs-spy vs-spy-pos">+1.28%</td></tr><tr><td>2</td><td>Antonacci Dual Momentum Sector Rotation</td><td>core_rotation</td><td class="return-pos">+5.57%</td><td class="vs-spy vs-spy-pos">+1.13%</td></tr><tr><td>3</td><td>Faber Momentum Rotation</td><td>core_rotation</td><td class="return-pos">+3.85%</td><td class="vs-spy vs-spy-neg">-0.60%</td></tr><tr><td>4</td><td>FINRA Dark Pool Signal</td><td>political_insider_filing</td><td class="return-pos">+0.60%</td><td class="vs-spy vs-spy-neg">-3.84%</td></tr><tr><td>5</td><td>Uber Mobility Index</td><td>travel_mobility</td><td class="return-pos">+0.52%</td><td class="vs-spy vs-spy-neg">-3.92%</td></tr><tr><td>6</td><td>Insider Trading Signals</td><td>political_insider_filing</td><td class="return-pos">+0.52%</td><td class="vs-spy vs-spy-neg">-3.93%</td></tr><tr><td>7</td><td>Retail Sales Momentum</td><td>consumer_stress</td><td class="return-pos">+0.26%</td><td class="vs-spy vs-spy-neg">-4.18%</td></tr><tr><td>8</td><td>Recession Whisper Google Trends Unemployment Search Surge</td><td>labor_jobs</td><td class="return-pos">+0.07%</td><td class="vs-spy vs-spy-neg">-4.37%</td></tr><tr><td>9</td><td>Semiconductor Moonshot Warning</td><td>macro_input_pressure</td><td class="return-pos">+0.05%</td><td class="vs-spy vs-spy-neg">-4.40%</td></tr><tr><td>10</td><td>Earthquake Aftershock Amplifier</td><td>macro_input_pressure</td><td class="return-pos">+0.05%</td><td class="vs-spy vs-spy-neg">-4.40%</td></tr></tbody>
       </table>
     </div>
   </div>
@@ -180,18 +189,19 @@
 <section>
   <div class="wrap">
     <h2 class="section-title">Rolling 30D Leaders</h2>
-    <ul style="margin-left: 20px; line-height: 1.9;"><li><strong>Algo Biscotti (Unconditional Loyalty)</strong> <span class="return-pos">+7.90%</span> <span class="days">vs SPY -4.72%</span></li><li><strong>Algo Baileymol (Chaos Monger)</strong> <span class="return-pos">+6.31%</span> <span class="days">vs SPY -6.31%</span></li><li><strong>Chaos Rotation Lab</strong> <span class="return-pos">+4.54%</span> <span class="days">vs SPY -8.08%</span></li><li><strong>Antonacci Dual Momentum Sector Rotation</strong> <span class="return-pos">+4.03%</span> <span class="days">vs SPY -8.59%</span></li><li><strong>VIX Term Structure</strong> <span class="return-pos">+3.07%</span> <span class="days">vs SPY -9.54%</span></li><li><strong>Algo Biscotti (Unconditional Loyalty)</strong> <span class="return-pos">+1.44%</span> <span class="days">vs SPY -11.18%</span></li><li><strong>FINRA Dark Pool Signal</strong> <span class="return-pos">+1.12%</span> <span class="days">vs SPY -11.50%</span></li><li><strong>Uber Mobility Index</strong> <span class="return-pos">+0.98%</span> <span class="days">vs SPY -11.64%</span></li><li><strong>Insider Trading Signals</strong> <span class="return-pos">+0.61%</span> <span class="days">vs SPY -12.00%</span></li><li><strong>VIX Fear Rotation</strong> <span class="return-pos">+0.59%</span> <span class="days">vs SPY -12.02%</span></li></ul>
+    <p class="section-sub">Recent leaders over the last 30 days.</p>
+    <ul class="daily-list"><li><strong>Algo Biscotti (Unconditional Loyalty)</strong> <span class="return-pos">+7.24%</span> <span class="days">vs SPY -5.36%</span></li><li><strong>Algo Baileymol (Chaos Monger)</strong> <span class="return-pos">+6.54%</span> <span class="days">vs SPY -6.06%</span></li><li><strong>Chaos Rotation Lab</strong> <span class="return-pos">+4.76%</span> <span class="days">vs SPY -7.83%</span></li><li><strong>Antonacci Dual Momentum Sector Rotation</strong> <span class="return-pos">+4.64%</span> <span class="days">vs SPY -7.96%</span></li><li><strong>VIX Term Structure</strong> <span class="return-pos">+3.35%</span> <span class="days">vs SPY -9.25%</span></li><li><strong>Algo Biscotti (Unconditional Loyalty)</strong> <span class="return-pos">+1.24%</span> <span class="days">vs SPY -11.35%</span></li><li><strong>FINRA Dark Pool Signal</strong> <span class="return-pos">+0.60%</span> <span class="days">vs SPY -12.00%</span></li><li><strong>Uber Mobility Index</strong> <span class="return-pos">+0.52%</span> <span class="days">vs SPY -12.08%</span></li><li><strong>Insider Trading Signals</strong> <span class="return-pos">+0.52%</span> <span class="days">vs SPY -12.08%</span></li><li><strong>VIX Fear Rotation</strong> <span class="return-pos">+0.37%</span> <span class="days">vs SPY -12.23%</span></li></ul>
   </div>
 </section>
 
 <footer>
   <div class="wrap">
-    <div class="footer-nav"><a href="/landing.html">Home</a><span class="footer-sep">&middot;</span><a href="/leaderboard.html">Leaderboard</a><span class="footer-sep">&middot;</span><a href="/signals/index.html">Signals</a><span class="footer-sep">&middot;</span><a href="/families.html">Families</a><span class="footer-sep">&middot;</span><a href="/daily.html">Daily Report</a><span class="footer-sep">&middot;</span><a href="/premium.html">Premium Preview</a><span class="footer-sep">&middot;</span><a href="/blog/index.html">Blog</a><span class="footer-sep">&middot;</span><a href="/legal.html">Legal</a><span class="footer-sep">*</span><a href="/biscotti.html">Biscotti</a></div>
+    <div class="footer-nav"><a href="/landing.html">Home</a><span class="footer-sep">&middot;</span><a href="/leaderboard.html">Leaderboard</a><span class="footer-sep">&middot;</span><a href="/signals/index.html">Signals</a><span class="footer-sep">&middot;</span><a href="/families.html">Families</a><span class="footer-sep">&middot;</span><a href="/daily.html">Daily Report</a><span class="footer-sep">&middot;</span><a href="/premium.html">Premium Preview</a><span class="footer-sep">&middot;</span><a href="/blog/index.html">Blog</a><span class="footer-sep">&middot;</span><a href="/legal.html">Legal</a><span class="footer-sep">&middot;</span><a href="/biscotti.html">Biscotti</a></div>
     <div style="width:100%;max-width:520px;height:1px;margin:14px auto 14px;background:rgba(255,255,255,0.10);"></div>
     <div style="display:block;width:100%;text-align:center;font-size:11px;font-style:italic;letter-spacing:0.2px;color:rgba(255,255,255,0.58);margin:0 auto 10px;">
       StockArithm powered by R&amp;B AlgoLabs, LLC.
     </div>
-    <div style="text-align:center;font-size:11px;font-style:italic;letter-spacing:0.2px;color:rgba(255,255,255,0.50);margin-bottom:14px;">Last updated: 2026-04-28T23:31:18Z</div>
+    <div style="text-align:center;font-size:11px;font-style:italic;letter-spacing:0.2px;color:rgba(255,255,255,0.50);margin-bottom:14px;">Last updated: 2026-04-29T23:31:16Z</div>
     <div style="margin-top:12px;max-width:920px;margin-left:auto;margin-right:auto;text-align:center;font-size:11px;font-style:italic;letter-spacing:0.2px;color:rgba(255,255,255,0.58);">
       <strong>Signal Lab Notice:</strong> Experimental research only. Signals can and will fail. Do not interpret any signal as a recommendation.<br>
       <strong>Performance Disclosure:</strong> Leaderboards are model/simulation outputs and may not reflect slippage, fees, liquidity, execution delays, or market impact.<br>

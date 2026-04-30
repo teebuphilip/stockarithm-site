@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>StockArithm — Daily Report</title>
+<title>StockArithm — How It Works</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;600&display=swap');
   :root {
@@ -135,66 +135,28 @@
   }
 </style>
 <style>
-  .daily-title { color: var(--accent); }
-  .daily-freshness { margin-top: 10px; font-family: var(--mono); font-size: 12px; color: var(--muted); text-align: center; }
-  .wrap-table table { width: 100%; min-width: 0; table-layout: fixed; }
-  .wrap-table th, .wrap-table td { white-space: normal; word-break: break-word; }
-  .daily-list { margin: 0 auto; max-width: 680px; padding-left: 0; list-style-position: inside; text-align: center; line-height: 1.9; }
+  .how-title { color: var(--accent); text-align: center; }
+  .how-hero { text-align: center; }
+  .how-page section .wrap { text-align: center; }
+  .how-page section .wrap p { margin-left: auto; margin-right: auto; max-width: 920px; }
+  .how-page .section-title { color: var(--accent); }
+  .how-note { font-family: var(--mono); font-size: 12px; color: var(--muted); text-align: center; margin-top: 10px; }
+  .how-chip-row { display: flex; justify-content: center; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+  .how-chip { font-family: var(--mono); font-size: 11px; color: var(--muted); border: 1px solid rgba(255,255,255,0.08); border-radius: 999px; padding: 4px 10px; }
 </style>
 </head>
-<body>
-<div class="hero">
-  <h1 class="daily-title">2026-04-29 nightly snapshot</h1>
-  <div class="hero-badge">DAILY REPORT</div>
-  <p class="hero-sub">What changed in the lab after the nightly run.</p>
-  <div class="daily-freshness">Updated after the most recent nightly run: 2026-04-29 23:34 UTC (7:34 PM ET)</div>
-</div>
-<div class="pulse">
-  <div class="wrap">
-    <span class="pulse-label">TODAY IN THE LAB</span>
-    <div class="pulse-items"><span class="pulse-item">Algo Baileymol (Chaos Monger): +5.72% YTD</span> <span class="pulse-sep">&middot;</span> <span class="pulse-item"><strong>151</strong> algos tracked</span> <span class="pulse-sep">&middot;</span> <span class="pulse-item">XLK strongest consensus</span> <span class="pulse-sep">&middot;</span> <span class="pulse-item">XLF weakest consensus</span> <span class="pulse-sep">&middot;</span> <span class="pulse-item pulse-date">2026-04-29</span></div>
+<body class="how-page">
+<div class="hero how-hero">
+  <h1 class="how-title">How It Works</h1>
+  <p class="hero-sub">One algo page, broken down box by box.</p>
+  <div class="how-note">Example: Biscotti, because it is the clearest public one.</div>
+  <div class="how-chip-row">
+    <span class="how-chip">No jargon</span>
+    <span class="how-chip">No scorekeeping trickery</span>
+    <span class="how-chip">Read the boxes in order</span>
   </div>
 </div>
-<section>
-  <div class="wrap">
-    <h2 class="section-title">Counts</h2>
-    <p class="section-sub">Current product layer totals.</p>
-    <div class="hero-stats">
-      <div class="hero-stat"><div class="num">151</div><div class="label">Total</div></div>
-      <div class="hero-stat"><div class="num">59</div><div class="label">Watchlist</div></div>
-      <div class="hero-stat"><div class="num">5</div><div class="label">Promoted</div></div>
-      <div class="hero-stat"><div class="num">7</div><div class="label">Graveyard</div></div>
-    </div>
-  </div>
-</section>
-<section>
-  <div class="wrap">
-    <div class="rank-note">
-      <strong>Comparator note:</strong> The lab now tracks simple always-on baselines in `docs/comparison/`.
-      Today that means <code>momentum_5d</code> and <code>momentum_20d</code>.
-      They are there to answer one question: does a signal add anything beyond price momentum alone?
-    </div>
-  </div>
-</section>
-<section>
-  <div class="wrap">
-    <h2 class="section-title">Top Live YTD</h2>
-    <p class="section-sub">Top live performers by year-to-date return.</p>
-    <div class="table-wrap wrap-table">
-      <table>
-        <thead><tr><th>#</th><th>Algorithm</th><th>Family</th><th>Return</th><th>Alpha vs SPY</th></tr></thead>
-        <tbody><tr><td>1</td><td>Algo Baileymol (Chaos Monger)</td><td>core_rotation</td><td class="return-pos">+5.72%</td><td class="vs-spy vs-spy-pos">+1.28%</td></tr><tr><td>2</td><td>Antonacci Dual Momentum Sector Rotation</td><td>core_rotation</td><td class="return-pos">+5.57%</td><td class="vs-spy vs-spy-pos">+1.13%</td></tr><tr><td>3</td><td>Faber Momentum Rotation</td><td>core_rotation</td><td class="return-pos">+3.85%</td><td class="vs-spy vs-spy-neg">-0.60%</td></tr><tr><td>4</td><td>FINRA Dark Pool Signal</td><td>political_insider_filing</td><td class="return-pos">+0.60%</td><td class="vs-spy vs-spy-neg">-3.84%</td></tr><tr><td>5</td><td>Uber Mobility Index</td><td>travel_mobility</td><td class="return-pos">+0.52%</td><td class="vs-spy vs-spy-neg">-3.92%</td></tr><tr><td>6</td><td>Insider Trading Signals</td><td>political_insider_filing</td><td class="return-pos">+0.52%</td><td class="vs-spy vs-spy-neg">-3.93%</td></tr><tr><td>7</td><td>Retail Sales Momentum</td><td>consumer_stress</td><td class="return-pos">+0.26%</td><td class="vs-spy vs-spy-neg">-4.18%</td></tr><tr><td>8</td><td>Recession Whisper Google Trends Unemployment Search Surge</td><td>labor_jobs</td><td class="return-pos">+0.07%</td><td class="vs-spy vs-spy-neg">-4.37%</td></tr><tr><td>9</td><td>Semiconductor Moonshot Warning</td><td>macro_input_pressure</td><td class="return-pos">+0.05%</td><td class="vs-spy vs-spy-neg">-4.40%</td></tr><tr><td>10</td><td>Earthquake Aftershock Amplifier</td><td>macro_input_pressure</td><td class="return-pos">+0.05%</td><td class="vs-spy vs-spy-neg">-4.40%</td></tr></tbody>
-      </table>
-    </div>
-  </div>
-</section>
-<section>
-  <div class="wrap">
-    <h2 class="section-title">Rolling 30D Leaders</h2>
-    <p class="section-sub">Recent leaders over the last 30 days.</p>
-    <ul class="daily-list"><li><strong>Algo Biscotti (Unconditional Loyalty)</strong> <span class="return-pos">+7.24%</span> <span class="days">vs SPY -5.36%</span></li><li><strong>Algo Baileymol (Chaos Monger)</strong> <span class="return-pos">+6.54%</span> <span class="days">vs SPY -6.06%</span></li><li><strong>Chaos Rotation Lab</strong> <span class="return-pos">+4.76%</span> <span class="days">vs SPY -7.83%</span></li><li><strong>Antonacci Dual Momentum Sector Rotation</strong> <span class="return-pos">+4.64%</span> <span class="days">vs SPY -7.96%</span></li><li><strong>VIX Term Structure</strong> <span class="return-pos">+3.35%</span> <span class="days">vs SPY -9.25%</span></li><li><strong>Algo Biscotti (Unconditional Loyalty)</strong> <span class="return-pos">+1.24%</span> <span class="days">vs SPY -11.35%</span></li><li><strong>FINRA Dark Pool Signal</strong> <span class="return-pos">+0.60%</span> <span class="days">vs SPY -12.00%</span></li><li><strong>Uber Mobility Index</strong> <span class="return-pos">+0.52%</span> <span class="days">vs SPY -12.08%</span></li><li><strong>Insider Trading Signals</strong> <span class="return-pos">+0.52%</span> <span class="days">vs SPY -12.08%</span></li><li><strong>VIX Fear Rotation</strong> <span class="return-pos">+0.37%</span> <span class="days">vs SPY -12.23%</span></li></ul>
-  </div>
-</section>
+<section><div class="wrap"><h2 class="section-title">What this page is</h2><p>This is the plain-English walkthrough of one algo page.</p><p>It uses Biscotti as the example because Biscotti is the easiest one to understand without pretending to be clever.</p><p>The goal is simple: explain every box, every chart, and every table without jargon.</p></div></section><section><div class="wrap"><h2 class="section-title">Top of the page</h2><p>The big title is the algo name.</p><p>The line under it tells you when the lab started, when it last ran, how much money the sim started with, and how much each trade uses.</p><p>The short sentence below that is the plain-English description of what the signal is trying to do.</p></div></section><section><div class="wrap"><h2 class="section-title">The stats boxes</h2><p>Total equity = how much the sim is worth right now.</p><p>Net P&amp;L = dollars gained or lost versus the starting amount.</p><p>Return = the same thing as a percentage.</p><p>Win rate = the percent of closed trades that made money.</p><p>Strategy = the name of the signal in plain words.</p><p>Sharpe ratio = a rough score for return versus wobble; higher is usually better, but it is not magic.</p><p>Max drawdown = the worst drop from a previous peak.</p><p>Avg win = the average size of a winning trade.</p><p>Avg loss = the average size of a losing trade.</p><p>Realized / Unrealized = money already locked in versus money still floating on open trades.</p></div></section><section><div class="wrap"><h2 class="section-title">The chart</h2><p>Portfolio Equity = the algo itself.</p><p>SPY Benchmark = the market yardstick the algo has to beat.</p><p>Starting Capital = the flat line showing where the sim began.</p><p>If the algo line stays above SPY, it is doing better than the market proxy.</p><p>If it stays below SPY, it is not winning that argument yet.</p></div></section><section><div class="wrap"><h2 class="section-title">The open position box</h2><p>This shows what the algo is holding right now.</p><p>Ticker is the thing it owns.</p><p>Entry is the price it paid.</p><p>Current is the latest price.</p><p>Unrealized is the gain or loss that is not locked in yet.</p><p>Value is the dollar size of the position.</p><p>Opened is when the trade started.</p></div></section><section><div class="wrap"><h2 class="section-title">The trade log</h2><p>This is the actual paper-trade history.</p><p>Date tells you when the trade happened.</p><p>Action tells you whether the system bought or sold.</p><p>Ticker is the instrument.</p><p>Price and shares tell you the size of the trade.</p><p>Value is the dollar amount at that moment.</p><p>P&amp;L is the profit or loss when the trade closed or changed.</p><p>Notes explain why the trade happened, usually in a short word like rebalance or CASH.</p></div></section><section><div class="wrap"><h2 class="section-title">What the colors mean</h2><p>Green usually means positive or active.</p><p>Red usually means negative or losing.</p><p>Muted gray means there is nothing special to call out.</p><p>The colors are meant to help you read fast, not to hide anything.</p></div></section><section><div class="wrap"><h2 class="section-title">How to read the whole page</h2><p>Start at the top.</p><p>Look at the current numbers.</p><p>Check the chart.</p><p>Then check the open position and trade log to see whether the algo is actually doing anything useful.</p><p>If the page looks ugly, that is usually the point: it means the algo is not pretending to be better than it is.</p></div></section>
 
 <footer>
   <div class="wrap">
@@ -203,7 +165,7 @@
     <div style="display:block;width:100%;text-align:center;font-size:11px;font-style:italic;letter-spacing:0.2px;color:rgba(255,255,255,0.58);margin:0 auto 10px;">
       StockArithm powered by R&amp;B AlgoLabs, LLC.
     </div>
-    <div style="text-align:center;font-size:11px;font-style:italic;letter-spacing:0.2px;color:rgba(255,255,255,0.50);margin-bottom:14px;">Last updated: 2026-04-29T23:34:40Z</div>
+    <div style="text-align:center;font-size:11px;font-style:italic;letter-spacing:0.2px;color:rgba(255,255,255,0.50);margin-bottom:14px;">Last updated: </div>
     <div style="margin-top:12px;max-width:920px;margin-left:auto;margin-right:auto;text-align:center;font-size:11px;font-style:italic;letter-spacing:0.2px;color:rgba(255,255,255,0.58);">
       <strong>Signal Lab Notice:</strong> Experimental research only. Signals can and will fail. Do not interpret any signal as a recommendation.<br>
       <strong>Performance Disclosure:</strong> Leaderboards are model/simulation outputs and may not reflect slippage, fees, liquidity, execution delays, or market impact.<br>

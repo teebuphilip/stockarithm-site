@@ -48,9 +48,10 @@
   .hero-brand { font-size: clamp(42px, 7vw, 72px); font-weight: 700; letter-spacing: -1.5px; line-height: 1; color: var(--accent); margin: 0 0 10px; }
   .hero-tagline { font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 14px; color: var(--muted); max-width: 860px; margin: 0 auto; }
   .home-shell { max-width: 1120px; margin: 0 auto; }
-  .home-shell .card { text-align: center; }
+  .home-shell .card { text-align: center; max-width: 980px; margin-left: auto; margin-right: auto; }
   .home-shell .card ul { display: inline-block; text-align: left; margin: 0 auto; }
   .home-shell .card .cta { margin-top: 6px; }
+  .card-actions { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; margin-top: 8px; }
   .mini-chart-wrap { display: flex; flex-direction: column; gap: 10px; }
   .mini-chart-meta { display: flex; flex-direction: column; gap: 4px; }
   .mini-chart-title { font-size: 18px; font-weight: 700; }
@@ -125,7 +126,7 @@
       <p>If TSA volume spikes, the lab can turn that into a travel or consumer signal, run it against SPY, and show whether it actually helps.</p>
     </div>
 
-    <div class="grid">
+    <div class="grid" style="max-width:980px; margin: 0 auto;">
 
       <div class="card">
         <h2>30-Day Rolling Leaders</h2>
@@ -146,16 +147,13 @@
       </div>
 
       <div class="card">
-        <h2>Signal Index</h2>
-        <p>All 144 signals in one public list. Names, families, and status only. No rank and no returns.</p>
-        <a class="cta" href="signals/index.html">Browse all signals</a>
-      </div>
-
-      <div class="card">
         <h2>Why so many names stay flat</h2>
         <p>A lot of the lab is still collecting data, waiting on better history, or sitting in sandbox until the first real trade fires. We leave those names visible instead of pretending they do not exist.</p>
         <p class="muted" style="margin-top:10px;">Families are the bucket system that groups similar signals together, so you can see whether the idea space is working even when individual names are still waiting on receipts.</p>
-        <a class="cta" href="families.html">Browse families</a>
+        <div class="card-actions">
+          <a class="cta" href="signals/index.html">Browse all signals</a>
+          <a class="cta" href="families.html">Browse families</a>
+        </div>
       </div>
     </div>
     <div class="card waitlist" id="waitlist">

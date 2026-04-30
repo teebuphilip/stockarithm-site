@@ -1,6 +1,6 @@
 {
   "schema_version": "v1",
-  "generated_at": "2026-04-28T23:35:31Z",
+  "generated_at": "2026-04-30T23:31:01Z",
   "algos": [
     {
       "schema_version": "v1",
@@ -13,29 +13,29 @@
       "evidence_class": "v1_backtested",
       "rebalance_frequency": "daily",
       "ytd_pct": -0.09,
-      "days_running": 80,
+      "days_running": 82,
       "beat_spy": false,
-      "spy_pct": 4.46,
-      "alpha_pct": -4.55,
+      "spy_pct": 5.48,
+      "alpha_pct": -5.57,
       "ret_30d_pct": -0.09,
-      "spy_delta_30d_pct": -12.7,
-      "last_snapshot": "2026-04-28",
+      "spy_delta_30d_pct": -10.59,
+      "last_snapshot": "2026-04-30",
       "new_algo_date": null,
       "comparator": {
         "primary_etf": "XLY",
         "signals": {
           "momentum_5d": {
-            "direction": "DOWN",
-            "confidence": 0.329,
-            "return_pct": -1.647
+            "direction": "UP",
+            "confidence": 0.104,
+            "return_pct": 0.518
           },
           "momentum_20d": {
             "direction": "UP",
             "confidence": 1.0,
-            "return_pct": 10.742
+            "return_pct": 7.787
           }
         },
-        "summary": "mixed"
+        "summary": "both_up"
       }
     },
     {
@@ -48,27 +48,27 @@
       "status": "parked",
       "evidence_class": "pending_seed",
       "rebalance_frequency": "weekly",
-      "ytd_pct": -0.13,
-      "days_running": 80,
+      "ytd_pct": -0.11,
+      "days_running": 82,
       "beat_spy": false,
-      "spy_pct": 4.46,
-      "alpha_pct": -4.59,
-      "ret_30d_pct": -0.13,
-      "spy_delta_30d_pct": -12.74,
-      "last_snapshot": "2026-04-28",
+      "spy_pct": 5.48,
+      "alpha_pct": -5.6,
+      "ret_30d_pct": -0.11,
+      "spy_delta_30d_pct": -10.62,
+      "last_snapshot": "2026-04-30",
       "new_algo_date": null,
       "comparator": {
         "primary_etf": "XLB",
         "signals": {
           "momentum_5d": {
             "direction": "DOWN",
-            "confidence": 0.143,
-            "return_pct": -0.715
+            "confidence": 0.131,
+            "return_pct": -0.656
           },
           "momentum_20d": {
             "direction": "UP",
-            "confidence": 0.941,
-            "return_pct": 4.706
+            "confidence": 0.4,
+            "return_pct": 2.002
           }
         },
         "summary": "mixed"
@@ -85,29 +85,29 @@
       "evidence_class": "pending_seed",
       "rebalance_frequency": "weekly",
       "ytd_pct": -0.33,
-      "days_running": 80,
+      "days_running": 82,
       "beat_spy": false,
-      "spy_pct": 4.46,
-      "alpha_pct": -4.79,
-      "ret_30d_pct": -0.21,
-      "spy_delta_30d_pct": -12.82,
-      "last_snapshot": "2026-04-28",
+      "spy_pct": 5.48,
+      "alpha_pct": -5.81,
+      "ret_30d_pct": -0.2,
+      "spy_delta_30d_pct": -10.7,
+      "last_snapshot": "2026-04-30",
       "new_algo_date": null,
       "comparator": {
         "primary_etf": "XLE",
         "signals": {
           "momentum_5d": {
             "direction": "UP",
-            "confidence": 0.659,
-            "return_pct": 3.293
+            "confidence": 0.937,
+            "return_pct": 4.686
           },
           "momentum_20d": {
-            "direction": "DOWN",
-            "confidence": 1.0,
-            "return_pct": -6.859
+            "direction": "UP",
+            "confidence": 0.231,
+            "return_pct": 1.153
           }
         },
-        "summary": "mixed"
+        "summary": "both_up"
       }
     },
     {
@@ -121,26 +121,26 @@
       "evidence_class": "pending_seed",
       "rebalance_frequency": "weekly",
       "ytd_pct": -0.41,
-      "days_running": 80,
+      "days_running": 82,
       "beat_spy": false,
-      "spy_pct": 4.46,
-      "alpha_pct": -4.87,
-      "ret_30d_pct": 0.06,
-      "spy_delta_30d_pct": -12.56,
-      "last_snapshot": "2026-04-28",
+      "spy_pct": 5.48,
+      "alpha_pct": -5.89,
+      "ret_30d_pct": -0.02,
+      "spy_delta_30d_pct": -10.53,
+      "last_snapshot": "2026-04-30",
       "new_algo_date": null,
       "comparator": {
         "primary_etf": "XLC",
         "signals": {
           "momentum_5d": {
             "direction": "DOWN",
-            "confidence": 0.241,
-            "return_pct": -1.203
+            "confidence": 0.15,
+            "return_pct": -0.75
           },
           "momentum_20d": {
             "direction": "UP",
-            "confidence": 1.0,
-            "return_pct": 7.216
+            "confidence": 0.948,
+            "return_pct": 4.738
           }
         },
         "summary": "mixed"
@@ -157,26 +157,26 @@
       "evidence_class": "pending_seed",
       "rebalance_frequency": "daily",
       "ytd_pct": 0.0,
-      "days_running": 80,
+      "days_running": 82,
       "beat_spy": false,
-      "spy_pct": 4.46,
-      "alpha_pct": -4.46,
+      "spy_pct": 5.48,
+      "alpha_pct": -5.48,
       "ret_30d_pct": 0.0,
-      "spy_delta_30d_pct": -12.61,
-      "last_snapshot": "2026-04-28",
+      "spy_delta_30d_pct": -10.51,
+      "last_snapshot": "2026-04-30",
       "new_algo_date": null,
       "comparator": {
         "primary_etf": "XLB",
         "signals": {
           "momentum_5d": {
             "direction": "DOWN",
-            "confidence": 0.143,
-            "return_pct": -0.715
+            "confidence": 0.131,
+            "return_pct": -0.656
           },
           "momentum_20d": {
             "direction": "UP",
-            "confidence": 0.941,
-            "return_pct": 4.706
+            "confidence": 0.4,
+            "return_pct": 2.002
           }
         },
         "summary": "mixed"
@@ -193,26 +193,26 @@
       "evidence_class": "pending_seed",
       "rebalance_frequency": "weekly",
       "ytd_pct": 0.0,
-      "days_running": 75,
+      "days_running": 77,
       "beat_spy": false,
-      "spy_pct": 4.46,
-      "alpha_pct": -4.46,
+      "spy_pct": 5.48,
+      "alpha_pct": -5.48,
       "ret_30d_pct": 0.0,
-      "spy_delta_30d_pct": -12.61,
-      "last_snapshot": "2026-04-28",
+      "spy_delta_30d_pct": -10.51,
+      "last_snapshot": "2026-04-30",
       "new_algo_date": null,
       "comparator": {
         "primary_etf": "XLB",
         "signals": {
           "momentum_5d": {
             "direction": "DOWN",
-            "confidence": 0.143,
-            "return_pct": -0.715
+            "confidence": 0.131,
+            "return_pct": -0.656
           },
           "momentum_20d": {
             "direction": "UP",
-            "confidence": 0.941,
-            "return_pct": 4.706
+            "confidence": 0.4,
+            "return_pct": 2.002
           }
         },
         "summary": "mixed"
@@ -229,29 +229,29 @@
       "evidence_class": "pending_seed",
       "rebalance_frequency": "weekly",
       "ytd_pct": 0.0,
-      "days_running": 75,
+      "days_running": 77,
       "beat_spy": false,
-      "spy_pct": 4.46,
-      "alpha_pct": -4.46,
+      "spy_pct": 5.48,
+      "alpha_pct": -5.48,
       "ret_30d_pct": 0.0,
-      "spy_delta_30d_pct": -12.61,
-      "last_snapshot": "2026-04-28",
+      "spy_delta_30d_pct": -10.51,
+      "last_snapshot": "2026-04-30",
       "new_algo_date": null,
       "comparator": {
         "primary_etf": "XLE",
         "signals": {
           "momentum_5d": {
             "direction": "UP",
-            "confidence": 0.659,
-            "return_pct": 3.293
+            "confidence": 0.937,
+            "return_pct": 4.686
           },
           "momentum_20d": {
-            "direction": "DOWN",
-            "confidence": 1.0,
-            "return_pct": -6.859
+            "direction": "UP",
+            "confidence": 0.231,
+            "return_pct": 1.153
           }
         },
-        "summary": "mixed"
+        "summary": "both_up"
       }
     }
   ]

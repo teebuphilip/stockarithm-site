@@ -3,200 +3,286 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Algo Biscotti</title>
+<title>StockArithm — Biscotti</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;600&display=swap');
   :root {
-    --bg: #0d1412;
-    --bg-2: #13231f;
+    --bg: #090909;
+    --bg2: #111111;
     --card: #182b26;
-    --accent: #f7b267;
+    --border: rgba(255,255,255,0.08);
+    --accent: #19d38f;
+    --accent-dim: #12a06b;
+    --red: #ef4444;
+    --red-dim: #991b1b;
+    --yellow: #eab308;
+    --gold: #d4a017;
+    --purple: #a855f7;
     --muted: #9ab0a7;
     --text: #ecf5f2;
+    --mono: 'IBM Plex Mono', ui-monospace, monospace;
+    --sans: 'Space Grotesk', system-ui, sans-serif;
   }
-  * { box-sizing: border-box; }
-  body {
-    margin: 0;
-    font-family: 'Space Grotesk', system-ui, sans-serif;
-    color: var(--text);
-    background:
-      radial-gradient(1000px 600px at 15% -10%, #1e3f35, transparent),
-      radial-gradient(900px 500px at 90% 0%, #1b352f, transparent),
-      var(--bg);
-  }
-  header {
-    padding: 28px;
-    border-bottom: 1px solid rgba(255,255,255,0.08);
-  }
-  header h1 {
-    margin: 0;
-    font-size: 30px;
-  }
-  header p {
-    margin: 6px 0 0;
-    color: var(--muted);
-    font-family: 'IBM Plex Mono', ui-monospace, monospace;
-    font-size: 12px;
-  }
-  .wrap { padding: 24px; max-width: 900px; }
-  .card {
-    background: var(--card);
-    border: 1px solid rgba(255,255,255,0.08);
-    border-radius: 14px;
-    padding: 18px;
-    box-shadow: 0 14px 30px rgba(0,0,0,0.22);
-  }
-  .grid {
-    display: grid;
-    grid-template-columns: 280px 1fr;
-    gap: 18px;
-  }
-  .photo {
-    width: 100%;
-    border-radius: 12px;
-    border: 1px solid rgba(255,255,255,0.1);
-    background: #111;
-    aspect-ratio: 1 / 1;
-    object-fit: cover;
-  }
-  .label {
-    color: var(--muted);
-    font-size: 12px;
-    font-family: 'IBM Plex Mono', ui-monospace, monospace;
-  }
-  .section { margin-top: 16px; }
-  .section h2 {
-    margin: 0 0 8px;
-    font-size: 18px;
-  }
-  ul { margin: 0; padding-left: 18px; }
-  .accent { color: var(--accent); font-weight: 600; }
-  blockquote {
-    margin: 14px 0;
-    padding: 14px 16px;
-    border-left: 4px solid var(--accent);
-    background: rgba(247,178,103,0.08);
-    border-radius: 10px;
-    font-size: 20px;
-    line-height: 1.35;
-  }
-  footer {
-    border-top: 1px solid rgba(255,255,255,0.08);
-    margin-top: 28px;
-    padding: 28px 18px 32px;
-    text-align: center;
-    color: var(--muted);
-    line-height: 1.8;
-  }
-  .footer-nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 0 8px;
-    font-family: 'IBM Plex Mono', ui-monospace, monospace;
-    font-size: 11px;
-    line-height: 1.6;
-    letter-spacing: 0.2px;
-    color: rgba(255,255,255,0.58);
-  }
-  .footer-nav a,
-  .footer-nav a:visited {
-    color: rgba(255,255,255,0.58);
-    text-decoration: none;
-    white-space: nowrap;
-  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: var(--sans); color: var(--text); background: var(--bg); line-height: 1.5; -webkit-font-smoothing: antialiased; }
+  .hero { text-align: center; padding: 60px 24px 48px; background: var(--bg); border-bottom: 1px solid var(--border); }
+  .hero-badge { display: inline-block; font-family: var(--mono); font-size: 12px; color: var(--accent); border: 1px solid var(--accent-dim); border-radius: 20px; padding: 4px 14px; margin-bottom: 16px; letter-spacing: 0.5px; }
+  .hero h1 { font-size: clamp(28px, 5vw, 48px); font-weight: 700; letter-spacing: -0.5px; margin-bottom: 12px; }
+  .hero h1 span { color: var(--accent); }
+  .hero-sub { font-family: var(--mono); font-size: 14px; color: var(--muted); margin-bottom: 8px; }
+  .hero-stats { display: flex; justify-content: center; gap: 32px; margin: 24px 0; flex-wrap: wrap; }
+  .hero-stat { text-align: center; }
+  .hero-stat .num { font-size: 32px; font-weight: 700; font-family: var(--mono); color: var(--accent); }
+  .hero-stat .label { font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; }
+  .cta { display: inline-block; margin-top: 20px; padding: 12px 32px; background: var(--accent); color: #000; font-weight: 700; font-size: 15px; border: none; border-radius: 8px; cursor: pointer; text-decoration: none; transition: background 0.2s; }
+  .cta:hover { background: #1ee89e; }
+  .cta-sub { display: block; font-size: 12px; color: var(--muted); margin-top: 8px; }
+  .hero-strip { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; }
+  .pill { font-size: 12px; color: var(--muted); border: 1px solid rgba(255,255,255,0.08); border-radius: 999px; padding: 6px 10px; }
+  .pill a { color: inherit; text-decoration: none; }
+  .pill a:hover { text-decoration: underline; }
+  .wrap { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+  section { padding: 48px 0; }
+  section + section { border-top: 1px solid var(--border); }
+  .section-title { font-size: 22px; font-weight: 700; margin-bottom: 6px; color: var(--accent); }
+  .section-sub { font-size: 13px; color: var(--muted); margin-bottom: 24px; }
+  .heatmap { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 10px; }
+  .sector-tile { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 14px; text-align: center; cursor: default; transition: transform 0.15s, border-color 0.15s; position: relative; }
+  .sector-tile:hover { transform: translateY(-2px); border-color: rgba(255,255,255,0.15); }
+  .sector-tile .etf { font-family: var(--mono); font-size: 16px; font-weight: 700; }
+  .sector-tile .sector-name { font-size: 11px; color: var(--muted); margin: 4px 0 8px; }
+  .sector-tile .verdict { font-family: var(--mono); font-size: 11px; font-weight: 600; padding: 3px 10px; border-radius: 4px; display: inline-block; letter-spacing: 0.5px; }
+  .verdict-BULLISH { background: rgba(25,211,143,0.15); color: var(--accent); }
+  .verdict-BEARISH { background: rgba(239,68,68,0.15); color: var(--red); }
+  .verdict-MIXED { background: rgba(234,179,8,0.15); color: var(--yellow); }
+  .sector-tooltip { display: none; position: absolute; bottom: calc(100% + 8px); left: 50%; transform: translateX(-50%); background: #222; border: 1px solid var(--border); border-radius: 6px; padding: 8px 12px; font-family: var(--mono); font-size: 11px; color: var(--muted); white-space: nowrap; z-index: 10; pointer-events: none; }
+  .sector-tile:hover .sector-tooltip { display: block; }
+  .table-wrap { overflow-x: auto; border-radius: 10px; border: 1px solid var(--border); background: var(--card); }
+  table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  thead th { text-align: left; padding: 12px 16px; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: var(--muted); border-bottom: 1px solid var(--border); white-space: nowrap; font-weight: 600; }
+  tbody td { padding: 12px 16px; border-bottom: 1px solid rgba(255,255,255,0.04); white-space: nowrap; }
+  tbody tr:last-child td { border-bottom: none; }
+  tbody tr:hover { background: rgba(255,255,255,0.02); }
+  .rank { color: var(--muted); font-family: var(--mono); width: 40px; }
+  .algo-name { font-weight: 600; display: flex; align-items: center; gap: 8px; }
+  .algo-emoji { font-size: 18px; }
+  .algo-type-badge { font-family: var(--mono); font-size: 10px; padding: 2px 6px; border-radius: 3px; background: rgba(255,255,255,0.06); color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; }
+  .return-pos { color: var(--accent); font-family: var(--mono); font-weight: 600; }
+  .return-neg { color: var(--red); font-family: var(--mono); font-weight: 600; }
+  .return-zero { color: var(--muted); font-family: var(--mono); }
+  .vs-spy { font-family: var(--mono); font-size: 12px; }
+  .vs-spy-pos { color: var(--accent); }
+  .vs-spy-neg { color: var(--red); }
+  .days { font-family: var(--mono); color: var(--muted); }
+  .status-beat { font-family: var(--mono); font-size: 11px; color: var(--accent); background: rgba(25,211,143,0.1); padding: 3px 8px; border-radius: 4px; letter-spacing: 0.3px; }
+  .status-lag { font-family: var(--mono); font-size: 11px; color: var(--red); background: rgba(239,68,68,0.1); padding: 3px 8px; border-radius: 4px; letter-spacing: 0.3px; }
+  .comparator-pack { display: flex; gap: 6px; flex-wrap: wrap; }
+  .comp-badge { font-family: var(--mono); font-size: 10px; padding: 3px 6px; border-radius: 4px; letter-spacing: 0.3px; border: 1px solid rgba(255,255,255,0.08); }
+  .comp-up { color: var(--accent); background: rgba(25,211,143,0.1); }
+  .comp-down { color: var(--red); background: rgba(239,68,68,0.1); }
+  .comp-neutral { color: var(--yellow); background: rgba(234,179,8,0.12); }
+  .comparator-na { color: var(--muted); font-family: var(--mono); font-size: 11px; }
+  .row-biscotti { border-left: 3px solid var(--gold) !important; }
+  .row-baileymol { border-left: 3px solid var(--purple) !important; }
+  .name-tooltip { position: relative; cursor: help; }
+  .name-tooltip .tip { display: none; position: absolute; bottom: calc(100% + 6px); left: 0; background: #222; border: 1px solid var(--border); border-radius: 6px; padding: 8px 12px; font-size: 12px; font-weight: 400; color: var(--muted); white-space: nowrap; z-index: 20; pointer-events: none; }
+  .name-tooltip:hover .tip { display: block; }
+  .ticker-check { max-width: 480px; margin: 0 auto; }
+  .ticker-input-wrap { display: flex; gap: 10px; margin-bottom: 16px; }
+  .ticker-input { flex: 1; padding: 12px 16px; font-family: var(--mono); font-size: 16px; background: var(--card); border: 1px solid var(--border); border-radius: 8px; color: var(--text); outline: none; text-transform: uppercase; }
+  .ticker-input::placeholder { color: rgba(255,255,255,0.2); }
+  .ticker-input:focus { border-color: var(--accent-dim); }
+  .ticker-btn { padding: 12px 20px; background: var(--accent); color: #000; font-weight: 700; font-size: 14px; border: none; border-radius: 8px; cursor: pointer; font-family: var(--sans); transition: background 0.2s; }
+  .ticker-btn:hover { background: #1ee89e; }
+  .ticker-result { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 20px; display: none; }
+  .ticker-result.show { display: block; }
+  .ticker-result .tr-ticker { font-family: var(--mono); font-size: 24px; font-weight: 700; }
+  .ticker-result .tr-sector { font-size: 13px; color: var(--muted); margin: 4px 0 12px; }
+  .ticker-result .tr-verdict { font-family: var(--mono); font-size: 14px; font-weight: 600; padding: 6px 14px; border-radius: 6px; display: inline-block; }
+  .ticker-result .tr-unlock { display: block; margin-top: 16px; font-size: 13px; color: var(--muted); }
+  .ticker-result .tr-unlock a { color: var(--accent); text-decoration: none; }
+  .ticker-result .tr-unlock a:hover { text-decoration: underline; }
+  .ticker-error { color: var(--red); font-family: var(--mono); font-size: 13px; display: none; }
+  .ticker-error.show { display: block; }
+  footer { border-top: 1px solid var(--border); padding: 32px 20px; text-align: center; font-size: 12px; color: var(--muted); line-height: 1.8; }
+  .footer-nav { margin-top: 8px; display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 0 8px; width: 100%; font-family: var(--mono); font-size: 11px; line-height: 1.6; letter-spacing: 0.2px; color: rgba(255,255,255,0.58); }
+  .footer-nav a, .footer-nav a:visited { color: rgba(255,255,255,0.58); text-decoration: none; white-space: nowrap; }
   .footer-nav .footer-sep { color: rgba(255,255,255,0.40); }
   .footer-nav a:hover { text-decoration: underline; }
-  .footer-divider {
-    width: min(520px, 100%);
-    height: 1px;
-    margin: 14px auto;
-    background: rgba(255,255,255,0.10);
+  .section-title { text-align: center; }
+  .section-sub { text-align: center; }
+  .rank-note { border: 1px solid var(--border); border-radius: 12px; background: rgba(255,255,255,0.035); padding: 14px 16px; margin: 14px 0 18px; color: var(--muted); font-size: 13px; line-height: 1.65; }
+  .rank-note strong { color: var(--text); }
+  .rank-note code { font-family: var(--mono); color: var(--gold); background: rgba(255,204,102,0.08); padding: 1px 5px; border-radius: 4px; }
+  .pulse { background: rgba(25,211,143,0.04); border-top: 1px solid rgba(25,211,143,0.14); border-bottom: 1px solid rgba(25,211,143,0.14); padding: 12px 0; }
+  .pulse .wrap { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+  .pulse-label { font-family: var(--mono); font-size: 10px; color: var(--accent); letter-spacing: 1.5px; text-transform: uppercase; white-space: nowrap; flex-shrink: 0; }
+  .pulse-items { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+  .pulse-item { font-family: var(--mono); font-size: 13px; color: var(--text); }
+  .pulse-sep { color: var(--muted); font-size: 13px; }
+  .pulse-date { color: var(--muted); font-size: 11px; }
+  .cred-strip { display: flex; justify-content: center; gap: 6px; align-items: center; flex-wrap: wrap; margin-top: 12px; padding-top: 12px; border-top: 1px solid rgba(255,255,255,0.06); }
+  .cred-strip .cred-item { font-family: var(--mono); font-size: 11px; color: var(--muted); }
+  .cred-strip .cred-dot { color: rgba(255,255,255,0.2); font-size: 11px; }
+  @media (max-width: 600px) {
+    .hero { padding: 40px 16px 32px; }
+    .hero-stats { gap: 20px; }
+    .hero-stat .num { font-size: 24px; }
+    table { font-size: 13px; }
+    thead th, tbody td { padding: 10px 10px; }
+    .heatmap { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+    .sector-tile { padding: 10px; }
   }
-  .footer-attrib {
-    font-size: 11px;
-    font-style: italic;
-    color: rgba(255,255,255,0.58);
-    margin-bottom: 8px;
-  }
-  .footer-note {
-    font-size: 11px;
-    font-style: italic;
-    color: rgba(255,255,255,0.50);
-    margin: 0 auto 12px;
-    max-width: 760px;
-  }
-  .footer-memorial {
-    font-size: 10px;
-    font-style: italic;
-    color: rgba(255,255,255,0.42);
-    margin: 18px auto 0;
-    padding-top: 14px;
-    border-top: 1px solid rgba(255,255,255,0.08);
-    max-width: 720px;
-  }
-  @media (max-width: 760px) {
-    .grid { grid-template-columns: 1fr; }
+</style>
+<style>
+  .biscotti-hero { text-align: center; }
+  .biscotti-title { color: var(--accent); text-align: center; }
+  .biscotti-sub { text-align: center; margin-top: 8px; color: var(--muted); font-family: var(--mono); font-size: 14px; }
+  .biscotti-top { display: grid; grid-template-columns: minmax(0, 280px) minmax(0, 1fr); gap: 20px; align-items: start; }
+  .biscotti-photo { width: 100%; border-radius: 12px; border: 1px solid var(--border); display: block; object-fit: cover; aspect-ratio: 1 / 1; background: #111; }
+  .biscotti-label { color: var(--muted); font-size: 12px; font-family: var(--mono); margin-top: 8px; text-align: center; }
+  .biscotti-summary { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; }
+  .biscotti-summary .hero-stat { background: rgba(255,255,255,0.02); border: 1px solid var(--border); border-radius: 12px; padding: 16px 14px; }
+  .biscotti-summary .hero-stat .num { font-size: 26px; }
+  .biscotti-summary .hero-stat .label { margin-top: 4px; }
+  .biscotti-note { margin-top: 12px; color: var(--muted); font-size: 13px; line-height: 1.6; }
+  .biscotti-chart { width: 100%; height: auto; display: block; margin: 0 auto; }
+  .biscotti-table-wrap { overflow-x: auto; border-radius: 12px; border: 1px solid var(--border); background: rgba(255,255,255,0.02); }
+  .biscotti-table-wrap table { min-width: 100%; }
+  .trade-table thead th, .trade-table tbody td { white-space: nowrap; }
+  .trade-table tbody tr:hover td { background: rgba(25,211,143,0.04); }
+  .free-preview-note { text-align: center; color: var(--muted); font-family: var(--mono); font-size: 12px; margin-top: 10px; }
+  @media (max-width: 900px) {
+    .biscotti-top { grid-template-columns: 1fr; }
+    .biscotti-summary { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   }
 </style>
 </head>
 <body>
-  <header>
-    <h1>Algo Biscotti</h1>
-    <p>Unconditional loyalty. A monthly contrarian rotation.</p>
-  </header>
+  <div class="hero biscotti-hero">
+  <div class="hero-badge">PUBLIC PREVIEW</div>
+    <h1 class="biscotti-title">Algo Biscotti</h1>
+    <p class="hero-sub">Unconditional loyalty. A monthly contrarian rotation.</p>
+    <div class="biscotti-sub">Public free view of the Biscotti page. The chart and trade log below are real; the deeper per-algo detail stays for premium later.</div>
+  </div>
 
   <div class="wrap">
-    <div class="card">
-      <div class="grid">
+    <section style="padding-top: 24px;">
+      <div class="card biscotti-top">
         <div>
-          <img class="photo" src="biscotti.jpg" alt="Biscotti" />
-          <div class="label">Biscotti. The original signal.</div>
+          <img class="biscotti-photo" src="biscotti.jpg" alt="Biscotti" />
+          <div class="biscotti-label">Biscotti. The original signal.</div>
         </div>
         <div>
-          <p><span class="accent">17.75 years.</span> He showed up every day. This algo does the same.</p>
-          <blockquote>"the best there is, the best there was and the best that ever will be."</blockquote>
-          <div class="section">
-            <h2>Thesis</h2>
-            <p>Find the most beaten‑down sector and show up for it. No filters. No hesitation. Pure loyalty to the unloved.</p>
-          </div>
-          <div class="section">
-            <h2>Signal</h2>
-            <ul>
-              <li>Last trading day of each month</li>
-              <li>Rank all 11 SPDR sector ETFs by 30‑day return</li>
-              <li>Buy the single biggest loser (100% allocation)</li>
-              <li>Hold for one month. Repeat.</li>
-            </ul>
-          </div>
-          <div class="section">
-            <h2>Notes</h2>
-            <ul>
-              <li>Runs in both standard and crazy tracks</li>
-              <li>Unconditional by design</li>
-            </ul>
-          </div>
+          <h2 class="section-title">What Biscotti does</h2>
+          <p class="section-sub">The monthly contrarian rule that keeps showing up for the most beaten-down sector.</p>
+          <div class="biscotti-note">Find the weakest SPDR sector ETF by 30-day return on the last trading day of each month. Buy the loser. Hold for one month. Repeat. No filters, no hesitation.</div>
+          <div class="biscotti-note"><strong style="color:var(--text);">Why it exists:</strong> it is the kind of idea that sounds too simple until the tape proves otherwise.</div>
+          <div class="biscotti-note"><strong style="color:var(--text);">What this page shows:</strong> the live paper-trade record, the equity curve, and the actual trade log.</div>
         </div>
       </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <h2 class="section-title">Current record</h2>
+        <p class="section-sub">The live paper-trade record as of the latest snapshot.</p>
+        <div class="biscotti-summary">
+          <div class="hero-stat"><div class="num">$98,108</div><div class="label">Total equity</div></div>
+          <div class="hero-stat"><div class="num">-1892</div><div class="label">Net P&amp;L</div></div>
+          <div class="hero-stat"><div class="num">-1.89%</div><div class="label">Return</div></div>
+          <div class="hero-stat"><div class="num">-11.46%</div><div class="label">Max drawdown</div></div>
+          <div class="hero-stat"><div class="num">0%</div><div class="label">Win rate</div></div>
+          <div class="hero-stat"><div class="num">5</div><div class="label">Trades</div></div>
+          <div class="hero-stat"><div class="num">1</div><div class="label">Open positions</div></div>
+          <div class="hero-stat"><div class="num">2</div><div class="label">Closed trades</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        
+    <div class="mini-chart-wrap">
+      <div class="mini-chart-meta">
+        <div class="mini-chart-title">Equity curve vs carried-forward SPY baseline</div>
+        <div class="mini-chart-note">This is the actual Biscotti record: equity line, baseline line, and the trade log below.</div>
+      </div>
+      <svg class="mini-chart biscotti-chart" viewBox="0 0 860 330" role="img" aria-label="Biscotti equity curve versus SPY baseline">
+        <rect x="0" y="0" width="860" height="330" rx="14" fill="#0f0f0f" stroke="rgba(255,255,255,0.08)"/>
+        <line x1="62" y1="288.0" x2="842" y2="288.0" stroke="rgba(255,255,255,0.08)" stroke-dasharray="4 6" stroke-width="1"/><text x="52" y="292.0" text-anchor="end" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="10" fill="rgba(255,255,255,0.55)">88,889</text><line x1="62" y1="198.9" x2="842" y2="198.9" stroke="rgba(255,255,255,0.08)" stroke-dasharray="4 6" stroke-width="1"/><text x="52" y="202.9" text-anchor="end" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="10" fill="rgba(255,255,255,0.55)">93,690</text><line x1="62" y1="109.8" x2="842" y2="109.8" stroke="rgba(255,255,255,0.08)" stroke-dasharray="4 6" stroke-width="1"/><text x="52" y="113.8" text-anchor="end" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="10" fill="rgba(255,255,255,0.55)">98,491</text><line x1="62" y1="18.0" x2="842" y2="18.0" stroke="rgba(255,255,255,0.08)" stroke-dasharray="4 6" stroke-width="1"/><text x="52" y="22.0" text-anchor="end" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="10" fill="rgba(255,255,255,0.55)">103,437</text>
+        <line x1="62" y1="18" x2="62" y2="288" stroke="rgba(255,255,255,0.14)" stroke-width="1"/>
+        <line x1="62" y1="288" x2="842" y2="288" stroke="rgba(255,255,255,0.14)" stroke-width="1"/>
+        <path d="M 62.0 81.8 L 71.3 85.5 L 80.6 94.6 L 89.9 89.6 L 99.1 91.1 L 108.4 91.1 L 117.7 128.7 L 127.0 107.8 L 136.3 98.3 L 145.6 97.6 L 154.9 88.3 L 164.1 80.9 L 173.4 81.1 L 182.7 84.8 L 192.0 90.3 L 201.3 81.1 L 210.6 96.8 L 219.9 105.7 L 229.1 128.6 L 238.4 93.9 L 247.7 85.0 L 257.0 89.9 L 266.3 90.3 L 275.6 118.9 L 284.9 117.6 L 294.1 117.6 L 303.4 114.7 L 312.7 105.5 L 322.0 110.3 L 331.3 97.1 L 340.6 115.9 L 349.9 102.6 L 359.1 87.2 L 368.4 97.4 L 377.7 106.3 L 387.0 105.2 L 396.3 121.4 L 405.6 108.6 L 414.9 118.8 L 424.1 142.6 L 433.4 126.9 L 442.7 129.8 L 452.0 132.1 L 461.3 159.5 L 470.6 169.5 L 479.9 151.5 L 489.1 146.9 L 498.4 171.8 L 507.7 176.2 L 517.0 201.4 L 526.3 183.2 L 535.6 189.1 L 544.9 179.4 L 554.1 210.8 L 563.4 240.2 L 572.7 245.9 L 582.0 196.7 L 591.3 183.6 L 600.6 182.0 L 609.9 182.0 L 619.1 173.7 L 628.4 172.9 L 637.7 128.0 L 647.0 117.5 L 656.3 118.8 L 665.6 118.8 L 674.9 101.0 L 684.1 63.9 L 693.4 63.9 L 702.7 63.9 L 712.0 63.9 L 721.3 63.9 L 730.6 59.3 L 739.9 36.6 L 749.1 36.6 L 758.4 36.6 L 767.7 36.6 L 777.0 36.6 L 786.3 36.6 L 795.6 36.6 L 804.9 36.6 L 814.1 36.6 L 823.4 36.6 L 832.7 36.6 L 842.0 36.6" fill="none" stroke="#8faeff" stroke-width="4" stroke-dasharray="10 6" stroke-linecap="round" stroke-linejoin="round" opacity="0.92"/>
+        <path d="M 62.0 81.8 L 71.3 81.8 L 80.6 81.8 L 89.9 81.8 L 99.1 81.8 L 108.4 81.8 L 117.7 81.8 L 127.0 81.8 L 136.3 81.8 L 145.6 81.8 L 154.9 81.8 L 164.1 81.8 L 173.4 81.8 L 182.7 81.8 L 192.0 82.0 L 201.3 61.5 L 210.6 78.9 L 219.9 63.9 L 229.1 87.2 L 238.4 53.5 L 247.7 64.6 L 257.0 78.2 L 266.3 106.3 L 275.6 142.7 L 284.9 144.1 L 294.1 144.1 L 303.4 125.0 L 312.7 111.5 L 322.0 126.8 L 331.3 115.0 L 340.6 176.1 L 349.9 167.4 L 359.1 136.5 L 368.4 114.6 L 377.7 152.2 L 387.0 156.8 L 396.3 159.9 L 405.6 149.8 L 414.9 159.2 L 424.1 182.1 L 433.4 190.4 L 442.7 199.8 L 452.0 214.4 L 461.3 242.5 L 470.6 240.4 L 479.9 226.2 L 489.1 217.2 L 498.4 237.6 L 507.7 236.9 L 517.0 233.8 L 526.3 218.4 L 535.6 218.1 L 544.9 216.0 L 554.1 226.1 L 563.4 269.4 L 572.7 250.2 L 582.0 215.4 L 591.3 186.7 L 600.6 193.7 L 609.9 193.7 L 619.1 184.7 L 628.4 188.3 L 637.7 122.7 L 647.0 104.0 L 656.3 111.2 L 665.6 111.2 L 674.9 98.3 L 684.1 114.8 L 693.4 114.8 L 702.7 114.8 L 712.0 114.8 L 721.3 114.8 L 730.6 123.8 L 739.9 90.0 L 749.1 85.8 L 758.4 112.0 L 767.7 116.3 L 777.0 116.3 L 786.3 84.0 L 795.6 101.0 L 804.9 101.0 L 814.1 101.0 L 823.4 101.0 L 832.7 100.6 L 842.0 116.9" fill="none" stroke="#19d38f" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+        <text x="62.0" y="318" text-anchor="start" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="10" fill="rgba(255,255,255,0.55)">Jan 12</text><text x="452.0" y="318" text-anchor="middle" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="10" fill="rgba(255,255,255,0.55)">Mar 11</text><text x="842.0" y="318" text-anchor="end" font-family="IBM Plex Mono, ui-monospace, monospace" font-size="10" fill="rgba(255,255,255,0.55)">Apr 28</text>
+      </svg>
+      <div class="mini-chart-legend">
+        <span><i style="background:#19d38f;"></i>Biscotti equity 98,108</span>
+        <span><i style="background:none;border-top:3px dashed #8faeff;width:18px;height:0;border-radius:0;"></i>SPY baseline 102,434</span>
+      </div>
+    </div>
+    
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <h2 class="section-title">Open position</h2>
+        <p class="section-sub">What Biscotti is holding right now.</p>
+        <div class="biscotti-table-wrap">
+          <table>
+            <thead>
+              <tr><th>Ticker</th><th>Entry</th><th>Current</th><th>Unrealized</th><th>Value</th><th>Opened</th></tr>
+            </thead>
+            <tbody>
+              <tr><td><strong>XLI</strong></td><td>$161.73</td><td>$170.98</td><td class="return-pos">$5,307.62</td><td>$98,107.76</td><td>2026-03-31</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <h2 class="section-title">Trade log</h2>
+        <p class="section-sub">The actual paper-trade history for the signal.</p>
+        <div class="biscotti-table-wrap">
+          <table class="trade-table">
+            <thead>
+              <tr><th>Date</th><th>Action</th><th>Ticker</th><th>Price</th><th>Shares</th><th>Value</th><th>P&amp;L</th><th>Notes</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>2026-03-31</td><td><span class="action-buy">BUY</span></td><td><span class="ticker">XLI</span></td><td>$161.73</td><td>573.7967</td><td>$92,800.14</td><td>—</td><td>entry</td></tr>
+<tr><td>2026-03-31</td><td><span class="action-sell">SELL</span></td><td><span class="ticker">XLF</span></td><td>$49.37</td><td>1,880.1954</td><td>$92,810.09</td><td><span class="return-neg">$-3,393.84 (-3.5%)</span></td><td>rebalance</td></tr>
+<tr><td>2026-02-27</td><td><span class="action-buy">BUY</span></td><td><span class="ticker">XLF</span></td><td>$51.17</td><td>1,880.1954</td><td>$96,203.93</td><td>—</td><td>entry</td></tr>
+<tr><td>2026-02-27</td><td><span class="action-sell">SELL</span></td><td><span class="ticker">XLF</span></td><td>$51.17</td><td>1,880.6893</td><td>$96,213.88</td><td><span class="return-neg">$-3,776.17 (-3.8%)</span></td><td>rebalance</td></tr>
+<tr><td>2026-01-30</td><td><span class="action-buy">BUY</span></td><td><span class="ticker">XLF</span></td><td>$53.17</td><td>1,880.6893</td><td>$99,990.05</td><td>—</td><td>entry</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </div>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-nav" style="margin-top:8px;display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:0 8px;width:100%;font-family:var(--mono);font-size:11px;line-height:1.6;letter-spacing:0.2px;color:rgba(255,255,255,0.58);"><a href="/landing.html" style="color:rgba(255,255,255,0.58);text-decoration:none;white-space:nowrap;">Home</a><span class="footer-sep">&middot;</span><a href="/leaderboard.html" style="color:rgba(255,255,255,0.58);text-decoration:none;white-space:nowrap;">Leaderboard</a><span class="footer-sep">&middot;</span><a href="/signals/index.html" style="color:rgba(255,255,255,0.58);text-decoration:none;white-space:nowrap;">Signals</a><span class="footer-sep">&middot;</span><a href="/families.html" style="color:rgba(255,255,255,0.58);text-decoration:none;white-space:nowrap;">Families</a><span class="footer-sep">&middot;</span><a href="/daily.html" style="color:rgba(255,255,255,0.58);text-decoration:none;white-space:nowrap;">Daily Report</a><span class="footer-sep">&middot;</span><a href="/premium.html" style="color:rgba(255,255,255,0.58);text-decoration:none;white-space:nowrap;">Premium Preview</a><span class="footer-sep">&middot;</span><a href="/legal.html" style="color:rgba(255,255,255,0.58);text-decoration:none;white-space:nowrap;">Legal</a><span class="footer-sep">&middot;</span><a href="/biscotti.html" style="color:rgba(255,255,255,0.58);text-decoration:none;white-space:nowrap;">Biscotti</a></div>
+    <div style="width:100%;max-width:520px;height:1px;margin:14px auto 14px;background:rgba(255,255,255,0.10);"></div>
+    <div style="display:block;width:100%;text-align:center;font-size:11px;font-style:italic;letter-spacing:0.2px;color:rgba(255,255,255,0.58);margin:0 auto 10px;">
+      StockArithm powered by R&amp;B AlgoLabs, LLC.
+    </div>
+    <div style="text-align:center;font-size:11px;font-style:italic;letter-spacing:0.2px;color:rgba(255,255,255,0.50);margin-bottom:14px;">Last updated: 2026-04-28</div>
+    <div style="margin-top:12px;max-width:920px;margin-left:auto;margin-right:auto;text-align:center;font-size:11px;font-style:italic;letter-spacing:0.2px;color:rgba(255,255,255,0.58);">
+      <strong>Signal Lab Notice:</strong> Experimental research only. Signals can and will fail. Do not interpret any signal as a recommendation.<br>
+      <strong>Performance Disclosure:</strong> Leaderboards are model/simulation outputs and may not reflect slippage, fees, liquidity, execution delays, or market impact.<br>
+      <strong>Data Disclaimer:</strong> Third-party data may be incomplete, delayed, inaccurate, or revised. Use at your own risk.<br>
+      <strong>Not financial advice:</strong> Do your own research. You are responsible for your own decisions. Paper-traded only &mdash; no real money at risk.
+    </div>
+    <div style="margin:20px auto 0;padding-top:16px;border-top:1px solid var(--border);max-width:720px;text-align:center;font-size:10px;font-style:italic;letter-spacing:0.15px;color:rgba(255,255,255,0.42);">
+      In loving memory of Biscotti (2008&ndash;2026). Good boy. Best algo. &hearts;
     </div>
   </div>
-  <footer>
-    <div class="footer-nav">
-      <a href="/landing.html">Home</a><span class="footer-sep">&middot;</span>
-      <a href="/leaderboard.html">Leaderboard</a><span class="footer-sep">&middot;</span>
-      <a href="/signals/index.html">Signals</a><span class="footer-sep">&middot;</span>
-      <a href="/families.html">Families</a><span class="footer-sep">&middot;</span>
-      <a href="/daily.html">Daily Report</a><span class="footer-sep">&middot;</span>
-      <a href="/premium.html">Premium Preview</a><span class="footer-sep">&middot;</span>
-      <a href="/blog/index.html">Blog</a><span class="footer-sep">&middot;</span>
-      <a href="/legal.html">Legal</a><span class="footer-sep">&middot;</span>
-      <a href="/biscotti.html">Biscotti</a>
-    </div>
-    <div class="footer-divider"></div>
-    <div class="footer-attrib">StockArithm powered by R&amp;B AlgoLabs, LLC.</div>
-    <div class="footer-note">Signal Lab Notice: Experimental research only. Signals can and will fail. Do not interpret any signal as a recommendation.<br>Performance Disclosure: Leaderboards are model/simulation outputs and may not reflect slippage, fees, liquidity, execution delays, or market impact.<br>Data Disclaimer: Third-party data may be incomplete, delayed, inaccurate, or revised. Use at your own risk.<br>Not financial advice: Do your own research. You are responsible for your own decisions. Paper-traded only &mdash; no real money at risk.</div>
-    <div class="footer-memorial">In loving memory of Biscotti (2008&ndash;2026). Good boy. Best algo. &hearts;</div>
-  </footer>
+</footer>
 </body>
 </html>

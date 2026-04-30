@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-04-30T22:43:05Z",
+  "generated_at": "2026-04-30T22:49:53Z",
   "algos": {
     "crazy:attention-sentiment-spike-daily-surge-in-news-rss-counts-men": {
       "key": "crazy:attention-sentiment-spike-daily-surge-in-news-rss-counts-men",
@@ -28,7 +28,7 @@
       "risks": "Data source instability, false positives, and regime shifts.",
       "implementation_notes": "Use RSS news feed counts for 'cyberattack' keyword via api (daily).",
       "source_kind": "completed",
-      "generated_at": "2026-04-30T22:43:00Z"
+      "generated_at": "2026-04-30T22:49:47Z"
     },
     "crazy:bank-stress-index-volatility-fear-crush-reversal": {
       "key": "crazy:bank-stress-index-volatility-fear-crush-reversal",
@@ -57,7 +57,7 @@
       "risks": "Data source instability, false positives, and regime shifts.",
       "implementation_notes": "Use Price_only adapter for financial sector ETF XLF and VIX via Yahoo Finance; daily data via api (daily).",
       "source_kind": "completed",
-      "generated_at": "2026-04-30T22:43:00Z"
+      "generated_at": "2026-04-30T22:49:47Z"
     },
     "crazy:daily-spike-in-rss-counts-for-cybersecurity-breach-news-trig": {
       "key": "crazy:daily-spike-in-rss-counts-for-cybersecurity-breach-news-trig",
@@ -86,7 +86,7 @@
       "risks": "Data source instability, false positives, and regime shifts.",
       "implementation_notes": "Use RSS news feed counts via api (daily).",
       "source_kind": "completed",
-      "generated_at": "2026-04-30T22:43:00Z"
+      "generated_at": "2026-04-30T22:49:47Z"
     },
     "crazy:news-sentiment-rotation-fade-trade": {
       "key": "crazy:news-sentiment-rotation-fade-trade",
@@ -115,7 +115,7 @@
       "risks": "Data source instability, false positives, and regime shifts.",
       "implementation_notes": "Use RSS feed (Bloomberg/Reuters/CNBC) daily article count mentioning 'recession' AND 'earnings miss' through rss_count adapter via scrape (daily).",
       "source_kind": "completed",
-      "generated_at": "2026-04-30T22:43:00Z"
+      "generated_at": "2026-04-30T22:49:47Z"
     },
     "crazy:reddit-emoji-sentiment-spike": {
       "key": "crazy:reddit-emoji-sentiment-spike",
@@ -152,7 +152,7 @@
       "risks": "Emoji usage can be noisy and sarcastic, leading to false signals. Sudden spikes may be driven by bots or coordinated campaigns. Low liquidity stocks may experience exaggerated moves unrelated to fundamentals. Timing mismatch between sentiment spikes and price moves can cause losses.",
       "implementation_notes": "1) Use Reddit API to fetch daily comments from target subreddits. 2) Parse comments for ticker mentions and emojis. 3) Calculate daily bullish/bearish emoji ratios per ticker. 4) Compare ratios day-over-day and filter by mention volume thresholds. 5) Generate signals and backtest with historical price data from Yahoo Finance.",
       "source_kind": "completed",
-      "generated_at": "2026-04-30T22:43:00Z"
+      "generated_at": "2026-04-30T22:49:47Z"
     },
     "crazy:reddit-gaming-thread-spike": {
       "key": "crazy:reddit-gaming-thread-spike",
@@ -186,7 +186,7 @@
       "risks": "False positives from viral posts unrelated to business fundamentals; short-lived spikes with no price follow-through; API rate limits or data outages; sector-wide selloffs overriding signal.",
       "implementation_notes": "Use Reddit API to pull daily counts of posts and comments from target subreddits. Compute rolling averages and percentage changes. Integrate with price data from Yahoo Finance to manage entry/exit. Backtest on historical Reddit data if available.",
       "source_kind": "completed",
-      "generated_at": "2026-04-30T22:43:00Z"
+      "generated_at": "2026-04-30T22:49:47Z"
     },
     "crazy:reddit-mentions-volatility-spike": {
       "key": "crazy:reddit-mentions-volatility-spike",
@@ -225,7 +225,7 @@
       "risks": "High false positives from meme-driven noise without sustained price moves; sudden regulatory or news events can disrupt patterns; limited liquidity in smaller tickers can cause slippage; Reddit mention counts can be artificially inflated or spammed.",
       "implementation_notes": "1) Use Pushshift API to pull daily comment data filtered by ticker keywords from r/wallstreetbets. 2) Aggregate mention counts per ticker per day. 3) Fetch daily OHLC price data from Yahoo Finance to compute volatility and returns. 4) Implement moving average and threshold logic for signal generation. 5) Backtest signal with historical data to validate effectiveness.",
       "source_kind": "other",
-      "generated_at": "2026-04-30T22:43:00Z"
+      "generated_at": "2026-04-30T22:49:47Z"
     },
     "crazy:reddit-sentiment-spike": {
       "key": "crazy:reddit-sentiment-spike",
@@ -264,7 +264,7 @@
       "risks": "Sentiment spikes may be driven by hype, misinformation, or short-term noise leading to false signals. Sudden market-wide events can override signals. Low liquidity stocks may have exaggerated sentiment effects.",
       "implementation_notes": "1) Use Pushshift API to collect daily Reddit posts/comments mentioning tickers. 2) Perform sentiment analysis using a lexicon-based approach (e.g., VADER). 3) Calculate daily sentiment score and volume per ticker. 4) Identify spikes per signal logic. 5) Generate trade signals and track exit conditions.",
       "source_kind": "completed",
-      "generated_at": "2026-04-30T22:43:00Z"
+      "generated_at": "2026-04-30T22:49:47Z"
     },
     "crazy:reddit-sentiment-spike-trend": {
       "key": "crazy:reddit-sentiment-spike-trend",
@@ -303,7 +303,7 @@
       "risks": "High noise and false positives due to viral meme posts or coordinated pump attempts. Sentiment may not translate to price movement if fundamentals are weak or market conditions are unfavorable.",
       "implementation_notes": "1) Use Reddit API to fetch daily posts and comments from r/investing and r/stocks. 2) Extract ticker mentions using regex patterns (e.g., $TSLA, TSLA). 3) Apply sentiment analysis on text containing tickers to compute daily sentiment per ticker. 4) Track sentiment and mention volume over rolling 7-day windows. 5) Generate signals based on defined thresholds. 6) Integrate with price data from Yahoo Finance for entry/exit and backtesting.",
       "source_kind": "completed",
-      "generated_at": "2026-04-30T22:43:00Z"
+      "generated_at": "2026-04-30T22:49:47Z"
     },
     "crazy:reddit-sentiment-volatility-spike": {
       "key": "crazy:reddit-sentiment-volatility-spike",
@@ -338,7 +338,7 @@
       "risks": "Sentiment analysis errors, low Reddit mention volume causing noisy signals, stocks with high natural volatility may trigger false signals, sudden fundamental changes not reflected in social sentiment.",
       "implementation_notes": "1) Use Pushshift API to pull daily r/investing posts/comments mentioning each ticker. 2) Preprocess text and apply lexicon-based sentiment analysis (e.g., VADER). 3) Calculate rolling standard deviation of sentiment scores. 4) Compare against historical percentiles to identify spikes. 5) Backtest signals against Yahoo Finance price data for entry/exit logic.",
       "source_kind": "completed",
-      "generated_at": "2026-04-30T22:43:00Z"
+      "generated_at": "2026-04-30T22:49:47Z"
     },
     "crazy:reddit-subreddit-mention-spike": {
       "key": "crazy:reddit-subreddit-mention-spike",
@@ -374,7 +374,7 @@
       "risks": "High noise and false positives from spam or bot activity. Sudden spikes may not translate to price moves. Price reversals can be sudden and sharp. Limited to well-discussed tickers with sufficient Reddit volume.",
       "implementation_notes": "1) Use Pushshift API to query daily Reddit submissions and comments mentioning ticker symbols in target subreddits. 2) Compute daily mention counts and moving averages. 3) Pull daily price data from Yahoo Finance. 4) Apply signal logic to generate buy/sell triggers. 5) Backtest on historical data to validate.",
       "source_kind": "completed",
-      "generated_at": "2026-04-30T22:43:00Z"
+      "generated_at": "2026-04-30T22:49:47Z"
     },
     "crazy:reddit-subreddit-sentiment-spike": {
       "key": "crazy:reddit-subreddit-sentiment-spike",
@@ -410,7 +410,7 @@
       "risks": "High noise and false positives due to hype cycles. Sentiment may be manipulated or delayed. Stocks may be illiquid or volatile. Correlation between subreddit sentiment and price may weaken over time.",
       "implementation_notes": "Use Reddit API to collect daily post and comment counts and text from target subreddits. Apply sentiment analysis on text data. Aggregate sentiment and volume metrics daily. Compare with rolling averages to detect spikes. Integrate with price data to execute trades based on signals.",
       "source_kind": "completed",
-      "generated_at": "2026-04-30T22:43:00Z"
+      "generated_at": "2026-04-30T22:49:47Z"
     },
     "crazy:reddit-subreddit-surge-momentum": {
       "key": "crazy:reddit-subreddit-surge-momentum",
@@ -449,7 +449,7 @@
       "risks": "High noise and false positives due to meme stock hype. Mentions may spike without price follow-through. Risk of sudden short squeezes or dumps. Data latency and API rate limits may delay signals.",
       "implementation_notes": "Use Pushshift API to collect daily subreddit comments filtered by cashtag mentions. Aggregate counts per ticker and compute moving averages. Combine with Yahoo Finance price data to backtest. Automate daily data pulls and signal generation with scheduled scripts.",
       "source_kind": "completed",
-      "generated_at": "2026-04-30T22:43:00Z"
+      "generated_at": "2026-04-30T22:49:47Z"
     },
     "crazy:reddit-volatility-spike": {
       "key": "crazy:reddit-volatility-spike",
@@ -489,7 +489,7 @@
       "risks": "High false positives due to noise in Reddit mentions or IV spikes unrelated to fundamental news. Sudden regulatory actions or market-wide volatility can invalidate signal. Low liquidity stocks may have unreliable IV data.",
       "implementation_notes": "1) Use Pushshift API to query Reddit submissions and comments mentioning ticker cashtags daily. 2) Use Yahoo Finance or Alpha Vantage to fetch daily options IV and price data. 3) Calculate percentage changes and moving averages. 4) Backtest signal logic on historical data. 5) Automate daily execution with conditional checks.",
       "source_kind": "completed",
-      "generated_at": "2026-04-30T22:43:00Z"
+      "generated_at": "2026-04-30T22:49:47Z"
     },
     "crazy:rss-roar": {
       "key": "crazy:rss-roar",
@@ -518,7 +518,7 @@
       "risks": "Data source instability, false positives, and regime shifts.",
       "implementation_notes": "Use RSS feed counts for key industry news terms through rss_count adapter via api (daily).",
       "source_kind": "completed",
-      "generated_at": "2026-04-30T22:43:00Z"
+      "generated_at": "2026-04-30T22:49:47Z"
     },
     "crazy:social-media-sentiment-spike": {
       "key": "crazy:social-media-sentiment-spike",
@@ -556,7 +556,7 @@
       "risks": "False sentiment spikes due to bots or coordinated social campaigns may cause whipsaws. Low volume tickers may generate unreliable sentiment data. Sudden news events not captured in social data can invalidate the signal.",
       "implementation_notes": "1) Collect tweets and Reddit posts mentioning each ticker daily. 2) Perform simple sentiment analysis using lexicon-based scoring or pretrained models. 3) Compute daily sentiment score and compare against 7-day moving average. 4) Generate signals and track open positions. 5) Implement position sizing and risk controls.",
       "source_kind": "other",
-      "generated_at": "2026-04-30T22:43:00Z"
+      "generated_at": "2026-04-30T22:49:47Z"
     },
     "crazy:twitter-sentiment-spike": {
       "key": "crazy:twitter-sentiment-spike",
@@ -595,7 +595,7 @@
       "risks": "Sentiment can be noisy and manipulated (e.g., bot activity). Spike may not translate to price moves, causing false signals. Sudden news events may cause whipsaws. Limited tweet volume for smaller tickers can reduce reliability.",
       "implementation_notes": "1) Collect tweets mentioning ticker symbols using Twitter API. 2) Perform sentiment analysis using a simple lexicon-based approach or free NLP libraries. 3) Aggregate daily sentiment scores and compute moving averages. 4) Compare daily changes to thresholds and backtest signals against price data from Yahoo Finance.",
       "source_kind": "other",
-      "generated_at": "2026-04-30T22:43:00Z"
+      "generated_at": "2026-04-30T22:49:48Z"
     },
     "crazy:vix-fear-rotation": {
       "key": "crazy:vix-fear-rotation",
@@ -627,7 +627,7 @@
       "risks": "",
       "implementation_notes": "",
       "source_kind": "unknown",
-      "generated_at": "2026-04-30T22:43:00Z"
+      "generated_at": "2026-04-30T22:49:48Z"
     },
     "crazy:vix-term-structure": {
       "key": "crazy:vix-term-structure",
@@ -659,7 +659,7 @@
       "risks": "",
       "implementation_notes": "",
       "source_kind": "unknown",
-      "generated_at": "2026-04-30T22:43:00Z"
+      "generated_at": "2026-04-30T22:49:48Z"
     },
     "crazy:xlb-weekly-rss-news-count-spike-on-commodity-shortage": {
       "key": "crazy:xlb-weekly-rss-news-count-spike-on-commodity-shortage",
@@ -688,7 +688,7 @@
       "risks": "Data source instability, false positives, and regime shifts.",
       "implementation_notes": "Use RSS news feed counts for commodity shortage keywords via api (weekly).",
       "source_kind": "completed",
-      "generated_at": "2026-04-30T22:43:00Z"
+      "generated_at": "2026-04-30T22:49:48Z"
     },
     "crazy:xlc-weekly-google-trends-surge-in-5g-rollout": {
       "key": "crazy:xlc-weekly-google-trends-surge-in-5g-rollout",
@@ -717,7 +717,7 @@
       "risks": "Data source instability, false positives, and regime shifts.",
       "implementation_notes": "Use Google Trends weekly data for '5G rollout' search term via api (weekly).",
       "source_kind": "completed",
-      "generated_at": "2026-04-30T22:43:00Z"
+      "generated_at": "2026-04-30T22:49:48Z"
     },
     "crazy:xlv-google-trends-flu-search-spike": {
       "key": "crazy:xlv-google-trends-flu-search-spike",
@@ -746,7 +746,7 @@
       "risks": "Data source instability, false positives, and regime shifts.",
       "implementation_notes": "Use Google Trends weekly data for 'flu symptoms' search term via api (weekly).",
       "source_kind": "completed",
-      "generated_at": "2026-04-30T22:43:00Z"
+      "generated_at": "2026-04-30T22:49:48Z"
     },
     "crazy:consumer-discretionary-google-trends-surge-for-sale-keywords": {
       "key": "crazy:consumer-discretionary-google-trends-surge-for-sale-keywords",
@@ -775,7 +775,7 @@
       "risks": "Data source instability, false positives, and regime shifts.",
       "implementation_notes": "Use Google Trends weekly data for 'sale' keyword in US via api (weekly).",
       "source_kind": "completed",
-      "generated_at": "2026-04-30T22:43:01Z"
+      "generated_at": "2026-04-30T22:49:48Z"
     },
     "crazy:consumer-sentiment": {
       "key": "crazy:consumer-sentiment",
@@ -807,7 +807,7 @@
       "risks": "",
       "implementation_notes": "",
       "source_kind": "unknown",
-      "generated_at": "2026-04-30T22:43:01Z"
+      "generated_at": "2026-04-30T22:49:48Z"
     },
     "crazy:credit-card-delinquency": {
       "key": "crazy:credit-card-delinquency",
@@ -839,7 +839,7 @@
       "risks": "",
       "implementation_notes": "",
       "source_kind": "unknown",
-      "generated_at": "2026-04-30T22:43:01Z"
+      "generated_at": "2026-04-30T22:49:48Z"
     },
     "crazy:grocery-store-foot-traffic-collapse-signal": {
       "key": "crazy:grocery-store-foot-traffic-collapse-signal",
@@ -868,7 +868,7 @@
       "risks": "Data source instability, false positives, and regime shifts.",
       "implementation_notes": "Use Google Trends weekly search volume for 'grocery delivery' and 'food bank near me' through google_trends adapter via api (weekly).",
       "source_kind": "completed",
-      "generated_at": "2026-04-30T22:43:01Z"
+      "generated_at": "2026-04-30T22:49:48Z"
     },
     "crazy:healthcare-cost-shock-google-search-spike": {
       "key": "crazy:healthcare-cost-shock-google-search-spike",
@@ -897,7 +897,7 @@
       "risks": "Data source instability, false positives, and regime shifts.",
       "implementation_notes": "Use Google Trends weekly search volume for 'medical debt' and 'prescription drug cost' through google_trends adapter via api (weekly).",
       "source_kind": "completed",
-      "generated_at": "2026-04-30T22:43:01Z"
+      "generated_at": "2026-04-30T22:49:48Z"
     },
     "crazy:mortgage-rate-housing-proxy": {
       "key": "crazy:mortgage-rate-housing-proxy",
@@ -929,7 +929,7 @@
       "risks": "",
       "implementation_notes": "",
       "source_kind": "unknown",
-      "generated_at": "2026-04-30T22:43:01Z"
+      "generated_at": "2026-04-30T22:49:48Z"
     },
     "crazy:retail-roulette": {
       "key": "crazy:retail-roulette",
@@ -958,7 +958,7 @@
       "risks": "Data source instability, false positives, and regime shifts.",
       "implementation_notes": "Use Yahoo Finance daily prices for XRT and SPY through price_only adapter via api (daily).",
       "source_kind": "completed",
-      "generated_at": "2026-04-30T22:43:01Z"
+      "generated_at": "2026-04-30T22:49:48Z"
     },
     "crazy:retail-rush-ahead-of-holidays": {
       "key": "crazy:retail-rush-ahead-of-holidays",
@@ -987,7 +987,7 @@
       "risks": "Data source instability, false positives, and regime shifts.",
       "implementation_notes": "Use Google Trends weekly search interest for holiday gift ideas through google_trends adapter via api (weekly).",
       "source_kind": "completed",
-      "generated_at": "2026-04-30T22:43:01Z"
+      "generated_at": "2026-04-30T22:49:48Z"
     },
     "crazy:retail-sales-momentum": {
       "key": "crazy:retail-sales-momentum",
@@ -1019,7 +1019,7 @@
       "risks": "",
       "implementation_notes": "",
       "source_kind": "unknown",
-      "generated_at": "2026-04-30T22:43:01Z"
+      "generated_at": "2026-04-30T22:49:48Z"
     },
     "crazy:small-business-formation": {
       "key": "crazy:small-business-formation",
@@ -1051,7 +1051,7 @@
       "risks": "",
       "implementation_notes": "",
       "source_kind": "unknown",
-      "generated_at": "2026-04-30T22:43:01Z"
+      "generated_at": "2026-04-30T22:49:48Z"
     },
     "crazy:weekly-google-trends-spike-for-diy-car-repair-signals-bullis": {
       "key": "crazy:weekly-google-trends-spike-for-diy-car-repair-signals-bullis",
@@ -1080,7 +1080,7 @@
       "risks": "Data source instability, false positives, and regime shifts.",
       "implementation_notes": "Use Google Trends weekly data for 'DIY car repair' via api (weekly).",
       "source_kind": "completed",
-      "generated_at": "2026-04-30T22:43:01Z"
+      "generated_at": "2026-04-30T22:49:48Z"
     },
     "crazy:weekly-google-trends-surge-in-diy-electronics-repair-signals": {
       "key": "crazy:weekly-google-trends-surge-in-diy-electronics-repair-signals",
@@ -1109,7 +1109,7 @@
       "risks": "Data source instability, false positives, and regime shifts.",
       "implementation_notes": "Use Google Trends weekly search interest via api (weekly).",
       "source_kind": "completed",
-      "generated_at": "2026-04-30T22:43:01Z"
+      "generated_at": "2026-04-30T22:49:48Z"
     },
     "crazy:weekly-google-trends-surge-in-energy-bill-shock-signals-cons": {
       "key": "crazy:weekly-google-trends-surge-in-energy-bill-shock-signals-cons",
@@ -1138,7 +1138,7 @@
       "risks": "Data source instability, false positives, and regime shifts.",
       "implementation_notes": "Use Google Trends weekly search interest via api (weekly).",
       "source_kind": "completed",
-      "generated_at": "2026-04-30T22:43:01Z"
+      "generated_at": "2026-04-30T22:49:48Z"
     },
     "crazy:weekly-rise-in-google-trends-interest-for-food-delivery-dela": {
       "key": "crazy:weekly-rise-in-google-trends-interest-for-food-delivery-dela",
@@ -1167,7 +1167,7 @@
       "risks": "Data source instability, false positives, and regime shifts.",
       "implementation_notes": "Use Google Trends weekly search interest via api (weekly).",
       "source_kind": "completed",
-      "generated_at": "2026-04-30T22:43:01Z"
+      "generated_at": "2026-04-30T22:49:48Z"
     },
     "crazy:weekly-surge-in-google-trends-for-diy-plumbing-repair-signal": {
       "key": "crazy:weekly-surge-in-google-trends-for-diy-plumbing-repair-signal",
@@ -1196,7 +1196,7 @@
       "risks": "Data source instability, false positives, and regime shifts.",
       "implementation_notes": "Use Google Trends weekly search interest via api (weekly).",
       "source_kind": "completed",
-      "generated_at": "2026-04-30T22:43:01Z"
+      "generated_at": "2026-04-30T22:49:48Z"
     },
     "crazy:weekly-surge-in-google-trends-searches-for-diy-electronics-r": {
       "key": "crazy:weekly-surge-in-google-trends-searches-for-diy-electronics-r",
@@ -1225,7 +1225,7 @@
       "risks": "Data source instability, false positives, and regime shifts.",
       "implementation_notes": "Use Google Trends weekly search interest via api (weekly).",
       "source_kind": "completed",
-      "generated_at": "2026-04-30T22:43:01Z"
+      "generated_at": "2026-04-30T22:49:48Z"
     },
     "crazy:weekly-surge-in-google-trends-searches-for-diy-home-repair-s": {
       "key": "crazy:weekly-surge-in-google-trends-searches-for-diy-home-repair-s",
@@ -1254,7 +1254,7 @@
       "risks": "Data source instability, false positives, and regime shifts.",
       "implementation_notes": "Use Google Trends weekly search interest via api (weekly).",
       "source_kind": "completed",
-      "generated_at": "2026-04-30T22:43:01Z"
+      "generated_at": "2026-04-30T22:49:48Z"
     },
     "crazy:weekly-surge-in-google-trends-searches-for-home-improvement-": {
       "key": "crazy:weekly-surge-in-google-trends-searches-for-home-improvement-",
@@ -1283,7 +1283,7 @@
       "risks": "Data source instability, false positives, and regime shifts.",
       "implementation_notes": "Use Google Trends weekly search interest via api (weekly).",
       "source_kind": "completed",
-      "generated_at": "2026-04-30T22:43:01Z"
+      "generated_at": "2026-04-30T22:49:48Z"
     },
     "crazy:cardboard": {
       "key": "crazy:cardboard",
@@ -1315,7 +1315,7 @@
       "risks": "",
       "implementation_notes": "",
       "source_kind": "unknown",
-      "generated_at": "2026-04-30T22:43:01Z"
+      "generated_at": "2026-04-30T22:49:48Z"
     },
     "crazy:daily-spike-in-freight-logistics-rss-news-volume-mentioning-": {
       "key": "crazy:daily-spike-in-freight-logistics-rss-news-volume-mentioning-",
@@ -1344,7 +1344,7 @@
       "risks": "Data source instability, false positives, and regime shifts.",
       "implementation_notes": "Use RSS news feed counts via api (daily).",
       "source_kind": "completed",
-      "generated_at": "2026-04-30T22:43:01Z"
+      "generated_at": "2026-04-30T22:49:48Z"
     },
     "crazy:freight-rail-carloads": {
       "key": "crazy:freight-rail-carloads",
@@ -1376,7 +1376,7 @@
       "risks": "",
       "implementation_notes": "",
       "source_kind": "unknown",
-      "generated_at": "2026-04-30T22:43:01Z"
+      "generated_at": "2026-04-30T22:49:48Z"
     },
     "crazy:port-congestion-squeeze": {
       "key": "crazy:port-congestion-squeeze",
@@ -1405,7 +1405,7 @@
       "risks": "Data source instability, false positives, and regime shifts.",
       "implementation_notes": "Use Port container volume data through port_container_volume adapter via api (weekly).",
       "source_kind": "completed",
-      "generated_at": "2026-04-30T22:43:01Z"
+      "generated_at": "2026-04-30T22:49:49Z"
     },
     "crazy:port-container-volume": {
       "key": "crazy:port-container-volume",
@@ -1436,7 +1436,7 @@
       "risks": "",
       "implementation_notes": "",
       "source_kind": "unknown",
-      "generated_at": "2026-04-30T22:43:01Z"
+      "generated_at": "2026-04-30T22:49:49Z"
     },
     "crazy:shipping-container-squeeze-play": {
       "key": "crazy:shipping-container-squeeze-play",
@@ -1465,7 +1465,7 @@
       "risks": "Data source instability, false positives, and regime shifts.",
       "implementation_notes": "Use Port of Shanghai weekly container export volumes and backlog through port_container_volume adapter (public shipping indices) via api (weekly).",
       "source_kind": "completed",
-      "generated_at": "2026-04-30T22:43:01Z"
+      "generated_at": "2026-04-30T22:49:49Z"
     },
     "crazy:truck-tonnage": {
       "key": "crazy:truck-tonnage",
@@ -1499,7 +1499,7 @@
       "risks": "Data source instability, false positives, and regime shifts.",
       "implementation_notes": "Use American Trucking Associations weekly tonnage index via html_table scrape adapter via scrape (weekly).",
       "source_kind": "publish",
-      "generated_at": "2026-04-30T22:43:01Z"
+      "generated_at": "2026-04-30T22:49:49Z"
     },
     "crazy:weekly-increase-in-google-trends-searches-for-bulk-shipping-": {
       "key": "crazy:weekly-increase-in-google-trends-searches-for-bulk-shipping-",
@@ -1528,7 +1528,7 @@
       "risks": "Data source instability, false positives, and regime shifts.",
       "implementation_notes": "Use Google Trends weekly search interest via api (weekly).",
       "source_kind": "completed",
-      "generated_at": "2026-04-30T22:43:01Z"
+      "generated_at": "2026-04-30T22:49:49Z"
     },
     "crazy:weekly-spike-in-google-trends-searches-for-warehouse-automat": {
       "key": "crazy:weekly-spike-in-google-trends-searches-for-warehouse-automat",
@@ -1557,7 +1557,7 @@
       "risks": "Data source instability, false positives, and regime shifts.",
       "implementation_notes": "Use Google Trends weekly search interest via api (weekly).",
       "source_kind": "completed",
-      "generated_at": "2026-04-30T22:43:01Z"
+      "generated_at": "2026-04-30T22:49:49Z"
     },
     "crazy:daily-spike-in-rss-news-counts-around-labor-union-contract-n": {
       "key": "crazy:daily-spike-in-rss-news-counts-around-labor-union-contract-n",
@@ -1586,7 +1586,7 @@
       "risks": "Data source instability, false positives, and regime shifts.",
       "implementation_notes": "Use RSS news feed counts via api (daily).",
       "source_kind": "completed",
-      "generated_at": "2026-04-30T22:43:02Z"
+      "generated_at": "2026-04-30T22:49:49Z"
     },
     "crazy:glassdoor": {
       "key": "crazy:glassdoor",
@@ -1623,7 +1623,7 @@
       "risks": "",
       "implementation_notes": "",
       "source_kind": "unknown",
-      "generated_at": "2026-04-30T22:43:02Z"
+      "generated_at": "2026-04-30T22:49:49Z"
     },
     "crazy:job-posting-acceleration": {
       "key": "crazy:job-posting-acceleration",
@@ -1655,7 +1655,7 @@
       "risks": "",
       "implementation_notes": "",
       "source_kind": "unknown",
-      "generated_at": "2026-04-30T22:43:02Z"
+      "generated_at": "2026-04-30T22:49:49Z"
     },
     "crazy:linkedin": {
       "key": "crazy:linkedin",
@@ -1689,7 +1689,7 @@
       "risks": "",
       "implementation_notes": "",
       "source_kind": "unknown",
-      "generated_at": "2026-04-30T22:43:02Z"
+      "generated_at": "2026-04-30T22:49:49Z"
     },
     "crazy:recession-whisper-google-trends-unemployment-search-surge": {
       "key": "crazy:recession-whisper-google-trends-unemployment-search-surge",
@@ -1718,7 +1718,7 @@
       "risks": "Data source instability, false positives, and regime shifts.",
       "implementation_notes": "Use Google Trends weekly search volume for terms: 'unemployment benefits', 'job loss', 'layoffs near me' via api (weekly).",
       "source_kind": "completed",
-      "generated_at": "2026-04-30T22:43:02Z"
+      "generated_at": "2026-04-30T22:49:49Z"
     },
     "crazy:wage-growth-demand-surge-fast-food-google-trends": {
       "key": "crazy:wage-growth-demand-surge-fast-food-google-trends",
@@ -1747,7 +1747,7 @@
       "risks": "Data source instability, false positives, and regime shifts.",
       "implementation_notes": "Use Google Trends weekly search volume for 'fast food hiring', 'minimum wage increase', 'restaurant worker pay' via api (weekly).",
       "source_kind": "completed",
-      "generated_at": "2026-04-30T22:43:02Z"
+      "generated_at": "2026-04-30T22:49:49Z"
     },
     "crazy:weekly-surge-in-job-postings-for-warehouse-workers-signals-b": {
       "key": "crazy:weekly-surge-in-job-postings-for-warehouse-workers-signals-b",
@@ -1776,7 +1776,7 @@
       "risks": "Data source instability, false positives, and regime shifts.",
       "implementation_notes": "Use RSS news feed counts via api (weekly).",
       "source_kind": "completed",
-      "generated_at": "2026-04-30T22:43:02Z"
+      "generated_at": "2026-04-30T22:49:49Z"
     },
     "crazy:calls311": {
       "key": "crazy:calls311",
@@ -1808,7 +1808,7 @@
       "risks": "",
       "implementation_notes": "",
       "source_kind": "unknown",
-      "generated_at": "2026-04-30T22:43:02Z"
+      "generated_at": "2026-04-30T22:49:49Z"
     },
     "crazy:craigslist": {
       "key": "crazy:craigslist",
@@ -1841,7 +1841,7 @@
       "risks": "",
       "implementation_notes": "",
       "source_kind": "unknown",
-      "generated_at": "2026-04-30T22:43:02Z"
+      "generated_at": "2026-04-30T22:49:49Z"
     },
     "crazy:daily-spike-in-daily-earthquake-activity-near-major-logistic": {
       "key": "crazy:daily-spike-in-daily-earthquake-activity-near-major-logistic",
@@ -1870,7 +1870,7 @@
       "risks": "Data source instability, false positives, and regime shifts.",
       "implementation_notes": "Use USGS earthquake activity via api (daily).",
       "source_kind": "completed",
-      "generated_at": "2026-04-30T22:43:02Z"
+      "generated_at": "2026-04-30T22:49:49Z"
     },
     "crazy:daily-spike-in-ev-charger-installations-signals-bullish-xlc": {
       "key": "crazy:daily-spike-in-ev-charger-installations-signals-bullish-xlc",
@@ -1899,7 +1899,7 @@
       "risks": "Data source instability, false positives, and regime shifts.",
       "implementation_notes": "Use OpenChargeMap daily EV charger counts via api (daily).",
       "source_kind": "completed",
-      "generated_at": "2026-04-30T22:43:02Z"
+      "generated_at": "2026-04-30T22:49:49Z"
     },
     "crazy:liquor": {
       "key": "crazy:liquor",
@@ -1931,7 +1931,7 @@
       "risks": "",
       "implementation_notes": "",
       "source_kind": "unknown",
-      "generated_at": "2026-04-30T22:43:02Z"
+      "generated_at": "2026-04-30T22:49:49Z"
     },
     "crazy:seismic-activity-construction-halt-signal": {
       "key": "crazy:seismic-activity-construction-halt-signal",
@@ -1960,7 +1960,7 @@
       "risks": "Data source instability, false positives, and regime shifts.",
       "implementation_notes": "Use USGS earthquake activity (magnitude ≥4.5) by region through earthquake_activity adapter via api (daily).",
       "source_kind": "completed",
-      "generated_at": "2026-04-30T22:43:02Z"
+      "generated_at": "2026-04-30T22:49:49Z"
     },
     "crazy:weekly-spike-in-google-trends-for-home-cooling-failure-signa": {
       "key": "crazy:weekly-spike-in-google-trends-for-home-cooling-failure-signa",
@@ -1989,7 +1989,7 @@
       "risks": "Data source instability, false positives, and regime shifts.",
       "implementation_notes": "Use Google Trends weekly search interest via api (weekly).",
       "source_kind": "completed",
-      "generated_at": "2026-04-30T22:43:02Z"
+      "generated_at": "2026-04-30T22:49:49Z"
     },
     "crazy:weekly-surge-in-google-trends-searches-for-city-water-outage": {
       "key": "crazy:weekly-surge-in-google-trends-searches-for-city-water-outage",
@@ -2018,7 +2018,7 @@
       "risks": "Data source instability, false positives, and regime shifts.",
       "implementation_notes": "Use Google Trends weekly search interest via api (weekly).",
       "source_kind": "completed",
-      "generated_at": "2026-04-30T22:43:02Z"
+      "generated_at": "2026-04-30T22:49:49Z"
     },
     "crazy:yelp-closure-velocity": {
       "key": "crazy:yelp-closure-velocity",
@@ -2050,7 +2050,7 @@
       "risks": "",
       "implementation_notes": "",
       "source_kind": "unknown",
-      "generated_at": "2026-04-30T22:43:02Z"
+      "generated_at": "2026-04-30T22:49:49Z"
     },
     "crazy:baileymol": {
       "key": "crazy:baileymol",
@@ -2087,7 +2087,7 @@
       "risks": "",
       "implementation_notes": "",
       "source_kind": "unknown",
-      "generated_at": "2026-04-30T22:43:02Z"
+      "generated_at": "2026-04-30T22:49:49Z"
     },
     "crazy:biscotti": {
       "key": "crazy:biscotti",
@@ -2124,7 +2124,7 @@
       "risks": "",
       "implementation_notes": "",
       "source_kind": "unknown",
-      "generated_at": "2026-04-30T22:43:02Z"
+      "generated_at": "2026-04-30T22:49:49Z"
     },
     "crazy:cloud-storage-demand-surge": {
       "key": "crazy:cloud-storage-demand-surge",
@@ -2158,7 +2158,7 @@
       "risks": "The demand surge may be temporary, and stock prices may not reflect the underlying trend. Additionally, geopolitical events or changes in technology could disrupt the cloud storage industry.",
       "implementation_notes": "1. Collect daily Google Trends data for relevant cloud storage search terms. 2. Monitor Alexa web traffic rankings for top cloud storage providers. 3. Analyze SEC filings for user growth and revenue trends. 4. Develop a scoring system to identify demand surges and trigger entry/exit signals.",
       "source_kind": "other",
-      "generated_at": "2026-04-30T22:43:02Z"
+      "generated_at": "2026-04-30T22:49:49Z"
     },
     "crazy:copper-momentum": {
       "key": "crazy:copper-momentum",
@@ -2190,7 +2190,7 @@
       "risks": "",
       "implementation_notes": "",
       "source_kind": "unknown",
-      "generated_at": "2026-04-30T22:43:02Z"
+      "generated_at": "2026-04-30T22:49:50Z"
     },
     "crazy:crypto-capitulation-countdown": {
       "key": "crazy:crypto-capitulation-countdown",
@@ -2219,7 +2219,7 @@
       "risks": "Data source instability, false positives, and regime shifts.",
       "implementation_notes": "Use Yahoo Finance daily prices for BTC-USD and SPY through price_only adapter via api (daily).",
       "source_kind": "completed",
-      "generated_at": "2026-04-30T22:43:02Z"
+      "generated_at": "2026-04-30T22:49:50Z"
     },
     "crazy:crypto-derivative-arbitrage": {
       "key": "crazy:crypto-derivative-arbitrage",
@@ -2254,7 +2254,7 @@
       "risks": "Potential slippage due to market volatility, exchange connectivity issues, and regulatory changes affecting crypto derivatives.",
       "implementation_notes": "Fetch spot and derivative prices from APIs, calculate the spread, and execute trades when the spread exceeds the target threshold. Monitor exchange order books and adjust position sizes accordingly.",
       "source_kind": "other",
-      "generated_at": "2026-04-30T22:43:02Z"
+      "generated_at": "2026-04-30T22:49:50Z"
     },
     "crazy:earthquake-aftershock-amplifier": {
       "key": "crazy:earthquake-aftershock-amplifier",
@@ -2283,7 +2283,7 @@
       "risks": "Data source instability, false positives, and regime shifts.",
       "implementation_notes": "Use USGS earthquake activity through earthquake_activity adapter via api (daily).",
       "source_kind": "completed",
-      "generated_at": "2026-04-30T22:43:02Z"
+      "generated_at": "2026-04-30T22:49:50Z"
     },
     "crazy:earthquake-energy-demand": {
       "key": "crazy:earthquake-energy-demand",
@@ -2315,7 +2315,7 @@
       "risks": "Earthquakes can have unpredictable effects on energy demand, and the relationship may be affected by other factors like weather, time of day, or infrastructure damage. False signals are possible, and the strategy may have limited applicability to small or remote earthquakes.",
       "implementation_notes": "1. Continuously monitor EIA's real-time electricity demand data for target regions. 2. When a significant earthquake is detected by USGS, analyze the subsequent energy demand changes. 3. Execute buy/sell orders for energy assets based on the direction and magnitude of the demand shift.",
       "source_kind": "other",
-      "generated_at": "2026-04-30T22:43:02Z"
+      "generated_at": "2026-04-30T22:49:50Z"
     },
     "crazy:electric-vehicle-charge-station-density": {
       "key": "crazy:electric-vehicle-charge-station-density",
@@ -2348,7 +2348,7 @@
       "risks": "Charge station data may not be comprehensive, regional adoption patterns may diverge from national trends, and competitive landscape changes could impact investment thesis.",
       "implementation_notes": "1. Collect charge station data from DOE and OpenChargeMap APIs. 2. Calculate charge station density for regions of interest. 3. Analyze density trends and changes over time. 4. Integrate density data with stock prices to generate trading signals.",
       "source_kind": "other",
-      "generated_at": "2026-04-30T22:43:02Z"
+      "generated_at": "2026-04-30T22:49:50Z"
     },
     "crazy:electricity-consumption": {
       "key": "crazy:electricity-consumption",
@@ -2379,7 +2379,7 @@
       "risks": "",
       "implementation_notes": "",
       "source_kind": "unknown",
-      "generated_at": "2026-04-30T22:43:02Z"
+      "generated_at": "2026-04-30T22:49:50Z"
     },
     "crazy:electricity-enlightenment": {
       "key": "crazy:electricity-enlightenment",
@@ -2408,7 +2408,7 @@
       "risks": "Data source instability, false positives, and regime shifts.",
       "implementation_notes": "Use EIA weekly electricity demand data through eia_electricity adapter via api (weekly).",
       "source_kind": "completed",
-      "generated_at": "2026-04-30T22:43:03Z"
+      "generated_at": "2026-04-30T22:49:50Z"
     },
     "crazy:ev-charger-network-density-surge-bullish-signal": {
       "key": "crazy:ev-charger-network-density-surge-bullish-signal",
@@ -2437,7 +2437,7 @@
       "risks": "Data source instability, false positives, and regime shifts.",
       "implementation_notes": "Use OpenChargeMap API daily charger counts by region via api (daily).",
       "source_kind": "completed",
-      "generated_at": "2026-04-30T22:43:03Z"
+      "generated_at": "2026-04-30T22:49:50Z"
     },
     "crazy:ev-charging-boom": {
       "key": "crazy:ev-charging-boom",
@@ -2466,7 +2466,7 @@
       "risks": "Data source instability, false positives, and regime shifts.",
       "implementation_notes": "Use EV charger count data from OpenChargeMap through openchargemap adapter via api (weekly).",
       "source_kind": "completed",
-      "generated_at": "2026-04-30T22:43:03Z"
+      "generated_at": "2026-04-30T22:49:50Z"
     },
     "crazy:ev-charging-station-stampede": {
       "key": "crazy:ev-charging-station-stampede",
@@ -2495,7 +2495,7 @@
       "risks": "Data source instability, false positives, and regime shifts.",
       "implementation_notes": "Use Openchargemap public EV charging station data through openchargemap adapter via api (weekly).",
       "source_kind": "completed",
-      "generated_at": "2026-04-30T22:43:03Z"
+      "generated_at": "2026-04-30T22:49:50Z"
     },
     "crazy:ev-euphoria": {
       "key": "crazy:ev-euphoria",
@@ -2524,7 +2524,7 @@
       "risks": "Data source instability, false positives, and regime shifts.",
       "implementation_notes": "Use OpenChargeMap daily EV charging station counts through openchargemap adapter via api (daily).",
       "source_kind": "completed",
-      "generated_at": "2026-04-30T22:43:03Z"
+      "generated_at": "2026-04-30T22:49:50Z"
     },
     "crazy:fintech-disruption-wave": {
       "key": "crazy:fintech-disruption-wave",
@@ -2553,7 +2553,7 @@
       "risks": "Data source instability, false positives, and regime shifts.",
       "implementation_notes": "Use RSS feed counts for FinTech news articles through rss_count adapter via api (daily).",
       "source_kind": "completed",
-      "generated_at": "2026-04-30T22:43:03Z"
+      "generated_at": "2026-04-30T22:49:50Z"
     },
     "crazy:global-tech-earnings-momentum": {
       "key": "crazy:global-tech-earnings-momentum",
@@ -2582,7 +2582,7 @@
       "risks": "Data source instability, false positives, and regime shifts.",
       "implementation_notes": "Use Google Trends weekly search interest for tech company earnings reports through google_trends adapter via api (weekly).",
       "source_kind": "completed",
-      "generated_at": "2026-04-30T22:43:03Z"
+      "generated_at": "2026-04-30T22:49:50Z"
     },
     "crazy:google-gusts": {
       "key": "crazy:google-gusts",
@@ -2611,7 +2611,7 @@
       "risks": "Data source instability, false positives, and regime shifts.",
       "implementation_notes": "Use Google Trends weekly search interest for key industry terms through google_trends adapter via api (weekly).",
       "source_kind": "completed",
-      "generated_at": "2026-04-30T22:43:03Z"
+      "generated_at": "2026-04-30T22:49:50Z"
     },
     "crazy:high-yield-spread-regime": {
       "key": "crazy:high-yield-spread-regime",
@@ -2643,7 +2643,7 @@
       "risks": "",
       "implementation_notes": "",
       "source_kind": "unknown",
-      "generated_at": "2026-04-30T22:43:03Z"
+      "generated_at": "2026-04-30T22:49:50Z"
     },
     "crazy:housing-permit-velocity": {
       "key": "crazy:housing-permit-velocity",
@@ -2675,7 +2675,7 @@
       "risks": "",
       "implementation_notes": "",
       "source_kind": "unknown",
-      "generated_at": "2026-04-30T22:43:03Z"
+      "generated_at": "2026-04-30T22:49:50Z"
     },
     "crazy:lumber-futures-rollercoaster": {
       "key": "crazy:lumber-futures-rollercoaster",
@@ -2704,7 +2704,7 @@
       "risks": "Data source instability, false positives, and regime shifts.",
       "implementation_notes": "Use Yahoo Finance daily prices for LBS and SPY through price_only adapter via api (daily).",
       "source_kind": "completed",
-      "generated_at": "2026-04-30T22:43:03Z"
+      "generated_at": "2026-04-30T22:49:50Z"
     },
     "crazy:lumber-momentum": {
       "key": "crazy:lumber-momentum",
@@ -2736,7 +2736,7 @@
       "risks": "",
       "implementation_notes": "",
       "source_kind": "unknown",
-      "generated_at": "2026-04-30T22:43:03Z"
+      "generated_at": "2026-04-30T22:49:50Z"
     },
     "crazy:misery-rotation": {
       "key": "crazy:misery-rotation",
@@ -2768,7 +2768,7 @@
       "risks": "",
       "implementation_notes": "",
       "source_kind": "unknown",
-      "generated_at": "2026-04-30T22:43:03Z"
+      "generated_at": "2026-04-30T22:49:50Z"
     },
     "crazy:oil-price-momentum-reversal-energy-sector-bounce": {
       "key": "crazy:oil-price-momentum-reversal-energy-sector-bounce",
@@ -2797,7 +2797,7 @@
       "risks": "Data source instability, false positives, and regime shifts.",
       "implementation_notes": "Use Yahoo Finance crude oil (CL=F) and XLE daily prices via price_only adapter via api (daily).",
       "source_kind": "completed",
-      "generated_at": "2026-04-30T22:43:03Z"
+      "generated_at": "2026-04-30T22:49:50Z"
     },
     "crazy:online-ad-impression-volatility": {
       "key": "crazy:online-ad-impression-volatility",
@@ -2832,7 +2832,7 @@
       "risks": "Impression volatility may not always translate to stock price movements. Data quality and timeliness from APIs can be inconsistent.",
       "implementation_notes": "Retrieve daily ad impression data, calculate volatility, and generate trading signals. May need to handle API rate limiting and process large data volumes.",
       "source_kind": "other",
-      "generated_at": "2026-04-30T22:43:03Z"
+      "generated_at": "2026-04-30T22:49:50Z"
     },
     "crazy:pet-food-supply-chain": {
       "key": "crazy:pet-food-supply-chain",
@@ -2866,7 +2866,7 @@
       "risks": "{'false_signals': 'Signals may be triggered by temporary or isolated events, leading to incorrect trades', 'demand_changes': 'Unexpected changes in pet ownership or consumer preferences could impact the effectiveness of the strategy'}",
       "implementation_notes": "{'steps': ['Collect monthly USDA pet food production data', 'Monitor Freight Transportation Services Index', 'Scrape Google Trends data for pet food-related searches', 'Develop logic to identify signal triggers', 'Backtest strategy on historical data', 'Implement trading system with position sizing and risk management']}",
       "source_kind": "other",
-      "generated_at": "2026-04-30T22:43:03Z"
+      "generated_at": "2026-04-30T22:49:50Z"
     },
     "crazy:semiconductor-moonshot-warning": {
       "key": "crazy:semiconductor-moonshot-warning",
@@ -2895,7 +2895,7 @@
       "risks": "Data source instability, false positives, and regime shifts.",
       "implementation_notes": "Use Yahoo Finance daily prices for SOXX and SPY through price_only adapter via api (daily).",
       "source_kind": "completed",
-      "generated_at": "2026-04-30T22:43:03Z"
+      "generated_at": "2026-04-30T22:49:50Z"
     },
     "crazy:solar-storm-scorcher": {
       "key": "crazy:solar-storm-scorcher",
@@ -2924,7 +2924,7 @@
       "risks": "Data source instability, false positives, and regime shifts.",
       "implementation_notes": "Use NOAA daily solar activity index through weather_series adapter via api (daily).",
       "source_kind": "completed",
-      "generated_at": "2026-04-30T22:43:03Z"
+      "generated_at": "2026-04-30T22:49:50Z"
     },
     "crazy:superbowl-futures-trade": {
       "key": "crazy:superbowl-futures-trade",
@@ -2955,7 +2955,7 @@
       "risks": "This signal may not work well in years with unique economic conditions or other major events around the Superbowl. It also relies on third-party data sources that could have biases or anomalies.",
       "implementation_notes": "1. Collect Google Trends data for relevant Superbowl ticket keywords. 2. Use Twitter and Reddit APIs to analyze sentiment around Superbowl ticket sales. 3. Create a composite signal by normalizing and combining the Google Trends and social media data. 4. Generate a trading signal when the composite indicator crosses a predefined threshold. 5. Execute the long S&P 500 trade accordingly.",
       "source_kind": "other",
-      "generated_at": "2026-04-30T22:43:03Z"
+      "generated_at": "2026-04-30T22:49:51Z"
     },
     "crazy:temperature-extremes-power-demand-spike-utility-boost": {
       "key": "crazy:temperature-extremes-power-demand-spike-utility-boost",
@@ -2984,7 +2984,7 @@
       "risks": "Data source instability, false positives, and regime shifts.",
       "implementation_notes": "Use Open-Meteo daily temperatures (highs/lows) for major US metro areas via weather_series adapter via api (daily).",
       "source_kind": "completed",
-      "generated_at": "2026-04-30T22:43:03Z"
+      "generated_at": "2026-04-30T22:49:51Z"
     },
     "crazy:temperature-shock-energy-demand-flip": {
       "key": "crazy:temperature-shock-energy-demand-flip",
@@ -3013,7 +3013,7 @@
       "risks": "Data source instability, false positives, and regime shifts.",
       "implementation_notes": "Use Open-Meteo daily average temperature anomalies for US and Europe through weather_series adapter via api (daily).",
       "source_kind": "completed",
-      "generated_at": "2026-04-30T22:43:03Z"
+      "generated_at": "2026-04-30T22:49:51Z"
     },
     "crazy:tremor-tension": {
       "key": "crazy:tremor-tension",
@@ -3042,7 +3042,7 @@
       "risks": "Data source instability, false positives, and regime shifts.",
       "implementation_notes": "Use USGS daily earthquake activity data through earthquake_activity adapter via api (daily).",
       "source_kind": "completed",
-      "generated_at": "2026-04-30T22:43:03Z"
+      "generated_at": "2026-04-30T22:49:51Z"
     },
     "crazy:utility-power-grid-stress": {
       "key": "crazy:utility-power-grid-stress",
@@ -3071,7 +3071,7 @@
       "risks": "Data source instability, false positives, and regime shifts.",
       "implementation_notes": "Use EIA electricity demand data through eia_electricity adapter via api (weekly).",
       "source_kind": "completed",
-      "generated_at": "2026-04-30T22:43:03Z"
+      "generated_at": "2026-04-30T22:49:51Z"
     },
     "crazy:volatility-spike-follow-through": {
       "key": "crazy:volatility-spike-follow-through",
@@ -3110,7 +3110,7 @@
       "risks": "False signals during earnings or news events; IV spikes can be driven by option demand unrelated to directional moves; rapid reversals causing stop-loss hits; liquidity constraints in options data.",
       "implementation_notes": "Fetch daily implied volatility data from Yahoo Finance options chains; calculate 30-day IV percentiles and daily changes; monitor price moves next day; implement logic to enter/exit trades and track stops; backtest over last 6 months to validate thresholds.",
       "source_kind": "other",
-      "generated_at": "2026-04-30T22:43:03Z"
+      "generated_at": "2026-04-30T22:49:51Z"
     },
     "crazy:weather-disruption-ripple-effects": {
       "key": "crazy:weather-disruption-ripple-effects",
@@ -3139,7 +3139,7 @@
       "risks": "Data source instability, false positives, and regime shifts.",
       "implementation_notes": "Use Daily weather data from Open-Meteo through weather_series adapter via api (daily).",
       "source_kind": "completed",
-      "generated_at": "2026-04-30T22:43:03Z"
+      "generated_at": "2026-04-30T22:49:51Z"
     },
     "crazy:weather-volatility-spike": {
       "key": "crazy:weather-volatility-spike",
@@ -3172,7 +3172,7 @@
       "risks": "Weather forecast models can change due to seasonal effects unrelated to market impact. Market volatility may not always correlate with weather unpredictability. False positives during hurricane seasons or extreme weather events may occur.",
       "implementation_notes": "1. Collect 7-day temperature forecasts daily for selected cities. 2. Compute daily standard deviation of these forecasts. 3. Calculate moving averages and detect spikes. 4. Link signals to volatility ETFs for backtesting. 5. Implement position sizing logic based on spike magnitude.",
       "source_kind": "other",
-      "generated_at": "2026-04-30T22:43:04Z"
+      "generated_at": "2026-04-30T22:49:51Z"
     },
     "crazy:weather-windfall": {
       "key": "crazy:weather-windfall",
@@ -3201,7 +3201,7 @@
       "risks": "Data source instability, false positives, and regime shifts.",
       "implementation_notes": "Use Open-Meteo daily temperature, precipitation, and wind speed data through weather_series adapter via api (daily).",
       "source_kind": "completed",
-      "generated_at": "2026-04-30T22:43:04Z"
+      "generated_at": "2026-04-30T22:49:51Z"
     },
     "crazy:weekly-rise-in-google-trends-searches-for-gas-price-protest-": {
       "key": "crazy:weekly-rise-in-google-trends-searches-for-gas-price-protest-",
@@ -3230,7 +3230,7 @@
       "risks": "Data source instability, false positives, and regime shifts.",
       "implementation_notes": "Use Google Trends weekly search interest via api (weekly).",
       "source_kind": "completed",
-      "generated_at": "2026-04-30T22:43:04Z"
+      "generated_at": "2026-04-30T22:49:51Z"
     },
     "crazy:weekly-surge-in-google-trends-for-inflation-hedge-gold-signa": {
       "key": "crazy:weekly-surge-in-google-trends-for-inflation-hedge-gold-signa",
@@ -3259,7 +3259,7 @@
       "risks": "Data source instability, false positives, and regime shifts.",
       "implementation_notes": "Use Google Trends weekly data for 'inflation hedge gold' via api (weekly).",
       "source_kind": "completed",
-      "generated_at": "2026-04-30T22:43:04Z"
+      "generated_at": "2026-04-30T22:49:51Z"
     },
     "crazy:weekly-surge-in-openchargemap-ev-charger-installations-signa": {
       "key": "crazy:weekly-surge-in-openchargemap-ev-charger-installations-signa",
@@ -3288,7 +3288,7 @@
       "risks": "Data source instability, false positives, and regime shifts.",
       "implementation_notes": "Use Openchargemap weekly EV charger count via api (weekly).",
       "source_kind": "completed",
-      "generated_at": "2026-04-30T22:43:04Z"
+      "generated_at": "2026-04-30T22:49:51Z"
     },
     "crazy:work-from-home-frenzy": {
       "key": "crazy:work-from-home-frenzy",
@@ -3317,7 +3317,7 @@
       "risks": "Data source instability, false positives, and regime shifts.",
       "implementation_notes": "Use Google Trends weekly search interest for remote work tools through google_trends adapter via api (weekly).",
       "source_kind": "completed",
-      "generated_at": "2026-04-30T22:43:04Z"
+      "generated_at": "2026-04-30T22:49:51Z"
     },
     "crazy:xlb-daily-volatility-contraction-breakout": {
       "key": "crazy:xlb-daily-volatility-contraction-breakout",
@@ -3346,7 +3346,7 @@
       "risks": "Data source instability, false positives, and regime shifts.",
       "implementation_notes": "Use Yahoo Finance daily price volatility for XLB via api (daily).",
       "source_kind": "completed",
-      "generated_at": "2026-04-30T22:43:04Z"
+      "generated_at": "2026-04-30T22:49:51Z"
     },
     "crazy:xle-weekly-drawdown-rebound-signal": {
       "key": "crazy:xle-weekly-drawdown-rebound-signal",
@@ -3375,7 +3375,7 @@
       "risks": "Data source instability, false positives, and regime shifts.",
       "implementation_notes": "Use Yahoo Finance weekly closing prices for XLE via api (weekly).",
       "source_kind": "completed",
-      "generated_at": "2026-04-30T22:43:04Z"
+      "generated_at": "2026-04-30T22:49:51Z"
     },
     "crazy:xlu-daily-electricity-demand-surge": {
       "key": "crazy:xlu-daily-electricity-demand-surge",
@@ -3404,7 +3404,7 @@
       "risks": "Data source instability, false positives, and regime shifts.",
       "implementation_notes": "Use EIA daily electricity demand data via api (daily).",
       "source_kind": "completed",
-      "generated_at": "2026-04-30T22:43:04Z"
+      "generated_at": "2026-04-30T22:49:51Z"
     },
     "crazy:xlu-weekly-cold-snap-weather-correlation": {
       "key": "crazy:xlu-weekly-cold-snap-weather-correlation",
@@ -3433,7 +3433,7 @@
       "risks": "Data source instability, false positives, and regime shifts.",
       "implementation_notes": "Use Open-Meteo daily temperature data aggregated weekly for US Northeast via api (weekly).",
       "source_kind": "completed",
-      "generated_at": "2026-04-30T22:43:04Z"
+      "generated_at": "2026-04-30T22:49:51Z"
     },
     "crazy:yield-curve-regime": {
       "key": "crazy:yield-curve-regime",
@@ -3465,7 +3465,7 @@
       "risks": "",
       "implementation_notes": "",
       "source_kind": "unknown",
-      "generated_at": "2026-04-30T22:43:04Z"
+      "generated_at": "2026-04-30T22:49:51Z"
     },
     "crazy:bankruptcy-filing-rate": {
       "key": "crazy:bankruptcy-filing-rate",
@@ -3497,7 +3497,7 @@
       "risks": "",
       "implementation_notes": "",
       "source_kind": "unknown",
-      "generated_at": "2026-04-30T22:43:04Z"
+      "generated_at": "2026-04-30T22:49:51Z"
     },
     "crazy:congress": {
       "key": "crazy:congress",
@@ -3534,7 +3534,7 @@
       "risks": "",
       "implementation_notes": "",
       "source_kind": "unknown",
-      "generated_at": "2026-04-30T22:43:04Z"
+      "generated_at": "2026-04-30T22:49:51Z"
     },
     "crazy:daily-spike-in-rss-news-counts-mentioning-politician-insider": {
       "key": "crazy:daily-spike-in-rss-news-counts-mentioning-politician-insider",
@@ -3563,7 +3563,7 @@
       "risks": "Data source instability, false positives, and regime shifts.",
       "implementation_notes": "Use RSS news feed counts via api (daily).",
       "source_kind": "completed",
-      "generated_at": "2026-04-30T22:43:04Z"
+      "generated_at": "2026-04-30T22:49:51Z"
     },
     "crazy:energy-sector-sudden-weekly-volatility-spike": {
       "key": "crazy:energy-sector-sudden-weekly-volatility-spike",
@@ -3592,7 +3592,7 @@
       "risks": "Data source instability, false positives, and regime shifts.",
       "implementation_notes": "Use Yahoo Finance weekly realized volatility for XLE via api (weekly).",
       "source_kind": "publish",
-      "generated_at": "2026-04-30T22:43:04Z"
+      "generated_at": "2026-04-30T22:49:51Z"
     },
     "crazy:energy-sector-weekly-drawdown-exhaustion": {
       "key": "crazy:energy-sector-weekly-drawdown-exhaustion",
@@ -3621,7 +3621,7 @@
       "risks": "Data source instability, false positives, and regime shifts.",
       "implementation_notes": "Use Yahoo Finance weekly prices for XLE via api (weekly).",
       "source_kind": "completed",
-      "generated_at": "2026-04-30T22:43:04Z"
+      "generated_at": "2026-04-30T22:49:51Z"
     },
     "crazy:financial-sector-momentum-divergence-with-spy": {
       "key": "crazy:financial-sector-momentum-divergence-with-spy",
@@ -3650,7 +3650,7 @@
       "risks": "Data source instability, false positives, and regime shifts.",
       "implementation_notes": "Use Yahoo Finance daily returns for XLF and SPY via api (daily).",
       "source_kind": "completed",
-      "generated_at": "2026-04-30T22:43:04Z"
+      "generated_at": "2026-04-30T22:49:51Z"
     },
     "crazy:finra-dark-pool-signal": {
       "key": "crazy:finra-dark-pool-signal",
@@ -3682,7 +3682,7 @@
       "risks": "",
       "implementation_notes": "",
       "source_kind": "unknown",
-      "generated_at": "2026-04-30T22:43:04Z"
+      "generated_at": "2026-04-30T22:49:51Z"
     },
     "crazy:healthcare-sector-google-trends-spike-in-flu-symptoms": {
       "key": "crazy:healthcare-sector-google-trends-spike-in-flu-symptoms",
@@ -3711,7 +3711,7 @@
       "risks": "Data source instability, false positives, and regime shifts.",
       "implementation_notes": "Use Google Trends weekly data for 'flu symptoms' US searches via api (weekly).",
       "source_kind": "completed",
-      "generated_at": "2026-04-30T22:43:04Z"
+      "generated_at": "2026-04-30T22:49:51Z"
     },
     "crazy:industrial-sector-weekly-earthquake-activity-correlation-dip": {
       "key": "crazy:industrial-sector-weekly-earthquake-activity-correlation-dip",
@@ -3740,7 +3740,7 @@
       "risks": "Data source instability, false positives, and regime shifts.",
       "implementation_notes": "Use USGS earthquake_activity weekly counts near major industrial hubs via api (weekly).",
       "source_kind": "completed",
-      "generated_at": "2026-04-30T22:43:04Z"
+      "generated_at": "2026-04-30T22:49:51Z"
     },
     "crazy:insider-trading-signals": {
       "key": "crazy:insider-trading-signals",
@@ -3773,7 +3773,7 @@
       "risks": "Insider transactions may not always predict future stock price movements. Insider trading laws and regulations must be carefully followed.",
       "implementation_notes": "Scrape SEC filings to extract insider transaction data. Analyze transaction size, insider role, and timing relative to upcoming events. Backtest signal logic and optimize position sizing.",
       "source_kind": "other",
-      "generated_at": "2026-04-30T22:43:04Z"
+      "generated_at": "2026-04-30T22:49:52Z"
     },
     "crazy:materials-sector-weekly-positive-correlation-breakdown-with-": {
       "key": "crazy:materials-sector-weekly-positive-correlation-breakdown-with-",
@@ -3802,7 +3802,7 @@
       "risks": "Data source instability, false positives, and regime shifts.",
       "implementation_notes": "Use Yahoo Finance weekly returns for XLB and SPY via api (weekly).",
       "source_kind": "completed",
-      "generated_at": "2026-04-30T22:43:04Z"
+      "generated_at": "2026-04-30T22:49:52Z"
     },
     "crazy:materials-sector-weekly-volatility-contraction-breakout": {
       "key": "crazy:materials-sector-weekly-volatility-contraction-breakout",
@@ -3831,7 +3831,7 @@
       "risks": "Data source instability, false positives, and regime shifts.",
       "implementation_notes": "Use Yahoo Finance weekly realized volatility for XLB via api (weekly).",
       "source_kind": "publish",
-      "generated_at": "2026-04-30T22:43:04Z"
+      "generated_at": "2026-04-30T22:49:52Z"
     },
     "crazy:patent-filing-velocity": {
       "key": "crazy:patent-filing-velocity",
@@ -3862,7 +3862,7 @@
       "risks": "",
       "implementation_notes": "",
       "source_kind": "unknown",
-      "generated_at": "2026-04-30T22:43:04Z"
+      "generated_at": "2026-04-30T22:49:52Z"
     },
     "crazy:real-estate-sector-weekly-google-trends-home-buying-surge": {
       "key": "crazy:real-estate-sector-weekly-google-trends-home-buying-surge",
@@ -3891,7 +3891,7 @@
       "risks": "Data source instability, false positives, and regime shifts.",
       "implementation_notes": "Use Google Trends weekly 'house for sale' and 'mortgage rates' search interest mapped to XLRE via api (weekly).",
       "source_kind": "completed",
-      "generated_at": "2026-04-30T22:43:04Z"
+      "generated_at": "2026-04-30T22:49:52Z"
     },
     "crazy:staples-sector-drawdown-rapid-recovery": {
       "key": "crazy:staples-sector-drawdown-rapid-recovery",
@@ -3920,7 +3920,7 @@
       "risks": "Data source instability, false positives, and regime shifts.",
       "implementation_notes": "Use Yahoo Finance daily prices for XLP via api (daily).",
       "source_kind": "completed",
-      "generated_at": "2026-04-30T22:43:04Z"
+      "generated_at": "2026-04-30T22:49:52Z"
     },
     "crazy:technology-sector-daily-ev-charger-count-surge": {
       "key": "crazy:technology-sector-daily-ev-charger-count-surge",
@@ -3949,7 +3949,7 @@
       "risks": "Data source instability, false positives, and regime shifts.",
       "implementation_notes": "Use OpenChargeMap daily US EV charger counts aggregated via api (daily).",
       "source_kind": "completed",
-      "generated_at": "2026-04-30T22:43:05Z"
+      "generated_at": "2026-04-30T22:49:52Z"
     },
     "crazy:utilities-sector-negative-price-gap-fill": {
       "key": "crazy:utilities-sector-negative-price-gap-fill",
@@ -3978,7 +3978,7 @@
       "risks": "Data source instability, false positives, and regime shifts.",
       "implementation_notes": "Use Yahoo Finance daily prices for XLU via api (daily).",
       "source_kind": "completed",
-      "generated_at": "2026-04-30T22:43:05Z"
+      "generated_at": "2026-04-30T22:49:52Z"
     },
     "crazy:utilities-sector-weekly-temperature-drop-signal": {
       "key": "crazy:utilities-sector-weekly-temperature-drop-signal",
@@ -4007,7 +4007,7 @@
       "risks": "Data source instability, false positives, and regime shifts.",
       "implementation_notes": "Use Open-Meteo daily temperature for US regions weighted to XLU holdings via api (weekly).",
       "source_kind": "completed",
-      "generated_at": "2026-04-30T22:43:05Z"
+      "generated_at": "2026-04-30T22:49:52Z"
     },
     "crazy:airline-load-factor": {
       "key": "crazy:airline-load-factor",
@@ -4042,7 +4042,7 @@
       "risks": "Data source instability, false positives, and regime shifts.",
       "implementation_notes": "Use BTS weekly airline load factor via bts_airline_load_factor adapter via api (weekly).",
       "source_kind": "publish",
-      "generated_at": "2026-04-30T22:43:05Z"
+      "generated_at": "2026-04-30T22:49:52Z"
     },
     "crazy:airport-security-surge": {
       "key": "crazy:airport-security-surge",
@@ -4071,7 +4071,7 @@
       "risks": "Data source instability, false positives, and regime shifts.",
       "implementation_notes": "Use TSA throughput data through tsa_table adapter via api (daily).",
       "source_kind": "completed",
-      "generated_at": "2026-04-30T22:43:05Z"
+      "generated_at": "2026-04-30T22:49:52Z"
     },
     "crazy:airport-shopping-spree": {
       "key": "crazy:airport-shopping-spree",
@@ -4103,7 +4103,7 @@
       "risks": "Potential for the signal to be influenced by external factors like economic conditions or seasonal trends. Liquidity risk for smaller airport retail stocks.",
       "implementation_notes": "1. Collect daily airport retail sales and passenger traffic data from the TSA and FAA. 2. Calculate the spread between the growth rates. 3. Generate buy/sell signals based on the predetermined threshold. 4. Execute trades in the corresponding airport retail stocks.",
       "source_kind": "other",
-      "generated_at": "2026-04-30T22:43:05Z"
+      "generated_at": "2026-04-30T22:49:52Z"
     },
     "crazy:ev-charger-density-saturation-play": {
       "key": "crazy:ev-charger-density-saturation-play",
@@ -4132,7 +4132,7 @@
       "risks": "Data source instability, false positives, and regime shifts.",
       "implementation_notes": "Use OpenChargeMap daily EV charger counts by state/region through openchargemap adapter via api (daily).",
       "source_kind": "completed",
-      "generated_at": "2026-04-30T22:43:05Z"
+      "generated_at": "2026-04-30T22:49:52Z"
     },
     "crazy:ev-charger-network-expansion-sprint-demand-surge": {
       "key": "crazy:ev-charger-network-expansion-sprint-demand-surge",
@@ -4161,7 +4161,7 @@
       "risks": "Data source instability, false positives, and regime shifts.",
       "implementation_notes": "Use OpenChargeMap daily charger counts by region via openchargemap adapter via api (daily).",
       "source_kind": "completed",
-      "generated_at": "2026-04-30T22:43:05Z"
+      "generated_at": "2026-04-30T22:49:52Z"
     },
     "crazy:rental-car-shortage-volatility-spike": {
       "key": "crazy:rental-car-shortage-volatility-spike",
@@ -4190,7 +4190,7 @@
       "risks": "Data source instability, false positives, and regime shifts.",
       "implementation_notes": "Use Google Trends weekly search volume for 'rental car prices' and 'car rental shortage' through google_trends adapter via api (weekly).",
       "source_kind": "completed",
-      "generated_at": "2026-04-30T22:43:05Z"
+      "generated_at": "2026-04-30T22:49:52Z"
     },
     "crazy:tsa": {
       "key": "crazy:tsa",
@@ -4222,7 +4222,7 @@
       "risks": "",
       "implementation_notes": "",
       "source_kind": "unknown",
-      "generated_at": "2026-04-30T22:43:05Z"
+      "generated_at": "2026-04-30T22:49:52Z"
     },
     "crazy:uber-mobility": {
       "key": "crazy:uber-mobility",
@@ -4254,7 +4254,7 @@
       "risks": "",
       "implementation_notes": "",
       "source_kind": "unknown",
-      "generated_at": "2026-04-30T22:43:05Z"
+      "generated_at": "2026-04-30T22:49:52Z"
     },
     "crazy:weekly-surge-in-google-trends-for-hotel-room-shortage-signal": {
       "key": "crazy:weekly-surge-in-google-trends-for-hotel-room-shortage-signal",
@@ -4283,7 +4283,7 @@
       "risks": "Data source instability, false positives, and regime shifts.",
       "implementation_notes": "Use Google Trends weekly search interest via api (weekly).",
       "source_kind": "completed",
-      "generated_at": "2026-04-30T22:43:05Z"
+      "generated_at": "2026-04-30T22:49:52Z"
     },
     "crazy:weekly-surge-in-google-trends-searches-for-commuting-strike-": {
       "key": "crazy:weekly-surge-in-google-trends-searches-for-commuting-strike-",
@@ -4312,7 +4312,7 @@
       "risks": "Data source instability, false positives, and regime shifts.",
       "implementation_notes": "Use Google Trends weekly search interest via api (weekly).",
       "source_kind": "completed",
-      "generated_at": "2026-04-30T22:43:05Z"
+      "generated_at": "2026-04-30T22:49:52Z"
     },
     "normal:baileymol": {
       "key": "normal:baileymol",
@@ -4349,7 +4349,7 @@
       "risks": "",
       "implementation_notes": "",
       "source_kind": "unknown",
-      "generated_at": "2026-04-30T22:43:05Z"
+      "generated_at": "2026-04-30T22:49:52Z"
     },
     "normal:biscotti": {
       "key": "normal:biscotti",
@@ -4386,7 +4386,7 @@
       "risks": "",
       "implementation_notes": "",
       "source_kind": "unknown",
-      "generated_at": "2026-04-30T22:43:05Z"
+      "generated_at": "2026-04-30T22:49:52Z"
     },
     "normal:dmsr": {
       "key": "normal:dmsr",
@@ -4425,7 +4425,7 @@
       "risks": "",
       "implementation_notes": "",
       "source_kind": "unknown",
-      "generated_at": "2026-04-30T22:43:05Z"
+      "generated_at": "2026-04-30T22:49:52Z"
     },
     "normal:faber": {
       "key": "normal:faber",
@@ -4463,7 +4463,7 @@
       "risks": "",
       "implementation_notes": "",
       "source_kind": "unknown",
-      "generated_at": "2026-04-30T22:43:05Z"
+      "generated_at": "2026-04-30T22:49:52Z"
     },
     "normal:simple_monthly": {
       "key": "normal:simple_monthly",
@@ -4492,7 +4492,7 @@
       "risks": "",
       "implementation_notes": "",
       "source_kind": "unknown",
-      "generated_at": "2026-04-30T22:43:05Z"
+      "generated_at": "2026-04-30T22:49:53Z"
     }
   }
 }

@@ -16,9 +16,9 @@
   }
   * { box-sizing: border-box; }
   body { margin: 0; font-family: 'Space Grotesk', system-ui, sans-serif; color: var(--text); background: radial-gradient(1000px 600px at 15% -10%, #1e3f35, transparent), radial-gradient(900px 500px at 90% 0%, #1b352f, transparent), var(--bg); }
-  header { padding: 28px; border-bottom: 1px solid rgba(255,255,255,0.08); }
+  header { padding: 28px; border-bottom: 1px solid rgba(255,255,255,0.08); text-align: center; }
   header h1 { margin: 0; font-size: 30px; letter-spacing: 0.5px; }
-  header p { margin: 6px 0 0; color: var(--muted); font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 12px; }
+  header p { margin: 6px auto 0; color: var(--muted); font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 12px; max-width: 860px; }
   .wrap { padding: 24px; }
   .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
   .card { background: var(--card); border: 1px solid rgba(255,255,255,0.08); border-radius: 14px; padding: 16px; box-shadow: 0 14px 30px rgba(0,0,0,0.22); }
@@ -39,11 +39,11 @@
   .waitlist-form button { border: 1px solid var(--accent); border-radius: 8px; background: transparent; color: var(--accent); padding: 10px 12px; font: inherit; font-size: 13px; font-weight: 700; cursor: pointer; }
   .waitlist-form button:hover { background: rgba(25, 211, 143, 0.1); }
   .notice { margin-top: 10px; color: var(--muted); font-size: 12px; line-height: 1.4; }
-  .hero-actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 14px; }
+  .hero-actions { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; margin-top: 14px; }
   .hero-actions .cta { padding: 10px 14px; }
   .cta-primary { background: var(--accent); color: #062018; font-weight: 700; }
   .cta-primary:hover { background: #33e3a3; }
-  .hero-strip { margin-top: 16px; display: flex; gap: 10px; flex-wrap: wrap; }
+  .hero-strip { margin-top: 16px; display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; }
   .pill { font-size: 12px; color: var(--muted); border: 1px solid rgba(255,255,255,0.08); border-radius: 999px; padding: 6px 10px; }
   .hero-brand { font-size: clamp(42px, 7vw, 72px); font-weight: 700; letter-spacing: -1.5px; line-height: 1; color: var(--accent); margin: 0 0 10px; }
   .hero-tagline { font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 14px; color: var(--muted); max-width: 860px; margin: 0 auto; }
@@ -52,12 +52,12 @@
   .home-shell .card ul { display: inline-block; text-align: left; margin: 0 auto; }
   .home-shell .card .cta { margin-top: 6px; }
   .card-actions { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; margin-top: 8px; }
-  .mini-chart-wrap { display: flex; flex-direction: column; gap: 10px; }
-  .mini-chart-meta { display: flex; flex-direction: column; gap: 4px; }
+  .mini-chart-wrap { display: flex; flex-direction: column; align-items: center; gap: 10px; }
+  .mini-chart-meta { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 4px; }
   .mini-chart-title { font-size: 18px; font-weight: 700; }
   .mini-chart-note { color: var(--muted); font-size: 14px; line-height: 1.4; }
-  .mini-chart { width: 100%; height: auto; display: block; }
-  .mini-chart-legend { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; font-size: 12px; color: var(--muted); }
+  .mini-chart { width: 100%; height: auto; display: block; margin: 0 auto; }
+  .mini-chart-legend { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; justify-content: center; font-size: 12px; color: var(--muted); }
   .mini-chart-legend span { display: inline-flex; align-items: center; gap: 6px; }
   .mini-chart-legend i { display: inline-block; width: 10px; height: 10px; border-radius: 999px; }
   @media (max-width: 560px) { .waitlist-form { grid-template-columns: 1fr; } }

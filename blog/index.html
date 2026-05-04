@@ -8,6 +8,7 @@
     @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;600&display=swap');
     :root {
       --bg: #0d1412;
+      --bg-2: #13231f;
       --card: #182b26;
       --border: rgba(255,255,255,0.08);
       --accent: #19d38f;
@@ -19,23 +20,75 @@
     * { box-sizing: border-box; }
     body {
       margin: 0;
-      background: radial-gradient(1000px 600px at 15% -10%, #1e3f35, transparent), radial-gradient(900px 500px at 90% 0%, #1b352f, transparent), var(--bg);
+      background: var(--bg);
       color: var(--text);
       font-family: var(--sans);
     }
-    header { padding: 32px 24px; border-bottom: 1px solid var(--border); }
-    header h1 { margin: 0 0 8px; font-size: 34px; }
-    header p { margin: 0; color: var(--muted); font-family: var(--mono); font-size: 13px; }
-    .wrap { max-width: 960px; margin: 0 auto; padding: 24px; }
-    .intro { margin-bottom: 20px; color: var(--muted); line-height: 1.6; }
+    .hero {
+      padding: 40px 24px 32px;
+      border-bottom: 1px solid var(--border);
+      text-align: center;
+    }
+    .hero-badge {
+      display: inline-block;
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--accent);
+      border: 1px solid rgba(25,211,143,0.4);
+      border-radius: 999px;
+      padding: 5px 14px;
+      letter-spacing: 0.5px;
+      margin-bottom: 16px;
+    }
+    .hero h1 {
+      margin: 0 0 10px;
+      font-size: clamp(38px, 7vw, 70px);
+      letter-spacing: -1.5px;
+      line-height: 1;
+      color: var(--accent);
+    }
+    .hero p {
+      margin: 0 auto;
+      max-width: 760px;
+      color: var(--muted);
+      font-family: var(--mono);
+      font-size: 14px;
+      line-height: 1.5;
+    }
+    .wrap { max-width: 1120px; margin: 0 auto; padding: 24px; }
+    .intro-card,
+    .post {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      box-shadow: 0 14px 30px rgba(0,0,0,0.22);
+    }
+    .intro-card {
+      margin: 20px 0 16px;
+      padding: 18px;
+      text-align: center;
+    }
+    .intro-card p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.6;
+    }
     .post-list { display: grid; gap: 16px; }
-    .post { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 18px; box-shadow: 0 14px 30px rgba(0,0,0,0.22); }
-    .post h2 { margin: 0 0 8px; font-size: 20px; }
+    .post { padding: 20px; }
+    .post h2 { margin: 0 0 8px; font-size: 22px; }
     .post a { color: var(--text); text-decoration: none; }
     .post a:hover { color: var(--accent); }
     .meta { color: var(--muted); font-family: var(--mono); font-size: 12px; margin-bottom: 10px; }
     .summary { color: #d8e7e1; line-height: 1.6; margin: 0; }
-    footer { border-top: 1px solid var(--border); padding: 32px 20px; text-align: center; color: var(--muted); font-size: 12px; line-height: 1.8; margin-top: 28px; }
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 32px 20px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.8;
+      margin-top: 28px;
+    }
     .footer-nav {
       width: 100%;
       margin-top: 8px;
@@ -89,16 +142,18 @@
   </style>
 </head>
 <body>
-  <header>
-    <h1>Blog / Lab Notes</h1>
+  <div class="hero">
+    <div class="hero-badge">BLOG</div>
+    <h1>Lab Notes</h1>
     <p>Build logs, failures, receipts, and what changed in the lab.</p>
-  </header>
+  </div>
 
   <div class="wrap">
-    <p class="intro">
-      This is the public notebook behind the signal lab. It is where the architecture, the failures,
-      and the reasoning stay visible instead of getting cleaned up after the fact.
-    </p>
+    <div class="intro-card">
+      <p>
+        This is the public notebook behind the signal lab. The architecture, the misses, and the reasoning stay visible here instead of getting cleaned up after the fact.
+      </p>
+    </div>
 
     <div class="post-list">
       <div class="post">
@@ -113,8 +168,7 @@
         <div class="meta">Apr 26, 2026</div>
         <h2><a href="_posts/2026-04-12-launch-log.html">Day 1: Shipping the Signals Engine</a></h2>
         <p class="summary">
-          The system now auto-generates new algos, runs them, and precomputes sector-level verdicts
-          for tracked tickers. This post explains the architecture and why it matters for the product.
+          The system now auto-generates new algos, runs them, and precomputes sector-level verdicts for tracked tickers. This post explains the architecture and why it matters for the product.
         </p>
       </div>
 
@@ -122,8 +176,7 @@
         <div class="meta">Apr 26, 2026</div>
         <h2><a href="_posts/2026-04-12-why-the-failures.html">Why We Publish the Failures</a></h2>
         <p class="summary">
-          Most signal products show their winners. We keep the failures visible because the research
-          process is the point, not just the outputs.
+          Most signal products show their winners. We keep the failures visible because the research process is the point, not just the outputs.
         </p>
       </div>
     </div>
@@ -136,6 +189,7 @@
       <a href="/signals/index.html">Signals</a><span class="footer-sep">&middot;</span>
       <a href="/families.html">Families</a><span class="footer-sep">&middot;</span>
       <a href="/daily.html">Daily Report</a><span class="footer-sep">&middot;</span>
+      <a href="/how-it-works.html">How It Works</a><span class="footer-sep">&middot;</span>
       <a href="/premium.html">Premium Preview</a><span class="footer-sep">&middot;</span>
       <a href="/blog/index.html">Blog</a><span class="footer-sep">&middot;</span>
       <a href="/legal.html">Legal</a><span class="footer-sep">&middot;</span>

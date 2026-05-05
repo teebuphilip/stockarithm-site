@@ -52,9 +52,11 @@
   .hero-brand { font-size: clamp(42px, 7vw, 72px); font-weight: 700; letter-spacing: -1.5px; line-height: 1; color: var(--accent); margin: 0 0 10px; }
   .hero-tagline { font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 14px; color: var(--muted); max-width: 860px; margin: 0 auto; }
   .home-shell { max-width: 1120px; margin: 0 auto; }
-  .home-shell .card { text-align: center; }
+  .home-shell .card { text-align: center; display: flex; flex-direction: column; }
   .home-shell .card ul { display: inline-block; text-align: left; margin: 0 auto; }
-  .home-shell .card .cta { margin-top: 6px; }
+  .home-shell .card .cta { margin-top: auto; }
+  .home-shell .card .muted:last-of-type { margin-bottom: 12px; }
+  .home-shell .card .card-actions { margin-top: auto; display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
   .mini-chart-wrap { display: flex; flex-direction: column; gap: 10px; }
   .mini-chart-meta { display: flex; flex-direction: column; gap: 4px; }
   .mini-chart-title { font-size: 18px; font-weight: 700; }
@@ -152,7 +154,7 @@
         <h2>Signal Index</h2>
         <p>All 179 signals in one public list. Names, families, and status only. No rank and no returns.</p>
         <p class="muted" style="margin-top:10px;">A lot of the lab is still collecting data, waiting on better history, or sitting in sandbox until the first real trade fires. Families show what each cluster is trying to measure.</p>
-        <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:8px;">
+        <div class="card-actions">
           <a class="cta" href="signals/index.html">Browse all signals</a>
           <a class="cta" href="families.html">Browse families</a>
         </div>

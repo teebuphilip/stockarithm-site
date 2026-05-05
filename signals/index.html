@@ -52,9 +52,11 @@
   .hero-brand { font-size: clamp(42px, 7vw, 72px); font-weight: 700; letter-spacing: -1.5px; line-height: 1; color: var(--accent); margin: 0 0 10px; }
   .hero-tagline { font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 14px; color: var(--muted); max-width: 860px; margin: 0 auto; }
   .home-shell { max-width: 1120px; margin: 0 auto; }
-  .home-shell .card { text-align: center; }
+  .home-shell .card { text-align: center; display: flex; flex-direction: column; }
   .home-shell .card ul { display: inline-block; text-align: left; margin: 0 auto; }
-  .home-shell .card .cta { margin-top: 6px; }
+  .home-shell .card .cta { margin-top: auto; }
+  .home-shell .card .muted:last-of-type { margin-bottom: 12px; }
+  .home-shell .card .card-actions { margin-top: auto; display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
   .mini-chart-wrap { display: flex; flex-direction: column; gap: 10px; }
   .mini-chart-meta { display: flex; flex-direction: column; gap: 4px; }
   .mini-chart-title { font-size: 18px; font-weight: 700; }
@@ -185,7 +187,7 @@
 <tr><td><strong>Housing Permit Velocity</strong></td><td>alternative</td><td>Macro Input Pressure</td><td>Live Only</td><td>monthly</td></tr>
 <tr><td><strong>Industrial Sector Weekly Earthquake Activity Correlation Dip</strong></td><td>alternative</td><td>Political &amp; Insider Filings</td><td>Live Only</td><td>weekly</td></tr>
 <tr><td><strong>Insider Trading Signals</strong></td><td>alternative</td><td>Political &amp; Insider Filings</td><td>Live Only</td><td>weekly</td></tr>
-<tr><td><strong>Job Posting Acceleration</strong></td><td>alternative</td><td>Labor &amp; Jobs</td><td>Sandbox</td><td>monthly</td></tr>
+<tr><td><strong>Job Posting Acceleration</strong></td><td>alternative</td><td>Labor &amp; Jobs</td><td>Live Only</td><td>monthly</td></tr>
 <tr><td><strong>LinkedIn Layoff Propagation</strong></td><td>alternative</td><td>Labor &amp; Jobs</td><td>Sandbox</td><td>monthly</td></tr>
 <tr><td><strong>Liquor Store Leading Indicator</strong></td><td>alternative</td><td>Local Economy Signals</td><td>Live Only</td><td>monthly</td></tr>
 <tr><td><strong>Lumber Futures Rollercoaster</strong></td><td>alternative</td><td>Macro Input Pressure</td><td>Sandbox</td><td>daily</td></tr>
@@ -302,7 +304,7 @@
     <div style="display:block;width:100%;text-align:center;font-size:11px;font-style:italic;letter-spacing:0.2px;color:rgba(255,255,255,0.58);margin:0 auto 10px;">
       StockArithm powered by R&amp;B AlgoLabs, LLC.
     </div>
-    <div style="text-align:center;font-size:11px;font-style:italic;letter-spacing:0.2px;color:rgba(255,255,255,0.50);margin-bottom:14px;">Last updated: 2026-05-04T23:36:55Z</div>
+    <div style="text-align:center;font-size:11px;font-style:italic;letter-spacing:0.2px;color:rgba(255,255,255,0.50);margin-bottom:14px;">Last updated: 2026-05-05T23:33:50Z</div>
     <div style="margin-top:12px;max-width:920px;margin-left:auto;margin-right:auto;text-align:center;font-size:11px;font-style:italic;letter-spacing:0.2px;color:rgba(255,255,255,0.58);">
       <strong>Signal Lab Notice:</strong> Experimental research only. Signals can and will fail. Do not interpret any signal as a recommendation.<br>
       <strong>Performance Disclosure:</strong> Leaderboards are model/simulation outputs and may not reflect slippage, fees, liquidity, execution delays, or market impact.<br>

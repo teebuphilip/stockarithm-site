@@ -1,55 +1,55 @@
 {
   "schema_version": "v1",
-  "run_date": "2026-05-06",
-  "generated_at": "2026-05-06T23:37:40Z",
+  "run_date": "2026-05-07",
+  "generated_at": "2026-05-07T23:35:10Z",
   "counts": {
-    "total": 179,
+    "total": 194,
     "normal": 5,
-    "crazy": 174,
-    "watchlist": 77,
+    "crazy": 189,
+    "watchlist": 82,
     "promoted": 5,
     "graveyard": 7
   },
   "by_status": {
     "backtest_weak": 4,
     "failed": 1,
-    "live_only": 68,
+    "live_only": 73,
     "parked": 6,
     "promoted": 5,
-    "sandbox": 95
+    "sandbox": 105
   },
   "by_evidence_class": {
-    "live_receipts_only": 69,
-    "needs_history": 92,
+    "live_receipts_only": 74,
+    "needs_history": 102,
     "pending_seed": 6,
     "v1_backtested": 12
   },
   "new_algos_today": [],
   "top_bullish_etfs": [
     "XLK",
-    "XLU",
-    "XLP"
+    "XLP",
+    "XLY"
   ],
   "top_bearish_etfs": [
-    "XLC",
+    "XLF",
     "XLRE",
-    "XLF"
+    "XLC"
   ],
   "ticker_count": 105,
-  "signal_count": 179,
+  "signal_count": 194,
   "sector_summary": {
     "XLK": {
       "etf": "XLK",
       "sector": "Technology",
-      "composite": "13 of 35",
-      "composite_label": "MIXED",
-      "composite_color": "yellow",
-      "bullish_pct": 37
+      "composite": "12 of 34",
+      "composite_label": "BEARISH",
+      "composite_color": "red",
+      "bullish_pct": 35
     },
     "XLV": {
       "etf": "XLV",
       "sector": "Healthcare",
-      "composite": "2 of 35",
+      "composite": "2 of 33",
       "composite_label": "BEARISH",
       "composite_color": "red",
       "bullish_pct": 6
@@ -57,23 +57,23 @@
     "XLF": {
       "etf": "XLF",
       "sector": "Financial Services",
-      "composite": "0 of 35",
+      "composite": "1 of 32",
       "composite_label": "BEARISH",
       "composite_color": "red",
-      "bullish_pct": 0
+      "bullish_pct": 3
     },
     "XLY": {
       "etf": "XLY",
       "sector": "Consumer Cyclical",
-      "composite": "7 of 46",
+      "composite": "8 of 45",
       "composite_label": "BEARISH",
       "composite_color": "red",
-      "bullish_pct": 15
+      "bullish_pct": 18
     },
     "XLI": {
       "etf": "XLI",
       "sector": "Industrials",
-      "composite": "5 of 36",
+      "composite": "5 of 35",
       "composite_label": "BEARISH",
       "composite_color": "red",
       "bullish_pct": 14
@@ -81,23 +81,23 @@
     "XLC": {
       "etf": "XLC",
       "sector": "Communication Services",
-      "composite": "2 of 32",
+      "composite": "0 of 32",
       "composite_label": "BEARISH",
       "composite_color": "red",
-      "bullish_pct": 6
+      "bullish_pct": 0
     },
     "XLP": {
       "etf": "XLP",
       "sector": "Consumer Defensive",
-      "composite": "6 of 34",
+      "composite": "7 of 31",
       "composite_label": "BEARISH",
       "composite_color": "red",
-      "bullish_pct": 18
+      "bullish_pct": 23
     },
     "XLE": {
       "etf": "XLE",
       "sector": "Energy",
-      "composite": "4 of 34",
+      "composite": "4 of 33",
       "composite_label": "BEARISH",
       "composite_color": "red",
       "bullish_pct": 12
@@ -105,15 +105,15 @@
     "XLB": {
       "etf": "XLB",
       "sector": "Basic Materials",
-      "composite": "4 of 35",
+      "composite": "4 of 34",
       "composite_label": "BEARISH",
       "composite_color": "red",
-      "bullish_pct": 11
+      "bullish_pct": 12
     },
     "XLRE": {
       "etf": "XLRE",
       "sector": "Real Estate",
-      "composite": "1 of 33",
+      "composite": "1 of 31",
       "composite_label": "BEARISH",
       "composite_color": "red",
       "bullish_pct": 3
@@ -121,10 +121,10 @@
     "XLU": {
       "etf": "XLU",
       "sector": "Utilities",
-      "composite": "7 of 35",
+      "composite": "5 of 35",
       "composite_label": "BEARISH",
       "composite_color": "red",
-      "bullish_pct": 20
+      "bullish_pct": 14
     }
   },
   "top_live_ytd": [
@@ -138,14 +138,14 @@
       "status": "promoted",
       "evidence_class": "v1_backtested",
       "rebalance_frequency": "weekly",
-      "ytd_pct": 7.11,
-      "days_running": 94,
+      "ytd_pct": 6.41,
+      "days_running": 95,
       "beat_spy": false,
-      "spy_pct": 7.71,
-      "alpha_pct": -0.59,
-      "ret_30d_pct": 5.65,
-      "spy_delta_30d_pct": -5.71,
-      "last_snapshot": "2026-05-06",
+      "spy_pct": 7.38,
+      "alpha_pct": -0.97,
+      "ret_30d_pct": 5.2,
+      "spy_delta_30d_pct": -5.78,
+      "last_snapshot": "2026-05-07",
       "new_algo_date": null,
       "comparator": null
     },
@@ -159,14 +159,14 @@
       "status": "promoted",
       "evidence_class": "live_receipts_only",
       "rebalance_frequency": "monthly_eom",
-      "ytd_pct": 6.59,
-      "days_running": 94,
+      "ytd_pct": 6.38,
+      "days_running": 95,
       "beat_spy": false,
-      "spy_pct": 7.71,
-      "alpha_pct": -1.12,
-      "ret_30d_pct": 6.59,
-      "spy_delta_30d_pct": -4.78,
-      "last_snapshot": "2026-05-06",
+      "spy_pct": 7.38,
+      "alpha_pct": -1.0,
+      "ret_30d_pct": 6.38,
+      "spy_delta_30d_pct": -4.6,
+      "last_snapshot": "2026-05-07",
       "new_algo_date": null,
       "comparator": null
     },
@@ -180,14 +180,14 @@
       "status": "promoted",
       "evidence_class": "live_receipts_only",
       "rebalance_frequency": "monthly_eom",
-      "ytd_pct": 4.88,
-      "days_running": 94,
+      "ytd_pct": 3.94,
+      "days_running": 95,
       "beat_spy": false,
-      "spy_pct": 7.71,
-      "alpha_pct": -2.83,
-      "ret_30d_pct": 4.04,
-      "spy_delta_30d_pct": -7.33,
-      "last_snapshot": "2026-05-06",
+      "spy_pct": 7.38,
+      "alpha_pct": -3.44,
+      "ret_30d_pct": 2.83,
+      "spy_delta_30d_pct": -8.14,
+      "last_snapshot": "2026-05-07",
       "new_algo_date": null,
       "comparator": null
     },
@@ -201,14 +201,14 @@
       "status": "promoted",
       "evidence_class": "v1_backtested",
       "rebalance_frequency": "monthly_eom",
-      "ytd_pct": 4.57,
-      "days_running": 94,
+      "ytd_pct": 3.89,
+      "days_running": 95,
       "beat_spy": false,
-      "spy_pct": 7.71,
-      "alpha_pct": -3.13,
-      "ret_30d_pct": 0.7,
-      "spy_delta_30d_pct": -10.67,
-      "last_snapshot": "2026-05-06",
+      "spy_pct": 7.38,
+      "alpha_pct": -3.49,
+      "ret_30d_pct": 0.04,
+      "spy_delta_30d_pct": -10.93,
+      "last_snapshot": "2026-05-07",
       "new_algo_date": null,
       "comparator": null
     },
@@ -222,14 +222,14 @@
       "status": "live_only",
       "evidence_class": "live_receipts_only",
       "rebalance_frequency": "weekly",
-      "ytd_pct": 3.06,
-      "days_running": 93,
+      "ytd_pct": 2.99,
+      "days_running": 94,
       "beat_spy": false,
-      "spy_pct": 7.71,
-      "alpha_pct": -4.65,
-      "ret_30d_pct": 3.06,
-      "spy_delta_30d_pct": -8.31,
-      "last_snapshot": "2026-05-06",
+      "spy_pct": 7.38,
+      "alpha_pct": -4.39,
+      "ret_30d_pct": 2.99,
+      "spy_delta_30d_pct": -7.99,
+      "last_snapshot": "2026-05-07",
       "new_algo_date": null,
       "comparator": null
     },
@@ -243,56 +243,14 @@
       "status": "live_only",
       "evidence_class": "live_receipts_only",
       "rebalance_frequency": "monthly",
-      "ytd_pct": 3.05,
-      "days_running": 93,
+      "ytd_pct": 2.98,
+      "days_running": 94,
       "beat_spy": false,
-      "spy_pct": 7.71,
-      "alpha_pct": -4.66,
-      "ret_30d_pct": 3.05,
-      "spy_delta_30d_pct": -8.32,
-      "last_snapshot": "2026-05-06",
-      "new_algo_date": null,
-      "comparator": null
-    },
-    {
-      "schema_version": "v1",
-      "key": "crazy:freight-rail-carloads",
-      "algo_type": "crazy",
-      "algo_id": "freight-rail-carloads",
-      "name": "Freight Rail Carloads",
-      "family": "freight_logistics",
-      "status": "live_only",
-      "evidence_class": "live_receipts_only",
-      "rebalance_frequency": "monthly",
-      "ytd_pct": 1.72,
-      "days_running": 93,
-      "beat_spy": false,
-      "spy_pct": 7.71,
-      "alpha_pct": -5.99,
-      "ret_30d_pct": 1.72,
-      "spy_delta_30d_pct": -9.65,
-      "last_snapshot": "2026-05-06",
-      "new_algo_date": null,
-      "comparator": null
-    },
-    {
-      "schema_version": "v1",
-      "key": "crazy:truck-tonnage",
-      "algo_type": "crazy",
-      "algo_id": "truck-tonnage",
-      "name": "Truck Tonnage Index",
-      "family": "freight_logistics",
-      "status": "live_only",
-      "evidence_class": "live_receipts_only",
-      "rebalance_frequency": "monthly",
-      "ytd_pct": 1.5,
-      "days_running": 93,
-      "beat_spy": false,
-      "spy_pct": 7.71,
-      "alpha_pct": -6.21,
-      "ret_30d_pct": 1.5,
-      "spy_delta_30d_pct": -9.86,
-      "last_snapshot": "2026-05-06",
+      "spy_pct": 7.38,
+      "alpha_pct": -4.4,
+      "ret_30d_pct": 2.98,
+      "spy_delta_30d_pct": -8.0,
+      "last_snapshot": "2026-05-07",
       "new_algo_date": null,
       "comparator": null
     },
@@ -306,112 +264,154 @@
       "status": "live_only",
       "evidence_class": "live_receipts_only",
       "rebalance_frequency": "monthly",
-      "ytd_pct": 1.44,
-      "days_running": 93,
+      "ytd_pct": 1.37,
+      "days_running": 94,
       "beat_spy": false,
-      "spy_pct": 7.71,
-      "alpha_pct": -6.27,
-      "ret_30d_pct": 1.44,
-      "spy_delta_30d_pct": -9.92,
-      "last_snapshot": "2026-05-06",
+      "spy_pct": 7.38,
+      "alpha_pct": -6.0,
+      "ret_30d_pct": 1.37,
+      "spy_delta_30d_pct": -9.6,
+      "last_snapshot": "2026-05-07",
       "new_algo_date": null,
       "comparator": null
     },
     {
       "schema_version": "v1",
-      "key": "crazy:copper-momentum",
+      "key": "crazy:insider-trading-signals",
       "algo_type": "crazy",
-      "algo_id": "copper-momentum",
-      "name": "Copper Momentum",
-      "family": "macro_input_pressure",
+      "algo_id": "insider-trading-signals",
+      "name": "Insider Trading Signals",
+      "family": "political_insider_filing",
+      "status": "live_only",
+      "evidence_class": "live_receipts_only",
+      "rebalance_frequency": "weekly",
+      "ytd_pct": 0.69,
+      "days_running": 94,
+      "beat_spy": false,
+      "spy_pct": 7.38,
+      "alpha_pct": -6.69,
+      "ret_30d_pct": 0.69,
+      "spy_delta_30d_pct": -10.29,
+      "last_snapshot": "2026-05-07",
+      "new_algo_date": null,
+      "comparator": null
+    },
+    {
+      "schema_version": "v1",
+      "key": "crazy:freight-rail-carloads",
+      "algo_type": "crazy",
+      "algo_id": "freight-rail-carloads",
+      "name": "Freight Rail Carloads",
+      "family": "freight_logistics",
       "status": "live_only",
       "evidence_class": "live_receipts_only",
       "rebalance_frequency": "monthly",
-      "ytd_pct": 1.07,
-      "days_running": 93,
+      "ytd_pct": 0.28,
+      "days_running": 94,
       "beat_spy": false,
-      "spy_pct": 7.71,
-      "alpha_pct": -6.63,
-      "ret_30d_pct": 1.07,
-      "spy_delta_30d_pct": -10.29,
-      "last_snapshot": "2026-05-06",
+      "spy_pct": 7.38,
+      "alpha_pct": -7.09,
+      "ret_30d_pct": 0.28,
+      "spy_delta_30d_pct": -10.69,
+      "last_snapshot": "2026-05-07",
+      "new_algo_date": null,
+      "comparator": null
+    },
+    {
+      "schema_version": "v1",
+      "key": "crazy:truck-tonnage",
+      "algo_type": "crazy",
+      "algo_id": "truck-tonnage",
+      "name": "Truck Tonnage Index",
+      "family": "freight_logistics",
+      "status": "live_only",
+      "evidence_class": "live_receipts_only",
+      "rebalance_frequency": "monthly",
+      "ytd_pct": 0.25,
+      "days_running": 94,
+      "beat_spy": false,
+      "spy_pct": 7.38,
+      "alpha_pct": -7.13,
+      "ret_30d_pct": 0.25,
+      "spy_delta_30d_pct": -10.73,
+      "last_snapshot": "2026-05-07",
       "new_algo_date": null,
       "comparator": null
     }
   ],
   "rolling_30d": {
-    "as_of": "2026-05-06T23:37:39.093488",
-    "spy_ret_30d_pct": 11.37,
+    "as_of": "2026-05-07T23:35:09.791050",
+    "spy_ret_30d_pct": 10.98,
     "leaders": [
-      {
-        "algo_id": "simple_monthly",
-        "name": "Quantified Simple Monthly Rotation",
-        "algo_type": "normal",
-        "ret_30d_pct": 6.59,
-        "vs_spy_30d_pct": -4.78
-      },
       {
         "algo_id": "vix-term-structure",
         "name": "VIX Term Structure",
         "algo_type": "crazy",
-        "ret_30d_pct": 6.51,
-        "vs_spy_30d_pct": -4.86
+        "ret_30d_pct": 7.22,
+        "vs_spy_30d_pct": -3.76
+      },
+      {
+        "algo_id": "simple_monthly",
+        "name": "Quantified Simple Monthly Rotation",
+        "algo_type": "normal",
+        "ret_30d_pct": 6.38,
+        "vs_spy_30d_pct": -4.6
       },
       {
         "algo_id": "baileymol",
         "name": "Algo Baileymol (Chaos Monger)",
         "algo_type": "normal",
-        "ret_30d_pct": 5.65,
-        "vs_spy_30d_pct": -5.71
-      },
-      {
-        "algo_id": "baileymol",
-        "name": "Chaos Rotation Lab",
-        "algo_type": "crazy",
-        "ret_30d_pct": 4.2,
-        "vs_spy_30d_pct": -7.17
-      },
-      {
-        "algo_id": "dmsr",
-        "name": "Antonacci Dual Momentum Sector Rotation",
-        "algo_type": "normal",
-        "ret_30d_pct": 4.04,
-        "vs_spy_30d_pct": -7.33
+        "ret_30d_pct": 5.2,
+        "vs_spy_30d_pct": -5.78
       },
       {
         "algo_id": "vix-fear-rotation",
         "name": "VIX Fear Rotation",
         "algo_type": "crazy",
-        "ret_30d_pct": 3.51,
-        "vs_spy_30d_pct": -7.86
+        "ret_30d_pct": 4.21,
+        "vs_spy_30d_pct": -6.77
+      },
+      {
+        "algo_id": "baileymol",
+        "name": "Chaos Rotation Lab",
+        "algo_type": "crazy",
+        "ret_30d_pct": 3.75,
+        "vs_spy_30d_pct": -7.23
       },
       {
         "algo_id": "uber-mobility",
         "name": "Uber Mobility Index",
         "algo_type": "crazy",
-        "ret_30d_pct": 3.06,
-        "vs_spy_30d_pct": -8.31
+        "ret_30d_pct": 2.99,
+        "vs_spy_30d_pct": -7.99
       },
       {
         "algo_id": "retail-sales-momentum",
         "name": "Retail Sales Momentum",
         "algo_type": "crazy",
-        "ret_30d_pct": 3.05,
-        "vs_spy_30d_pct": -8.32
+        "ret_30d_pct": 2.98,
+        "vs_spy_30d_pct": -8.0
+      },
+      {
+        "algo_id": "dmsr",
+        "name": "Antonacci Dual Momentum Sector Rotation",
+        "algo_type": "normal",
+        "ret_30d_pct": 2.83,
+        "vs_spy_30d_pct": -8.14
       },
       {
         "algo_id": "biscotti",
         "name": "Algo Biscotti (Unconditional Loyalty)",
         "algo_type": "normal",
-        "ret_30d_pct": 2.73,
-        "vs_spy_30d_pct": -8.64
+        "ret_30d_pct": 2.46,
+        "vs_spy_30d_pct": -8.52
       },
       {
-        "algo_id": "freight-rail-carloads",
-        "name": "Freight Rail Carloads",
+        "algo_id": "biscotti",
+        "name": "Algo Biscotti (Unconditional Loyalty)",
         "algo_type": "crazy",
-        "ret_30d_pct": 1.72,
-        "vs_spy_30d_pct": -9.65
+        "ret_30d_pct": 1.78,
+        "vs_spy_30d_pct": -9.2
       }
     ]
   }

@@ -1,119 +1,119 @@
 {
   "schema_version": "v1",
-  "run_date": "2026-05-18",
-  "generated_at": "2026-05-18T23:49:22Z",
+  "run_date": "2026-05-19",
+  "generated_at": "2026-05-19T23:51:17Z",
   "counts": {
-    "total": 278,
+    "total": 292,
     "normal": 5,
-    "crazy": 273,
-    "watchlist": 114,
+    "crazy": 287,
+    "watchlist": 125,
     "promoted": 5,
     "graveyard": 7
   },
   "by_status": {
     "backtest_weak": 4,
     "failed": 1,
-    "live_only": 105,
+    "live_only": 116,
     "parked": 6,
     "promoted": 5,
-    "sandbox": 157
+    "sandbox": 160
   },
   "by_evidence_class": {
-    "live_receipts_only": 106,
-    "needs_history": 154,
+    "live_receipts_only": 117,
+    "needs_history": 157,
     "pending_seed": 6,
     "v1_backtested": 12
   },
   "new_algos_today": [],
   "top_bullish_etfs": [
-    "XLK",
     "XLU",
-    "XLB"
+    "XLK",
+    "XLI"
   ],
   "top_bearish_etfs": [
-    "XLC",
+    "XLF",
     "XLRE",
-    "XLF"
+    "XLC"
   ],
   "ticker_count": 105,
-  "signal_count": 278,
+  "signal_count": 292,
   "sector_summary": {
     "XLK": {
       "etf": "XLK",
       "sector": "Technology",
-      "composite": "11 of 44",
+      "composite": "10 of 51",
       "composite_label": "BEARISH",
       "composite_color": "red",
-      "bullish_pct": 25
+      "bullish_pct": 20
     },
     "XLV": {
       "etf": "XLV",
       "sector": "Healthcare",
-      "composite": "2 of 44",
+      "composite": "2 of 52",
       "composite_label": "BEARISH",
       "composite_color": "red",
-      "bullish_pct": 5
+      "bullish_pct": 4
     },
     "XLF": {
       "etf": "XLF",
       "sector": "Financial Services",
-      "composite": "0 of 41",
+      "composite": "1 of 46",
       "composite_label": "BEARISH",
       "composite_color": "red",
-      "bullish_pct": 0
+      "bullish_pct": 2
     },
     "XLY": {
       "etf": "XLY",
       "sector": "Consumer Cyclical",
-      "composite": "8 of 61",
+      "composite": "7 of 69",
       "composite_label": "BEARISH",
       "composite_color": "red",
-      "bullish_pct": 13
+      "bullish_pct": 10
     },
     "XLI": {
       "etf": "XLI",
       "sector": "Industrials",
-      "composite": "7 of 54",
+      "composite": "11 of 57",
       "composite_label": "BEARISH",
       "composite_color": "red",
-      "bullish_pct": 13
+      "bullish_pct": 19
     },
     "XLC": {
       "etf": "XLC",
       "sector": "Communication Services",
-      "composite": "2 of 38",
+      "composite": "0 of 46",
       "composite_label": "BEARISH",
       "composite_color": "red",
-      "bullish_pct": 5
+      "bullish_pct": 0
     },
     "XLP": {
       "etf": "XLP",
       "sector": "Consumer Defensive",
-      "composite": "6 of 43",
-      "composite_label": "BEARISH",
-      "composite_color": "red",
-      "bullish_pct": 14
-    },
-    "XLE": {
-      "etf": "XLE",
-      "sector": "Energy",
-      "composite": "6 of 39",
-      "composite_label": "BEARISH",
-      "composite_color": "red",
-      "bullish_pct": 15
-    },
-    "XLB": {
-      "etf": "XLB",
-      "sector": "Basic Materials",
-      "composite": "7 of 42",
+      "composite": "8 of 47",
       "composite_label": "BEARISH",
       "composite_color": "red",
       "bullish_pct": 17
     },
+    "XLE": {
+      "etf": "XLE",
+      "sector": "Energy",
+      "composite": "5 of 47",
+      "composite_label": "BEARISH",
+      "composite_color": "red",
+      "bullish_pct": 11
+    },
+    "XLB": {
+      "etf": "XLB",
+      "sector": "Basic Materials",
+      "composite": "7 of 48",
+      "composite_label": "BEARISH",
+      "composite_color": "red",
+      "bullish_pct": 15
+    },
     "XLRE": {
       "etf": "XLRE",
       "sector": "Real Estate",
-      "composite": "1 of 41",
+      "composite": "1 of 47",
       "composite_label": "BEARISH",
       "composite_color": "red",
       "bullish_pct": 2
@@ -121,10 +121,10 @@
     "XLU": {
       "etf": "XLU",
       "sector": "Utilities",
-      "composite": "8 of 40",
+      "composite": "12 of 48",
       "composite_label": "BEARISH",
       "composite_color": "red",
-      "bullish_pct": 20
+      "bullish_pct": 25
     }
   },
   "top_live_ytd": [
@@ -138,14 +138,14 @@
       "status": "promoted",
       "evidence_class": "live_receipts_only",
       "rebalance_frequency": "monthly_eom",
-      "ytd_pct": 9.31,
-      "days_running": 102,
+      "ytd_pct": 8.6,
+      "days_running": 103,
       "beat_spy": true,
-      "spy_pct": 8.42,
-      "alpha_pct": 0.89,
-      "ret_30d_pct": 9.31,
-      "spy_delta_30d_pct": 5.08,
-      "last_snapshot": "2026-05-18",
+      "spy_pct": 7.69,
+      "alpha_pct": 0.91,
+      "ret_30d_pct": 8.6,
+      "spy_delta_30d_pct": 5.07,
+      "last_snapshot": "2026-05-19",
       "new_algo_date": null,
       "comparator": null
     },
@@ -159,14 +159,14 @@
       "status": "promoted",
       "evidence_class": "v1_backtested",
       "rebalance_frequency": "weekly",
-      "ytd_pct": 8.04,
-      "days_running": 102,
-      "beat_spy": false,
-      "spy_pct": 8.42,
-      "alpha_pct": -0.37,
-      "ret_30d_pct": 1.82,
-      "spy_delta_30d_pct": -2.41,
-      "last_snapshot": "2026-05-18",
+      "ytd_pct": 8.23,
+      "days_running": 103,
+      "beat_spy": true,
+      "spy_pct": 7.69,
+      "alpha_pct": 0.54,
+      "ret_30d_pct": 2.0,
+      "spy_delta_30d_pct": -1.53,
+      "last_snapshot": "2026-05-19",
       "new_algo_date": null,
       "comparator": null
     },
@@ -180,14 +180,14 @@
       "status": "promoted",
       "evidence_class": "v1_backtested",
       "rebalance_frequency": "monthly_eom",
-      "ytd_pct": 7.59,
-      "days_running": 102,
-      "beat_spy": false,
-      "spy_pct": 8.42,
-      "alpha_pct": -0.82,
-      "ret_30d_pct": 3.61,
-      "spy_delta_30d_pct": -0.62,
-      "last_snapshot": "2026-05-18",
+      "ytd_pct": 7.76,
+      "days_running": 103,
+      "beat_spy": true,
+      "spy_pct": 7.69,
+      "alpha_pct": 0.07,
+      "ret_30d_pct": 3.77,
+      "spy_delta_30d_pct": 0.24,
+      "last_snapshot": "2026-05-19",
       "new_algo_date": null,
       "comparator": null
     },
@@ -201,14 +201,14 @@
       "status": "promoted",
       "evidence_class": "live_receipts_only",
       "rebalance_frequency": "monthly_eom",
-      "ytd_pct": 6.23,
-      "days_running": 102,
+      "ytd_pct": 6.06,
+      "days_running": 103,
       "beat_spy": false,
-      "spy_pct": 8.42,
-      "alpha_pct": -2.19,
-      "ret_30d_pct": 2.43,
-      "spy_delta_30d_pct": -1.79,
-      "last_snapshot": "2026-05-18",
+      "spy_pct": 7.69,
+      "alpha_pct": -1.64,
+      "ret_30d_pct": 2.26,
+      "spy_delta_30d_pct": -1.27,
+      "last_snapshot": "2026-05-19",
       "new_algo_date": null,
       "comparator": null
     },
@@ -222,14 +222,14 @@
       "status": "live_only",
       "evidence_class": "live_receipts_only",
       "rebalance_frequency": "weekly",
-      "ytd_pct": 2.8,
-      "days_running": 101,
+      "ytd_pct": 2.12,
+      "days_running": 102,
       "beat_spy": false,
-      "spy_pct": 8.42,
-      "alpha_pct": -5.62,
-      "ret_30d_pct": 2.82,
-      "spy_delta_30d_pct": -1.4,
-      "last_snapshot": "2026-05-18",
+      "spy_pct": 7.69,
+      "alpha_pct": -5.58,
+      "ret_30d_pct": 2.14,
+      "spy_delta_30d_pct": -1.39,
+      "last_snapshot": "2026-05-19",
       "new_algo_date": null,
       "comparator": null
     },
@@ -243,35 +243,14 @@
       "status": "live_only",
       "evidence_class": "live_receipts_only",
       "rebalance_frequency": "monthly",
-      "ytd_pct": 2.79,
-      "days_running": 101,
+      "ytd_pct": 2.11,
+      "days_running": 102,
       "beat_spy": false,
-      "spy_pct": 8.42,
-      "alpha_pct": -5.63,
-      "ret_30d_pct": 2.79,
-      "spy_delta_30d_pct": -1.43,
-      "last_snapshot": "2026-05-18",
-      "new_algo_date": null,
-      "comparator": null
-    },
-    {
-      "schema_version": "v1",
-      "key": "crazy:job-posting-acceleration",
-      "algo_type": "crazy",
-      "algo_id": "job-posting-acceleration",
-      "name": "Job Posting Acceleration",
-      "family": "labor_jobs",
-      "status": "live_only",
-      "evidence_class": "live_receipts_only",
-      "rebalance_frequency": "monthly",
-      "ytd_pct": 1.31,
-      "days_running": 101,
-      "beat_spy": false,
-      "spy_pct": 8.42,
-      "alpha_pct": -7.11,
-      "ret_30d_pct": 1.31,
-      "spy_delta_30d_pct": -2.92,
-      "last_snapshot": "2026-05-18",
+      "spy_pct": 7.69,
+      "alpha_pct": -5.59,
+      "ret_30d_pct": 2.11,
+      "spy_delta_30d_pct": -1.42,
+      "last_snapshot": "2026-05-19",
       "new_algo_date": null,
       "comparator": null
     },
@@ -285,163 +264,154 @@
       "status": "live_only",
       "evidence_class": "live_receipts_only",
       "rebalance_frequency": "weekly",
-      "ytd_pct": 1.24,
-      "days_running": 101,
+      "ytd_pct": 1.35,
+      "days_running": 102,
       "beat_spy": false,
-      "spy_pct": 8.42,
-      "alpha_pct": -7.17,
-      "ret_30d_pct": 1.24,
-      "spy_delta_30d_pct": -2.98,
-      "last_snapshot": "2026-05-18",
+      "spy_pct": 7.69,
+      "alpha_pct": -6.34,
+      "ret_30d_pct": 1.35,
+      "spy_delta_30d_pct": -2.18,
+      "last_snapshot": "2026-05-19",
       "new_algo_date": null,
       "comparator": null
     },
     {
       "schema_version": "v1",
-      "key": "crazy:weekly-surge-in-google-trends-searches-for-diy-electronics-r",
+      "key": "crazy:job-posting-acceleration",
       "algo_type": "crazy",
-      "algo_id": "weekly-surge-in-google-trends-searches-for-diy-electronics-r",
-      "name": "Weekly Surge In Google Trends Searches For Diy Electronics Repair Signals Bullish Xlk",
-      "family": "consumer_stress",
+      "algo_id": "job-posting-acceleration",
+      "name": "Job Posting Acceleration",
+      "family": "labor_jobs",
       "status": "live_only",
       "evidence_class": "live_receipts_only",
-      "rebalance_frequency": "weekly",
-      "ytd_pct": 0.08,
-      "days_running": 87,
+      "rebalance_frequency": "monthly",
+      "ytd_pct": 0.69,
+      "days_running": 102,
       "beat_spy": false,
-      "spy_pct": 8.42,
-      "alpha_pct": -8.33,
-      "ret_30d_pct": 0.08,
-      "spy_delta_30d_pct": -4.14,
-      "last_snapshot": "2026-05-18",
+      "spy_pct": 7.69,
+      "alpha_pct": -7.01,
+      "ret_30d_pct": 0.69,
+      "spy_delta_30d_pct": -2.84,
+      "last_snapshot": "2026-05-19",
       "new_algo_date": null,
-      "comparator": {
-        "primary_etf": "XLK",
-        "signals": {
-          "momentum_5d": {
-            "direction": "DOWN",
-            "confidence": 0.396,
-            "return_pct": -1.979
-          },
-          "momentum_20d": {
-            "direction": "UP",
-            "confidence": 1.0,
-            "return_pct": 12.811
-          }
-        },
-        "summary": "mixed"
-      }
+      "comparator": null
     },
     {
       "schema_version": "v1",
-      "key": "crazy:weekly-google-trends-surge-in-diy-electronics-repair-signals",
+      "key": "crazy:misery-rotation",
       "algo_type": "crazy",
-      "algo_id": "weekly-google-trends-surge-in-diy-electronics-repair-signals",
-      "name": "Weekly Google Trends Surge In Diy Electronics Repair Signals Tech Consumer Stress Lift",
-      "family": "consumer_stress",
+      "algo_id": "misery-rotation",
+      "name": "Misery Rotation",
+      "family": "macro_input_pressure",
       "status": "live_only",
       "evidence_class": "live_receipts_only",
-      "rebalance_frequency": "weekly",
-      "ytd_pct": 0.08,
-      "days_running": 83,
+      "rebalance_frequency": "monthly",
+      "ytd_pct": 0.2,
+      "days_running": 102,
       "beat_spy": false,
-      "spy_pct": 8.42,
-      "alpha_pct": -8.34,
-      "ret_30d_pct": 0.17,
-      "spy_delta_30d_pct": -4.05,
-      "last_snapshot": "2026-05-18",
+      "spy_pct": 7.69,
+      "alpha_pct": -7.5,
+      "ret_30d_pct": 0.2,
+      "spy_delta_30d_pct": -3.33,
+      "last_snapshot": "2026-05-19",
       "new_algo_date": null,
-      "comparator": {
-        "primary_etf": "XLK",
-        "signals": {
-          "momentum_5d": {
-            "direction": "DOWN",
-            "confidence": 0.396,
-            "return_pct": -1.979
-          },
-          "momentum_20d": {
-            "direction": "UP",
-            "confidence": 1.0,
-            "return_pct": 12.811
-          }
-        },
-        "summary": "mixed"
-      }
+      "comparator": null
+    },
+    {
+      "schema_version": "v1",
+      "key": "crazy:housing-permit-velocity",
+      "algo_type": "crazy",
+      "algo_id": "housing-permit-velocity",
+      "name": "Housing Permit Velocity",
+      "family": "macro_input_pressure",
+      "status": "live_only",
+      "evidence_class": "live_receipts_only",
+      "rebalance_frequency": "monthly",
+      "ytd_pct": 0.17,
+      "days_running": 102,
+      "beat_spy": false,
+      "spy_pct": 7.69,
+      "alpha_pct": -7.52,
+      "ret_30d_pct": 0.17,
+      "spy_delta_30d_pct": -3.36,
+      "last_snapshot": "2026-05-19",
+      "new_algo_date": null,
+      "comparator": null
     }
   ],
   "rolling_30d": {
-    "as_of": "2026-05-18T23:49:21.207805",
-    "spy_ret_30d_pct": 4.22,
+    "as_of": "2026-05-19T23:51:15.122249",
+    "spy_ret_30d_pct": 3.53,
     "leaders": [
       {
         "algo_id": "simple_monthly",
         "name": "Quantified Simple Monthly Rotation",
         "algo_type": "normal",
-        "ret_30d_pct": 9.31,
-        "vs_spy_30d_pct": 5.08
+        "ret_30d_pct": 8.6,
+        "vs_spy_30d_pct": 5.07
       },
       {
         "algo_id": "faber",
         "name": "Faber Momentum Rotation",
         "algo_type": "normal",
-        "ret_30d_pct": 3.61,
-        "vs_spy_30d_pct": -0.62
+        "ret_30d_pct": 3.77,
+        "vs_spy_30d_pct": 0.24
       },
       {
         "algo_id": "vix-fear-rotation",
         "name": "VIX Fear Rotation",
         "algo_type": "crazy",
-        "ret_30d_pct": 3.47,
-        "vs_spy_30d_pct": -0.75
+        "ret_30d_pct": 2.8,
+        "vs_spy_30d_pct": -0.72
       },
       {
         "algo_id": "vix-term-structure",
         "name": "VIX Term Structure",
         "algo_type": "crazy",
-        "ret_30d_pct": 3.32,
-        "vs_spy_30d_pct": -0.9
-      },
-      {
-        "algo_id": "uber-mobility",
-        "name": "Uber Mobility Index",
-        "algo_type": "crazy",
-        "ret_30d_pct": 2.82,
-        "vs_spy_30d_pct": -1.4
-      },
-      {
-        "algo_id": "retail-sales-momentum",
-        "name": "Retail Sales Momentum",
-        "algo_type": "crazy",
-        "ret_30d_pct": 2.79,
-        "vs_spy_30d_pct": -1.43
+        "ret_30d_pct": 2.66,
+        "vs_spy_30d_pct": -0.87
       },
       {
         "algo_id": "dmsr",
         "name": "Antonacci Dual Momentum Sector Rotation",
         "algo_type": "normal",
-        "ret_30d_pct": 2.43,
-        "vs_spy_30d_pct": -1.79
+        "ret_30d_pct": 2.26,
+        "vs_spy_30d_pct": -1.27
+      },
+      {
+        "algo_id": "uber-mobility",
+        "name": "Uber Mobility Index",
+        "algo_type": "crazy",
+        "ret_30d_pct": 2.14,
+        "vs_spy_30d_pct": -1.39
+      },
+      {
+        "algo_id": "retail-sales-momentum",
+        "name": "Retail Sales Momentum",
+        "algo_type": "crazy",
+        "ret_30d_pct": 2.11,
+        "vs_spy_30d_pct": -1.42
+      },
+      {
+        "algo_id": "biscotti",
+        "name": "Algo Biscotti (Unconditional Loyalty)",
+        "algo_type": "crazy",
+        "ret_30d_pct": 2.1,
+        "vs_spy_30d_pct": -1.43
       },
       {
         "algo_id": "baileymol",
         "name": "Algo Baileymol (Chaos Monger)",
         "algo_type": "normal",
-        "ret_30d_pct": 1.82,
-        "vs_spy_30d_pct": -2.41
-      },
-      {
-        "algo_id": "job-posting-acceleration",
-        "name": "Job Posting Acceleration",
-        "algo_type": "crazy",
-        "ret_30d_pct": 1.31,
-        "vs_spy_30d_pct": -2.92
+        "ret_30d_pct": 2.0,
+        "vs_spy_30d_pct": -1.53
       },
       {
         "algo_id": "insider-trading-signals",
         "name": "Insider Trading Signals",
         "algo_type": "crazy",
-        "ret_30d_pct": 1.24,
-        "vs_spy_30d_pct": -2.98
+        "ret_30d_pct": 1.35,
+        "vs_spy_30d_pct": -2.18
       }
     ]
   }

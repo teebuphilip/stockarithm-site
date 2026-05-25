@@ -1,6 +1,6 @@
 {
   "schema_version": "v1",
-  "generated_at": "2026-05-24T13:23:07Z",
+  "generated_at": "2026-05-24T13:32:14Z",
   "families": {
     "attention_sentiment": {
       "family": "attention_sentiment",
@@ -200,16 +200,16 @@
     },
     "consumer_stress": {
       "family": "consumer_stress",
-      "count": 93,
+      "count": 98,
       "by_status": {
         "failed": 1,
-        "live_only": 39,
+        "live_only": 42,
         "parked": 4,
-        "sandbox": 49
+        "sandbox": 51
       },
       "by_evidence_class": {
-        "live_receipts_only": 39,
-        "needs_history": 49,
+        "live_receipts_only": 42,
+        "needs_history": 51,
         "pending_seed": 4,
         "v1_backtested": 1
       },
@@ -486,15 +486,15 @@
     },
     "freight_logistics": {
       "family": "freight_logistics",
-      "count": 25,
+      "count": 26,
       "by_status": {
         "live_only": 14,
         "parked": 2,
-        "sandbox": 9
+        "sandbox": 10
       },
       "by_evidence_class": {
         "live_receipts_only": 14,
-        "needs_history": 9,
+        "needs_history": 10,
         "pending_seed": 2
       },
       "leaders": [
@@ -667,15 +667,15 @@
     },
     "labor_jobs": {
       "family": "labor_jobs",
-      "count": 30,
+      "count": 33,
       "by_status": {
-        "live_only": 12,
+        "live_only": 13,
         "parked": 4,
-        "sandbox": 14
+        "sandbox": 16
       },
       "by_evidence_class": {
-        "live_receipts_only": 12,
-        "needs_history": 14,
+        "live_receipts_only": 13,
+        "needs_history": 16,
         "pending_seed": 4
       },
       "leaders": [
@@ -735,27 +735,6 @@
             },
             "summary": "both_up"
           }
-        },
-        {
-          "schema_version": "v1",
-          "key": "crazy:glassdoor",
-          "algo_type": "crazy",
-          "algo_id": "glassdoor",
-          "name": "Glassdoor Misery Gradient",
-          "family": "labor_jobs",
-          "status": "sandbox",
-          "evidence_class": "needs_history",
-          "rebalance_frequency": "monthly",
-          "ytd_pct": 0.0,
-          "days_running": 111,
-          "beat_spy": false,
-          "spy_pct": 9.44,
-          "alpha_pct": -9.44,
-          "ret_30d_pct": 0.0,
-          "spy_delta_30d_pct": -4.84,
-          "last_snapshot": "2026-05-24",
-          "new_algo_date": null,
-          "comparator": null
         },
         {
           "schema_version": "v1",
@@ -828,20 +807,56 @@
             },
             "summary": "mixed"
           }
+        },
+        {
+          "schema_version": "v1",
+          "key": "crazy:daily-spike-in-rss-counts-for-corporate-layoff-announcements",
+          "algo_type": "crazy",
+          "algo_id": "daily-spike-in-rss-counts-for-corporate-layoff-announcements",
+          "name": "Daily Spike In Rss Counts For Corporate Layoff Announcements Signals Consumer Discretionary Headwind",
+          "family": "labor_jobs",
+          "status": "sandbox",
+          "evidence_class": "needs_history",
+          "rebalance_frequency": "daily",
+          "ytd_pct": 0.0,
+          "days_running": 0,
+          "beat_spy": null,
+          "spy_pct": null,
+          "alpha_pct": null,
+          "ret_30d_pct": 0.0,
+          "spy_delta_30d_pct": -4.84,
+          "last_snapshot": "2026-05-24",
+          "new_algo_date": null,
+          "comparator": {
+            "primary_etf": "XLY",
+            "signals": {
+              "momentum_5d": {
+                "direction": "UP",
+                "confidence": 0.455,
+                "return_pct": 2.274
+              },
+              "momentum_20d": {
+                "direction": "UP",
+                "confidence": 0.083,
+                "return_pct": 0.413
+              }
+            },
+            "summary": "both_up"
+          }
         }
       ]
     },
     "local_economy_weirdness": {
       "family": "local_economy_weirdness",
-      "count": 34,
+      "count": 36,
       "by_status": {
-        "live_only": 13,
+        "live_only": 14,
         "parked": 2,
-        "sandbox": 19
+        "sandbox": 20
       },
       "by_evidence_class": {
-        "live_receipts_only": 13,
-        "needs_history": 19,
+        "live_receipts_only": 14,
+        "needs_history": 20,
         "pending_seed": 2
       },
       "leaders": [
@@ -999,16 +1014,16 @@
     },
     "macro_input_pressure": {
       "family": "macro_input_pressure",
-      "count": 76,
+      "count": 78,
       "by_status": {
         "backtest_weak": 1,
-        "live_only": 23,
+        "live_only": 24,
         "parked": 5,
-        "sandbox": 47
+        "sandbox": 48
       },
       "by_evidence_class": {
-        "live_receipts_only": 23,
-        "needs_history": 45,
+        "live_receipts_only": 24,
+        "needs_history": 46,
         "pending_seed": 5,
         "v1_backtested": 3
       },
@@ -1305,15 +1320,15 @@
     },
     "travel_mobility": {
       "family": "travel_mobility",
-      "count": 23,
+      "count": 25,
       "by_status": {
-        "live_only": 4,
+        "live_only": 5,
         "parked": 2,
-        "sandbox": 17
+        "sandbox": 18
       },
       "by_evidence_class": {
-        "live_receipts_only": 4,
-        "needs_history": 17,
+        "live_receipts_only": 5,
+        "needs_history": 18,
         "pending_seed": 2
       },
       "leaders": [

@@ -1,6 +1,6 @@
 {
   "schema_version": "v1",
-  "generated_at": "2026-05-24T13:23:07Z",
+  "generated_at": "2026-05-24T13:32:14Z",
   "algos": [
     {
       "schema_version": "v1",
@@ -1507,6 +1507,42 @@
     },
     {
       "schema_version": "v1",
+      "key": "crazy:weekly-surge-in-google-trends-for-last-minute-vacation-booki",
+      "algo_type": "crazy",
+      "algo_id": "weekly-surge-in-google-trends-for-last-minute-vacation-booki",
+      "name": "Weekly Surge In Google Trends For Last Minute Vacation Bookings Signals Travel Demand Spike",
+      "family": "travel_mobility",
+      "status": "live_only",
+      "evidence_class": "live_receipts_only",
+      "rebalance_frequency": "weekly",
+      "ytd_pct": -0.02,
+      "days_running": 0,
+      "beat_spy": null,
+      "spy_pct": null,
+      "alpha_pct": null,
+      "ret_30d_pct": 0.0,
+      "spy_delta_30d_pct": -4.84,
+      "last_snapshot": "2026-05-24",
+      "new_algo_date": null,
+      "comparator": {
+        "primary_etf": "XLY",
+        "signals": {
+          "momentum_5d": {
+            "direction": "UP",
+            "confidence": 0.455,
+            "return_pct": 2.274
+          },
+          "momentum_20d": {
+            "direction": "UP",
+            "confidence": 0.083,
+            "return_pct": 0.413
+          }
+        },
+        "summary": "both_up"
+      }
+    },
+    {
+      "schema_version": "v1",
       "key": "crazy:weekly-surge-in-google-trends-for-diy-plumbing-repair-signal",
       "algo_type": "crazy",
       "algo_id": "weekly-surge-in-google-trends-for-diy-plumbing-repair-signal",
@@ -1939,6 +1975,42 @@
     },
     {
       "schema_version": "v1",
+      "key": "crazy:earthquake-aftershock-capital-flight",
+      "algo_type": "crazy",
+      "algo_id": "earthquake-aftershock-capital-flight",
+      "name": "Earthquake Aftershock Capital Flight",
+      "family": "local_economy_weirdness",
+      "status": "live_only",
+      "evidence_class": "live_receipts_only",
+      "rebalance_frequency": "daily",
+      "ytd_pct": -0.06,
+      "days_running": 0,
+      "beat_spy": null,
+      "spy_pct": null,
+      "alpha_pct": null,
+      "ret_30d_pct": -0.06,
+      "spy_delta_30d_pct": -4.9,
+      "last_snapshot": "2026-05-24",
+      "new_algo_date": null,
+      "comparator": {
+        "primary_etf": "XLB",
+        "signals": {
+          "momentum_5d": {
+            "direction": "DOWN",
+            "confidence": 0.004,
+            "return_pct": -0.02
+          },
+          "momentum_20d": {
+            "direction": "DOWN",
+            "confidence": 0.628,
+            "return_pct": -3.139
+          }
+        },
+        "summary": "mixed"
+      }
+    },
+    {
+      "schema_version": "v1",
       "key": "crazy:electricity-demand-spike-during-extreme-cold-snap-triggers-u",
       "algo_type": "crazy",
       "algo_id": "electricity-demand-spike-during-extreme-cold-snap-triggers-u",
@@ -2004,6 +2076,78 @@
             "direction": "UP",
             "confidence": 0.792,
             "return_pct": 3.96
+          }
+        },
+        "summary": "both_up"
+      }
+    },
+    {
+      "schema_version": "v1",
+      "key": "crazy:weekly-rise-in-google-trends-for-unemployment-benefits-searc",
+      "algo_type": "crazy",
+      "algo_id": "weekly-rise-in-google-trends-for-unemployment-benefits-searc",
+      "name": "Weekly Rise In Google Trends For Unemployment Benefits Searches Signals Labor Market Stress",
+      "family": "labor_jobs",
+      "status": "live_only",
+      "evidence_class": "live_receipts_only",
+      "rebalance_frequency": "weekly",
+      "ytd_pct": -0.07,
+      "days_running": 0,
+      "beat_spy": null,
+      "spy_pct": null,
+      "alpha_pct": null,
+      "ret_30d_pct": -0.07,
+      "spy_delta_30d_pct": -4.91,
+      "last_snapshot": "2026-05-24",
+      "new_algo_date": null,
+      "comparator": {
+        "primary_etf": "XLF",
+        "signals": {
+          "momentum_5d": {
+            "direction": "UP",
+            "confidence": 0.329,
+            "return_pct": 1.644
+          },
+          "momentum_20d": {
+            "direction": "UP",
+            "confidence": 0.202,
+            "return_pct": 1.011
+          }
+        },
+        "summary": "both_up"
+      }
+    },
+    {
+      "schema_version": "v1",
+      "key": "crazy:daily-spike-in-google-trends-for-gas-station-cash-only-searc",
+      "algo_type": "crazy",
+      "algo_id": "daily-spike-in-google-trends-for-gas-station-cash-only-searc",
+      "name": "Daily Spike In Google Trends For Gas Station Cash Only Searches Indicates Consumer Payment Stress",
+      "family": "consumer_stress",
+      "status": "live_only",
+      "evidence_class": "live_receipts_only",
+      "rebalance_frequency": "daily",
+      "ytd_pct": -0.07,
+      "days_running": 0,
+      "beat_spy": null,
+      "spy_pct": null,
+      "alpha_pct": null,
+      "ret_30d_pct": -0.07,
+      "spy_delta_30d_pct": -4.91,
+      "last_snapshot": "2026-05-24",
+      "new_algo_date": null,
+      "comparator": {
+        "primary_etf": "XLE",
+        "signals": {
+          "momentum_5d": {
+            "direction": "UP",
+            "confidence": 0.017,
+            "return_pct": 0.084
+          },
+          "momentum_20d": {
+            "direction": "UP",
+            "confidence": 0.921,
+            "return_pct": 4.607
           }
         },
         "summary": "both_up"
@@ -2299,6 +2443,42 @@
     },
     {
       "schema_version": "v1",
+      "key": "crazy:daily-spike-in-google-trends-for-diy-home-security-installat",
+      "algo_type": "crazy",
+      "algo_id": "daily-spike-in-google-trends-for-diy-home-security-installat",
+      "name": "Daily Spike In Google Trends For Diy Home Security Installation Signals Consumer Tech Caution",
+      "family": "consumer_stress",
+      "status": "live_only",
+      "evidence_class": "live_receipts_only",
+      "rebalance_frequency": "daily",
+      "ytd_pct": -0.09,
+      "days_running": 0,
+      "beat_spy": null,
+      "spy_pct": null,
+      "alpha_pct": null,
+      "ret_30d_pct": -0.09,
+      "spy_delta_30d_pct": -4.93,
+      "last_snapshot": "2026-05-24",
+      "new_algo_date": null,
+      "comparator": {
+        "primary_etf": "XLC",
+        "signals": {
+          "momentum_5d": {
+            "direction": "DOWN",
+            "confidence": 0.107,
+            "return_pct": -0.534
+          },
+          "momentum_20d": {
+            "direction": "DOWN",
+            "confidence": 0.014,
+            "return_pct": -0.069
+          }
+        },
+        "summary": "mixed"
+      }
+    },
+    {
+      "schema_version": "v1",
       "key": "crazy:weekly-surge-in-job-postings-for-warehouse-workers-signals-b",
       "algo_type": "crazy",
       "algo_id": "weekly-surge-in-job-postings-for-warehouse-workers-signals-b",
@@ -2400,6 +2580,42 @@
             "direction": "UP",
             "confidence": 1.0,
             "return_pct": 12.589
+          }
+        },
+        "summary": "both_up"
+      }
+    },
+    {
+      "schema_version": "v1",
+      "key": "crazy:daily-spike-in-google-trends-for-emergency-childcare-searche",
+      "algo_type": "crazy",
+      "algo_id": "daily-spike-in-google-trends-for-emergency-childcare-searche",
+      "name": "Daily Spike In Google Trends For Emergency Childcare Searches Signals Working Parent Stress",
+      "family": "consumer_stress",
+      "status": "live_only",
+      "evidence_class": "live_receipts_only",
+      "rebalance_frequency": "daily",
+      "ytd_pct": -0.11,
+      "days_running": 0,
+      "beat_spy": null,
+      "spy_pct": null,
+      "alpha_pct": null,
+      "ret_30d_pct": 0.0,
+      "spy_delta_30d_pct": -4.84,
+      "last_snapshot": "2026-05-24",
+      "new_algo_date": null,
+      "comparator": {
+        "primary_etf": "XLY",
+        "signals": {
+          "momentum_5d": {
+            "direction": "UP",
+            "confidence": 0.455,
+            "return_pct": 2.274
+          },
+          "momentum_20d": {
+            "direction": "UP",
+            "confidence": 0.083,
+            "return_pct": 0.413
           }
         },
         "summary": "both_up"
@@ -4521,6 +4737,42 @@
           }
         },
         "summary": "both_up"
+      }
+    },
+    {
+      "schema_version": "v1",
+      "key": "crazy:utility-demand-spike-from-weather-extremes",
+      "algo_type": "crazy",
+      "algo_id": "utility-demand-spike-from-weather-extremes",
+      "name": "Utility Demand Spike From Weather Extremes",
+      "family": "macro_input_pressure",
+      "status": "live_only",
+      "evidence_class": "live_receipts_only",
+      "rebalance_frequency": "daily",
+      "ytd_pct": 0.0,
+      "days_running": 0,
+      "beat_spy": null,
+      "spy_pct": null,
+      "alpha_pct": null,
+      "ret_30d_pct": 0.01,
+      "spy_delta_30d_pct": -4.83,
+      "last_snapshot": "2026-05-24",
+      "new_algo_date": null,
+      "comparator": {
+        "primary_etf": "XLU",
+        "signals": {
+          "momentum_5d": {
+            "direction": "UP",
+            "confidence": 0.675,
+            "return_pct": 3.374
+          },
+          "momentum_20d": {
+            "direction": "DOWN",
+            "confidence": 0.359,
+            "return_pct": -1.797
+          }
+        },
+        "summary": "mixed"
       }
     }
   ]

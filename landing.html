@@ -71,8 +71,8 @@
 <body>
   <header>
     <div class="hero-brand">StockArithm</div>
-    <h1>Alternative data signals, run in public.</h1>
-    <p class="hero-tagline">StockArithm is a public paper-trading lab for alternative data signals. Some are working. Some are failing. All of them stay visible.</p>
+    <h1>Most trading signals look good until they have to survive in public.</h1>
+    <p class="hero-tagline">StockArithm is a public paper-trading lab where the winners and losers stay visible.</p>
     <div class="hero-actions">
       <a class="cta" href="leaderboard.html">See the public leaderboard</a>
       <a class="cta" href="#waitlist">Get the weekly lab notes</a>
@@ -111,10 +111,18 @@
     </div>
 
     <div class="card" style="margin-bottom:16px;">
-      <h2>Start Here</h2>
-      <p>StockArithm is a public lab for alternative data signals.</p>
-      <p>We turn non-traditional inputs into trading ideas, test them honestly, and publish the results.</p>
-      <p>Some signals work. Some fail. We keep both visible.</p>
+      <h2>What You're Looking At</h2>
+      <p>StockArithm is a public paper-trading lab for market signals.</p>
+      <p>Each signal is a rule-based idea that tries to decide when a sector or market trade should outperform SPY. Some signals use standard momentum logic. Others use alternative data like TSA checkpoint traffic, freight activity, electricity demand, and search behavior.</p>
+      <p>The board shows which signals are actually holding up in public paper trading, not just which ones looked good in a backtest.</p>
+      <h3 style="margin-top:16px;">How to read the board</h3>
+      <ul>
+        <li><strong>Force Rank:</strong> full-window performance since the signal went live</li>
+        <li><strong>Rolling 30D:</strong> recent performance over the last 30 days</li>
+        <li><strong>SPY:</strong> the benchmark</li>
+        <li><strong>Visible failures:</strong> the losing signals stay on the board too</li>
+      </ul>
+      <p class="muted" style="margin-top:10px;">Need the terms in plain English? Start with the <a href="glossary.html" style="color:var(--accent);">glossary</a>.</p>
       <h3 style="margin-top:16px;">What to look at first</h3>
       <ul>
         <li><strong>Leaderboard:</strong> which signals are working right now</li>
@@ -122,11 +130,8 @@
         <li><strong>Daily Report:</strong> what changed after the nightly run</li>
         <li><strong>Families:</strong> what each signal family is trying to measure</li>
       </ul>
-      <h3 style="margin-top:16px;">How it works</h3>
-      <p>Idea -> signal -> backtest if we can -> live run if we can’t -> public result.</p>
-      <p>Signals can go idle. Signals that underperform can fail. We keep both visible.</p>
       <h3 style="margin-top:16px;">Why it matters</h3>
-      <p>The point is not hype. The point is to see which signals add something beyond price alone.</p>
+      <p>Most trading signals look good until they have to survive in public. StockArithm exists to show that survival test in real time.</p>
       <h3 style="margin-top:16px;">One example</h3>
       <p>If TSA volume spikes, the lab can turn that into a travel or consumer signal, run it against SPY, and show whether it actually helps.</p>
     </div>
@@ -197,12 +202,12 @@
 
 <footer>
   <div class="wrap">
-    <div class="footer-nav" style="margin-top:8px;display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:0 8px;width:100%;font-family:var(--mono);font-size:11px;line-height:1.6;letter-spacing:0.2px;color:rgba(255,255,255,0.58);"><a href="/landing.html" style="color:rgba(255,255,255,0.58);text-decoration:none;white-space:nowrap;">Home</a><span class="footer-sep">&middot;</span><a href="/leaderboard.html" style="color:rgba(255,255,255,0.58);text-decoration:none;white-space:nowrap;">Leaderboard</a><span class="footer-sep">&middot;</span><a href="/signals/index.html" style="color:rgba(255,255,255,0.58);text-decoration:none;white-space:nowrap;">Signals</a><span class="footer-sep">&middot;</span><a href="/families.html" style="color:rgba(255,255,255,0.58);text-decoration:none;white-space:nowrap;">Families</a><span class="footer-sep">&middot;</span><a href="/daily.html" style="color:rgba(255,255,255,0.58);text-decoration:none;white-space:nowrap;">Daily Report</a><span class="footer-sep">&middot;</span><a href="/premium.html" style="color:rgba(255,255,255,0.58);text-decoration:none;white-space:nowrap;">Premium Preview</a><span class="footer-sep">&middot;</span><a href="/blog/index.html" style="color:rgba(255,255,255,0.58);text-decoration:none;white-space:nowrap;">Blog</a><span class="footer-sep">&middot;</span><a href="/legal.html" style="color:rgba(255,255,255,0.58);text-decoration:none;white-space:nowrap;">Legal</a><span class="footer-sep">&middot;</span><a href="/public-changelog.html" style="color:rgba(255,255,255,0.58);text-decoration:none;white-space:nowrap;">Public Changelog</a><span class="footer-sep">&middot;</span><a href="/algo-changelog.html" style="color:rgba(255,255,255,0.58);text-decoration:none;white-space:nowrap;">Algo Changelog</a><span class="footer-sep">&middot;</span><a href="/biscotti.html" style="color:rgba(255,255,255,0.58);text-decoration:none;white-space:nowrap;">Biscotti</a></div>
+    <div class="footer-nav" style="margin-top:8px;display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:0 8px;width:100%;font-family:var(--mono);font-size:11px;line-height:1.6;letter-spacing:0.2px;color:rgba(255,255,255,0.58);"><a href="/landing.html" style="color:rgba(255,255,255,0.58);text-decoration:none;white-space:nowrap;">Home</a><span class="footer-sep">&middot;</span><a href="/leaderboard.html" style="color:rgba(255,255,255,0.58);text-decoration:none;white-space:nowrap;">Leaderboard</a><span class="footer-sep">&middot;</span><a href="/signals/index.html" style="color:rgba(255,255,255,0.58);text-decoration:none;white-space:nowrap;">Signals</a><span class="footer-sep">&middot;</span><a href="/families.html" style="color:rgba(255,255,255,0.58);text-decoration:none;white-space:nowrap;">Families</a><span class="footer-sep">&middot;</span><a href="/daily.html" style="color:rgba(255,255,255,0.58);text-decoration:none;white-space:nowrap;">Daily Report</a><span class="footer-sep">&middot;</span><a href="/glossary.html" style="color:rgba(255,255,255,0.58);text-decoration:none;white-space:nowrap;">Glossary</a><span class="footer-sep">&middot;</span><a href="/premium.html" style="color:rgba(255,255,255,0.58);text-decoration:none;white-space:nowrap;">Premium Preview</a><span class="footer-sep">&middot;</span><a href="/blog/index.html" style="color:rgba(255,255,255,0.58);text-decoration:none;white-space:nowrap;">Blog</a><span class="footer-sep">&middot;</span><a href="/legal.html" style="color:rgba(255,255,255,0.58);text-decoration:none;white-space:nowrap;">Legal</a><span class="footer-sep">&middot;</span><a href="/public-changelog.html" style="color:rgba(255,255,255,0.58);text-decoration:none;white-space:nowrap;">Public Changelog</a><span class="footer-sep">&middot;</span><a href="/algo-changelog.html" style="color:rgba(255,255,255,0.58);text-decoration:none;white-space:nowrap;">Algo Changelog</a><span class="footer-sep">&middot;</span><a href="/biscotti.html" style="color:rgba(255,255,255,0.58);text-decoration:none;white-space:nowrap;">Biscotti</a></div>
     <div style="width:100%;max-width:520px;height:1px;margin:14px auto 14px;background:rgba(255,255,255,0.10);"></div>
     <div style="display:block;width:100%;text-align:center;font-size:11px;font-style:italic;letter-spacing:0.2px;color:rgba(255,255,255,0.58);margin:0 auto 10px;">
       StockArithm powered by <a href="https://www.randbalgolabs.com" style="color:rgba(255,255,255,0.58);text-decoration:none;white-space:nowrap;" target="_blank" rel="noopener noreferrer">R&amp;B AlgoLabs</a>, LLC.
     </div>
-    <div style="text-align:center;font-size:11px;font-style:italic;letter-spacing:0.2px;color:rgba(255,255,255,0.50);margin-bottom:14px;">Last updated: 2026-05-26T23:52:34Z</div>
+    <div style="text-align:center;font-size:11px;font-style:italic;letter-spacing:0.2px;color:rgba(255,255,255,0.50);margin-bottom:14px;">Last updated: 2026-05-26T23:53:31Z</div>
     <div style="margin-top:12px;max-width:920px;margin-left:auto;margin-right:auto;text-align:center;font-size:11px;font-style:italic;letter-spacing:0.2px;color:rgba(255,255,255,0.58);">
       <strong>Signal Lab Notice:</strong> Experimental research only. Signals can and will fail. Do not interpret any signal as a recommendation.<br>
       <strong>Performance Disclosure:</strong> Leaderboards are model/simulation outputs and may not reflect slippage, fees, liquidity, execution delays, or market impact.<br>

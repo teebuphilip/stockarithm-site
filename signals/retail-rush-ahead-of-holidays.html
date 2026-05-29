@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>StockArithm — Retail Rush Ahead Of Holidays</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;600&display=swap');
+  :root {
+    --bg: #0a0d12;
+    --bg-2: #111520;
+    --card: #111520;
+    --accent: #19d38f;
+    --muted: #9ab0a7;
+    --text: #ecf5f2;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: 'Space Grotesk', system-ui, sans-serif; color: var(--text); background: var(--bg); }
+  header { padding: 28px; border-bottom: 1px solid rgba(255,255,255,0.08); text-align: center; }
+  header h1 { margin: 0; font-size: 30px; letter-spacing: 0.5px; }
+  header p { margin: 6px 0 0; color: var(--muted); font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 12px; }
+  .wrap { padding: 24px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
+  .card { background: var(--card); border: 1px solid rgba(255,255,255,0.08); border-radius: 14px; padding: 16px; box-shadow: 0 14px 30px rgba(0,0,0,0.22); }
+  .card h2 { margin: 0 0 8px; font-size: 18px; }
+  .card p { margin: 0 0 12px; color: var(--muted); font-size: 14px; line-height: 1.4; }
+  .cta { display: inline-block; padding: 10px 12px; border-radius: 8px; border: none; background: var(--accent); color: #062018; text-decoration: none; font-weight: 700; font-size: 13px; transition: background 0.2s; }
+  .cta:hover { background: #33e3a3; }
+  .winners h3 { margin: 0 0 8px; font-size: 16px; }
+  .winners ul { margin: 0; padding: 0; list-style: none; }
+  .winners li { padding: 6px 0; border-bottom: 1px solid rgba(255,255,255,0.06); font-size: 14px; }
+  .winners li:last-child { border-bottom: none; }
+  .muted { color: var(--muted); font-size: 12px; }
+  .ret-pos { color: #19d38f; font-family: 'IBM Plex Mono', monospace; }
+  .ret-neg { color: #ef4444; font-family: 'IBM Plex Mono', monospace; }
+  .waitlist { margin-top: 16px; border: 1px solid rgba(25, 211, 143, 0.28); }
+  .waitlist-form { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 8px; margin-top: 12px; }
+  .waitlist-form input { min-width: 0; border: 1px solid rgba(255,255,255,0.14); border-radius: 8px; background: #0f1c18; color: var(--text); padding: 10px 12px; font: inherit; font-size: 14px; }
+  .waitlist-form button { border: none; border-radius: 8px; background: var(--accent); color: #062018; padding: 10px 12px; font: inherit; font-size: 13px; font-weight: 700; cursor: pointer; transition: background 0.2s; }
+  .waitlist-form button:hover { background: #33e3a3; }
+  .waitlist-form button[disabled] { opacity: 0.72; cursor: wait; }
+  .waitlist-status { display: none; margin-top: 10px; padding: 10px 12px; border-radius: 10px; font-size: 13px; line-height: 1.45; text-align: center; }
+  .waitlist-status.is-active { display: block; }
+  .waitlist-status.is-info { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); color: var(--muted); }
+  .waitlist-status.is-success { background: rgba(25,211,143,0.10); border: 1px solid rgba(25,211,143,0.24); color: var(--text); }
+  .waitlist-status.is-warn { background: rgba(250,204,21,0.10); border: 1px solid rgba(250,204,21,0.20); color: var(--text); }
+  .notice { margin-top: 10px; color: var(--muted); font-size: 12px; line-height: 1.4; }
+  .hero-actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 14px; justify-content: center; }
+  .hero-actions .cta { padding: 10px 14px; }
+  .hero-strip { margin-top: 16px; display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; }
+  .pill { font-size: 12px; color: var(--muted); border: 1px solid rgba(255,255,255,0.08); border-radius: 999px; padding: 6px 10px; }
+  .hero-brand { font-size: clamp(42px, 7vw, 72px); font-weight: 700; letter-spacing: -1.5px; line-height: 1; color: var(--accent); margin: 0 0 10px; }
+  .hero-tagline { font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 14px; color: var(--muted); max-width: 860px; margin: 0 auto; }
+  .home-shell { max-width: 1120px; margin: 0 auto; }
+  .home-shell .card { text-align: center; display: flex; flex-direction: column; }
+  .home-shell .card ul { display: inline-block; text-align: left; margin: 0 auto; }
+  .home-shell .card .cta { margin-top: auto; }
+  .home-shell .card .muted:last-of-type { margin-bottom: 12px; }
+  .home-shell .card .card-actions { margin-top: auto; display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+  .mini-chart-wrap { display: flex; flex-direction: column; gap: 10px; }
+  .mini-chart-meta { display: flex; flex-direction: column; gap: 4px; }
+  .mini-chart-title { font-size: 18px; font-weight: 700; }
+  .mini-chart-note { color: var(--muted); font-size: 14px; line-height: 1.4; }
+  .mini-chart { width: 100%; height: auto; display: block; }
+  .mini-chart-legend { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; font-size: 12px; color: var(--muted); }
+  .mini-chart-legend span { display: inline-flex; align-items: center; gap: 6px; }
+  .mini-chart-legend i { display: inline-block; width: 10px; height: 10px; border-radius: 999px; }
+  @media (max-width: 560px) { .waitlist-form { grid-template-columns: 1fr; } }
+
+  .meta-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:10px; margin-top:18px; }
+  .meta-card { border:1px solid rgba(255,255,255,0.08); border-radius:12px; padding:14px; background:rgba(255,255,255,0.02); }
+  .meta-card .label { color:var(--muted); font-size:12px; text-transform:uppercase; letter-spacing:0.04em; font-family:var(--mono); }
+  .meta-card .value { color:var(--text); font-size:15px; margin-top:6px; }
+  .lede { color:var(--text); font-size:20px; line-height:1.6; max-width:920px; }
+  .public-note { color:var(--muted); font-size:14px; line-height:1.6; margin-top:12px; }
+  ul { margin:0; padding-left:20px; }
+  li { margin:6px 0; color:var(--text); }
+  @media (max-width: 900px) {
+    .meta-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  }
+  @media (max-width: 600px) {
+    .meta-grid { grid-template-columns:1fr; }
+  }
+</style>
+</head>
+<body>
+  <header>
+    <h1 class="page-title">Retail Rush Ahead Of Holidays</h1>
+    <p class="lede">Increased consumer interest in holiday shopping often precedes stronger retail sales and market activity. Consumer discretionary sector benefits from elevated holiday shopping demand.</p>
+    <p class="public-note">This is the public plain-English summary page. It stays free. The deeper per-algo dashboard, trade history, and equity details move behind the paywall.</p>
+    <div class="hero-actions">
+      <a class="cta" href="/signals/index.html">Back to all signals</a>
+      <a class="cta" href="/premium.html">See premium plan</a>
+    </div>
+    <div class="meta-grid">
+      <div class="meta-card"><div class="label">Type</div><div class="value">alternative</div></div>
+      <div class="meta-card"><div class="label">Family</div><div class="value">Consumer Stress</div></div>
+      <div class="meta-card"><div class="label">Status</div><div class="value">Sandbox</div></div>
+      <div class="meta-card"><div class="label">Frequency</div><div class="value">weekly</div></div>
+    </div>
+  </header>
+
+  <div class="wrap">
+    <div class="card">
+      <h2 class="section-title">Plain English description</h2>
+      <p>Increased consumer interest in holiday shopping often precedes stronger retail sales and market activity. Consumer discretionary sector benefits from elevated holiday shopping demand.</p>
+    </div>
+
+    <div class="card">
+      <h2 class="section-title">What you are looking at</h2>
+      <p>Increased consumer interest in holiday shopping often precedes stronger retail sales and market activity. Consumer discretionary sector benefits from elevated holiday shopping demand.</p>
+      <p class="public-note">StockArithm keeps these public summary pages open so visitors can understand what each signal is trying to do before they ever hit a paywall.</p>
+    </div>
+
+
+        <div class="card">
+          <h2 class="section-title">Data sources</h2>
+          <ul><li>Google Trends weekly search interest for holiday gift ideas through google_trends adapter</li></ul>
+        </div>
+
+        <div class="card">
+          <h2 class="section-title">Known risks</h2>
+          <p>Data source instability, false positives, and regime shifts.</p>
+        </div>
+  </div>
+
+
+<footer>
+  <div class="wrap">
+    <div class="footer-nav" style="margin-top:8px;display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:0 8px;width:100%;font-family:var(--mono);font-size:11px;line-height:1.6;letter-spacing:0.2px;color:rgba(255,255,255,0.58);"><a href="/landing.html" style="color:rgba(255,255,255,0.58);text-decoration:none;white-space:nowrap;">Home</a><span class="footer-sep">&middot;</span><a href="/leaderboard.html" style="color:rgba(255,255,255,0.58);text-decoration:none;white-space:nowrap;">Leaderboard</a><span class="footer-sep">&middot;</span><a href="/signals/index.html" style="color:rgba(255,255,255,0.58);text-decoration:none;white-space:nowrap;">Signals</a><span class="footer-sep">&middot;</span><a href="/families.html" style="color:rgba(255,255,255,0.58);text-decoration:none;white-space:nowrap;">Families</a><span class="footer-sep">&middot;</span><a href="/daily.html" style="color:rgba(255,255,255,0.58);text-decoration:none;white-space:nowrap;">Daily Report</a><span class="footer-sep">&middot;</span><a href="/glossary.html" style="color:rgba(255,255,255,0.58);text-decoration:none;white-space:nowrap;">Glossary</a><span class="footer-sep">&middot;</span><a href="/premium.html" style="color:rgba(255,255,255,0.58);text-decoration:none;white-space:nowrap;">Premium Preview</a><span class="footer-sep">&middot;</span><a href="/blog/index.html" style="color:rgba(255,255,255,0.58);text-decoration:none;white-space:nowrap;">Blog</a><span class="footer-sep">&middot;</span><a href="/legal.html" style="color:rgba(255,255,255,0.58);text-decoration:none;white-space:nowrap;">Legal</a><span class="footer-sep">&middot;</span><a href="/public-changelog.html" style="color:rgba(255,255,255,0.58);text-decoration:none;white-space:nowrap;">Public Changelog</a><span class="footer-sep">&middot;</span><a href="/algo-changelog.html" style="color:rgba(255,255,255,0.58);text-decoration:none;white-space:nowrap;">Algo Changelog</a><span class="footer-sep">&middot;</span><a href="/biscotti.html" style="color:rgba(255,255,255,0.58);text-decoration:none;white-space:nowrap;">Biscotti</a></div>
+    <div style="width:100%;max-width:520px;height:1px;margin:14px auto 14px;background:rgba(255,255,255,0.10);"></div>
+    <div style="display:block;width:100%;text-align:center;font-size:11px;font-style:italic;letter-spacing:0.2px;color:rgba(255,255,255,0.58);margin:0 auto 10px;">
+      StockArithm powered by <a href="https://www.randbalgolabs.com" style="color:rgba(255,255,255,0.58);text-decoration:none;white-space:nowrap;" target="_blank" rel="noopener noreferrer">R&amp;B AlgoLabs</a>, LLC.
+    </div>
+    <div style="text-align:center;font-size:11px;font-style:italic;letter-spacing:0.2px;color:rgba(255,255,255,0.50);margin-bottom:14px;">Last updated: 2026-05-29T00:09:55Z</div>
+    <div style="margin-top:12px;max-width:920px;margin-left:auto;margin-right:auto;text-align:center;font-size:11px;font-style:italic;letter-spacing:0.2px;color:rgba(255,255,255,0.58);">
+      <strong>Signal Lab Notice:</strong> Experimental research only. Signals can and will fail. Do not interpret any signal as a recommendation.<br>
+      <strong>Performance Disclosure:</strong> Leaderboards are model/simulation outputs and may not reflect slippage, fees, liquidity, execution delays, or market impact.<br>
+      <strong>Data Disclaimer:</strong> Third-party data may be incomplete, delayed, inaccurate, or revised. Use at your own risk.<br>
+      <strong>Not financial advice:</strong> Do your own research. You are responsible for your own decisions. Paper-traded only &mdash; no real money at risk.
+    </div>
+    <div style="margin:20px auto 0;padding-top:16px;border-top:1px solid var(--border);max-width:720px;text-align:center;font-size:10px;font-style:italic;letter-spacing:0.15px;color:rgba(255,255,255,0.42);">
+      In loving memory of Biscotti (2008&ndash;2026). Good boy. Best algo. &hearts;
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

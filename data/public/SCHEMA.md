@@ -38,6 +38,8 @@ Algo row fields:
 | `status` | `string` | product-layer status |
 | `evidence_class` | `string` | product-layer evidence bucket |
 | `rebalance_frequency` | `string \| null` | e.g. `daily`, `weekly`, `monthly` |
+| `thesis_one_liner` | `string \| null` | one-sentence reason the signal could plausibly work |
+| `thesis_source` | `string \| null` | `spec` for extracted idea Markdown, `derived` for deterministic fallback |
 | `ytd_pct` | `number \| null` | strategy YTD return in percent |
 | `days_running` | `integer` | days since tracking started |
 | `beat_spy` | `boolean \| null` | latest YTD comparison vs SPY |

@@ -1,26 +1,26 @@
 {
   "schema_version": "v1",
-  "run_date": "2026-06-05",
-  "generated_at": "2026-06-05T23:57:01Z",
+  "run_date": "2026-06-06",
+  "generated_at": "2026-06-08T08:24:57Z",
   "counts": {
-    "total": 419,
+    "total": 422,
     "normal": 5,
-    "crazy": 414,
-    "watchlist": 181,
+    "crazy": 417,
+    "watchlist": 183,
     "promoted": 5,
     "graveyard": 26
   },
   "by_status": {
     "backtest_weak": 4,
     "failed": 1,
-    "live_only": 172,
+    "live_only": 174,
     "parked": 25,
     "promoted": 5,
-    "sandbox": 212
+    "sandbox": 213
   },
   "by_evidence_class": {
-    "live_receipts_only": 173,
-    "needs_history": 209,
+    "live_receipts_only": 175,
+    "needs_history": 210,
     "pending_seed": 25,
     "v1_backtested": 12
   },
@@ -36,7 +36,7 @@
     "XLV"
   ],
   "ticker_count": 105,
-  "signal_count": 419,
+  "signal_count": 422,
   "sector_summary": {
     "XLK": {
       "etf": "XLK",
@@ -65,10 +65,10 @@
     "XLY": {
       "etf": "XLY",
       "sector": "Consumer Cyclical",
-      "composite": "12 of 77",
+      "composite": "12 of 78",
       "composite_label": "BEARISH",
       "composite_color": "red",
-      "bullish_pct": 16
+      "bullish_pct": 15
     },
     "XLI": {
       "etf": "XLI",
@@ -89,10 +89,10 @@
     "XLP": {
       "etf": "XLP",
       "sector": "Consumer Defensive",
-      "composite": "8 of 48",
+      "composite": "8 of 49",
       "composite_label": "BEARISH",
       "composite_color": "red",
-      "bullish_pct": 17
+      "bullish_pct": 16
     },
     "XLE": {
       "etf": "XLE",
@@ -138,6 +138,8 @@
       "status": "promoted",
       "evidence_class": "v1_backtested",
       "rebalance_frequency": "weekly",
+      "thesis_one_liner": "Algo Baileymol (Chaos Monger) tests whether systematic price rotation can capture persistent sector momentum better than passive market exposure.",
+      "thesis_source": "derived",
       "ytd_pct": 8.16,
       "days_running": 122,
       "beat_spy": false,
@@ -159,6 +161,8 @@
       "status": "promoted",
       "evidence_class": "live_receipts_only",
       "rebalance_frequency": "monthly_eom",
+      "thesis_one_liner": "Quantified Simple Monthly Rotation tests whether systematic price rotation can capture persistent sector momentum better than passive market exposure.",
+      "thesis_source": "derived",
       "ytd_pct": 6.11,
       "days_running": 122,
       "beat_spy": false,
@@ -180,6 +184,8 @@
       "status": "promoted",
       "evidence_class": "live_receipts_only",
       "rebalance_frequency": "monthly_eom",
+      "thesis_one_liner": "Antonacci Dual Momentum Sector Rotation tests whether systematic price rotation can capture persistent sector momentum better than passive market exposure.",
+      "thesis_source": "derived",
       "ytd_pct": 4.8,
       "days_running": 122,
       "beat_spy": false,
@@ -201,6 +207,8 @@
       "status": "live_only",
       "evidence_class": "live_receipts_only",
       "rebalance_frequency": "weekly",
+      "thesis_one_liner": "Uber Mobility Index tests whether source data can identify travel and mobility demand changes before transport-linked sectors reprice.",
+      "thesis_source": "derived",
       "ytd_pct": 3.41,
       "days_running": 121,
       "beat_spy": false,
@@ -222,6 +230,8 @@
       "status": "promoted",
       "evidence_class": "v1_backtested",
       "rebalance_frequency": "monthly_eom",
+      "thesis_one_liner": "Faber Momentum Rotation tests whether systematic price rotation can capture persistent sector momentum better than passive market exposure.",
+      "thesis_source": "derived",
       "ytd_pct": 2.4,
       "days_running": 122,
       "beat_spy": false,
@@ -243,6 +253,8 @@
       "status": "live_only",
       "evidence_class": "live_receipts_only",
       "rebalance_frequency": "monthly",
+      "thesis_one_liner": "Retail Sales Momentum tests whether consumer behavior can reveal consumer stress or demand rotation before it shows up in sector performance.",
+      "thesis_source": "derived",
       "ytd_pct": 1.22,
       "days_running": 121,
       "beat_spy": false,
@@ -264,6 +276,8 @@
       "status": "live_only",
       "evidence_class": "live_receipts_only",
       "rebalance_frequency": "monthly",
+      "thesis_one_liner": "Housing Permit Velocity tests whether source data can expose input-cost, demand, or regime pressure before sector ETFs fully react.",
+      "thesis_source": "derived",
       "ytd_pct": 1.02,
       "days_running": 121,
       "beat_spy": false,
@@ -285,6 +299,8 @@
       "status": "live_only",
       "evidence_class": "live_receipts_only",
       "rebalance_frequency": "monthly",
+      "thesis_one_liner": "High Yield Spread Regime tests whether macro data can expose input-cost, demand, or regime pressure before sector ETFs fully react.",
+      "thesis_source": "derived",
       "ytd_pct": 0.54,
       "days_running": 121,
       "beat_spy": false,
@@ -306,6 +322,8 @@
       "status": "live_only",
       "evidence_class": "live_receipts_only",
       "rebalance_frequency": "monthly",
+      "thesis_one_liner": "Job Posting Acceleration tests whether labor-market activity can flag hiring pressure, layoffs, or wage-cycle shifts before sector momentum adjusts.",
+      "thesis_source": "derived",
       "ytd_pct": 0.08,
       "days_running": 121,
       "beat_spy": false,
@@ -327,6 +345,8 @@
       "status": "live_only",
       "evidence_class": "live_receipts_only",
       "rebalance_frequency": "daily",
+      "thesis_one_liner": "Spikes in searches for repossession indicate consumer financial strain that may impact discretionary spending.",
+      "thesis_source": "spec",
       "ytd_pct": 0.07,
       "days_running": 92,
       "beat_spy": false,
@@ -355,7 +375,7 @@
     }
   ],
   "rolling_30d": {
-    "as_of": "2026-06-05T23:57:00.346080",
+    "as_of": "2026-06-06T00:00:27.370010",
     "spy_ret_30d_pct": 0.51,
     "leaders": [
       {

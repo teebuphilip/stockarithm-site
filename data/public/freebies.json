@@ -1,0 +1,48 @@
+{
+  "schema_version": "v1",
+  "date": "2026-06-08",
+  "generated_at": "2026-06-08T12:02:38Z",
+  "spotlight_1": {
+    "algo_id": "high-yield-spread-regime",
+    "name": "High Yield Spread Regime",
+    "family": "core_rotation",
+    "algo_type": "crazy",
+    "thesis_one_liner": "Recent momentum leader with 0.5% 30D return",
+    "ytd_pct": 0.0,
+    "ret_30d_pct": 0.54,
+    "status": "live_only",
+    "beat_spy": null,
+    "teaser_hook": "Alternative data experiment tracked live in public",
+    "source": "rolling"
+  },
+  "spotlight_2": {
+    "algo_id": "baileymol",
+    "name": "Algo Baileymol (Chaos Monger)",
+    "family": "core_rotation",
+    "algo_type": "normal",
+    "thesis_one_liner": "Algo Baileymol (Chaos Monger) tests whether systematic price rotation can capture persistent sector momentum better than passive market exposure.",
+    "ytd_pct": 8.16,
+    "ret_30d_pct": 0.98,
+    "status": "promoted",
+    "beat_spy": false,
+    "teaser_hook": "Academically validated signal with live trading receipts",
+    "source": "promoted"
+  },
+  "previous_14_days": [
+    "biscotti",
+    "uber-mobility",
+    "high-yield-spread-regime",
+    "baileymol"
+  ],
+  "pool_stats": {
+    "total_pool_size": 17,
+    "promoted_count": 2,
+    "watchlist_count": 5,
+    "rolling_count": 10
+  },
+  "meta": {
+    "anti_repeat_days": 14,
+    "algorithm": "deterministic_hash_rotation",
+    "selection_bias": "spotlight1=premium, spotlight2=diversity"
+  }
+}

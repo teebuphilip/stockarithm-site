@@ -190,6 +190,55 @@
       <div class="notice">No hype. Just the state of the lab.</div>
     </div>
 
+    <div class="card" id="daily-spotlight">
+      <h2>Today's Signal Spotlight</h2>
+      <p>Every day we showcase three signals from our lab — two rotating daily picks and one permanent resident. No cherry-picking, no backtested fantasies.</p>
+
+      <div id="spotlight-container" style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin:16px 0;">
+        <div class="spotlight-card" style="border:1px solid rgba(255,255,255,0.08);border-radius:10px;padding:14px;background:rgba(255,255,255,0.02);">
+          <div class="spotlight-header" style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
+            <h3 style="margin:0;font-size:14px;font-weight:600;color:var(--accent);">Spotlight 1</h3>
+            <span class="spotlight-status" style="font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:0.5px;">Loading...</span>
+          </div>
+          <div class="spotlight-name" style="font-weight:600;font-size:13px;margin-bottom:6px;line-height:1.3;">Loading daily selection...</div>
+          <div class="spotlight-thesis" style="font-size:12px;color:var(--muted);line-height:1.4;margin-bottom:8px;">Selecting today's featured signals...</div>
+          <div class="spotlight-metrics" style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);">
+            <span>YTD: --</span> • <span>30D: --</span>
+          </div>
+        </div>
+
+        <div class="spotlight-card" style="border:1px solid rgba(255,255,255,0.08);border-radius:10px;padding:14px;background:rgba(255,255,255,0.02);">
+          <div class="spotlight-header" style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
+            <h3 style="margin:0;font-size:14px;font-weight:600;color:var(--accent);">Spotlight 2</h3>
+            <span class="spotlight-status" style="font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:0.5px;">Loading...</span>
+          </div>
+          <div class="spotlight-name" style="font-weight:600;font-size:13px;margin-bottom:6px;line-height:1.3;">Loading daily selection...</div>
+          <div class="spotlight-thesis" style="font-size:12px;color:var(--muted);line-height:1.4;margin-bottom:8px;">Selecting today's featured signals...</div>
+          <div class="spotlight-metrics" style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);">
+            <span>YTD: --</span> • <span>30D: --</span>
+          </div>
+        </div>
+
+        <div class="spotlight-card" style="border:1px solid rgba(25,211,143,0.15);border-radius:10px;padding:14px;background:rgba(25,211,143,0.03);">
+          <div class="spotlight-header" style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
+            <h3 style="margin:0;font-size:14px;font-weight:600;color:var(--accent);">Biscotti ❤️</h3>
+            <span class="spotlight-status" style="font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:0.5px;">Permanent</span>
+          </div>
+          <div class="spotlight-name" style="font-weight:600;font-size:13px;margin-bottom:6px;line-height:1.3;">Algo Biscotti (Unconditional Loyalty)</div>
+          <div class="spotlight-thesis" style="font-size:12px;color:var(--muted);line-height:1.4;margin-bottom:8px;">Lab mascot and good boy. Memorial signal for the best algorithmic trader who ever lived.</div>
+          <div class="spotlight-metrics" style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);">
+            <a href="biscotti.html" style="color:var(--accent);text-decoration:none;">See Biscotti page →</a>
+          </div>
+        </div>
+      </div>
+
+      <p class="muted" style="font-size:11px;margin-bottom:8px;">Spotlight 1 & 2 update daily at 6:30pm EST. Never cherry-picked — rotation is deterministic with 14-day anti-repeat.</p>
+      <div class="card-actions">
+        <a class="cta" href="leaderboard.html">See full performance</a>
+        <a class="cta" href="premium.html">Get premium access</a>
+      </div>
+    </div>
+
     <div class="card waitlist" id="disclaimer">
       <h2>Disclaimer</h2>
       <p>The information provided by this website, its tools, and any associated content is for informational and educational purposes only. Nothing here is financial, investment, legal, or tax advice.</p>
@@ -225,6 +274,72 @@
 </footer>
 
 <script>
+  // Load daily spotlights
+  (function () {
+    function formatPercent(value) {
+      if (value === null || value === undefined) return '--';
+      const num = parseFloat(value);
+      if (isNaN(num)) return '--';
+      return (num >= 0 ? '+' : '') + num.toFixed(1) + '%';
+    }
+
+    function renderSpotlight(spotlightData, cardElement) {
+      if (!spotlightData || !cardElement) {
+        return;
+      }
+
+      const statusElement = cardElement.querySelector('.spotlight-status');
+      const nameElement = cardElement.querySelector('.spotlight-name');
+      const thesisElement = cardElement.querySelector('.spotlight-thesis');
+      const metricsElement = cardElement.querySelector('.spotlight-metrics');
+
+      if (statusElement) {
+        statusElement.textContent = spotlightData.status || 'unknown';
+      }
+
+      if (nameElement) {
+        nameElement.textContent = spotlightData.name || 'Unknown Signal';
+      }
+
+      if (thesisElement) {
+        thesisElement.textContent = spotlightData.teaser_hook || spotlightData.thesis_one_liner || 'No description available.';
+      }
+
+      if (metricsElement) {
+        const ytd = formatPercent(spotlightData.ytd_pct);
+        const ret30d = formatPercent(spotlightData.ret_30d_pct);
+        metricsElement.innerHTML = '<span>YTD: ' + ytd + '</span> • <span>30D: ' + ret30d + '</span>';
+      }
+    }
+
+    // Load spotlights data
+    fetch('/data/public/freebies.json')
+      .then(function(response) {
+        if (!response.ok) throw new Error('Failed to load spotlights');
+        return response.json();
+      })
+      .then(function(data) {
+        const cards = document.querySelectorAll('.spotlight-card');
+        if (cards.length >= 2) {
+          renderSpotlight(data.spotlight_1, cards[0]);
+          renderSpotlight(data.spotlight_2, cards[1]);
+          // Biscotti (cards[2]) is static and doesn't need updating
+        }
+      })
+      .catch(function(error) {
+        console.warn('Failed to load daily spotlights:', error);
+        const cards = document.querySelectorAll('.spotlight-card');
+        // Only update the first two cards (skip Biscotti)
+        for (let i = 0; i < Math.min(2, cards.length); i++) {
+          const nameElement = cards[i].querySelector('.spotlight-name');
+          const thesisElement = cards[i].querySelector('.spotlight-thesis');
+          if (nameElement) nameElement.textContent = 'Loading failed';
+          if (thesisElement) thesisElement.textContent = 'Please check back later.';
+        }
+      });
+  })();
+
+  // Waitlist form handling
   (function () {
     const form = document.getElementById('mailerlite-waitlist-form');
     const frame = document.querySelector('iframe[name="mailerlite-waitlist-frame"]');

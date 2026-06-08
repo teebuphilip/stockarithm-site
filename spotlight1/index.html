@@ -287,7 +287,7 @@
 
 <div class="container">
 
-  <section class="algo-hero" style="max-width:980px;margin:0 auto 28px;padding:26px 18px 4px;text-align:center;"><div class="algo-hero-title" style="font-family:var(--font-body);font-size:54px;font-weight:700;line-height:1.02;letter-spacing:-0.02em;color:var(--green);">High Yield Spread Regime</div><div class="algo-hero-meta">Lab started: 2026-01-16 &nbsp;·&nbsp; Last run: 2026-06-05 &nbsp;·&nbsp; $100k base · $10k/trade</div><div class="algo-hero-desc">Tracks high-yield credit spreads as a read on risk appetite and corporate-stress regimes.</div></section>
+  <section class="algo-hero" style="max-width:980px;margin:0 auto 28px;padding:26px 18px 4px;text-align:center;"><div class="algo-hero-title" style="font-family:var(--font-body);font-size:54px;font-weight:700;line-height:1.02;letter-spacing:-0.02em;color:var(--green);">VIX Term Structure</div><div class="algo-hero-meta">Lab started: 2026-01-20 &nbsp;·&nbsp; Last run: 2026-06-05 &nbsp;·&nbsp; $100k base · $10k/trade</div><div class="algo-hero-desc">Tracks the VIX/VXV term-structure ratio as a read on volatility regime and market stress.</div></section>
 
   
   <div class="panel">
@@ -297,7 +297,7 @@
     </div>
     <div class="panel-body">
       <div class="brief-grid">
-<div class="brief-item"><div class="brief-label">Plain English Description</div><div class="brief-value"><p>Tracks high-yield credit spreads as a read on risk appetite and corporate-stress regimes.</p></div></div><div class="brief-item"><div class="brief-label">Thesis</div><div class="brief-value"><p>Widening junk-bond spreads usually mean the market is pricing more stress. Tightening spreads point toward healthier credit conditions and better cyclical risk tolerance.</p></div></div>
+<div class="brief-item"><div class="brief-label">Plain English Description</div><div class="brief-value"><p>Tracks the VIX/VXV term-structure ratio as a read on volatility regime and market stress.</p></div></div><div class="brief-item"><div class="brief-label">Thesis</div><div class="brief-value"><p>Backwardation in the volatility curve often signals acute near-term fear, while steep contango suggests calmer conditions. The signal converts that regime into sector rotation.</p></div></div>
       </div>
     </div>
   </div>
@@ -307,43 +307,43 @@
   <div class="kpi-grid">
     <div class="kpi">
       <div class="kpi-label">Total Equity</div>
-      <div class="kpi-value">$100,544</div>
+      <div class="kpi-value">$98,173</div>
     </div>
     <div class="kpi">
       <div class="kpi-label">Net P&L</div>
-      <div class="kpi-value green">$+544</div>
+      <div class="kpi-value red">$-1,827</div>
     </div>
     <div class="kpi">
       <div class="kpi-label">Return</div>
-      <div class="kpi-value green">+0.54%</div>
+      <div class="kpi-value red">-1.83%</div>
     </div>
     <div class="kpi">
       <div class="kpi-label">Win Rate</div>
-      <div class="kpi-value accent">0%</div>
+      <div class="kpi-value accent">57%</div>
     </div>
     <div class="kpi">
       <div class="kpi-label">Strategy</div>
-      <div class="kpi-value accent">High Yield Spread Regime</div>
+      <div class="kpi-value accent">VIX Term Structure</div>
     </div>
     <div class="kpi">
       <div class="kpi-label">Sharpe Ratio</div>
-      <div class="kpi-value red">-1.71</div>
+      <div class="kpi-value red">-0.64</div>
     </div>
     <div class="kpi">
       <div class="kpi-label">Max Drawdown</div>
-      <div class="kpi-value red">-0.6%</div>
+      <div class="kpi-value red">-10.9%</div>
     </div>
     <div class="kpi">
       <div class="kpi-label">Avg Win</div>
-      <div class="kpi-value green">$+0</div>
+      <div class="kpi-value green">$+255</div>
     </div>
     <div class="kpi">
       <div class="kpi-label">Avg Loss</div>
-      <div class="kpi-value red">$+0</div>
+      <div class="kpi-value red">$-564</div>
     </div>
     <div class="kpi">
       <div class="kpi-label">Realized / Unrealized</div>
-      <div class="kpi-value green">$+0 / $+564</div>
+      <div class="kpi-value red">$-5,074 / $+3,804</div>
     </div>
   </div>
 
@@ -383,19 +383,19 @@
       <div class="panel-body" style="padding:0">
         <table><thead><tr><th>Ticker</th><th>Entry</th><th>Current</th><th>P&L</th><th>Opened</th><th>Consec↓MA</th></tr></thead><tbody>
         <tr>
-          <td><span class="ticker">XLF</span></td>
-          <td>$50.87</td>
-          <td>$52.30</td>
-          <td style="color:#00ff88">$+1,124.44 (+2.8%)</td>
-          <td>2026-06-04</td>
+          <td><span class="ticker">XLK</span></td>
+          <td>$160.57</td>
+          <td>$180.30</td>
+          <td style="color:#00ff88">$+4,639.22 (+12.3%)</td>
+          <td>2026-04-27</td>
           <td>0</td>
         </tr>
         <tr>
           <td><span class="ticker">XLY</span></td>
-          <td>$116.73</td>
+          <td>$117.84</td>
           <td>$114.86</td>
-          <td style="color:#ff4d6d">$-560.70 (-1.6%)</td>
-          <td>2026-06-04</td>
+          <td style="color:#ff4d6d">$-835.44 (-2.5%)</td>
+          <td>2026-04-27</td>
           <td>0</td>
         </tr></tbody></table>
       </div>
@@ -409,14 +409,14 @@
       <div class="panel-body">
         <table>
           <tbody>
-            <tr><td style="color:var(--muted);font-family:var(--font-mono);font-size:11px">CASH</td><td>$24,980.10</td></tr>
+            <tr><td style="color:var(--muted);font-family:var(--font-mono);font-size:11px">CASH</td><td>$23,577.39</td></tr>
             <tr><td style="color:var(--muted);font-family:var(--font-mono);font-size:11px">BORROWED</td><td style="color:var(--text)">$0.00</td></tr>
             <tr><td style="color:var(--muted);font-family:var(--font-mono);font-size:11px">ACCRUED INT.</td><td style="color:var(--red)">$0.00</td></tr>
             <tr><td style="color:var(--muted);font-family:var(--font-mono);font-size:11px">OPEN POSITIONS</td><td>2</td></tr>
-            <tr><td style="color:var(--muted);font-family:var(--font-mono);font-size:11px">TOTAL TRADES</td><td>0</td></tr>
-            <tr><td style="color:var(--muted);font-family:var(--font-mono);font-size:11px">WINNERS</td><td>0</td></tr>
-            <tr><td style="color:var(--muted);font-family:var(--font-mono);font-size:11px">WIN RATE</td><td>0.0%</td></tr>
-            <tr><td style="color:var(--muted);font-family:var(--font-mono);font-size:11px">SIM START</td><td>2026-01-16</td></tr>
+            <tr><td style="color:var(--muted);font-family:var(--font-mono);font-size:11px">TOTAL TRADES</td><td>54</td></tr>
+            <tr><td style="color:var(--muted);font-family:var(--font-mono);font-size:11px">WINNERS</td><td>31</td></tr>
+            <tr><td style="color:var(--muted);font-family:var(--font-mono);font-size:11px">WIN RATE</td><td>57.4%</td></tr>
+            <tr><td style="color:var(--muted);font-family:var(--font-mono);font-size:11px">SIM START</td><td>2026-01-20</td></tr>
           </tbody>
         </table>
       </div>
@@ -432,22 +432,302 @@
     <div class="panel-body" style="padding:0; overflow-x:auto">
       <table><thead><tr><th>Date</th><th>Action</th><th>Ticker</th><th>Price</th><th>Shares</th><th>Value</th><th>P&L</th><th>Notes</th></tr></thead><tbody>
             <tr class="buy-row">
-              <td>2026-06-04</td>
+              <td>2026-04-27</td>
               <td><span class="action-buy">BUY</span></td>
               <td><span class="ticker">XLY</span></td>
-              <td>$116.73</td>
-              <td>299.8372</td>
-              <td>$35,000.00</td>
+              <td>$117.84</td>
+              <td>280.3480</td>
+              <td>$33,036.20</td>
               <td>—</td>
               <td>CASH</td>
             </tr>
             <tr class="buy-row">
-              <td>2026-06-04</td>
+              <td>2026-04-27</td>
               <td><span class="action-buy">BUY</span></td>
-              <td><span class="ticker">XLF</span></td>
-              <td>$50.87</td>
-              <td>786.3181</td>
-              <td>$40,000.00</td>
+              <td><span class="ticker">XLK</span></td>
+              <td>$160.57</td>
+              <td>235.1352</td>
+              <td>$37,755.66</td>
+              <td>—</td>
+              <td>CASH</td>
+            </tr>
+            <tr class="sell-row">
+              <td>2026-04-27</td>
+              <td><span class="action-sell">SELL</span></td>
+              <td><span class="ticker">XLY</span></td>
+              <td>$117.84</td>
+              <td>273.7430</td>
+              <td>$32,246.23</td>
+              <td style="color:#ff4d6d">$-715.17 (-2.2%)</td>
+              <td>rebalance</td>
+            </tr>
+            <tr class="sell-row">
+              <td>2026-04-27</td>
+              <td><span class="action-sell">SELL</span></td>
+              <td><span class="ticker">XLK</span></td>
+              <td>$160.57</td>
+              <td>244.0568</td>
+              <td>$39,176.21</td>
+              <td style="color:#00ff88">$+948.81 (+2.5%)</td>
+              <td>rebalance</td>
+            </tr>
+            <tr class="buy-row">
+              <td>2026-04-17</td>
+              <td><span class="action-buy">BUY</span></td>
+              <td><span class="ticker">XLY</span></td>
+              <td>$120.41</td>
+              <td>273.7430</td>
+              <td>$32,961.39</td>
+              <td>—</td>
+              <td>CASH</td>
+            </tr>
+            <tr class="buy-row">
+              <td>2026-04-17</td>
+              <td><span class="action-buy">BUY</span></td>
+              <td><span class="ticker">XLK</span></td>
+              <td>$154.35</td>
+              <td>244.0568</td>
+              <td>$37,670.16</td>
+              <td>—</td>
+              <td>CASH</td>
+            </tr>
+            <tr class="sell-row">
+              <td>2026-04-17</td>
+              <td><span class="action-sell">SELL</span></td>
+              <td><span class="ticker">XLY</span></td>
+              <td>$120.41</td>
+              <td>277.7954</td>
+              <td>$33,437.64</td>
+              <td style="color:#00ff88">$+479.16 (+1.5%)</td>
+              <td>rebalance</td>
+            </tr>
+            <tr class="sell-row">
+              <td>2026-04-17</td>
+              <td><span class="action-sell">SELL</span></td>
+              <td><span class="ticker">XLK</span></td>
+              <td>$154.35</td>
+              <td>245.6599</td>
+              <td>$37,905.69</td>
+              <td style="color:#00ff88">$+353.10 (+0.9%)</td>
+              <td>rebalance</td>
+            </tr>
+            <tr class="buy-row">
+              <td>2026-04-16</td>
+              <td><span class="action-buy">BUY</span></td>
+              <td><span class="ticker">XLY</span></td>
+              <td>$117.63</td>
+              <td>277.7954</td>
+              <td>$32,677.07</td>
+              <td>—</td>
+              <td>CASH</td>
+            </tr>
+            <tr class="buy-row">
+              <td>2026-04-16</td>
+              <td><span class="action-buy">BUY</span></td>
+              <td><span class="ticker">XLK</span></td>
+              <td>$152.02</td>
+              <td>245.6599</td>
+              <td>$37,345.22</td>
+              <td>—</td>
+              <td>CASH</td>
+            </tr>
+            <tr class="sell-row">
+              <td>2026-04-16</td>
+              <td><span class="action-sell">SELL</span></td>
+              <td><span class="ticker">XLY</span></td>
+              <td>$117.63</td>
+              <td>276.2715</td>
+              <td>$32,486.16</td>
+              <td style="color:#ff4d6d">$-163.61 (-0.5%)</td>
+              <td>rebalance</td>
+            </tr>
+            <tr class="sell-row">
+              <td>2026-04-16</td>
+              <td><span class="action-sell">SELL</span></td>
+              <td><span class="ticker">XLK</span></td>
+              <td>$152.02</td>
+              <td>248.2636</td>
+              <td>$37,729.12</td>
+              <td style="color:#00ff88">$+261.51 (+0.7%)</td>
+              <td>rebalance</td>
+            </tr>
+            <tr class="buy-row">
+              <td>2026-04-15</td>
+              <td><span class="action-buy">BUY</span></td>
+              <td><span class="ticker">XLY</span></td>
+              <td>$118.18</td>
+              <td>276.2715</td>
+              <td>$32,649.77</td>
+              <td>—</td>
+              <td>CASH</td>
+            </tr>
+            <tr class="buy-row">
+              <td>2026-04-15</td>
+              <td><span class="action-buy">BUY</span></td>
+              <td><span class="ticker">XLK</span></td>
+              <td>$150.30</td>
+              <td>248.2636</td>
+              <td>$37,314.02</td>
+              <td>—</td>
+              <td>CASH</td>
+            </tr>
+            <tr class="sell-row">
+              <td>2026-04-15</td>
+              <td><span class="action-sell">SELL</span></td>
+              <td><span class="ticker">XLY</span></td>
+              <td>$118.18</td>
+              <td>282.5712</td>
+              <td>$33,382.56</td>
+              <td style="color:#00ff88">$+934.35 (+2.9%)</td>
+              <td>rebalance</td>
+            </tr>
+            <tr class="sell-row">
+              <td>2026-04-15</td>
+              <td><span class="action-sell">SELL</span></td>
+              <td><span class="ticker">XLK</span></td>
+              <td>$150.30</td>
+              <td>255.6201</td>
+              <td>$38,407.75</td>
+              <td style="color:#00ff88">$+1,229.27 (+3.4%)</td>
+              <td>rebalance</td>
+            </tr>
+            <tr class="buy-row">
+              <td>2026-04-10</td>
+              <td><span class="action-buy">BUY</span></td>
+              <td><span class="ticker">XLY</span></td>
+              <td>$112.89</td>
+              <td>282.5712</td>
+              <td>$31,899.47</td>
+              <td>—</td>
+              <td>CASH</td>
+            </tr>
+            <tr class="buy-row">
+              <td>2026-04-10</td>
+              <td><span class="action-buy">BUY</span></td>
+              <td><span class="ticker">XLK</span></td>
+              <td>$142.62</td>
+              <td>255.6201</td>
+              <td>$36,456.53</td>
+              <td>—</td>
+              <td>CASH</td>
+            </tr>
+            <tr class="sell-row">
+              <td>2026-04-10</td>
+              <td><span class="action-sell">SELL</span></td>
+              <td><span class="ticker">XLU</span></td>
+              <td>$46.96</td>
+              <td>685.0726</td>
+              <td>$32,159.24</td>
+              <td style="color:#00ff88">$+290.39 (+0.9%)</td>
+              <td>rebalance</td>
+            </tr>
+            <tr class="sell-row">
+              <td>2026-04-10</td>
+              <td><span class="action-sell">SELL</span></td>
+              <td><span class="ticker">XLP</span></td>
+              <td>$82.37</td>
+              <td>445.8114</td>
+              <td>$36,709.57</td>
+              <td style="color:#00ff88">$+304.25 (+0.8%)</td>
+              <td>rebalance</td>
+            </tr>
+            <tr class="buy-row">
+              <td>2026-04-07</td>
+              <td><span class="action-buy">BUY</span></td>
+              <td><span class="ticker">XLU</span></td>
+              <td>$46.27</td>
+              <td>685.0726</td>
+              <td>$31,698.31</td>
+              <td>—</td>
+              <td>CASH</td>
+            </tr>
+            <tr class="buy-row">
+              <td>2026-04-07</td>
+              <td><span class="action-buy">BUY</span></td>
+              <td><span class="ticker">XLP</span></td>
+              <td>$81.26</td>
+              <td>445.8114</td>
+              <td>$36,226.64</td>
+              <td>—</td>
+              <td>CASH</td>
+            </tr>
+            <tr class="sell-row">
+              <td>2026-04-07</td>
+              <td><span class="action-sell">SELL</span></td>
+              <td><span class="ticker">XLU</span></td>
+              <td>$46.27</td>
+              <td>691.5252</td>
+              <td>$31,985.11</td>
+              <td style="color:#00ff88">$+145.08 (+0.5%)</td>
+              <td>rebalance</td>
+            </tr>
+            <tr class="sell-row">
+              <td>2026-04-07</td>
+              <td><span class="action-sell">SELL</span></td>
+              <td><span class="ticker">XLP</span></td>
+              <td>$81.26</td>
+              <td>443.2247</td>
+              <td>$36,004.56</td>
+              <td style="color:#ff4d6d">$-286.68 (-0.8%)</td>
+              <td>rebalance</td>
+            </tr>
+            <tr class="buy-row">
+              <td>2026-03-30</td>
+              <td><span class="action-buy">BUY</span></td>
+              <td><span class="ticker">XLU</span></td>
+              <td>$45.92</td>
+              <td>691.5252</td>
+              <td>$31,754.84</td>
+              <td>—</td>
+              <td>CASH</td>
+            </tr>
+            <tr class="buy-row">
+              <td>2026-03-30</td>
+              <td><span class="action-buy">BUY</span></td>
+              <td><span class="ticker">XLP</span></td>
+              <td>$81.88</td>
+              <td>443.2247</td>
+              <td>$36,291.24</td>
+              <td>—</td>
+              <td>CASH</td>
+            </tr>
+            <tr class="sell-row">
+              <td>2026-03-30</td>
+              <td><span class="action-sell">SELL</span></td>
+              <td><span class="ticker">XLU</span></td>
+              <td>$45.92</td>
+              <td>695.4736</td>
+              <td>$31,924.39</td>
+              <td style="color:#00ff88">$+137.18 (+0.4%)</td>
+              <td>rebalance</td>
+            </tr>
+            <tr class="sell-row">
+              <td>2026-03-30</td>
+              <td><span class="action-sell">SELL</span></td>
+              <td><span class="ticker">XLP</span></td>
+              <td>$81.88</td>
+              <td>443.0932</td>
+              <td>$36,268.57</td>
+              <td style="color:#00ff88">$+20.42 (+0.1%)</td>
+              <td>rebalance</td>
+            </tr>
+            <tr class="buy-row">
+              <td>2026-03-27</td>
+              <td><span class="action-buy">BUY</span></td>
+              <td><span class="ticker">XLU</span></td>
+              <td>$45.59</td>
+              <td>695.4736</td>
+              <td>$31,706.64</td>
+              <td>—</td>
+              <td>CASH</td>
+            </tr>
+            <tr class="buy-row">
+              <td>2026-03-27</td>
+              <td><span class="action-buy">BUY</span></td>
+              <td><span class="ticker">XLP</span></td>
+              <td>$81.78</td>
+              <td>443.0932</td>
+              <td>$36,236.16</td>
               <td>—</td>
               <td>CASH</td>
             </tr></tbody></table>
@@ -488,11 +768,11 @@
 </div>
 
 <script>
-const dates  = ["2026-01-16", "2026-01-19", "2026-01-20", "2026-01-21", "2026-01-22", "2026-01-23", "2026-01-26", "2026-01-27", "2026-01-28", "2026-01-29", "2026-01-30", "2026-02-02", "2026-02-03", "2026-02-04", "2026-02-05", "2026-02-06", "2026-02-09", "2026-02-10", "2026-02-11", "2026-02-12", "2026-02-13", "2026-02-16", "2026-02-17", "2026-02-18", "2026-02-19", "2026-02-20", "2026-02-23", "2026-02-24", "2026-02-25", "2026-02-26", "2026-02-27", "2026-03-02", "2026-03-03", "2026-03-04", "2026-03-05", "2026-03-06", "2026-03-09", "2026-03-10", "2026-03-11", "2026-03-12", "2026-03-13", "2026-03-16", "2026-03-17", "2026-03-18", "2026-03-19", "2026-03-20", "2026-03-23", "2026-03-24", "2026-03-25", "2026-03-26", "2026-03-27", "2026-03-30", "2026-03-31", "2026-04-01", "2026-04-02", "2026-04-03", "2026-04-06", "2026-04-07", "2026-04-08", "2026-04-09", "2026-04-10", "2026-04-13", "2026-04-14", "2026-04-15", "2026-04-16", "2026-04-17", "2026-04-17", "2026-04-19", "2026-04-19", "2026-04-19", "2026-04-19", "2026-04-20", "2026-04-20", "2026-04-20", "2026-04-21", "2026-04-22", "2026-04-22", "2026-04-23", "2026-04-24", "2026-04-24", "2026-04-24", "2026-04-25", "2026-04-27", "2026-04-28", "2026-04-29", "2026-04-30", "2026-05-01", "2026-05-03", "2026-05-04", "2026-05-04", "2026-05-04", "2026-05-05", "2026-05-06", "2026-05-07", "2026-05-08", "2026-05-11", "2026-05-12", "2026-05-13", "2026-05-14", "2026-05-15", "2026-05-18", "2026-05-19", "2026-05-20", "2026-05-20", "2026-05-20", "2026-05-20", "2026-05-20", "2026-05-21", "2026-05-22", "2026-05-23", "2026-05-24", "2026-05-25", "2026-05-26", "2026-05-27", "2026-05-29", "2026-05-29", "2026-06-01", "2026-06-03", "2026-06-04", "2026-06-04", "2026-06-05"];
-const equity = [100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 99980.1, 101176.95, 100543.84];
+const dates  = ["2026-01-20", "2026-01-21", "2026-01-22", "2026-01-23", "2026-01-26", "2026-01-27", "2026-01-28", "2026-01-29", "2026-01-30", "2026-02-02", "2026-02-03", "2026-02-04", "2026-02-05", "2026-02-06", "2026-02-09", "2026-02-10", "2026-02-11", "2026-02-12", "2026-02-13", "2026-02-16", "2026-02-17", "2026-02-18", "2026-02-19", "2026-02-20", "2026-02-23", "2026-02-24", "2026-02-25", "2026-02-26", "2026-02-27", "2026-03-02", "2026-03-03", "2026-03-04", "2026-03-05", "2026-03-06", "2026-03-09", "2026-03-10", "2026-03-11", "2026-03-12", "2026-03-13", "2026-03-16", "2026-03-17", "2026-03-18", "2026-03-19", "2026-03-20", "2026-03-23", "2026-03-24", "2026-03-25", "2026-03-26", "2026-03-27", "2026-03-30", "2026-03-31", "2026-04-01", "2026-04-02", "2026-04-03", "2026-04-06", "2026-04-07", "2026-04-08", "2026-04-09", "2026-04-10", "2026-04-13", "2026-04-14", "2026-04-15", "2026-04-16", "2026-04-17", "2026-04-20", "2026-04-21", "2026-04-22", "2026-04-22", "2026-04-23", "2026-04-24", "2026-04-24", "2026-04-24", "2026-04-25", "2026-04-27", "2026-04-28", "2026-04-29", "2026-04-30", "2026-05-01", "2026-05-03", "2026-05-04", "2026-05-04", "2026-05-04", "2026-05-05", "2026-05-06", "2026-05-07", "2026-05-08", "2026-05-11", "2026-05-12", "2026-05-13", "2026-05-14", "2026-05-15", "2026-05-18", "2026-05-19", "2026-05-20", "2026-05-20", "2026-05-20", "2026-05-20", "2026-05-20", "2026-05-21", "2026-05-22", "2026-05-23", "2026-05-24", "2026-05-25", "2026-05-26", "2026-05-27", "2026-05-29", "2026-05-29", "2026-06-01", "2026-06-03", "2026-06-04", "2026-06-04", "2026-06-05"];
+const equity = [100000.0, 99980.1, 100354.26, 100448.06, 100350.21, 100723.32, 100621.97, 99773.85, 98911.78, 99260.02, 98111.47, 96775.3, 95356.72, 96953.5, 97172.15, 97058.13, 96927.36, 95437.83, 95547.17, 95547.17, 95485.13, 96155.38, 95740.77, 96271.15, 94922.2, 95914.67, 96745.15, 96191.15, 95526.12, 95322.76, 94420.52, 94311.26, 93297.98, 93301.29, 93366.94, 93055.99, 92292.91, 92331.81, 92866.41, 93180.18, 92967.05, 91785.76, 91359.92, 89747.98, 90164.59, 90231.96, 90522.09, 90311.51, 90570.5, 90708.2, 90731.78, 90653.44, 91003.08, 91003.08, 91226.8, 90546.7, 91573.71, 92125.89, 91121.43, 92176.79, 93484.46, 93265.15, 93343.16, 94155.51, 94058.94, 93844.3, 94441.94, 94663.14, 93788.26, 93788.26, 94548.66, 95117.28, 95117.28, 94369.26, 93497.0, 93745.61, 94260.64, 94896.4, 94896.4, 94896.4, 94896.4, 94683.61, 95623.52, 97162.74, 97085.6, 98546.15, 98868.38, 97935.44, 98443.96, 99053.05, 97691.27, 97185.64, 96560.64, 96560.64, 97273.91, 97550.91, 97929.47, 98293.48, 98849.84, 99405.3, 99405.3, 99405.3, 99405.3, 100597.89, 101019.67, 101731.68, 102378.58, 102741.78, 103149.66, 102442.99, 101872.06, 98173.04];
 const startV = 100000.0;
-const spyData = [100000.0, 100000.0, 97964.32, 99094.94, 99612.53, 99648.67, 100154.7, 100553.74, 100543.62, 100344.1, 100044.82, 100542.18, 99692.05, 99209.15, 97970.11, 99849.64, 100331.09, 100066.51, 100043.38, 98497.83, 98567.22, 98567.22, 98726.25, 99223.61, 98961.92, 99677.59, 98659.76, 99376.86, 100215.44, 99658.79, 99180.24, 99236.63, 98361.92, 99055.9, 98503.6, 97212.5, 98064.09, 97906.49, 97783.6, 96298.76, 95753.7, 96728.17, 96982.62, 95629.36, 95393.7, 94026.15, 95013.43, 94694.48, 95222.19, 93521.64, 91926.92, 91619.57, 94282.76, 94993.13, 95078.67, 95078.67, 95528.09, 95570.13, 98004.25, 98569.65, 98504.42, 99467.04, 100679.04, 101473.5, 101722.85, 102952.24, 102952.24, 102952.24, 102952.24, 102952.24, 102952.24, 102746.37, 102746.37, 102746.37, 102073.69, 103107.36, 103107.36, 102707.23, 103503.14, 103503.14, 103503.14, 103503.14, 103681.45, 103176.95, 103161.0, 104187.41, 104475.92, 104475.92, 104093.19, 104093.19, 104093.19, 104928.24, 106386.69, 106060.49, 106936.14, 107179.69, 107017.32, 107616.07, 108465.62, 107160.84, 107085.46, 106372.18, 107462.39, 107462.39, 107462.39, 107462.39, 107462.39, 107675.5, 108098.83, 108098.83, 108098.83, 108098.83, 108816.46, 108797.61, 109670.35, 109670.35, 109969.0, 109345.61, 109758.79, 109758.79, 106925.99];
-const ddData  = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, -0.02, 0.0, -0.63];
+const spyData = [100000.0, 101154.11, 101682.46, 101719.35, 102235.89, 102643.23, 102632.9, 102429.23, 102123.73, 102631.42, 101763.63, 101270.7, 100005.91, 101924.49, 102415.95, 102145.87, 102122.27, 100544.59, 100615.42, 100615.42, 100777.76, 101285.46, 101018.32, 101748.87, 100709.88, 101441.89, 102297.89, 101729.68, 101241.18, 101298.74, 100405.86, 101114.26, 100550.49, 99232.56, 100101.84, 99940.96, 99815.52, 98299.83, 97743.44, 98738.16, 98997.9, 97616.52, 97375.96, 95980.0, 96987.79, 96662.22, 97200.89, 95465.0, 93837.15, 93523.41, 96241.94, 96967.07, 97054.38, 97054.38, 97513.14, 97556.05, 100040.76, 100617.91, 100551.32, 101533.95, 102771.13, 103582.09, 103836.63, 105091.56, 104881.42, 104194.76, 105249.91, 105249.91, 104841.47, 105653.91, 105653.91, 105653.91, 105653.91, 105835.93, 105320.94, 105304.67, 106352.41, 106646.91, 106646.91, 106256.22, 106256.22, 106256.22, 107108.63, 108597.38, 108264.41, 109158.25, 109406.86, 109241.12, 109852.31, 110719.51, 109387.62, 109310.68, 108582.57, 109695.44, 109695.44, 109695.44, 109695.44, 109695.44, 109912.98, 110345.11, 110345.11, 110345.11, 110345.11, 111077.64, 111058.4, 111949.28, 111949.28, 112254.13, 111617.79, 112039.56, 112039.56, 109147.89];
+const ddData  = [0.0, -0.02, 0.0, 0.0, -0.1, 0.0, -0.1, -0.94, -1.8, -1.45, -2.59, -3.92, -5.33, -3.74, -3.53, -3.64, -3.77, -5.25, -5.14, -5.14, -5.2, -4.54, -4.95, -4.42, -5.76, -4.77, -3.95, -4.5, -5.16, -5.36, -6.26, -6.37, -7.37, -7.37, -7.3, -7.61, -8.37, -8.33, -7.8, -7.49, -7.7, -8.87, -9.3, -10.9, -10.48, -10.42, -10.13, -10.34, -10.08, -9.94, -9.92, -10.0, -9.65, -9.65, -9.43, -10.1, -9.08, -8.54, -9.53, -8.49, -7.19, -7.4, -7.33, -6.52, -6.62, -6.83, -6.24, -6.02, -6.89, -6.89, -6.13, -5.57, -5.57, -6.31, -7.17, -6.93, -6.42, -5.79, -5.79, -5.79, -5.79, -6.0, -5.06, -3.54, -3.61, -2.16, -1.84, -2.77, -2.26, -1.66, -3.01, -3.51, -4.13, -4.13, -3.42, -3.15, -2.77, -2.41, -1.86, -1.31, -1.31, -1.31, -1.31, -0.12, 0.0, 0.0, 0.0, 0.0, 0.0, -0.69, -1.24, -4.82];
 
 const ctx = document.getElementById('equityChart').getContext('2d');
 

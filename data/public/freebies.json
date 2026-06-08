@@ -1,44 +1,48 @@
 {
   "schema_version": "v1",
   "date": "2026-06-08",
-  "generated_at": "2026-06-08T12:02:38Z",
+  "generated_at": "2026-06-08T15:14:00Z",
   "spotlight_1": {
-    "algo_id": "high-yield-spread-regime",
-    "name": "High Yield Spread Regime",
+    "algo_id": "vix-term-structure",
+    "name": "VIX Term Structure",
     "family": "core_rotation",
     "algo_type": "crazy",
-    "thesis_one_liner": "Recent momentum leader with 0.5% 30D return",
+    "thesis_one_liner": "Recent momentum leader with 1.0% 30D return",
     "ytd_pct": 0.0,
-    "ret_30d_pct": 0.54,
+    "ret_30d_pct": 1.04,
     "status": "live_only",
     "beat_spy": null,
+    "trade_count": 110,
     "teaser_hook": "Alternative data experiment tracked live in public",
     "source": "rolling"
   },
   "spotlight_2": {
-    "algo_id": "baileymol",
-    "name": "Algo Baileymol (Chaos Monger)",
+    "algo_id": "housing-permit-velocity",
+    "name": "Housing Permit Velocity",
     "family": "core_rotation",
-    "algo_type": "normal",
-    "thesis_one_liner": "Algo Baileymol (Chaos Monger) tests whether systematic price rotation can capture persistent sector momentum better than passive market exposure.",
-    "ytd_pct": 8.16,
-    "ret_30d_pct": 0.98,
-    "status": "promoted",
-    "beat_spy": false,
-    "teaser_hook": "Academically validated signal with live trading receipts",
-    "source": "promoted"
+    "algo_type": "crazy",
+    "thesis_one_liner": "Recent momentum leader with 0.8% 30D return",
+    "ytd_pct": 0.0,
+    "ret_30d_pct": 0.85,
+    "status": "live_only",
+    "beat_spy": null,
+    "trade_count": 10,
+    "teaser_hook": "Alternative data experiment tracked live in public",
+    "source": "rolling"
   },
   "previous_14_days": [
     "biscotti",
     "uber-mobility",
     "high-yield-spread-regime",
-    "baileymol"
+    "baileymol",
+    "vix-term-structure",
+    "housing-permit-velocity"
   ],
   "pool_stats": {
-    "total_pool_size": 17,
+    "total_pool_size": 16,
     "promoted_count": 2,
     "watchlist_count": 5,
-    "rolling_count": 10
+    "rolling_count": 9
   },
   "meta": {
     "anti_repeat_days": 14,

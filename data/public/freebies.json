@@ -1,34 +1,34 @@
 {
   "schema_version": "v1",
   "date": "2026-06-08",
-  "generated_at": "2026-06-08T15:14:00Z",
+  "generated_at": "2026-06-08T15:18:38Z",
   "spotlight_1": {
-    "algo_id": "vix-term-structure",
-    "name": "VIX Term Structure",
+    "algo_id": "dmsr",
+    "name": "Antonacci Dual Momentum Sector Rotation",
     "family": "core_rotation",
-    "algo_type": "crazy",
-    "thesis_one_liner": "Recent momentum leader with 1.0% 30D return",
-    "ytd_pct": 0.0,
-    "ret_30d_pct": 1.04,
-    "status": "live_only",
-    "beat_spy": null,
-    "trade_count": 110,
-    "teaser_hook": "Alternative data experiment tracked live in public",
-    "source": "rolling"
+    "algo_type": "normal",
+    "thesis_one_liner": "Antonacci Dual Momentum Sector Rotation tests whether systematic price rotation can capture persistent sector momentum better than passive market exposure.",
+    "ytd_pct": 4.8,
+    "ret_30d_pct": -0.08,
+    "status": "promoted",
+    "beat_spy": false,
+    "trade_count": 27,
+    "teaser_hook": "Academically validated signal with live trading receipts",
+    "source": "watchlist"
   },
   "spotlight_2": {
-    "algo_id": "housing-permit-velocity",
-    "name": "Housing Permit Velocity",
+    "algo_id": "simple_monthly",
+    "name": "Quantified Simple Monthly Rotation",
     "family": "core_rotation",
-    "algo_type": "crazy",
-    "thesis_one_liner": "Recent momentum leader with 0.8% 30D return",
-    "ytd_pct": 0.0,
-    "ret_30d_pct": 0.85,
-    "status": "live_only",
-    "beat_spy": null,
-    "trade_count": 10,
-    "teaser_hook": "Alternative data experiment tracked live in public",
-    "source": "rolling"
+    "algo_type": "normal",
+    "thesis_one_liner": "Quantified Simple Monthly Rotation tests whether systematic price rotation can capture persistent sector momentum better than passive market exposure.",
+    "ytd_pct": 6.11,
+    "ret_30d_pct": -0.45,
+    "status": "promoted",
+    "beat_spy": false,
+    "trade_count": 3,
+    "teaser_hook": "Academically validated signal with live trading receipts",
+    "source": "promoted"
   },
   "previous_14_days": [
     "biscotti",
@@ -36,17 +36,21 @@
     "high-yield-spread-regime",
     "baileymol",
     "vix-term-structure",
-    "housing-permit-velocity"
+    "housing-permit-velocity",
+    "dmsr",
+    "simple_monthly"
   ],
   "pool_stats": {
-    "total_pool_size": 16,
+    "total_pool_size": 14,
     "promoted_count": 2,
     "watchlist_count": 5,
-    "rolling_count": 9
+    "rolling_count": 7
   },
   "meta": {
     "anti_repeat_days": 14,
     "algorithm": "deterministic_hash_rotation",
-    "selection_bias": "spotlight1=premium, spotlight2=diversity"
+    "selection_bias": "spotlight1=premium, spotlight2=diversity",
+    "min_trade_count": 1,
+    "max_trade_count": 80
   }
 }

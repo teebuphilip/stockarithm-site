@@ -208,7 +208,7 @@
       <p>Every day we showcase three signals from our lab: two rotating daily picks and one permanent resident. No cherry-picking, no backtested fantasies.</p>
 
       <div class="spotlight-grid" id="spotlight-container">
-        <a href="/signals/index.html" class="spotlight-card spotlight-link" data-spotlight="1">
+        <a href="/spotlight1/" class="spotlight-card spotlight-link" data-spotlight="1">
           <div class="spotlight-header"><h3>Spotlight 1</h3></div>
           <div class="spotlight-status">Loading...</div>
           <div class="spotlight-name">Loading daily selection...</div>
@@ -216,7 +216,7 @@
           <div class="spotlight-metrics"><span>YTD: --</span> &bull; <span>30D: --</span></div>
         </a>
 
-        <a href="/signals/index.html" class="spotlight-card spotlight-link" data-spotlight="2">
+        <a href="/spotlight2/" class="spotlight-card spotlight-link" data-spotlight="2">
           <div class="spotlight-header"><h3>Spotlight 2</h3></div>
           <div class="spotlight-status">Loading...</div>
           <div class="spotlight-name">Loading daily selection...</div>
@@ -300,9 +300,7 @@
         metricsElement.innerHTML = '<span>YTD: ' + ytd + '</span> &bull; <span>30D: ' + ret30d + '</span>';
       }
 
-      if (spotlightData.algo_id) {
-        cardElement.href = '/signals/' + encodeURIComponent(spotlightData.algo_id) + '.html';
-      }
+      if (spotlightData.public_url) cardElement.href = spotlightData.public_url;
     }
 
     fetch('/data/public/freebies.json')

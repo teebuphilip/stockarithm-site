@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>StockArithm</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg:        #0a0d12;
+    --surface:   #111520;
+    --border:    #1e2535;
+    --accent:    #00d4ff;
+    --green:     #00ff88;
+    --red:       #ff4d6d;
+    --yellow:    #ffd166;
+    --text:      #c8d6e5;
+    --muted:     #4a5568;
+    --font-mono: 'Space Mono', monospace;
+    --font-body: 'DM Sans', sans-serif;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-body);
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  /* ── Header ── */
+  header {
+    border-bottom: 1px solid var(--border);
+    padding: 20px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--surface);
+  }
+  .logo {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    color: var(--green);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+  }
+  .logo span { color: var(--muted); }
+  .last-update {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--muted);
+  }
+  .algo-hero {
+    max-width: 980px;
+    margin: 0 auto 28px;
+    padding: 26px 18px 4px;
+    text-align: center;
+  }
+  .algo-hero-title {
+    font-family: var(--font-mono);
+    font-size: 54px;
+    line-height: 1.02;
+    letter-spacing: -0.03em;
+    color: var(--green);
+  }
+  .algo-hero-meta {
+    margin-top: 10px;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    color: var(--muted);
+  }
+  .algo-hero-desc {
+    margin: 14px auto 0;
+    max-width: 760px;
+    font-size: 16px;
+    line-height: 1.75;
+    color: var(--text);
+  }
+
+  /* ── Layout ── */
+  .container { max-width: 1400px; margin: 0 auto; padding: 28px 32px; }
+
+  /* ── KPI bar ── */
+  .kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+    margin-bottom: 28px;
+  }
+  .kpi {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px 18px;
+  }
+  .kpi-label {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    color: var(--muted);
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  .kpi-value {
+    font-family: var(--font-mono);
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text);
+  }
+  .kpi-value.green { color: var(--green); }
+  .kpi-value.red   { color: var(--red); }
+  .kpi-value.accent { color: var(--accent); }
+
+  /* ── Panels ── */
+  .panel {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    margin-bottom: 20px;
+    overflow: hidden;
+  }
+  .panel-header {
+    padding: 14px 20px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .panel-title {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+  .panel-body { padding: 20px; }
+  .brief-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .brief-item {
+    border-bottom: 1px solid rgba(30,37,53,0.6);
+    padding-bottom: 14px;
+  }
+  .brief-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+  .brief-label {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 8px;
+  }
+  .brief-value p {
+    margin: 0;
+    color: var(--text);
+    line-height: 1.7;
+  }
+  .brief-value ul {
+    margin: 0;
+    padding-left: 18px;
+    color: var(--text);
+  }
+  .brief-value li {
+    margin: 0 0 6px;
+  }
+
+  /* ── Chart ── */
+  .chart-wrap {
+    position: relative;
+    height: 280px;
+  }
+
+  /* ── Tables ── */
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+
+  table { width: 100%; border-collapse: collapse; }
+  thead th {
+    font-family: var(--font-mono);
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    padding: 8px 12px;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+  }
+  tbody td {
+    padding: 9px 12px;
+    border-bottom: 1px solid rgba(30,37,53,0.6);
+    font-size: 13px;
+    color: var(--text);
+  }
+  tbody tr:last-child td { border-bottom: none; }
+  tbody tr:hover td { background: rgba(0,212,255,0.03); }
+
+  .ticker {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--accent);
+  }
+  .badge {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 9px;
+    padding: 2px 6px;
+    border-radius: 3px;
+    margin-left: 6px;
+    letter-spacing: 0.05em;
+    vertical-align: middle;
+  }
+  .badge.margin { background: rgba(255,209,102,0.15); color: var(--yellow); border: 1px solid var(--yellow); }
+
+  .action-buy  { font-family: var(--font-mono); font-size: 11px; font-weight:700; color: var(--green); }
+  .action-sell { font-family: var(--font-mono); font-size: 11px; font-weight:700; color: var(--red); }
+
+  .empty-state {
+    text-align: center;
+    color: var(--muted);
+    font-family: var(--font-mono);
+    font-size: 12px;
+    padding: 40px;
+  }
+
+  /* ── Dot indicator ── */
+  .dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; }
+  .dot.green { background: var(--green); box-shadow: 0 0 6px var(--green); }
+  .dot.yellow { background: var(--yellow); }
+
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 32px 20px;
+    text-align: center;
+    font-size: 12px;
+    color: var(--muted);
+    line-height: 1.8;
+  }
+  .footer-nav {
+    margin-top: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0 8px;
+    width: 100%;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    line-height: 1.6;
+    letter-spacing: 0.2px;
+    color: rgba(255,255,255,0.58);
+  }
+  .footer-nav a, .footer-nav a:visited {
+    color: rgba(255,255,255,0.58);
+    text-decoration: none;
+    white-space: nowrap;
+  }
+  .footer-nav .footer-sep {
+    color: rgba(255,255,255,0.40);
+  }
+  .footer-nav a:hover {
+    text-decoration: underline;
+  }
+
+  @media (max-width: 1100px) {
+    .kpi-grid { grid-template-columns: repeat(3, 1fr); }
+    .two-col  { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 680px) {
+    .kpi-grid { grid-template-columns: repeat(2, 1fr); }
+    .container { padding: 16px; }
+  }
+</style>
+</head>
+<body>
+
+  
+
+<div class="container">
+
+  <section class="algo-hero" style="max-width:980px;margin:0 auto 28px;padding:26px 18px 4px;text-align:center;"><div class="algo-hero-title" style="font-family:var(--font-body);font-size:54px;font-weight:700;line-height:1.02;letter-spacing:-0.02em;color:var(--green);">Algo Baileymol (Chaos Monger)</div><div class="algo-hero-meta">Lab started: 2026-01-11 &nbsp;·&nbsp; Last run: 2026-06-05 &nbsp;·&nbsp; $100k base · $10k/trade</div><div class="algo-hero-desc">A weekly sector momentum rotation with a hard stop-loss designed to stay with strength until it breaks.</div></section>
+
+  
+  <div class="panel">
+    <div class="panel-header">
+      <span class="dot yellow"></span>
+      <span class="panel-title">Signal Brief</span>
+    </div>
+    <div class="panel-body">
+      <div class="brief-grid">
+<div class="brief-item"><div class="brief-label">Plain English Description</div><div class="brief-value"><p>A weekly sector momentum rotation with a hard stop-loss designed to stay with strength until it breaks.</p></div></div><div class="brief-item"><div class="brief-label">Thesis</div><div class="brief-value"><p>Baileymol rotates into the strongest sector setup on a weekly cadence, but exits quickly when the move fails. It is a faster, rougher rule than the slower monthly systems.</p></div></div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- KPI Bar -->
+  <div class="kpi-grid">
+    <div class="kpi">
+      <div class="kpi-label">Total Equity</div>
+      <div class="kpi-value">$108,161</div>
+    </div>
+    <div class="kpi">
+      <div class="kpi-label">Net P&L</div>
+      <div class="kpi-value green">$+8,161</div>
+    </div>
+    <div class="kpi">
+      <div class="kpi-label">Return</div>
+      <div class="kpi-value green">+8.16%</div>
+    </div>
+    <div class="kpi">
+      <div class="kpi-label">Win Rate</div>
+      <div class="kpi-value accent">61%</div>
+    </div>
+    <div class="kpi">
+      <div class="kpi-label">Strategy</div>
+      <div class="kpi-value accent">Algo Baileymol (Chaos Monger)</div>
+    </div>
+    <div class="kpi">
+      <div class="kpi-label">Sharpe Ratio</div>
+      <div class="kpi-value green">1.52</div>
+    </div>
+    <div class="kpi">
+      <div class="kpi-label">Max Drawdown</div>
+      <div class="kpi-value red">-2.3%</div>
+    </div>
+    <div class="kpi">
+      <div class="kpi-label">Avg Win</div>
+      <div class="kpi-value green">$+807</div>
+    </div>
+    <div class="kpi">
+      <div class="kpi-label">Avg Loss</div>
+      <div class="kpi-value red">$-480</div>
+    </div>
+    <div class="kpi">
+      <div class="kpi-label">Realized / Unrealized</div>
+      <div class="kpi-value green">$+8,440 / $+0</div>
+    </div>
+  </div>
+
+  <!-- Equity Curve -->
+  <div class="panel">
+    <div class="panel-header">
+      <span class="dot green"></span>
+      <span class="panel-title">Equity Curve</span>
+    </div>
+    <div class="panel-body">
+      <div class="chart-wrap">
+        <canvas id="equityChart"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <!-- Drawdown Chart -->
+  <div class="panel">
+    <div class="panel-header">
+      <span class="dot" style="background:var(--red);box-shadow:0 0 6px var(--red)"></span>
+      <span class="panel-title">Drawdown</span>
+    </div>
+    <div class="panel-body">
+      <div class="chart-wrap" style="height:180px">
+        <canvas id="drawdownChart"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <!-- Positions + Sector Performance -->
+  <div class="two-col">
+    <div class="panel">
+      <div class="panel-header">
+        <span class="dot yellow"></span>
+        <span class="panel-title">Open Positions (0)</span>
+      </div>
+      <div class="panel-body" style="padding:0">
+        <div class="empty-state">No open positions</div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="panel-header">
+        <span class="dot yellow"></span>
+        <span class="panel-title">Portfolio Stats</span>
+      </div>
+      <div class="panel-body">
+        <table>
+          <tbody>
+            <tr><td style="color:var(--muted);font-family:var(--font-mono);font-size:11px">CASH</td><td>$108,161.29</td></tr>
+            <tr><td style="color:var(--muted);font-family:var(--font-mono);font-size:11px">BORROWED</td><td style="color:var(--text)">$0.00</td></tr>
+            <tr><td style="color:var(--muted);font-family:var(--font-mono);font-size:11px">ACCRUED INT.</td><td style="color:var(--red)">$0.00</td></tr>
+            <tr><td style="color:var(--muted);font-family:var(--font-mono);font-size:11px">OPEN POSITIONS</td><td>0</td></tr>
+            <tr><td style="color:var(--muted);font-family:var(--font-mono);font-size:11px">TOTAL TRADES</td><td>28</td></tr>
+            <tr><td style="color:var(--muted);font-family:var(--font-mono);font-size:11px">WINNERS</td><td>17</td></tr>
+            <tr><td style="color:var(--muted);font-family:var(--font-mono);font-size:11px">WIN RATE</td><td>60.7%</td></tr>
+            <tr><td style="color:var(--muted);font-family:var(--font-mono);font-size:11px">SIM START</td><td>2026-01-11</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- Trade Log -->
+  <div class="panel">
+    <div class="panel-header">
+      <span class="dot yellow"></span>
+      <span class="panel-title">Trade Log (last 30)</span>
+    </div>
+    <div class="panel-body" style="padding:0; overflow-x:auto">
+      <table><thead><tr><th>Date</th><th>Action</th><th>Ticker</th><th>Price</th><th>Shares</th><th>Value</th><th>P&L</th><th>Notes</th></tr></thead><tbody>
+            <tr class="sell-row">
+              <td>2026-05-25</td>
+              <td><span class="action-sell">SELL</span></td>
+              <td><span class="ticker">XLK</span></td>
+              <td>$180.39</td>
+              <td>206.5915</td>
+              <td>$37,255.16</td>
+              <td style="color:#00ff88">$+777.34 (+2.2%)</td>
+              <td>rebalance</td>
+            </tr>
+            <tr class="sell-row">
+              <td>2026-05-25</td>
+              <td><span class="action-sell">SELL</span></td>
+              <td><span class="ticker">XLE</span></td>
+              <td>$59.49</td>
+              <td>594.6069</td>
+              <td>$35,361.27</td>
+              <td style="color:#ff4d6d">$-660.02 (-1.8%)</td>
+              <td>rebalance</td>
+            </tr>
+            <tr class="buy-row">
+              <td>2026-05-18</td>
+              <td><span class="action-buy">BUY</span></td>
+              <td><span class="ticker">XLK</span></td>
+              <td>$174.36</td>
+              <td>206.5915</td>
+              <td>$36,021.29</td>
+              <td>—</td>
+              <td>CASH</td>
+            </tr>
+            <tr class="buy-row">
+              <td>2026-05-18</td>
+              <td><span class="action-buy">BUY</span></td>
+              <td><span class="ticker">XLE</span></td>
+              <td>$60.58</td>
+              <td>594.6069</td>
+              <td>$36,021.29</td>
+              <td>—</td>
+              <td>CASH</td>
+            </tr>
+            <tr class="sell-row">
+              <td>2026-05-18</td>
+              <td><span class="action-sell">SELL</span></td>
+              <td><span class="ticker">XLI</span></td>
+              <td>$170.75</td>
+              <td>204.9707</td>
+              <td>$34,986.99</td>
+              <td style="color:#ff4d6d">$-891.08 (-2.5%)</td>
+              <td>rebalance</td>
+            </tr>
+            <tr class="sell-row">
+              <td>2026-05-18</td>
+              <td><span class="action-sell">SELL</span></td>
+              <td><span class="ticker">XLE</span></td>
+              <td>$60.58</td>
+              <td>627.5683</td>
+              <td>$38,006.05</td>
+              <td style="color:#00ff88">$+1,340.62 (+3.7%)</td>
+              <td>rebalance</td>
+            </tr>
+            <tr class="buy-row">
+              <td>2026-05-11</td>
+              <td><span class="action-buy">BUY</span></td>
+              <td><span class="ticker">XLI</span></td>
+              <td>$175.04</td>
+              <td>204.9707</td>
+              <td>$35,878.08</td>
+              <td>—</td>
+              <td>CASH</td>
+            </tr>
+            <tr class="buy-row">
+              <td>2026-05-11</td>
+              <td><span class="action-buy">BUY</span></td>
+              <td><span class="ticker">XLE</span></td>
+              <td>$57.17</td>
+              <td>627.5683</td>
+              <td>$35,878.08</td>
+              <td>—</td>
+              <td>CASH</td>
+            </tr>
+            <tr class="sell-row">
+              <td>2026-05-11</td>
+              <td><span class="action-sell">SELL</span></td>
+              <td><span class="ticker">XLK</span></td>
+              <td>$177.88</td>
+              <td>219.7125</td>
+              <td>$39,070.49</td>
+              <td style="color:#00ff88">$+2,183.63 (+6.1%)</td>
+              <td>rebalance</td>
+            </tr>
+            <tr class="sell-row">
+              <td>2026-05-11</td>
+              <td><span class="action-sell">SELL</span></td>
+              <td><span class="ticker">XLE</span></td>
+              <td>$57.17</td>
+              <td>599.5018</td>
+              <td>$34,261.67</td>
+              <td style="color:#ff4d6d">$-1,342.74 (-3.8%)</td>
+              <td>rebalance</td>
+            </tr>
+            <tr class="buy-row">
+              <td>2026-05-04</td>
+              <td><span class="action-buy">BUY</span></td>
+              <td><span class="ticker">XLK</span></td>
+              <td>$162.05</td>
+              <td>219.7125</td>
+              <td>$35,604.41</td>
+              <td>—</td>
+              <td>CASH</td>
+            </tr>
+            <tr class="buy-row">
+              <td>2026-05-04</td>
+              <td><span class="action-buy">BUY</span></td>
+              <td><span class="ticker">XLE</span></td>
+              <td>$59.39</td>
+              <td>599.5018</td>
+              <td>$35,604.41</td>
+              <td>—</td>
+              <td>CASH</td>
+            </tr>
+            <tr class="sell-row">
+              <td>2026-05-04</td>
+              <td><span class="action-sell">SELL</span></td>
+              <td><span class="ticker">XLE</span></td>
+              <td>$59.39</td>
+              <td>603.8954</td>
+              <td>$35,853.43</td>
+              <td style="color:#00ff88">$+197.93 (+0.6%)</td>
+              <td>rebalance</td>
+            </tr>
+            <tr class="sell-row">
+              <td>2026-05-04</td>
+              <td><span class="action-sell">SELL</span></td>
+              <td><span class="ticker">XLK</span></td>
+              <td>$162.05</td>
+              <td>219.5543</td>
+              <td>$35,566.97</td>
+              <td style="color:#00ff88">$+17.47 (+0.1%)</td>
+              <td>rebalance</td>
+            </tr>
+            <tr class="buy-row">
+              <td>2026-05-04</td>
+              <td><span class="action-buy">BUY</span></td>
+              <td><span class="ticker">XLE</span></td>
+              <td>$58.85</td>
+              <td>603.8954</td>
+              <td>$35,539.25</td>
+              <td>—</td>
+              <td>CASH</td>
+            </tr>
+            <tr class="buy-row">
+              <td>2026-05-04</td>
+              <td><span class="action-buy">BUY</span></td>
+              <td><span class="ticker">XLK</span></td>
+              <td>$161.87</td>
+              <td>219.5543</td>
+              <td>$35,539.25</td>
+              <td>—</td>
+              <td>CASH</td>
+            </tr>
+            <tr class="sell-row">
+              <td>2026-05-04</td>
+              <td><span class="action-sell">SELL</span></td>
+              <td><span class="ticker">XLE</span></td>
+              <td>$58.85</td>
+              <td>604.1424</td>
+              <td>$35,541.87</td>
+              <td style="color:#ff4d6d">$-11.91 (-0.0%)</td>
+              <td>rebalance</td>
+            </tr>
+            <tr class="sell-row">
+              <td>2026-05-04</td>
+              <td><span class="action-sell">SELL</span></td>
+              <td><span class="ticker">XLK</span></td>
+              <td>$161.87</td>
+              <td>219.6440</td>
+              <td>$35,541.99</td>
+              <td style="color:#ff4d6d">$-11.79 (-0.0%)</td>
+              <td>rebalance</td>
+            </tr>
+            <tr class="buy-row">
+              <td>2026-05-04</td>
+              <td><span class="action-buy">BUY</span></td>
+              <td><span class="ticker">XLE</span></td>
+              <td>$58.85</td>
+              <td>604.1424</td>
+              <td>$35,553.78</td>
+              <td>—</td>
+              <td>CASH</td>
+            </tr>
+            <tr class="buy-row">
+              <td>2026-05-04</td>
+              <td><span class="action-buy">BUY</span></td>
+              <td><span class="ticker">XLK</span></td>
+              <td>$161.87</td>
+              <td>219.6440</td>
+              <td>$35,553.78</td>
+              <td>—</td>
+              <td>CASH</td>
+            </tr>
+            <tr class="sell-row">
+              <td>2026-05-04</td>
+              <td><span class="action-sell">SELL</span></td>
+              <td><span class="ticker">XLY</span></td>
+              <td>$118.63</td>
+              <td>300.8756</td>
+              <td>$35,681.05</td>
+              <td style="color:#00ff88">$+142.30 (+0.4%)</td>
+              <td>rebalance</td>
+            </tr>
+            <tr class="sell-row">
+              <td>2026-05-04</td>
+              <td><span class="action-sell">SELL</span></td>
+              <td><span class="ticker">XLK</span></td>
+              <td>$161.87</td>
+              <td>220.8082</td>
+              <td>$35,730.42</td>
+              <td style="color:#00ff88">$+173.40 (+0.5%)</td>
+              <td>rebalance</td>
+            </tr>
+            <tr class="buy-row">
+              <td>2026-04-27</td>
+              <td><span class="action-buy">BUY</span></td>
+              <td><span class="ticker">XLY</span></td>
+              <td>$117.84</td>
+              <td>300.8756</td>
+              <td>$35,455.18</td>
+              <td>—</td>
+              <td>CASH</td>
+            </tr>
+            <tr class="buy-row">
+              <td>2026-04-27</td>
+              <td><span class="action-buy">BUY</span></td>
+              <td><span class="ticker">XLK</span></td>
+              <td>$160.57</td>
+              <td>220.8082</td>
+              <td>$35,455.18</td>
+              <td>—</td>
+              <td>CASH</td>
+            </tr>
+            <tr class="sell-row">
+              <td>2026-04-27</td>
+              <td><span class="action-sell">SELL</span></td>
+              <td><span class="ticker">XLY</span></td>
+              <td>$117.84</td>
+              <td>295.1451</td>
+              <td>$34,768.12</td>
+              <td style="color:#ff4d6d">$-610.92 (-1.7%)</td>
+              <td>rebalance</td>
+            </tr>
+            <tr class="sell-row">
+              <td>2026-04-27</td>
+              <td><span class="action-sell">SELL</span></td>
+              <td><span class="ticker">XLK</span></td>
+              <td>$160.57</td>
+              <td>228.9017</td>
+              <td>$36,742.89</td>
+              <td style="color:#00ff88">$+859.22 (+2.4%)</td>
+              <td>rebalance</td>
+            </tr>
+            <tr class="buy-row">
+              <td>2026-04-20</td>
+              <td><span class="action-buy">BUY</span></td>
+              <td><span class="ticker">XLY</span></td>
+              <td>$119.87</td>
+              <td>295.1451</td>
+              <td>$35,379.05</td>
+              <td>—</td>
+              <td>CASH</td>
+            </tr>
+            <tr class="buy-row">
+              <td>2026-04-20</td>
+              <td><span class="action-buy">BUY</span></td>
+              <td><span class="ticker">XLK</span></td>
+              <td>$154.56</td>
+              <td>228.9017</td>
+              <td>$35,379.05</td>
+              <td>—</td>
+              <td>CASH</td>
+            </tr>
+            <tr class="sell-row">
+              <td>2026-04-20</td>
+              <td><span class="action-sell">SELL</span></td>
+              <td><span class="ticker">XLY</span></td>
+              <td>$119.87</td>
+              <td>303.4180</td>
+              <td>$36,358.86</td>
+              <td style="color:#00ff88">$+1,129.89 (+3.3%)</td>
+              <td>rebalance</td>
+            </tr>
+            <tr class="sell-row">
+              <td>2026-04-20</td>
+              <td><span class="action-sell">SELL</span></td>
+              <td><span class="ticker">XLK</span></td>
+              <td>$154.56</td>
+              <td>237.3833</td>
+              <td>$36,678.10</td>
+              <td style="color:#00ff88">$+1,331.02 (+3.9%)</td>
+              <td>rebalance</td>
+            </tr></tbody></table>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-nav">
+      <a href="/landing.html">Home</a><span class="footer-sep">&middot;</span>
+      <a href="/leaderboard.html">Leaderboard</a><span class="footer-sep">&middot;</span>
+      <a href="/signals/index.html">Signals</a><span class="footer-sep">&middot;</span>
+      <a href="/families.html">Families</a><span class="footer-sep">&middot;</span>
+      <a href="/daily.html">Daily Report</a><span class="footer-sep">&middot;</span>
+      <a href="/how-it-works.html">How It Works</a><span class="footer-sep">&middot;</span>
+      <a href="/premium.html">Premium</a><span class="footer-sep">&middot;</span>
+      <a href="/blog/index.html">Blog</a><span class="footer-sep">&middot;</span>
+      <a href="/legal.html">Legal</a><span class="footer-sep">&middot;</span>
+      <a href="/public-changelog.html">Public Changelog</a><span class="footer-sep">&middot;</span>
+      <a href="/algo-changelog.html">Algo Changelog</a><span class="footer-sep">&middot;</span>
+      <a href="/biscotti.html">Biscotti</a>
+    </div>
+    <div style="width:100%;max-width:520px;height:1px;margin:14px auto 14px;background:rgba(255,255,255,0.10);"></div>
+    <div style="display:block;width:100%;text-align:center;font-size:11px;font-style:italic;letter-spacing:0.2px;color:rgba(255,255,255,0.58);margin:0 auto 10px;">
+      StockArithm powered by <a href="https://www.randbalgolabs.com" style="color:rgba(255,255,255,0.58);text-decoration:none;white-space:nowrap;" target="_blank" rel="noopener noreferrer">R&amp;B AlgoLabs</a>, LLC.
+    </div>
+    <div style="text-align:center;font-size:11px;font-style:italic;letter-spacing:0.2px;color:rgba(255,255,255,0.50);margin-bottom:14px;">Last updated: 2026-06-05</div>
+    <div style="margin-top:12px;max-width:920px;margin-left:auto;margin-right:auto;text-align:center;font-size:11px;font-style:italic;letter-spacing:0.2px;color:rgba(255,255,255,0.58);">
+      <strong>Signal Lab Notice:</strong> Experimental research only. Signals can and will fail. Do not interpret any signal as a recommendation.<br>
+      <strong>Performance Disclosure:</strong> Leaderboards are model/simulation outputs and may not reflect slippage, fees, liquidity, execution delays, or market impact.<br>
+      <strong>Data Disclaimer:</strong> Third-party data may be incomplete, delayed, inaccurate, or revised. Use at your own risk.<br>
+      <strong>Not financial advice:</strong> Do your own research. You are responsible for your own decisions. Paper-traded only &mdash; no real money at risk.
+    </div>
+    <div style="margin:20px auto 0;padding-top:16px;border-top:1px solid var(--border);max-width:720px;text-align:center;font-size:10px;font-style:italic;letter-spacing:0.15px;color:rgba(255,255,255,0.42);">
+      In loving memory of Biscotti (2008&ndash;2026). Good boy. Best algo. &hearts;
+    </div>
+  </footer>
+
+</div>
+
+<script>
+const dates  = ["2026-01-12", "2026-01-13", "2026-01-14", "2026-01-15", "2026-01-16", "2026-01-19", "2026-01-20", "2026-01-21", "2026-01-22", "2026-01-23", "2026-01-26", "2026-01-27", "2026-01-28", "2026-01-29", "2026-01-30", "2026-02-02", "2026-02-03", "2026-02-04", "2026-02-05", "2026-02-06", "2026-02-09", "2026-02-10", "2026-02-11", "2026-02-12", "2026-02-13", "2026-02-16", "2026-02-17", "2026-02-18", "2026-02-19", "2026-02-20", "2026-02-23", "2026-02-24", "2026-02-25", "2026-02-26", "2026-02-27", "2026-03-02", "2026-03-03", "2026-03-04", "2026-03-05", "2026-03-06", "2026-03-09", "2026-03-10", "2026-03-11", "2026-03-12", "2026-03-13", "2026-03-16", "2026-03-17", "2026-03-18", "2026-03-19", "2026-03-20", "2026-03-23", "2026-03-24", "2026-03-25", "2026-03-26", "2026-03-27", "2026-03-30", "2026-03-31", "2026-04-01", "2026-04-02", "2026-04-03", "2026-04-06", "2026-04-07", "2026-04-08", "2026-04-09", "2026-04-10", "2026-04-12", "2026-04-13", "2026-04-15", "2026-04-15", "2026-04-15", "2026-04-15", "2026-04-15", "2026-04-16", "2026-04-17", "2026-04-20", "2026-04-21", "2026-04-22", "2026-04-22", "2026-04-23", "2026-04-24", "2026-04-24", "2026-04-24", "2026-04-25", "2026-04-27", "2026-04-28", "2026-04-29", "2026-04-30", "2026-05-01", "2026-05-03", "2026-05-04", "2026-05-04", "2026-05-04", "2026-05-05", "2026-05-06", "2026-05-07", "2026-05-08", "2026-05-11", "2026-05-12", "2026-05-13", "2026-05-14", "2026-05-15", "2026-05-18", "2026-05-19", "2026-05-20", "2026-05-20", "2026-05-20", "2026-05-20", "2026-05-20", "2026-05-21", "2026-05-22", "2026-05-23", "2026-05-24", "2026-05-25", "2026-05-26", "2026-05-27", "2026-05-28", "2026-05-29", "2026-06-01", "2026-06-03", "2026-06-04", "2026-06-04", "2026-06-05"];
+const equity = [100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 99980.1, 99593.01, 100566.27, 100644.4, 100620.43, 100021.69, 100021.69, 100021.69, 100021.69, 100021.69, 100001.79, 99210.42, 99576.63, 99827.37, 99189.47, 99575.01, 99501.96, 99634.55, 98913.07, 98340.62, 98907.05, 99435.04, 99014.06, 99655.39, 98880.82, 99254.1, 99254.1, 99254.1, 99254.1, 99254.1, 99234.2, 101675.0, 102453.34, 102216.93, 102216.93, 101383.29, 101150.23, 103148.43, 103837.51, 104019.92, 104019.92, 103676.23, 104993.95, 104993.95, 104993.95, 104993.95, 106082.12, 106323.54, 107720.15, 106117.24, 105881.37, 106493.74, 106647.83, 105781.58, 105781.58, 106500.29, 107064.56, 107064.56, 106345.64, 105495.32, 105722.38, 106262.82, 106870.38, 106870.38, 106641.44, 106597.84, 106793.34, 107615.88, 107113.84, 106409.66, 107540.71, 107614.33, 107723.93, 107611.96, 108070.51, 108292.82, 108043.97, 108234.76, 108234.76, 108508.26, 108528.2, 108167.76, 108154.5, 108057.74, 108641.59, 108641.59, 108641.59, 108161.29, 108161.29, 108161.29, 108161.29, 108161.29, 108161.29, 108161.29, 108161.29, 108161.29, 108161.29];
+const startV = 100000.0;
+const spyData = [100000.0, 99800.05, 99309.51, 99579.95, 99496.52, 99496.52, 97471.09, 98596.01, 99111.0, 99146.95, 99650.44, 100047.47, 100037.4, 99838.89, 99541.11, 100035.96, 99190.12, 98709.65, 97476.85, 99346.91, 99825.95, 99562.69, 99539.68, 98001.91, 98070.95, 98070.95, 98229.18, 98724.04, 98463.66, 99175.73, 98163.02, 98876.51, 99710.87, 99157.03, 98680.88, 98736.99, 97866.69, 98557.17, 98007.66, 96723.06, 97570.35, 97413.54, 97291.28, 95813.91, 95271.59, 96241.16, 96494.33, 95147.88, 94913.4, 93552.75, 94535.05, 94217.71, 94742.77, 93050.78, 91464.09, 91158.28, 93808.06, 94514.86, 94599.96, 94599.96, 95047.12, 95088.95, 97510.82, 98073.37, 98008.47, 98008.47, 98966.24, 100962.59, 100962.59, 100962.59, 100962.59, 100962.59, 101210.69, 102433.89, 102229.06, 101559.77, 102588.23, 102588.23, 102190.12, 102982.02, 102982.02, 102982.02, 102982.02, 103159.44, 102657.47, 102641.6, 103662.85, 103949.9, 103949.9, 103569.1, 103569.1, 103569.1, 104399.95, 105851.05, 105526.5, 106397.73, 106640.06, 106478.51, 107074.24, 107919.51, 106621.31, 106546.31, 105836.62, 106921.34, 106921.34, 106921.34, 106921.34, 106921.34, 107133.37, 107554.58, 107554.58, 107554.58, 107554.58, 108268.59, 108249.84, 108847.0, 109118.18, 109415.33, 108795.08, 109206.18, 109206.18, 106387.63];
+const ddData  = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, -0.02, -0.41, 0.0, 0.0, -0.02, -0.62, -0.62, -0.62, -0.62, -0.62, -0.64, -1.42, -1.06, -0.81, -1.45, -1.06, -1.14, -1.0, -1.72, -2.29, -1.73, -1.2, -1.62, -0.98, -1.75, -1.38, -1.38, -1.38, -1.38, -1.38, -1.4, 0.0, 0.0, -0.23, -0.23, -1.04, -1.27, 0.0, 0.0, 0.0, 0.0, -0.33, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, -1.49, -1.71, -1.14, -1.0, -1.8, -1.8, -1.13, -0.61, -0.61, -1.28, -2.07, -1.85, -1.35, -0.79, -0.79, -1.0, -1.04, -0.86, -0.1, -0.56, -1.22, -0.17, -0.1, 0.0, -0.1, 0.0, 0.0, -0.23, -0.05, -0.05, 0.0, 0.0, -0.33, -0.34, -0.43, 0.0, 0.0, 0.0, -0.44, -0.44, -0.44, -0.44, -0.44, -0.44, -0.44, -0.44, -0.44, -0.44];
+
+const ctx = document.getElementById('equityChart').getContext('2d');
+
+const grad = ctx.createLinearGradient(0, 0, 0, 280);
+grad.addColorStop(0,   'rgba(0,212,255,0.25)');
+grad.addColorStop(1,   'rgba(0,212,255,0.00)');
+
+new Chart(ctx, {
+  type: 'line',
+  data: {
+    labels: dates,
+    datasets: [
+      {
+        label: 'Portfolio Equity',
+        data: equity,
+        borderColor: '#00d4ff',
+        borderWidth: 2,
+        backgroundColor: grad,
+        fill: true,
+        tension: 0.3,
+        pointRadius: equity.length > 60 ? 0 : 3,
+        pointHoverRadius: 5,
+        pointBackgroundColor: '#00d4ff',
+      },
+      {
+        label: 'SPY Benchmark',
+        data: spyData.length ? spyData.slice(0, dates.length) : [],
+        borderColor: '#ffd166',
+        borderWidth: 3,
+        borderDash: [6,3],
+        fill: false,
+        tension: 0.25,
+        pointRadius: 0,
+        pointHoverRadius: 0,
+      },
+      {
+        label: 'Starting Capital',
+        data: Array(dates.length).fill(startV),
+        borderColor: 'rgba(255,255,255,0.12)',
+        borderWidth: 1,
+        borderDash: [4,4],
+        fill: false,
+        tension: 0,
+        pointRadius: 0,
+      }
+    ]
+  },
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    interaction: { mode: 'index', intersect: false },
+    plugins: {
+      legend: {
+        labels: {
+          color: '#4a5568',
+          font: { family: 'Space Mono', size: 11 },
+          boxWidth: 12,
+        }
+      },
+      tooltip: {
+        backgroundColor: '#111520',
+        borderColor: '#1e2535',
+        borderWidth: 1,
+        titleColor: '#00d4ff',
+        bodyColor: '#c8d6e5',
+        titleFont: { family: 'Space Mono', size: 11 },
+        bodyFont: { family: 'DM Sans', size: 12 },
+        callbacks: {
+          label: ctx => ' $' + ctx.parsed.y.toLocaleString(undefined, {minimumFractionDigits:2, maximumFractionDigits:2})
+        }
+      }
+    },
+    scales: {
+      x: {
+        grid: { color: 'rgba(30,37,53,0.8)' },
+        ticks: {
+          color: '#4a5568',
+          font: { family: 'Space Mono', size: 10 },
+          maxTicksLimit: 12,
+        }
+      },
+      y: {
+        grid: { color: 'rgba(30,37,53,0.8)' },
+        ticks: {
+          color: '#4a5568',
+          font: { family: 'Space Mono', size: 10 },
+          callback: v => '$' + (v/1000).toFixed(0) + 'k'
+        }
+      }
+    }
+  }
+});
+
+// ── Drawdown Chart ──
+if (ddData.length > 0) {
+  const ddCtx = document.getElementById('drawdownChart').getContext('2d');
+  const ddGrad = ddCtx.createLinearGradient(0, 0, 0, 180);
+  ddGrad.addColorStop(0, 'rgba(255,77,109,0.00)');
+  ddGrad.addColorStop(1, 'rgba(255,77,109,0.30)');
+
+  new Chart(ddCtx, {
+    type: 'line',
+    data: {
+      labels: dates,
+      datasets: [{
+        label: 'Drawdown %',
+        data: ddData,
+        borderColor: '#ff4d6d',
+        borderWidth: 1.5,
+        backgroundColor: ddGrad,
+        fill: true,
+        tension: 0.3,
+        pointRadius: 0,
+        pointHoverRadius: 4,
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          backgroundColor: '#111520',
+          borderColor: '#1e2535',
+          borderWidth: 1,
+          titleColor: '#ff4d6d',
+          bodyColor: '#c8d6e5',
+          titleFont: { family: 'Space Mono', size: 11 },
+          bodyFont: { family: 'DM Sans', size: 12 },
+          callbacks: { label: ctx => ' ' + ctx.parsed.y.toFixed(2) + '%' }
+        }
+      },
+      scales: {
+        x: {
+          grid: { color: 'rgba(30,37,53,0.8)' },
+          ticks: { color: '#4a5568', font: { family: 'Space Mono', size: 10 }, maxTicksLimit: 12 }
+        },
+        y: {
+          max: 0,
+          grid: { color: 'rgba(30,37,53,0.8)' },
+          ticks: { color: '#4a5568', font: { family: 'Space Mono', size: 10 }, callback: v => v.toFixed(0) + '%' }
+        }
+      }
+    }
+  });
+}
+</script>
+</body>
+</html>

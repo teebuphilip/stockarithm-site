@@ -65,6 +65,9 @@
   .mini-chart-legend { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; font-size: 12px; color: var(--muted); }
   .mini-chart-legend span { display: inline-flex; align-items: center; gap: 6px; }
   .mini-chart-legend i { display: inline-block; width: 10px; height: 10px; border-radius: 999px; }
+  .spotlight-card:hover { border-color: rgba(25,211,143,0.3) !important; background: rgba(25,211,143,0.05) !important; cursor: pointer; }
+  .spotlight-card:active { transform: translateY(1px); }
+  @media (max-width: 768px) { #spotlight-container { grid-template-columns: 1fr !important; gap: 10px !important; } }
   @media (max-width: 560px) { .waitlist-form { grid-template-columns: 1fr; } }
 </style>
 </head>
@@ -195,41 +198,41 @@
       <p>Every day we showcase three signals from our lab — two rotating daily picks and one permanent resident. No cherry-picking, no backtested fantasies.</p>
 
       <div id="spotlight-container" style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin:16px 0;">
-        <div class="spotlight-card" style="border:1px solid rgba(255,255,255,0.08);border-radius:10px;padding:14px;background:rgba(255,255,255,0.02);">
-          <div class="spotlight-header" style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
-            <h3 style="margin:0;font-size:14px;font-weight:600;color:var(--accent);">Spotlight 1</h3>
-            <span class="spotlight-status" style="font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:0.5px;">Loading...</span>
+        <a href="#" class="spotlight-card spotlight-link" data-spotlight="1" style="border:1px solid rgba(255,255,255,0.08);border-radius:10px;padding:14px;background:rgba(255,255,255,0.02);text-decoration:none;color:inherit;display:block;transition:border-color 0.2s,background 0.2s;">
+          <div class="spotlight-header" style="display:flex;justify-content:center;align-items:center;margin-bottom:8px;">
+            <h3 style="margin:0;font-size:14px;font-weight:600;color:var(--accent);text-align:center;">Spotlight 1</h3>
           </div>
-          <div class="spotlight-name" style="font-weight:600;font-size:13px;margin-bottom:6px;line-height:1.3;">Loading daily selection...</div>
-          <div class="spotlight-thesis" style="font-size:12px;color:var(--muted);line-height:1.4;margin-bottom:8px;">Selecting today's featured signals...</div>
-          <div class="spotlight-metrics" style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);">
+          <div class="spotlight-status" style="font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:0.5px;text-align:center;margin-bottom:8px;">Loading...</div>
+          <div class="spotlight-name" style="font-weight:600;font-size:13px;margin-bottom:6px;line-height:1.3;text-align:center;">Loading daily selection...</div>
+          <div class="spotlight-thesis" style="font-size:12px;color:var(--muted);line-height:1.4;margin-bottom:8px;text-align:center;">Selecting today's featured signals...</div>
+          <div class="spotlight-metrics" style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);text-align:center;">
             <span>YTD: --</span> • <span>30D: --</span>
           </div>
-        </div>
+        </a>
 
-        <div class="spotlight-card" style="border:1px solid rgba(255,255,255,0.08);border-radius:10px;padding:14px;background:rgba(255,255,255,0.02);">
-          <div class="spotlight-header" style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
-            <h3 style="margin:0;font-size:14px;font-weight:600;color:var(--accent);">Spotlight 2</h3>
-            <span class="spotlight-status" style="font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:0.5px;">Loading...</span>
+        <a href="#" class="spotlight-card spotlight-link" data-spotlight="2" style="border:1px solid rgba(255,255,255,0.08);border-radius:10px;padding:14px;background:rgba(255,255,255,0.02);text-decoration:none;color:inherit;display:block;transition:border-color 0.2s,background 0.2s;">
+          <div class="spotlight-header" style="display:flex;justify-content:center;align-items:center;margin-bottom:8px;">
+            <h3 style="margin:0;font-size:14px;font-weight:600;color:var(--accent);text-align:center;">Spotlight 2</h3>
           </div>
-          <div class="spotlight-name" style="font-weight:600;font-size:13px;margin-bottom:6px;line-height:1.3;">Loading daily selection...</div>
-          <div class="spotlight-thesis" style="font-size:12px;color:var(--muted);line-height:1.4;margin-bottom:8px;">Selecting today's featured signals...</div>
-          <div class="spotlight-metrics" style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);">
+          <div class="spotlight-status" style="font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:0.5px;text-align:center;margin-bottom:8px;">Loading...</div>
+          <div class="spotlight-name" style="font-weight:600;font-size:13px;margin-bottom:6px;line-height:1.3;text-align:center;">Loading daily selection...</div>
+          <div class="spotlight-thesis" style="font-size:12px;color:var(--muted);line-height:1.4;margin-bottom:8px;text-align:center;">Selecting today's featured signals...</div>
+          <div class="spotlight-metrics" style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);text-align:center;">
             <span>YTD: --</span> • <span>30D: --</span>
           </div>
-        </div>
+        </a>
 
-        <div class="spotlight-card" style="border:1px solid rgba(25,211,143,0.15);border-radius:10px;padding:14px;background:rgba(25,211,143,0.03);">
-          <div class="spotlight-header" style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
-            <h3 style="margin:0;font-size:14px;font-weight:600;color:var(--accent);">Biscotti ❤️</h3>
-            <span class="spotlight-status" style="font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:0.5px;">Permanent</span>
+        <a href="biscotti.html" class="spotlight-card" style="border:1px solid rgba(25,211,143,0.15);border-radius:10px;padding:14px;background:rgba(25,211,143,0.03);text-decoration:none;color:inherit;display:block;transition:border-color 0.2s,background 0.2s;">
+          <div class="spotlight-header" style="display:flex;justify-content:center;align-items:center;margin-bottom:8px;">
+            <h3 style="margin:0;font-size:14px;font-weight:600;color:var(--accent);text-align:center;">Biscotti ❤️</h3>
           </div>
-          <div class="spotlight-name" style="font-weight:600;font-size:13px;margin-bottom:6px;line-height:1.3;">Algo Biscotti (Unconditional Loyalty)</div>
-          <div class="spotlight-thesis" style="font-size:12px;color:var(--muted);line-height:1.4;margin-bottom:8px;">Lab mascot and good boy. Memorial signal for the best algorithmic trader who ever lived.</div>
-          <div class="spotlight-metrics" style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--muted);">
-            <a href="biscotti.html" style="color:var(--accent);text-decoration:none;">See Biscotti page →</a>
+          <div class="spotlight-status" style="font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:0.5px;text-align:center;margin-bottom:8px;">Permanent</div>
+          <div class="spotlight-name" style="font-weight:600;font-size:13px;margin-bottom:6px;line-height:1.3;text-align:center;">Algo Biscotti (Unconditional Loyalty)</div>
+          <div class="spotlight-thesis" style="font-size:12px;color:var(--muted);line-height:1.4;margin-bottom:8px;text-align:center;">Lab mascot and good boy. Memorial signal for the best algorithmic trader who ever lived.</div>
+          <div class="spotlight-metrics" style="font-family:'IBM Plex Mono',monospace;font-size:11px;color:var(--accent);text-align:center;">
+            See Biscotti page →
           </div>
-        </div>
+        </a>
       </div>
 
       <p class="muted" style="font-size:11px;margin-bottom:8px;">Spotlight 1 & 2 update daily at 6:30pm EST. Never cherry-picked — rotation is deterministic with 14-day anti-repeat.</p>
@@ -309,6 +312,14 @@
         const ytd = formatPercent(spotlightData.ytd_pct);
         const ret30d = formatPercent(spotlightData.ret_30d_pct);
         metricsElement.innerHTML = '<span>YTD: ' + ytd + '</span> • <span>30D: ' + ret30d + '</span>';
+      }
+
+      // Update the link to point to the algo page
+      if (spotlightData.algo_id) {
+        const algoPath = spotlightData.algo_type === 'normal' ?
+          'normal/' + spotlightData.algo_id + '/index.html' :
+          'algos/' + spotlightData.algo_id + '/index.html';
+        cardElement.href = algoPath;
       }
     }
 

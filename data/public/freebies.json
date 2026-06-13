@@ -1,40 +1,36 @@
 {
   "schema_version": "v1",
-  "date": "2026-06-12",
-  "generated_at": "2026-06-12T00:16:49Z",
+  "date": "2026-06-13",
+  "generated_at": "2026-06-13T00:13:08Z",
   "spotlight_1": {
-    "algo_id": "weekly-spike-in-rss-news-counts-on-port-labor-strikes-signal",
-    "name": "Weekly Spike In Rss News Counts On Port Labor Strikes Signals Freight Logistics Disruption",
-    "family": "core_rotation",
+    "algo_id": "uber-mobility",
+    "name": "Uber Mobility Index",
+    "family": "travel_mobility",
     "algo_type": "crazy",
-    "thesis_one_liner": "Recent momentum leader with 0.1% 30D return",
-    "ytd_pct": 0.0,
-    "ret_30d_pct": 0.09,
+    "thesis_one_liner": "Uber Mobility Index tests whether source data can identify travel and mobility demand changes before transport-linked sectors reprice.",
+    "ytd_pct": 4.72,
+    "ret_30d_pct": 0.0,
     "status": "live_only",
-    "beat_spy": null,
-    "trade_count": 2,
+    "beat_spy": false,
+    "trade_count": 18,
     "teaser_hook": "Alternative data experiment tracked live in public",
-    "source": "rolling"
+    "source": "watchlist"
   },
   "spotlight_2": {
-    "algo_id": "google-trends-surge-in-flight-delay-complaints",
-    "name": "Google Trends Surge In Flight Delay Complaints",
-    "family": "core_rotation",
+    "algo_id": "lumber-momentum",
+    "name": "Lumber Momentum",
+    "family": "macro_input_pressure",
     "algo_type": "crazy",
-    "thesis_one_liner": "Recent momentum leader with 0.1% 30D return",
-    "ytd_pct": 0.0,
-    "ret_30d_pct": 0.06,
+    "thesis_one_liner": "Lumber Momentum tests whether source data can expose input-cost, demand, or regime pressure before sector ETFs fully react.",
+    "ytd_pct": 0.86,
+    "ret_30d_pct": 1.56,
     "status": "live_only",
-    "beat_spy": null,
-    "trade_count": 2,
+    "beat_spy": false,
+    "trade_count": 10,
     "teaser_hook": "Alternative data experiment tracked live in public",
-    "source": "rolling"
+    "source": "watchlist"
   },
   "previous_14_days": [
-    "biscotti",
-    "uber-mobility",
-    "high-yield-spread-regime",
-    "baileymol",
     "vix-term-structure",
     "housing-permit-velocity",
     "dmsr",
@@ -44,13 +40,17 @@
     "grocery-price-inflation-google-trends-spike-signals-consumer",
     "daily-rise-in-freightlogistics-google-trends-for-truck-drive",
     "weekly-spike-in-rss-news-counts-on-port-labor-strikes-signal",
-    "google-trends-surge-in-flight-delay-complaints"
+    "google-trends-surge-in-flight-delay-complaints",
+    "weekly-jump-in-rss-news-counts-for-coal-shortage-signals-inp",
+    "faber",
+    "uber-mobility",
+    "lumber-momentum"
   ],
   "pool_stats": {
-    "total_pool_size": 16,
+    "total_pool_size": 11,
     "promoted_count": 3,
-    "watchlist_count": 6,
-    "rolling_count": 7
+    "watchlist_count": 8,
+    "rolling_count": 0
   },
   "meta": {
     "anti_repeat_days": 14,

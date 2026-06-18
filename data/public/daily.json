@@ -1,11 +1,11 @@
 {
   "schema_version": "v1",
-  "run_date": "2026-06-17",
-  "generated_at": "2026-06-17T00:29:06Z",
+  "run_date": "2026-06-18",
+  "generated_at": "2026-06-18T00:11:37Z",
   "counts": {
-    "total": 464,
+    "total": 472,
     "normal": 5,
-    "crazy": 459,
+    "crazy": 467,
     "watchlist": 202,
     "promoted": 5,
     "graveyard": 26
@@ -16,11 +16,11 @@
     "live_only": 193,
     "parked": 25,
     "promoted": 5,
-    "sandbox": 236
+    "sandbox": 244
   },
   "by_evidence_class": {
     "live_receipts_only": 194,
-    "needs_history": 233,
+    "needs_history": 241,
     "pending_seed": 25,
     "v1_backtested": 12
   },
@@ -28,36 +28,36 @@
   "top_bullish_etfs": [
     "XLK",
     "XLP",
-    "XLU"
+    "XLY"
   ],
   "top_bearish_etfs": [
-    "XLC",
+    "XLF",
     "XLRE",
-    "XLV"
+    "XLC"
   ],
   "ticker_count": 105,
-  "signal_count": 464,
+  "signal_count": 472,
   "sector_summary": {
     "XLK": {
       "etf": "XLK",
       "sector": "Technology",
-      "composite": "11 of 48",
+      "composite": "10 of 53",
       "composite_label": "BEARISH",
       "composite_color": "red",
-      "bullish_pct": 23
+      "bullish_pct": 19
     },
     "XLV": {
       "etf": "XLV",
       "sector": "Healthcare",
-      "composite": "1 of 45",
+      "composite": "3 of 46",
       "composite_label": "BEARISH",
       "composite_color": "red",
-      "bullish_pct": 2
+      "bullish_pct": 7
     },
     "XLF": {
       "etf": "XLF",
       "sector": "Financial Services",
-      "composite": "2 of 45",
+      "composite": "2 of 48",
       "composite_label": "BEARISH",
       "composite_color": "red",
       "bullish_pct": 4
@@ -65,39 +65,39 @@
     "XLY": {
       "etf": "XLY",
       "sector": "Consumer Cyclical",
-      "composite": "9 of 83",
+      "composite": "14 of 82",
       "composite_label": "BEARISH",
       "composite_color": "red",
-      "bullish_pct": 11
+      "bullish_pct": 17
     },
     "XLI": {
       "etf": "XLI",
       "sector": "Industrials",
-      "composite": "11 of 72",
+      "composite": "8 of 78",
       "composite_label": "BEARISH",
       "composite_color": "red",
-      "bullish_pct": 15
+      "bullish_pct": 10
     },
     "XLC": {
       "etf": "XLC",
       "sector": "Communication Services",
-      "composite": "1 of 39",
+      "composite": "0 of 43",
       "composite_label": "BEARISH",
       "composite_color": "red",
-      "bullish_pct": 3
+      "bullish_pct": 0
     },
     "XLP": {
       "etf": "XLP",
       "sector": "Consumer Defensive",
-      "composite": "9 of 51",
+      "composite": "10 of 52",
       "composite_label": "BEARISH",
       "composite_color": "red",
-      "bullish_pct": 18
+      "bullish_pct": 19
     },
     "XLE": {
       "etf": "XLE",
       "sector": "Energy",
-      "composite": "4 of 44",
+      "composite": "4 of 47",
       "composite_label": "BEARISH",
       "composite_color": "red",
       "bullish_pct": 9
@@ -105,26 +105,26 @@
     "XLB": {
       "etf": "XLB",
       "sector": "Basic Materials",
-      "composite": "6 of 43",
+      "composite": "7 of 45",
       "composite_label": "BEARISH",
       "composite_color": "red",
-      "bullish_pct": 14
+      "bullish_pct": 16
     },
     "XLRE": {
       "etf": "XLRE",
       "sector": "Real Estate",
-      "composite": "1 of 39",
+      "composite": "1 of 42",
       "composite_label": "BEARISH",
       "composite_color": "red",
-      "bullish_pct": 3
+      "bullish_pct": 2
     },
     "XLU": {
       "etf": "XLU",
       "sector": "Utilities",
-      "composite": "9 of 51",
+      "composite": "8 of 54",
       "composite_label": "BEARISH",
       "composite_color": "red",
-      "bullish_pct": 18
+      "bullish_pct": 15
     }
   },
   "top_live_ytd": [
@@ -140,14 +140,14 @@
       "rebalance_frequency": "monthly_eom",
       "thesis_one_liner": "Quantified Simple Monthly Rotation tests whether systematic price rotation can capture persistent sector momentum better than passive market exposure.",
       "thesis_source": "derived",
-      "ytd_pct": 9.72,
-      "days_running": 129,
-      "beat_spy": false,
-      "spy_pct": 10.13,
-      "alpha_pct": -0.41,
-      "ret_30d_pct": 0.38,
-      "spy_delta_30d_pct": -1.2,
-      "last_snapshot": "2026-06-17",
+      "ytd_pct": 9.35,
+      "days_running": 130,
+      "beat_spy": true,
+      "spy_pct": 8.76,
+      "alpha_pct": 0.59,
+      "ret_30d_pct": 0.68,
+      "spy_delta_30d_pct": 0.37,
+      "last_snapshot": "2026-06-18",
       "new_algo_date": null,
       "comparator": null
     },
@@ -163,14 +163,14 @@
       "rebalance_frequency": "weekly",
       "thesis_one_liner": "Algo Baileymol (Chaos Monger) tests whether systematic price rotation can capture persistent sector momentum better than passive market exposure.",
       "thesis_source": "derived",
-      "ytd_pct": 6.75,
-      "days_running": 129,
+      "ytd_pct": 6.2,
+      "days_running": 130,
       "beat_spy": false,
-      "spy_pct": 10.13,
-      "alpha_pct": -3.38,
-      "ret_30d_pct": -1.2,
-      "spy_delta_30d_pct": -2.78,
-      "last_snapshot": "2026-06-17",
+      "spy_pct": 8.76,
+      "alpha_pct": -2.56,
+      "ret_30d_pct": -1.88,
+      "spy_delta_30d_pct": -2.2,
+      "last_snapshot": "2026-06-18",
       "new_algo_date": null,
       "comparator": null
     },
@@ -186,14 +186,14 @@
       "rebalance_frequency": "monthly_eom",
       "thesis_one_liner": "Antonacci Dual Momentum Sector Rotation tests whether systematic price rotation can capture persistent sector momentum better than passive market exposure.",
       "thesis_source": "derived",
-      "ytd_pct": 5.43,
-      "days_running": 129,
+      "ytd_pct": 4.98,
+      "days_running": 130,
       "beat_spy": false,
-      "spy_pct": 10.13,
-      "alpha_pct": -4.71,
-      "ret_30d_pct": -0.76,
-      "spy_delta_30d_pct": -2.34,
-      "last_snapshot": "2026-06-17",
+      "spy_pct": 8.76,
+      "alpha_pct": -3.78,
+      "ret_30d_pct": -1.02,
+      "spy_delta_30d_pct": -1.33,
+      "last_snapshot": "2026-06-18",
       "new_algo_date": null,
       "comparator": null
     },
@@ -209,14 +209,14 @@
       "rebalance_frequency": "weekly",
       "thesis_one_liner": "Uber Mobility Index tests whether source data can identify travel and mobility demand changes before transport-linked sectors reprice.",
       "thesis_source": "derived",
-      "ytd_pct": 4.99,
-      "days_running": 128,
+      "ytd_pct": 3.61,
+      "days_running": 129,
       "beat_spy": false,
-      "spy_pct": 10.13,
-      "alpha_pct": -5.15,
-      "ret_30d_pct": 2.13,
-      "spy_delta_30d_pct": 0.55,
-      "last_snapshot": "2026-06-17",
+      "spy_pct": 8.76,
+      "alpha_pct": -5.14,
+      "ret_30d_pct": 1.47,
+      "spy_delta_30d_pct": 1.15,
+      "last_snapshot": "2026-06-18",
       "new_algo_date": null,
       "comparator": null
     },
@@ -232,14 +232,14 @@
       "rebalance_frequency": "monthly_eom",
       "thesis_one_liner": "Faber Momentum Rotation tests whether systematic price rotation can capture persistent sector momentum better than passive market exposure.",
       "thesis_source": "derived",
-      "ytd_pct": 4.59,
-      "days_running": 129,
+      "ytd_pct": 3.6,
+      "days_running": 130,
       "beat_spy": false,
-      "spy_pct": 10.13,
-      "alpha_pct": -5.54,
-      "ret_30d_pct": -2.79,
-      "spy_delta_30d_pct": -4.37,
-      "last_snapshot": "2026-06-17",
+      "spy_pct": 8.76,
+      "alpha_pct": -5.15,
+      "ret_30d_pct": -3.86,
+      "spy_delta_30d_pct": -4.17,
+      "last_snapshot": "2026-06-18",
       "new_algo_date": null,
       "comparator": null
     },
@@ -255,37 +255,14 @@
       "rebalance_frequency": "monthly",
       "thesis_one_liner": "Retail Sales Momentum tests whether consumer behavior can reveal consumer stress or demand rotation before it shows up in sector performance.",
       "thesis_source": "derived",
-      "ytd_pct": 3.66,
-      "days_running": 128,
+      "ytd_pct": 2.48,
+      "days_running": 129,
       "beat_spy": false,
-      "spy_pct": 10.13,
-      "alpha_pct": -6.47,
-      "ret_30d_pct": 0.85,
-      "spy_delta_30d_pct": -0.73,
-      "last_snapshot": "2026-06-17",
-      "new_algo_date": null,
-      "comparator": null
-    },
-    {
-      "schema_version": "v1",
-      "key": "crazy:high-yield-spread-regime",
-      "algo_type": "crazy",
-      "algo_id": "high-yield-spread-regime",
-      "name": "High Yield Spread Regime",
-      "family": "macro_input_pressure",
-      "status": "live_only",
-      "evidence_class": "live_receipts_only",
-      "rebalance_frequency": "monthly",
-      "thesis_one_liner": "High Yield Spread Regime tests whether macro data can expose input-cost, demand, or regime pressure before sector ETFs fully react.",
-      "thesis_source": "derived",
-      "ytd_pct": 3.24,
-      "days_running": 128,
-      "beat_spy": false,
-      "spy_pct": 10.13,
-      "alpha_pct": -6.9,
-      "ret_30d_pct": 3.24,
-      "spy_delta_30d_pct": 1.65,
-      "last_snapshot": "2026-06-17",
+      "spy_pct": 8.76,
+      "alpha_pct": -6.28,
+      "ret_30d_pct": 0.37,
+      "spy_delta_30d_pct": 0.05,
+      "last_snapshot": "2026-06-18",
       "new_algo_date": null,
       "comparator": null
     },
@@ -301,14 +278,37 @@
       "rebalance_frequency": "monthly",
       "thesis_one_liner": "Freight Rail Carloads tests whether logistics activity can reveal real-economy demand shifts before they appear in sector ETF momentum.",
       "thesis_source": "derived",
-      "ytd_pct": 2.66,
-      "days_running": 128,
+      "ytd_pct": 2.12,
+      "days_running": 129,
       "beat_spy": false,
-      "spy_pct": 10.13,
-      "alpha_pct": -7.47,
-      "ret_30d_pct": 4.08,
-      "spy_delta_30d_pct": 2.5,
-      "last_snapshot": "2026-06-17",
+      "spy_pct": 8.76,
+      "alpha_pct": -6.64,
+      "ret_30d_pct": 4.95,
+      "spy_delta_30d_pct": 4.63,
+      "last_snapshot": "2026-06-18",
+      "new_algo_date": null,
+      "comparator": null
+    },
+    {
+      "schema_version": "v1",
+      "key": "crazy:high-yield-spread-regime",
+      "algo_type": "crazy",
+      "algo_id": "high-yield-spread-regime",
+      "name": "High Yield Spread Regime",
+      "family": "macro_input_pressure",
+      "status": "live_only",
+      "evidence_class": "live_receipts_only",
+      "rebalance_frequency": "monthly",
+      "thesis_one_liner": "High Yield Spread Regime tests whether macro data can expose input-cost, demand, or regime pressure before sector ETFs fully react.",
+      "thesis_source": "derived",
+      "ytd_pct": 2.11,
+      "days_running": 129,
+      "beat_spy": false,
+      "spy_pct": 8.76,
+      "alpha_pct": -6.65,
+      "ret_30d_pct": 2.11,
+      "spy_delta_30d_pct": 1.8,
+      "last_snapshot": "2026-06-18",
       "new_algo_date": null,
       "comparator": null
     },
@@ -324,14 +324,14 @@
       "rebalance_frequency": "monthly",
       "thesis_one_liner": "Truck Tonnage Index tests whether logistics activity can reveal real-economy demand shifts before they appear in sector ETF momentum.",
       "thesis_source": "derived",
-      "ytd_pct": 2.37,
-      "days_running": 128,
+      "ytd_pct": 1.91,
+      "days_running": 129,
       "beat_spy": false,
-      "spy_pct": 10.13,
-      "alpha_pct": -7.76,
-      "ret_30d_pct": 3.61,
-      "spy_delta_30d_pct": 2.03,
-      "last_snapshot": "2026-06-17",
+      "spy_pct": 8.76,
+      "alpha_pct": -6.85,
+      "ret_30d_pct": 4.35,
+      "spy_delta_30d_pct": 4.04,
+      "last_snapshot": "2026-06-18",
       "new_algo_date": null,
       "comparator": null
     },
@@ -347,91 +347,91 @@
       "rebalance_frequency": "monthly",
       "thesis_one_liner": "Job Posting Acceleration tests whether labor-market activity can flag hiring pressure, layoffs, or wage-cycle shifts before sector momentum adjusts.",
       "thesis_source": "derived",
-      "ytd_pct": 2.33,
-      "days_running": 128,
+      "ytd_pct": 1.3,
+      "days_running": 129,
       "beat_spy": false,
-      "spy_pct": 10.13,
-      "alpha_pct": -7.8,
-      "ret_30d_pct": 1.01,
-      "spy_delta_30d_pct": -0.57,
-      "last_snapshot": "2026-06-17",
+      "spy_pct": 8.76,
+      "alpha_pct": -7.46,
+      "ret_30d_pct": 0.6,
+      "spy_delta_30d_pct": 0.29,
+      "last_snapshot": "2026-06-18",
       "new_algo_date": null,
       "comparator": null
     }
   ],
   "rolling_30d": {
-    "as_of": "2026-06-17T00:29:04.951333",
-    "spy_ret_30d_pct": 1.58,
+    "as_of": "2026-06-18T00:11:36.309709",
+    "spy_ret_30d_pct": 0.31,
     "leaders": [
       {
         "algo_id": "freight-rail-carloads",
         "name": "Freight Rail Carloads",
         "algo_type": "crazy",
-        "ret_30d_pct": 4.08,
-        "vs_spy_30d_pct": 2.5
-      },
-      {
-        "algo_id": "copper-momentum",
-        "name": "Copper Momentum",
-        "algo_type": "crazy",
-        "ret_30d_pct": 4.05,
-        "vs_spy_30d_pct": 2.47
-      },
-      {
-        "algo_id": "truck-tonnage",
-        "name": "Truck Tonnage Index",
-        "algo_type": "crazy",
-        "ret_30d_pct": 3.61,
-        "vs_spy_30d_pct": 2.03
-      },
-      {
-        "algo_id": "vix-fear-rotation",
-        "name": "VIX Fear Rotation",
-        "algo_type": "crazy",
-        "ret_30d_pct": 3.55,
-        "vs_spy_30d_pct": 1.97
-      },
-      {
-        "algo_id": "vix-term-structure",
-        "name": "VIX Term Structure",
-        "algo_type": "crazy",
-        "ret_30d_pct": 3.54,
-        "vs_spy_30d_pct": 1.96
-      },
-      {
-        "algo_id": "lumber-momentum",
-        "name": "Lumber Momentum",
-        "algo_type": "crazy",
-        "ret_30d_pct": 3.27,
-        "vs_spy_30d_pct": 1.69
-      },
-      {
-        "algo_id": "high-yield-spread-regime",
-        "name": "High Yield Spread Regime",
-        "algo_type": "crazy",
-        "ret_30d_pct": 3.24,
-        "vs_spy_30d_pct": 1.65
-      },
-      {
-        "algo_id": "biscotti-crazy",
-        "name": "Algo Biscotti (Unconditional Loyalty) (alt)",
-        "algo_type": "crazy",
-        "ret_30d_pct": 3.13,
-        "vs_spy_30d_pct": 1.55
-      },
-      {
-        "algo_id": "biscotti",
-        "name": "Algo Biscotti (Unconditional Loyalty)",
-        "algo_type": "normal",
-        "ret_30d_pct": 3.13,
-        "vs_spy_30d_pct": 1.55
+        "ret_30d_pct": 4.95,
+        "vs_spy_30d_pct": 4.63
       },
       {
         "algo_id": "port-container-volume",
         "name": "Port Container Volume",
         "algo_type": "crazy",
-        "ret_30d_pct": 2.83,
-        "vs_spy_30d_pct": 1.25
+        "ret_30d_pct": 4.94,
+        "vs_spy_30d_pct": 4.62
+      },
+      {
+        "algo_id": "copper-momentum",
+        "name": "Copper Momentum",
+        "algo_type": "crazy",
+        "ret_30d_pct": 4.91,
+        "vs_spy_30d_pct": 4.59
+      },
+      {
+        "algo_id": "truck-tonnage",
+        "name": "Truck Tonnage Index",
+        "algo_type": "crazy",
+        "ret_30d_pct": 4.35,
+        "vs_spy_30d_pct": 4.04
+      },
+      {
+        "algo_id": "vix-fear-rotation",
+        "name": "VIX Fear Rotation",
+        "algo_type": "crazy",
+        "ret_30d_pct": 3.2,
+        "vs_spy_30d_pct": 2.89
+      },
+      {
+        "algo_id": "vix-term-structure",
+        "name": "VIX Term Structure",
+        "algo_type": "crazy",
+        "ret_30d_pct": 3.19,
+        "vs_spy_30d_pct": 2.88
+      },
+      {
+        "algo_id": "lumber-momentum",
+        "name": "Lumber Momentum",
+        "algo_type": "crazy",
+        "ret_30d_pct": 2.66,
+        "vs_spy_30d_pct": 2.34
+      },
+      {
+        "algo_id": "high-yield-spread-regime",
+        "name": "High Yield Spread Regime",
+        "algo_type": "crazy",
+        "ret_30d_pct": 2.11,
+        "vs_spy_30d_pct": 1.8
+      },
+      {
+        "algo_id": "electricity-consumption",
+        "name": "Electricity Consumption",
+        "algo_type": "crazy",
+        "ret_30d_pct": 1.94,
+        "vs_spy_30d_pct": 1.63
+      },
+      {
+        "algo_id": "uber-mobility",
+        "name": "Uber Mobility Index",
+        "algo_type": "crazy",
+        "ret_30d_pct": 1.47,
+        "vs_spy_30d_pct": 1.15
       }
     ]
   }

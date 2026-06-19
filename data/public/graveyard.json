@@ -1,6 +1,6 @@
 {
   "schema_version": "v1",
-  "generated_at": "2026-06-19T00:22:21Z",
+  "generated_at": "2026-06-19T23:52:57Z",
   "algos": [
     {
       "schema_version": "v1",
@@ -14,13 +14,13 @@
       "rebalance_frequency": "weekly",
       "thesis_one_liner": "Rising news volume on coal shortages signals rising commodity input costs for materials companies.",
       "thesis_source": "spec",
-      "ytd_pct": 0.06,
-      "days_running": 93,
+      "ytd_pct": 0.05,
+      "days_running": 94,
       "beat_spy": false,
-      "spy_pct": 9.6,
-      "alpha_pct": -9.55,
-      "ret_30d_pct": 0.07,
-      "spy_delta_30d_pct": -1.7,
+      "spy_pct": 9.89,
+      "alpha_pct": -9.84,
+      "ret_30d_pct": 0.05,
+      "spy_delta_30d_pct": -1.99,
       "last_snapshot": "2026-06-19",
       "new_algo_date": null,
       "comparator": {
@@ -53,12 +53,12 @@
       "thesis_one_liner": "Spikes in urgent plumbing searches reveal consumer stress and rising demand for home repair services.",
       "thesis_source": "spec",
       "ytd_pct": -0.1,
-      "days_running": 93,
+      "days_running": 94,
       "beat_spy": false,
-      "spy_pct": 9.6,
-      "alpha_pct": -9.7,
+      "spy_pct": 9.89,
+      "alpha_pct": -9.98,
       "ret_30d_pct": 0.0,
-      "spy_delta_30d_pct": -1.77,
+      "spy_delta_30d_pct": -2.04,
       "last_snapshot": "2026-06-19",
       "new_algo_date": null,
       "comparator": {
@@ -66,16 +66,16 @@
         "signals": {
           "momentum_5d": {
             "direction": "UP",
-            "confidence": 0.148,
-            "return_pct": 0.739
+            "confidence": 0.352,
+            "return_pct": 1.762
           },
           "momentum_20d": {
-            "direction": "DOWN",
-            "confidence": 0.132,
-            "return_pct": -0.661
+            "direction": "UP",
+            "confidence": 0.08,
+            "return_pct": 0.4
           }
         },
-        "summary": "mixed"
+        "summary": "both_up"
       }
     },
     {
@@ -91,12 +91,12 @@
       "thesis_one_liner": "Retail stocks exhibit high volatility and frequent swings in investor sentiment, often leading to sharp drawdowns and bounces.",
       "thesis_source": "spec",
       "ytd_pct": -0.11,
-      "days_running": 126,
+      "days_running": 127,
       "beat_spy": false,
-      "spy_pct": 9.6,
-      "alpha_pct": -9.72,
+      "spy_pct": 9.89,
+      "alpha_pct": -10.0,
       "ret_30d_pct": -0.03,
-      "spy_delta_30d_pct": -1.8,
+      "spy_delta_30d_pct": -2.06,
       "last_snapshot": "2026-06-19",
       "new_algo_date": null,
       "comparator": {
@@ -104,16 +104,16 @@
         "signals": {
           "momentum_5d": {
             "direction": "UP",
-            "confidence": 0.148,
-            "return_pct": 0.739
+            "confidence": 0.352,
+            "return_pct": 1.762
           },
           "momentum_20d": {
-            "direction": "DOWN",
-            "confidence": 0.132,
-            "return_pct": -0.661
+            "direction": "UP",
+            "confidence": 0.08,
+            "return_pct": 0.4
           }
         },
-        "summary": "mixed"
+        "summary": "both_up"
       }
     },
     {
@@ -128,13 +128,13 @@
       "rebalance_frequency": "daily",
       "thesis_one_liner": "Spikes in dividend cut announcements signal deteriorating corporate cash flow, recession expectations, and capital preservation; correlates with broad market weakness.",
       "thesis_source": "spec",
-      "ytd_pct": -0.25,
-      "days_running": 93,
+      "ytd_pct": -0.26,
+      "days_running": 94,
       "beat_spy": false,
-      "spy_pct": 9.6,
-      "alpha_pct": -9.86,
-      "ret_30d_pct": -0.24,
-      "spy_delta_30d_pct": -2.02,
+      "spy_pct": 9.89,
+      "alpha_pct": -10.15,
+      "ret_30d_pct": -0.25,
+      "spy_delta_30d_pct": -2.29,
       "last_snapshot": "2026-06-19",
       "new_algo_date": null,
       "comparator": {
@@ -166,13 +166,13 @@
       "rebalance_frequency": "weekly",
       "thesis_one_liner": "News spikes mentioning commodity shortages tend to lift materials sector ETFs as prices rise.",
       "thesis_source": "spec",
-      "ytd_pct": -0.3,
-      "days_running": 126,
+      "ytd_pct": -0.31,
+      "days_running": 127,
       "beat_spy": false,
-      "spy_pct": 9.6,
-      "alpha_pct": -9.91,
-      "ret_30d_pct": -0.06,
-      "spy_delta_30d_pct": -1.83,
+      "spy_pct": 9.89,
+      "alpha_pct": -10.2,
+      "ret_30d_pct": -0.07,
+      "spy_delta_30d_pct": -2.1,
       "last_snapshot": "2026-06-19",
       "new_algo_date": null,
       "comparator": {
@@ -205,12 +205,12 @@
       "thesis_one_liner": "After a weekly drawdown exceeding 5%, XLE often rebounds sharply the following week as energy prices stabilize.",
       "thesis_source": "spec",
       "ytd_pct": -0.36,
-      "days_running": 126,
+      "days_running": 127,
       "beat_spy": false,
-      "spy_pct": 9.6,
-      "alpha_pct": -9.96,
+      "spy_pct": 9.89,
+      "alpha_pct": -10.24,
       "ret_30d_pct": -0.03,
-      "spy_delta_30d_pct": -1.81,
+      "spy_delta_30d_pct": -2.07,
       "last_snapshot": "2026-06-19",
       "new_algo_date": null,
       "comparator": {
@@ -243,12 +243,12 @@
       "thesis_one_liner": "Rising interest in 5G deployment correlates with communication sector ETF strength.",
       "thesis_source": "spec",
       "ytd_pct": -0.41,
-      "days_running": 126,
+      "days_running": 127,
       "beat_spy": false,
-      "spy_pct": 9.6,
-      "alpha_pct": -10.01,
+      "spy_pct": 9.89,
+      "alpha_pct": -10.29,
       "ret_30d_pct": 0.0,
-      "spy_delta_30d_pct": -1.77,
+      "spy_delta_30d_pct": -2.04,
       "last_snapshot": "2026-06-19",
       "new_algo_date": null,
       "comparator": {
@@ -256,13 +256,13 @@
         "signals": {
           "momentum_5d": {
             "direction": "DOWN",
-            "confidence": 0.476,
-            "return_pct": -2.381
+            "confidence": 0.326,
+            "return_pct": -1.63
           },
           "momentum_20d": {
             "direction": "DOWN",
             "confidence": 1.0,
-            "return_pct": -5.728
+            "return_pct": -5.74
           }
         },
         "summary": "mixed"
@@ -281,12 +281,12 @@
       "thesis_one_liner": "Periods of low volatility contraction in materials ETFs often precede explosive directional moves.",
       "thesis_source": "spec",
       "ytd_pct": 0.0,
-      "days_running": 126,
+      "days_running": 127,
       "beat_spy": false,
-      "spy_pct": 9.6,
-      "alpha_pct": -9.6,
+      "spy_pct": 9.89,
+      "alpha_pct": -9.89,
       "ret_30d_pct": 0.0,
-      "spy_delta_30d_pct": -1.77,
+      "spy_delta_30d_pct": -2.04,
       "last_snapshot": "2026-06-19",
       "new_algo_date": null,
       "comparator": {
@@ -319,12 +319,12 @@
       "thesis_one_liner": "A spike in last minute flight deal searches indicates spontaneous travel intentions increasing soon.",
       "thesis_source": "spec",
       "ytd_pct": 0.0,
-      "days_running": 93,
+      "days_running": 94,
       "beat_spy": false,
-      "spy_pct": 9.6,
-      "alpha_pct": -9.6,
+      "spy_pct": 9.89,
+      "alpha_pct": -9.89,
       "ret_30d_pct": 0.0,
-      "spy_delta_30d_pct": -1.77,
+      "spy_delta_30d_pct": -2.04,
       "last_snapshot": "2026-06-19",
       "new_algo_date": null,
       "comparator": {
@@ -332,16 +332,16 @@
         "signals": {
           "momentum_5d": {
             "direction": "UP",
-            "confidence": 0.148,
-            "return_pct": 0.739
+            "confidence": 0.352,
+            "return_pct": 1.762
           },
           "momentum_20d": {
-            "direction": "DOWN",
-            "confidence": 0.132,
-            "return_pct": -0.661
+            "direction": "UP",
+            "confidence": 0.08,
+            "return_pct": 0.4
           }
         },
-        "summary": "mixed"
+        "summary": "both_up"
       }
     },
     {
@@ -357,12 +357,12 @@
       "thesis_one_liner": "Spikes in reported warehouse worker injuries signal labor market stress, wage pressure, and operational cost escalation in logistics; presages margin compression.",
       "thesis_source": "spec",
       "ytd_pct": 0.0,
-      "days_running": 93,
+      "days_running": 94,
       "beat_spy": false,
-      "spy_pct": 9.6,
-      "alpha_pct": -9.6,
+      "spy_pct": 9.89,
+      "alpha_pct": -9.89,
       "ret_30d_pct": 0.0,
-      "spy_delta_30d_pct": -1.77,
+      "spy_delta_30d_pct": -2.04,
       "last_snapshot": "2026-06-19",
       "new_algo_date": null,
       "comparator": {
@@ -395,12 +395,12 @@
       "thesis_one_liner": "Increased seismic activity near key ports can disrupt freight logistics and shipping throughput.",
       "thesis_source": "spec",
       "ytd_pct": 0.0,
-      "days_running": 93,
+      "days_running": 94,
       "beat_spy": false,
-      "spy_pct": 9.6,
-      "alpha_pct": -9.6,
+      "spy_pct": 9.89,
+      "alpha_pct": -9.89,
       "ret_30d_pct": 0.0,
-      "spy_delta_30d_pct": -1.77,
+      "spy_delta_30d_pct": -2.04,
       "last_snapshot": "2026-06-19",
       "new_algo_date": null,
       "comparator": {
@@ -433,12 +433,12 @@
       "thesis_one_liner": "Growing searches for solar installation delays indicate supply chain bottlenecks impacting green energy demand.",
       "thesis_source": "spec",
       "ytd_pct": 0.0,
-      "days_running": 93,
+      "days_running": 94,
       "beat_spy": false,
-      "spy_pct": 9.6,
-      "alpha_pct": -9.6,
+      "spy_pct": 9.89,
+      "alpha_pct": -9.89,
       "ret_30d_pct": 0.0,
-      "spy_delta_30d_pct": -1.77,
+      "spy_delta_30d_pct": -2.04,
       "last_snapshot": "2026-06-19",
       "new_algo_date": null,
       "comparator": {
@@ -471,12 +471,12 @@
       "thesis_one_liner": "Increased freight train delay searches indicate supply chain slowdowns impacting industrial logistics.",
       "thesis_source": "spec",
       "ytd_pct": 0.0,
-      "days_running": 93,
+      "days_running": 94,
       "beat_spy": false,
-      "spy_pct": 9.6,
-      "alpha_pct": -9.6,
+      "spy_pct": 9.89,
+      "alpha_pct": -9.89,
       "ret_30d_pct": 0.0,
-      "spy_delta_30d_pct": -1.77,
+      "spy_delta_30d_pct": -2.04,
       "last_snapshot": "2026-06-19",
       "new_algo_date": null,
       "comparator": {
@@ -509,12 +509,12 @@
       "thesis_one_liner": "Growing interest in warehouse automation jobs signals rising automation adoption reducing labor demand.",
       "thesis_source": "spec",
       "ytd_pct": 0.0,
-      "days_running": 93,
+      "days_running": 94,
       "beat_spy": false,
-      "spy_pct": 9.6,
-      "alpha_pct": -9.6,
+      "spy_pct": 9.89,
+      "alpha_pct": -9.89,
       "ret_30d_pct": 0.0,
-      "spy_delta_30d_pct": -1.77,
+      "spy_delta_30d_pct": -2.04,
       "last_snapshot": "2026-06-19",
       "new_algo_date": null,
       "comparator": {
@@ -547,12 +547,12 @@
       "thesis_one_liner": "Rising searches for truck driver shortage indicate labor tightness impacting freight logistics and supply chain.",
       "thesis_source": "spec",
       "ytd_pct": 0.0,
-      "days_running": 93,
+      "days_running": 94,
       "beat_spy": false,
-      "spy_pct": 9.6,
-      "alpha_pct": -9.6,
+      "spy_pct": 9.89,
+      "alpha_pct": -9.89,
       "ret_30d_pct": 0.0,
-      "spy_delta_30d_pct": -1.77,
+      "spy_delta_30d_pct": -2.04,
       "last_snapshot": "2026-06-19",
       "new_algo_date": null,
       "comparator": {
@@ -585,12 +585,12 @@
       "thesis_one_liner": "Higher demand for moving truck rentals indicates rising residential relocations and housing market activity.",
       "thesis_source": "spec",
       "ytd_pct": 0.0,
-      "days_running": 93,
+      "days_running": 94,
       "beat_spy": false,
-      "spy_pct": 9.6,
-      "alpha_pct": -9.6,
+      "spy_pct": 9.89,
+      "alpha_pct": -9.89,
       "ret_30d_pct": 0.0,
-      "spy_delta_30d_pct": -1.77,
+      "spy_delta_30d_pct": -2.04,
       "last_snapshot": "2026-06-19",
       "new_algo_date": null,
       "comparator": {
@@ -598,13 +598,13 @@
         "signals": {
           "momentum_5d": {
             "direction": "DOWN",
-            "confidence": 0.472,
-            "return_pct": -2.36
+            "confidence": 0.453,
+            "return_pct": -2.267
           },
           "momentum_20d": {
-            "direction": "DOWN",
-            "confidence": 0.257,
-            "return_pct": -1.283
+            "direction": "UP",
+            "confidence": 0.014,
+            "return_pct": 0.068
           }
         },
         "summary": "mixed"
@@ -623,12 +623,12 @@
       "thesis_one_liner": "Spikes in pest control searches correlate with seasonal property stress and localized economic downturn; homeowners prioritize pest mitigation when neighborhood conditions deteriorate or rental markets tighten.",
       "thesis_source": "spec",
       "ytd_pct": 0.0,
-      "days_running": 93,
+      "days_running": 94,
       "beat_spy": false,
-      "spy_pct": 9.6,
-      "alpha_pct": -9.6,
+      "spy_pct": 9.89,
+      "alpha_pct": -9.89,
       "ret_30d_pct": 0.0,
-      "spy_delta_30d_pct": -1.77,
+      "spy_delta_30d_pct": -2.04,
       "last_snapshot": "2026-06-19",
       "new_algo_date": null,
       "comparator": {
@@ -636,13 +636,13 @@
         "signals": {
           "momentum_5d": {
             "direction": "DOWN",
-            "confidence": 0.472,
-            "return_pct": -2.36
+            "confidence": 0.453,
+            "return_pct": -2.267
           },
           "momentum_20d": {
-            "direction": "DOWN",
-            "confidence": 0.257,
-            "return_pct": -1.283
+            "direction": "UP",
+            "confidence": 0.014,
+            "return_pct": 0.068
           }
         },
         "summary": "mixed"
@@ -661,12 +661,12 @@
       "thesis_one_liner": "Acceleration in charger deployment outside major metro areas signals government subsidy stimulation and broadening EV adoption; correlates with XLE weakness and XLK strength.",
       "thesis_source": "spec",
       "ytd_pct": 0.0,
-      "days_running": 93,
+      "days_running": 94,
       "beat_spy": false,
-      "spy_pct": 9.6,
-      "alpha_pct": -9.6,
+      "spy_pct": 9.89,
+      "alpha_pct": -9.89,
       "ret_30d_pct": 0.0,
-      "spy_delta_30d_pct": -1.77,
+      "spy_delta_30d_pct": -2.04,
       "last_snapshot": "2026-06-19",
       "new_algo_date": null,
       "comparator": {
@@ -699,12 +699,12 @@
       "thesis_one_liner": "When weekly realized volatility contracts below 50% of its 20-week average, a breakout in price often follows.",
       "thesis_source": "spec",
       "ytd_pct": 0.0,
-      "days_running": 121,
+      "days_running": 122,
       "beat_spy": false,
-      "spy_pct": 9.6,
-      "alpha_pct": -9.6,
+      "spy_pct": 9.89,
+      "alpha_pct": -9.89,
       "ret_30d_pct": 0.0,
-      "spy_delta_30d_pct": -1.77,
+      "spy_delta_30d_pct": -2.04,
       "last_snapshot": "2026-06-19",
       "new_algo_date": null,
       "comparator": {
@@ -737,12 +737,12 @@
       "thesis_one_liner": "A 50%+ weekly spike in realized volatility often precedes strong directional moves in energy stocks.",
       "thesis_source": "spec",
       "ytd_pct": 0.0,
-      "days_running": 121,
+      "days_running": 122,
       "beat_spy": false,
-      "spy_pct": 9.6,
-      "alpha_pct": -9.6,
+      "spy_pct": 9.89,
+      "alpha_pct": -9.89,
       "ret_30d_pct": 0.0,
-      "spy_delta_30d_pct": -1.77,
+      "spy_delta_30d_pct": -2.04,
       "last_snapshot": "2026-06-19",
       "new_algo_date": null,
       "comparator": {
@@ -775,12 +775,12 @@
       "thesis_one_liner": "A spike in downgrade news signals rising credit risk perception and possible sector rotation to defensive assets.",
       "thesis_source": "spec",
       "ytd_pct": 0.0,
-      "days_running": 93,
+      "days_running": 94,
       "beat_spy": false,
-      "spy_pct": 9.6,
-      "alpha_pct": -9.6,
+      "spy_pct": 9.89,
+      "alpha_pct": -9.89,
       "ret_30d_pct": 0.0,
-      "spy_delta_30d_pct": -1.77,
+      "spy_delta_30d_pct": -2.04,
       "last_snapshot": "2026-06-19",
       "new_algo_date": null,
       "comparator": {
@@ -813,12 +813,12 @@
       "thesis_one_liner": "Sudden increase in emergency food delivery searches signals consumer stress and elevated food demand.",
       "thesis_source": "spec",
       "ytd_pct": 0.0,
-      "days_running": 93,
+      "days_running": 94,
       "beat_spy": false,
-      "spy_pct": 9.6,
-      "alpha_pct": -9.6,
+      "spy_pct": 9.89,
+      "alpha_pct": -9.89,
       "ret_30d_pct": 0.0,
-      "spy_delta_30d_pct": -1.77,
+      "spy_delta_30d_pct": -2.04,
       "last_snapshot": "2026-06-19",
       "new_algo_date": null,
       "comparator": {
@@ -826,13 +826,13 @@
         "signals": {
           "momentum_5d": {
             "direction": "DOWN",
-            "confidence": 0.462,
-            "return_pct": -2.31
+            "confidence": 0.423,
+            "return_pct": -2.117
           },
           "momentum_20d": {
             "direction": "DOWN",
-            "confidence": 0.519,
-            "return_pct": -2.596
+            "confidence": 0.56,
+            "return_pct": -2.799
           }
         },
         "summary": "mixed"
@@ -851,12 +851,12 @@
       "thesis_one_liner": "Spikes in EV charger outage searches indicate infrastructure issues creating stress in green tech adoption.",
       "thesis_source": "spec",
       "ytd_pct": 0.0,
-      "days_running": 93,
+      "days_running": 94,
       "beat_spy": false,
-      "spy_pct": 9.6,
-      "alpha_pct": -9.6,
+      "spy_pct": 9.89,
+      "alpha_pct": -9.89,
       "ret_30d_pct": 0.0,
-      "spy_delta_30d_pct": -1.77,
+      "spy_delta_30d_pct": -2.04,
       "last_snapshot": "2026-06-19",
       "new_algo_date": null,
       "comparator": {
@@ -864,13 +864,13 @@
         "signals": {
           "momentum_5d": {
             "direction": "DOWN",
-            "confidence": 0.476,
-            "return_pct": -2.381
+            "confidence": 0.326,
+            "return_pct": -1.63
           },
           "momentum_20d": {
             "direction": "DOWN",
             "confidence": 1.0,
-            "return_pct": -5.728
+            "return_pct": -5.74
           }
         },
         "summary": "mixed"
@@ -889,12 +889,12 @@
       "thesis_one_liner": "Utilities volatility spikes when energy cost shocks or grid stress events create input price uncertainty; relative volatility surge precedes defensive sector rotation.",
       "thesis_source": "spec",
       "ytd_pct": 0.0,
-      "days_running": 93,
+      "days_running": 94,
       "beat_spy": false,
-      "spy_pct": 9.6,
-      "alpha_pct": -9.6,
+      "spy_pct": 9.89,
+      "alpha_pct": -9.89,
       "ret_30d_pct": 0.0,
-      "spy_delta_30d_pct": -1.77,
+      "spy_delta_30d_pct": -2.04,
       "last_snapshot": "2026-06-19",
       "new_algo_date": null,
       "comparator": {
@@ -927,12 +927,12 @@
       "thesis_one_liner": "Rising strike-related searches reflect potential labor disruptions in logistics-heavy sectors.",
       "thesis_source": "spec",
       "ytd_pct": 0.0,
-      "days_running": 93,
+      "days_running": 94,
       "beat_spy": false,
-      "spy_pct": 9.6,
-      "alpha_pct": -9.6,
+      "spy_pct": 9.89,
+      "alpha_pct": -9.89,
       "ret_30d_pct": 0.0,
-      "spy_delta_30d_pct": -1.77,
+      "spy_delta_30d_pct": -2.04,
       "last_snapshot": "2026-06-19",
       "new_algo_date": null,
       "comparator": {
@@ -965,12 +965,12 @@
       "thesis_one_liner": "Spikes in overdraft fee searches signal liquidity crises and account shortfalls among consumers; precedes weakness in consumer discretionary spending and loan demand.",
       "thesis_source": "spec",
       "ytd_pct": 0.0,
-      "days_running": 93,
+      "days_running": 94,
       "beat_spy": false,
-      "spy_pct": 9.6,
-      "alpha_pct": -9.6,
+      "spy_pct": 9.89,
+      "alpha_pct": -9.89,
       "ret_30d_pct": 0.0,
-      "spy_delta_30d_pct": -1.77,
+      "spy_delta_30d_pct": -2.04,
       "last_snapshot": "2026-06-19",
       "new_algo_date": null,
       "comparator": {
@@ -978,16 +978,16 @@
         "signals": {
           "momentum_5d": {
             "direction": "UP",
-            "confidence": 0.148,
-            "return_pct": 0.739
+            "confidence": 0.352,
+            "return_pct": 1.762
           },
           "momentum_20d": {
-            "direction": "DOWN",
-            "confidence": 0.132,
-            "return_pct": -0.661
+            "direction": "UP",
+            "confidence": 0.08,
+            "return_pct": 0.4
           }
         },
-        "summary": "mixed"
+        "summary": "both_up"
       }
     }
   ]

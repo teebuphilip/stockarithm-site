@@ -1,38 +1,36 @@
 {
   "schema_version": "v1",
   "date": "2026-06-23",
-  "generated_at": "2026-06-23T00:03:14Z",
+  "generated_at": "2026-06-23T23:49:49Z",
   "spotlight_1": {
-    "algo_id": "simple_monthly",
-    "name": "Quantified Simple Monthly Rotation",
-    "family": "core_rotation",
-    "algo_type": "normal",
-    "thesis_one_liner": "Quantified Simple Monthly Rotation tests whether systematic price rotation can capture persistent sector momentum better than passive market exposure.",
-    "ytd_pct": 13.08,
-    "ret_30d_pct": 0.0,
-    "status": "promoted",
-    "beat_spy": true,
-    "trade_count": 3,
-    "teaser_hook": "V1 backtested signal beating 90%+ of retail strategies",
-    "source": "promoted"
-  },
-  "spotlight_2": {
-    "algo_id": "port-container-volume",
-    "name": "Port Container Volume",
+    "algo_id": "freight-rail-carloads",
+    "name": "Freight Rail Carloads",
     "family": "freight_logistics",
     "algo_type": "crazy",
-    "thesis_one_liner": "Port Container Volume tests whether source data can reveal real-economy demand shifts before they appear in sector ETF momentum.",
-    "ytd_pct": 1.25,
-    "ret_30d_pct": 3.5,
+    "thesis_one_liner": "Freight Rail Carloads tests whether logistics activity can reveal real-economy demand shifts before they appear in sector ETF momentum.",
+    "ytd_pct": 0.96,
+    "ret_30d_pct": 2.03,
     "status": "live_only",
     "beat_spy": false,
     "trade_count": 6,
-    "teaser_hook": "Live-only experiment with 3.5% recent momentum",
+    "teaser_hook": "Live-only experiment with 2.0% recent momentum",
+    "source": "watchlist"
+  },
+  "spotlight_2": {
+    "algo_id": "copper-momentum",
+    "name": "Copper Momentum",
+    "family": "macro_input_pressure",
+    "algo_type": "crazy",
+    "thesis_one_liner": "Copper Momentum tests whether source data can expose input-cost, demand, or regime pressure before sector ETFs fully react.",
+    "ytd_pct": -0.06,
+    "ret_30d_pct": 1.77,
+    "status": "live_only",
+    "beat_spy": false,
+    "trade_count": 10,
+    "teaser_hook": "Alternative data experiment tracked live in public",
     "source": "watchlist"
   },
   "previous_14_days": [
-    "copper-momentum",
-    "electricity-consumption",
     "faber",
     "uber-mobility",
     "lumber-momentum",
@@ -44,12 +42,14 @@
     "freight-rail-carloads",
     "job-posting-acceleration",
     "simple_monthly",
-    "port-container-volume"
+    "port-container-volume",
+    "freight-rail-carloads",
+    "copper-momentum"
   ],
   "pool_stats": {
-    "total_pool_size": 14,
-    "promoted_count": 3,
-    "watchlist_count": 11,
+    "total_pool_size": 10,
+    "promoted_count": 2,
+    "watchlist_count": 8,
     "rolling_count": 0
   },
   "meta": {

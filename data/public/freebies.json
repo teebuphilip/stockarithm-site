@@ -1,39 +1,23 @@
 {
   "schema_version": "v1",
-  "date": "2026-06-24",
-  "generated_at": "2026-06-24T23:58:21Z",
+  "date": "2026-06-26",
+  "generated_at": "2026-06-26T00:06:39Z",
   "spotlight_1": {
-    "algo_id": "uber-mobility",
-    "name": "Uber Mobility Index",
-    "family": "travel_mobility",
-    "algo_type": "crazy",
-    "thesis_one_liner": "Uber Mobility Index tests whether source data can identify travel and mobility demand changes before transport-linked sectors reprice.",
-    "ytd_pct": 4.75,
-    "ret_30d_pct": -0.32,
-    "status": "live_only",
+    "algo_id": "baileymol",
+    "name": "Algo Baileymol (Chaos Monger)",
+    "family": "core_rotation",
+    "algo_type": "normal",
+    "thesis_one_liner": "Algo Baileymol (Chaos Monger) tests whether systematic price rotation can capture persistent sector momentum better than passive market exposure.",
+    "ytd_pct": 5.07,
+    "ret_30d_pct": -2.86,
+    "status": "promoted",
     "beat_spy": false,
-    "trade_count": 18,
-    "teaser_hook": "Alternative data experiment tracked live in public",
-    "source": "watchlist"
+    "trade_count": 62,
+    "teaser_hook": "Academically validated signal with live trading receipts",
+    "source": "promoted"
   },
-  "spotlight_2": {
-    "algo_id": "housing-permit-velocity",
-    "name": "Housing Permit Velocity",
-    "family": "macro_input_pressure",
-    "algo_type": "crazy",
-    "thesis_one_liner": "Housing Permit Velocity tests whether source data can expose input-cost, demand, or regime pressure before sector ETFs fully react.",
-    "ytd_pct": 2.09,
-    "ret_30d_pct": 1.83,
-    "status": "live_only",
-    "beat_spy": false,
-    "trade_count": 14,
-    "teaser_hook": "Alternative data experiment tracked live in public",
-    "source": "watchlist"
-  },
+  "spotlight_2": null,
   "previous_14_days": [
-    "high-yield-spread-regime",
-    "baileymol",
-    "high-yield-spread-regime",
     "dmsr",
     "freight-rail-carloads",
     "job-posting-acceleration",
@@ -44,12 +28,15 @@
     "freight-rail-carloads",
     "copper-momentum",
     "uber-mobility",
-    "housing-permit-velocity"
+    "housing-permit-velocity",
+    "simple_monthly",
+    "truck-tonnage",
+    "baileymol"
   ],
   "pool_stats": {
-    "total_pool_size": 11,
-    "promoted_count": 1,
-    "watchlist_count": 10,
+    "total_pool_size": 12,
+    "promoted_count": 3,
+    "watchlist_count": 9,
     "rolling_count": 0
   },
   "meta": {

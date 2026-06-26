@@ -1,25 +1,36 @@
 {
   "schema_version": "v1",
   "date": "2026-06-26",
-  "generated_at": "2026-06-26T00:06:39Z",
+  "generated_at": "2026-06-26T23:59:02Z",
   "spotlight_1": {
-    "algo_id": "baileymol",
-    "name": "Algo Baileymol (Chaos Monger)",
+    "algo_id": "simple_monthly",
+    "name": "Quantified Simple Monthly Rotation",
     "family": "core_rotation",
     "algo_type": "normal",
-    "thesis_one_liner": "Algo Baileymol (Chaos Monger) tests whether systematic price rotation can capture persistent sector momentum better than passive market exposure.",
-    "ytd_pct": 5.07,
-    "ret_30d_pct": -2.86,
+    "thesis_one_liner": "Quantified Simple Monthly Rotation tests whether systematic price rotation can capture persistent sector momentum better than passive market exposure.",
+    "ytd_pct": 6.59,
+    "ret_30d_pct": -7.81,
     "status": "promoted",
     "beat_spy": false,
-    "trade_count": 62,
+    "trade_count": 3,
     "teaser_hook": "Academically validated signal with live trading receipts",
     "source": "promoted"
   },
-  "spotlight_2": null,
+  "spotlight_2": {
+    "algo_id": "freight-rail-carloads",
+    "name": "Freight Rail Carloads",
+    "family": "freight_logistics",
+    "algo_type": "crazy",
+    "thesis_one_liner": "Freight Rail Carloads tests whether logistics activity can reveal real-economy demand shifts before they appear in sector ETF momentum.",
+    "ytd_pct": 2.25,
+    "ret_30d_pct": 2.03,
+    "status": "live_only",
+    "beat_spy": false,
+    "trade_count": 6,
+    "teaser_hook": "Live-only experiment with 2.0% recent momentum",
+    "source": "watchlist"
+  },
   "previous_14_days": [
-    "dmsr",
-    "freight-rail-carloads",
     "job-posting-acceleration",
     "simple_monthly",
     "port-container-volume",
@@ -31,12 +42,14 @@
     "housing-permit-velocity",
     "simple_monthly",
     "truck-tonnage",
-    "baileymol"
+    "baileymol",
+    "simple_monthly",
+    "freight-rail-carloads"
   ],
   "pool_stats": {
-    "total_pool_size": 12,
-    "promoted_count": 3,
-    "watchlist_count": 9,
+    "total_pool_size": 11,
+    "promoted_count": 1,
+    "watchlist_count": 10,
     "rolling_count": 0
   },
   "meta": {

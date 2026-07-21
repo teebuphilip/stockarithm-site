@@ -1,39 +1,23 @@
 {
   "schema_version": "v1",
-  "date": "2026-07-20",
-  "generated_at": "2026-07-20T23:51:29Z",
+  "date": "2026-07-21",
+  "generated_at": "2026-07-21T23:53:44Z",
   "spotlight_1": {
-    "algo_id": "mortgage-rate-housing-proxy",
-    "name": "Mortgage Rate Housing Proxy",
+    "algo_id": "simple_monthly",
+    "name": "Quantified Simple Monthly Rotation",
     "family": "core_rotation",
-    "algo_type": "crazy",
-    "thesis_one_liner": "Recent momentum leader with 1.4% 30D return",
-    "ytd_pct": 0.0,
-    "ret_30d_pct": 1.45,
-    "status": "live_only",
-    "beat_spy": null,
-    "trade_count": 6,
-    "teaser_hook": "Alternative data experiment tracked live in public",
-    "source": "rolling"
+    "algo_type": "normal",
+    "thesis_one_liner": "Quantified Simple Monthly Rotation tests whether systematic price rotation can capture persistent sector momentum better than passive market exposure.",
+    "ytd_pct": 8.12,
+    "ret_30d_pct": -4.39,
+    "status": "promoted",
+    "beat_spy": false,
+    "trade_count": 5,
+    "teaser_hook": "Academically validated signal with live trading receipts",
+    "source": "promoted"
   },
-  "spotlight_2": {
-    "algo_id": "misery-rotation",
-    "name": "Misery Rotation",
-    "family": "core_rotation",
-    "algo_type": "crazy",
-    "thesis_one_liner": "Recent momentum leader with 1.4% 30D return",
-    "ytd_pct": 0.0,
-    "ret_30d_pct": 1.4,
-    "status": "live_only",
-    "beat_spy": null,
-    "trade_count": 6,
-    "teaser_hook": "Alternative data experiment tracked live in public",
-    "source": "rolling"
-  },
+  "spotlight_2": null,
   "previous_14_days": [
-    "uber-mobility",
-    "baileymol",
-    "uber-mobility",
     "baileymol",
     "daily-spike-in-google-trends-for-emergency-dental-care-signa",
     "grocery-store-foot-traffic-collapse-signal",
@@ -44,13 +28,16 @@
     "weekly-surge-in-google-trends-searches-for-home-improvement-",
     "dmsr",
     "mortgage-rate-housing-proxy",
-    "misery-rotation"
+    "misery-rotation",
+    "housing-permit-velocity",
+    "high-yield-spread-regime",
+    "simple_monthly"
   ],
   "pool_stats": {
-    "total_pool_size": 18,
-    "promoted_count": 2,
+    "total_pool_size": 11,
+    "promoted_count": 4,
     "watchlist_count": 7,
-    "rolling_count": 9
+    "rolling_count": 0
   },
   "meta": {
     "anti_repeat_days": 14,

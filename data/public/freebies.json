@@ -1,27 +1,36 @@
 {
   "schema_version": "v1",
-  "date": "2026-07-21",
-  "generated_at": "2026-07-21T23:53:44Z",
+  "date": "2026-07-22",
+  "generated_at": "2026-07-22T23:47:45Z",
   "spotlight_1": {
-    "algo_id": "simple_monthly",
-    "name": "Quantified Simple Monthly Rotation",
+    "algo_id": "dmsr",
+    "name": "Antonacci Dual Momentum Sector Rotation",
     "family": "core_rotation",
     "algo_type": "normal",
-    "thesis_one_liner": "Quantified Simple Monthly Rotation tests whether systematic price rotation can capture persistent sector momentum better than passive market exposure.",
-    "ytd_pct": 8.12,
-    "ret_30d_pct": -4.39,
+    "thesis_one_liner": "Antonacci Dual Momentum Sector Rotation tests whether systematic price rotation can capture persistent sector momentum better than passive market exposure.",
+    "ytd_pct": 5.71,
+    "ret_30d_pct": -0.18,
     "status": "promoted",
     "beat_spy": false,
-    "trade_count": 5,
+    "trade_count": 33,
     "teaser_hook": "Academically validated signal with live trading receipts",
-    "source": "promoted"
+    "source": "watchlist"
   },
-  "spotlight_2": null,
+  "spotlight_2": {
+    "algo_id": "mortgage-rate-housing-proxy",
+    "name": "Mortgage Rate Housing Proxy",
+    "family": "consumer_stress",
+    "algo_type": "crazy",
+    "thesis_one_liner": "Mortgage Rate Housing Proxy tests whether source data can reveal consumer stress or demand rotation before it shows up in sector performance.",
+    "ytd_pct": 0.33,
+    "ret_30d_pct": 1.87,
+    "status": "live_only",
+    "beat_spy": false,
+    "trade_count": 6,
+    "teaser_hook": "Alternative data experiment tracked live in public",
+    "source": "watchlist"
+  },
   "previous_14_days": [
-    "baileymol",
-    "daily-spike-in-google-trends-for-emergency-dental-care-signa",
-    "grocery-store-foot-traffic-collapse-signal",
-    "oil-price-momentum-reversal-energy-sector-bounce",
     "bank-equity-sector-outperformance-after-cre-distress-news-fa",
     "earthquake-activity-spike-in-manufacturing-regions-signals-s",
     "recession-whisper-google-trends-unemployment-search-surge",
@@ -31,12 +40,16 @@
     "misery-rotation",
     "housing-permit-velocity",
     "high-yield-spread-regime",
-    "simple_monthly"
+    "simple_monthly",
+    "uber-mobility",
+    "baileymol",
+    "dmsr",
+    "mortgage-rate-housing-proxy"
   ],
   "pool_stats": {
-    "total_pool_size": 11,
+    "total_pool_size": 14,
     "promoted_count": 4,
-    "watchlist_count": 7,
+    "watchlist_count": 10,
     "rolling_count": 0
   },
   "meta": {

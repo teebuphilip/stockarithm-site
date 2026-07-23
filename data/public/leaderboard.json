@@ -1,8 +1,8 @@
 {
   "schema_version": "v1",
-  "generated_at": "2026-07-22T23:47:44Z",
+  "generated_at": "2026-07-22T23:53:48Z",
   "counts": {
-    "total": 699,
+    "total": 706,
     "beating_spy": 1
   },
   "algos": [
@@ -2177,6 +2177,120 @@
     },
     {
       "schema_version": "v1",
+      "key": "crazy:oil-refinery-outage-news-volume-surge-signals-energy-sector-",
+      "algo_type": "crazy",
+      "algo_id": "oil-refinery-outage-news-volume-surge-signals-energy-sector-",
+      "name": "Oil Refinery Outage News Volume Surge Signals Energy Sector Supply Constraint Trade",
+      "family": "macro_input_pressure",
+      "status": "live_only",
+      "evidence_class": "live_receipts_only",
+      "rebalance_frequency": "daily",
+      "thesis_one_liner": "Daily spikes in refinery outage news signal supply-side constraints, potential product shortages, and margin expansion for refiners.",
+      "thesis_source": "spec",
+      "ytd_pct": -0.01,
+      "days_running": 0,
+      "beat_spy": null,
+      "spy_pct": null,
+      "alpha_pct": null,
+      "ret_30d_pct": -0.01,
+      "spy_delta_30d_pct": -0.42,
+      "last_snapshot": "2026-07-22",
+      "new_algo_date": null,
+      "comparator": {
+        "primary_etf": "XLE",
+        "signals": {
+          "momentum_5d": {
+            "direction": "UP",
+            "confidence": 0.956,
+            "return_pct": 4.779
+          },
+          "momentum_20d": {
+            "direction": "UP",
+            "confidence": 1.0,
+            "return_pct": 8.704
+          }
+        },
+        "summary": "both_up"
+      }
+    },
+    {
+      "schema_version": "v1",
+      "key": "crazy:medical-device-approval-news-surge-signals-healthcare-innova",
+      "algo_type": "crazy",
+      "algo_id": "medical-device-approval-news-surge-signals-healthcare-innova",
+      "name": "Medical Device Approval News Surge Signals Healthcare Innovation Bid",
+      "family": "attention_sentiment",
+      "status": "live_only",
+      "evidence_class": "live_receipts_only",
+      "rebalance_frequency": "daily",
+      "thesis_one_liner": "Daily spikes in medical device approval news signal innovation momentum, competitive positioning shifts, and earnings upside surprise potential.",
+      "thesis_source": "spec",
+      "ytd_pct": -0.01,
+      "days_running": 0,
+      "beat_spy": null,
+      "spy_pct": null,
+      "alpha_pct": null,
+      "ret_30d_pct": -0.01,
+      "spy_delta_30d_pct": -0.42,
+      "last_snapshot": "2026-07-22",
+      "new_algo_date": null,
+      "comparator": {
+        "primary_etf": "XLV",
+        "signals": {
+          "momentum_5d": {
+            "direction": "UP",
+            "confidence": 0.144,
+            "return_pct": 0.72
+          },
+          "momentum_20d": {
+            "direction": "UP",
+            "confidence": 0.953,
+            "return_pct": 4.764
+          }
+        },
+        "summary": "both_up"
+      }
+    },
+    {
+      "schema_version": "v1",
+      "key": "crazy:cybersecurity-incident-news-volume-surge-signals-information",
+      "algo_type": "crazy",
+      "algo_id": "cybersecurity-incident-news-volume-surge-signals-information",
+      "name": "Cybersecurity Incident News Volume Surge Signals Information Tech Volatility Expansion",
+      "family": "attention_sentiment",
+      "status": "live_only",
+      "evidence_class": "live_receipts_only",
+      "rebalance_frequency": "daily",
+      "thesis_one_liner": "Daily spikes in cybersecurity incident news coverage signal heightened tech sector risk premium and governance concerns.",
+      "thesis_source": "spec",
+      "ytd_pct": -0.01,
+      "days_running": 0,
+      "beat_spy": null,
+      "spy_pct": null,
+      "alpha_pct": null,
+      "ret_30d_pct": -0.01,
+      "spy_delta_30d_pct": -0.42,
+      "last_snapshot": "2026-07-22",
+      "new_algo_date": null,
+      "comparator": {
+        "primary_etf": "XLK",
+        "signals": {
+          "momentum_5d": {
+            "direction": "DOWN",
+            "confidence": 0.144,
+            "return_pct": -0.721
+          },
+          "momentum_20d": {
+            "direction": "DOWN",
+            "confidence": 0.426,
+            "return_pct": -2.128
+          }
+        },
+        "summary": "mixed"
+      }
+    },
+    {
+      "schema_version": "v1",
       "key": "crazy:weekly-surge-in-google-trends-for-last-minute-vacation-booki",
       "algo_type": "crazy",
       "algo_id": "weekly-surge-in-google-trends-for-last-minute-vacation-booki",
@@ -2930,6 +3044,44 @@
             "direction": "UP",
             "confidence": 0.158,
             "return_pct": 0.788
+          }
+        },
+        "summary": "both_up"
+      }
+    },
+    {
+      "schema_version": "v1",
+      "key": "crazy:weather-series-heatwave-surge-triggers-utility-demand-spike",
+      "algo_type": "crazy",
+      "algo_id": "weather-series-heatwave-surge-triggers-utility-demand-spike",
+      "name": "Weather Series Heatwave Surge Triggers Utility Demand Spike",
+      "family": "macro_input_pressure",
+      "status": "live_only",
+      "evidence_class": "live_receipts_only",
+      "rebalance_frequency": "daily",
+      "thesis_one_liner": "A 3-day consecutive heatwave above 95F typically causes a surge in utility demand, boosting utility sector performance.",
+      "thesis_source": "spec",
+      "ytd_pct": -0.04,
+      "days_running": 0,
+      "beat_spy": null,
+      "spy_pct": null,
+      "alpha_pct": null,
+      "ret_30d_pct": -0.04,
+      "spy_delta_30d_pct": -0.45,
+      "last_snapshot": "2026-07-22",
+      "new_algo_date": null,
+      "comparator": {
+        "primary_etf": "XLU",
+        "signals": {
+          "momentum_5d": {
+            "direction": "UP",
+            "confidence": 0.314,
+            "return_pct": 1.57
+          },
+          "momentum_20d": {
+            "direction": "UP",
+            "confidence": 0.382,
+            "return_pct": 1.908
           }
         },
         "summary": "both_up"
@@ -25648,6 +25800,120 @@
             "direction": "UP",
             "confidence": 0.046,
             "return_pct": 0.229
+          }
+        },
+        "summary": "mixed"
+      }
+    },
+    {
+      "schema_version": "v1",
+      "key": "crazy:technology-sector-earnings-revision-downgrade-surge-triggers",
+      "algo_type": "crazy",
+      "algo_id": "technology-sector-earnings-revision-downgrade-surge-triggers",
+      "name": "Technology Sector Earnings Revision Downgrade Surge Triggers Growth Stock Rotation",
+      "family": "attention_sentiment",
+      "status": "sandbox",
+      "evidence_class": "needs_history",
+      "rebalance_frequency": "daily",
+      "thesis_one_liner": "Daily spikes in tech earnings downgrade news signal growth disappointment, valuation compression, and flight to value/defensive sectors.",
+      "thesis_source": "spec",
+      "ytd_pct": 0.0,
+      "days_running": 0,
+      "beat_spy": null,
+      "spy_pct": null,
+      "alpha_pct": null,
+      "ret_30d_pct": 0.0,
+      "spy_delta_30d_pct": -0.41,
+      "last_snapshot": "2026-07-22",
+      "new_algo_date": null,
+      "comparator": {
+        "primary_etf": "XLK",
+        "signals": {
+          "momentum_5d": {
+            "direction": "DOWN",
+            "confidence": 0.144,
+            "return_pct": -0.721
+          },
+          "momentum_20d": {
+            "direction": "DOWN",
+            "confidence": 0.426,
+            "return_pct": -2.128
+          }
+        },
+        "summary": "mixed"
+      }
+    },
+    {
+      "schema_version": "v1",
+      "key": "crazy:open-charge-map-daily-ev-charger-additions-surge-signals-gre",
+      "algo_type": "crazy",
+      "algo_id": "open-charge-map-daily-ev-charger-additions-surge-signals-gre",
+      "name": "Open Charge Map Daily Ev Charger Additions Surge Signals Green Tech Rally",
+      "family": "attention_sentiment",
+      "status": "sandbox",
+      "evidence_class": "needs_history",
+      "rebalance_frequency": "daily",
+      "thesis_one_liner": "A sudden surge in newly installed EV chargers generally correlates with increased green tech investment enthusiasm and sector uplift.",
+      "thesis_source": "spec",
+      "ytd_pct": 0.0,
+      "days_running": 0,
+      "beat_spy": null,
+      "spy_pct": null,
+      "alpha_pct": null,
+      "ret_30d_pct": 0.0,
+      "spy_delta_30d_pct": -0.41,
+      "last_snapshot": "2026-07-22",
+      "new_algo_date": null,
+      "comparator": {
+        "primary_etf": "XLC",
+        "signals": {
+          "momentum_5d": {
+            "direction": "DOWN",
+            "confidence": 0.737,
+            "return_pct": -3.687
+          },
+          "momentum_20d": {
+            "direction": "UP",
+            "confidence": 0.36,
+            "return_pct": 1.799
+          }
+        },
+        "summary": "mixed"
+      }
+    },
+    {
+      "schema_version": "v1",
+      "key": "crazy:freight-logistics-daily-volume-shock-indicates-temporary-sup",
+      "algo_type": "crazy",
+      "algo_id": "freight-logistics-daily-volume-shock-indicates-temporary-sup",
+      "name": "Freight Logistics Daily Volume Shock Indicates Temporary Supply Chain Stress",
+      "family": "freight_logistics",
+      "status": "sandbox",
+      "evidence_class": "needs_history",
+      "rebalance_frequency": "daily",
+      "thesis_one_liner": "A sudden 10% drop in daily container volume followed by 3 days of stabilization generally precedes a short-term bounce in transportation and industrial stocks.",
+      "thesis_source": "spec",
+      "ytd_pct": 0.0,
+      "days_running": 0,
+      "beat_spy": null,
+      "spy_pct": null,
+      "alpha_pct": null,
+      "ret_30d_pct": 0.0,
+      "spy_delta_30d_pct": -0.41,
+      "last_snapshot": "2026-07-22",
+      "new_algo_date": null,
+      "comparator": {
+        "primary_etf": "XLI",
+        "signals": {
+          "momentum_5d": {
+            "direction": "DOWN",
+            "confidence": 0.134,
+            "return_pct": -0.672
+          },
+          "momentum_20d": {
+            "direction": "UP",
+            "confidence": 0.079,
+            "return_pct": 0.393
           }
         },
         "summary": "mixed"

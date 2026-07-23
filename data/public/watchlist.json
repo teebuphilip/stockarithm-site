@@ -1,6 +1,6 @@
 {
   "schema_version": "v1",
-  "generated_at": "2026-07-22T23:47:34Z",
+  "generated_at": "2026-07-22T23:53:48Z",
   "algos": [
     {
       "schema_version": "v1",
@@ -2173,6 +2173,120 @@
     },
     {
       "schema_version": "v1",
+      "key": "crazy:oil-refinery-outage-news-volume-surge-signals-energy-sector-",
+      "algo_type": "crazy",
+      "algo_id": "oil-refinery-outage-news-volume-surge-signals-energy-sector-",
+      "name": "Oil Refinery Outage News Volume Surge Signals Energy Sector Supply Constraint Trade",
+      "family": "macro_input_pressure",
+      "status": "live_only",
+      "evidence_class": "live_receipts_only",
+      "rebalance_frequency": "daily",
+      "thesis_one_liner": "Daily spikes in refinery outage news signal supply-side constraints, potential product shortages, and margin expansion for refiners.",
+      "thesis_source": "spec",
+      "ytd_pct": -0.01,
+      "days_running": 0,
+      "beat_spy": null,
+      "spy_pct": null,
+      "alpha_pct": null,
+      "ret_30d_pct": -0.01,
+      "spy_delta_30d_pct": -0.42,
+      "last_snapshot": "2026-07-22",
+      "new_algo_date": null,
+      "comparator": {
+        "primary_etf": "XLE",
+        "signals": {
+          "momentum_5d": {
+            "direction": "UP",
+            "confidence": 0.956,
+            "return_pct": 4.779
+          },
+          "momentum_20d": {
+            "direction": "UP",
+            "confidence": 1.0,
+            "return_pct": 8.704
+          }
+        },
+        "summary": "both_up"
+      }
+    },
+    {
+      "schema_version": "v1",
+      "key": "crazy:medical-device-approval-news-surge-signals-healthcare-innova",
+      "algo_type": "crazy",
+      "algo_id": "medical-device-approval-news-surge-signals-healthcare-innova",
+      "name": "Medical Device Approval News Surge Signals Healthcare Innovation Bid",
+      "family": "attention_sentiment",
+      "status": "live_only",
+      "evidence_class": "live_receipts_only",
+      "rebalance_frequency": "daily",
+      "thesis_one_liner": "Daily spikes in medical device approval news signal innovation momentum, competitive positioning shifts, and earnings upside surprise potential.",
+      "thesis_source": "spec",
+      "ytd_pct": -0.01,
+      "days_running": 0,
+      "beat_spy": null,
+      "spy_pct": null,
+      "alpha_pct": null,
+      "ret_30d_pct": -0.01,
+      "spy_delta_30d_pct": -0.42,
+      "last_snapshot": "2026-07-22",
+      "new_algo_date": null,
+      "comparator": {
+        "primary_etf": "XLV",
+        "signals": {
+          "momentum_5d": {
+            "direction": "UP",
+            "confidence": 0.144,
+            "return_pct": 0.72
+          },
+          "momentum_20d": {
+            "direction": "UP",
+            "confidence": 0.953,
+            "return_pct": 4.764
+          }
+        },
+        "summary": "both_up"
+      }
+    },
+    {
+      "schema_version": "v1",
+      "key": "crazy:cybersecurity-incident-news-volume-surge-signals-information",
+      "algo_type": "crazy",
+      "algo_id": "cybersecurity-incident-news-volume-surge-signals-information",
+      "name": "Cybersecurity Incident News Volume Surge Signals Information Tech Volatility Expansion",
+      "family": "attention_sentiment",
+      "status": "live_only",
+      "evidence_class": "live_receipts_only",
+      "rebalance_frequency": "daily",
+      "thesis_one_liner": "Daily spikes in cybersecurity incident news coverage signal heightened tech sector risk premium and governance concerns.",
+      "thesis_source": "spec",
+      "ytd_pct": -0.01,
+      "days_running": 0,
+      "beat_spy": null,
+      "spy_pct": null,
+      "alpha_pct": null,
+      "ret_30d_pct": -0.01,
+      "spy_delta_30d_pct": -0.42,
+      "last_snapshot": "2026-07-22",
+      "new_algo_date": null,
+      "comparator": {
+        "primary_etf": "XLK",
+        "signals": {
+          "momentum_5d": {
+            "direction": "DOWN",
+            "confidence": 0.144,
+            "return_pct": -0.721
+          },
+          "momentum_20d": {
+            "direction": "DOWN",
+            "confidence": 0.426,
+            "return_pct": -2.128
+          }
+        },
+        "summary": "mixed"
+      }
+    },
+    {
+      "schema_version": "v1",
       "key": "crazy:weekly-surge-in-google-trends-for-last-minute-vacation-booki",
       "algo_type": "crazy",
       "algo_id": "weekly-surge-in-google-trends-for-last-minute-vacation-booki",
@@ -2926,6 +3040,44 @@
             "direction": "UP",
             "confidence": 0.158,
             "return_pct": 0.788
+          }
+        },
+        "summary": "both_up"
+      }
+    },
+    {
+      "schema_version": "v1",
+      "key": "crazy:weather-series-heatwave-surge-triggers-utility-demand-spike",
+      "algo_type": "crazy",
+      "algo_id": "weather-series-heatwave-surge-triggers-utility-demand-spike",
+      "name": "Weather Series Heatwave Surge Triggers Utility Demand Spike",
+      "family": "macro_input_pressure",
+      "status": "live_only",
+      "evidence_class": "live_receipts_only",
+      "rebalance_frequency": "daily",
+      "thesis_one_liner": "A 3-day consecutive heatwave above 95F typically causes a surge in utility demand, boosting utility sector performance.",
+      "thesis_source": "spec",
+      "ytd_pct": -0.04,
+      "days_running": 0,
+      "beat_spy": null,
+      "spy_pct": null,
+      "alpha_pct": null,
+      "ret_30d_pct": -0.04,
+      "spy_delta_30d_pct": -0.45,
+      "last_snapshot": "2026-07-22",
+      "new_algo_date": null,
+      "comparator": {
+        "primary_etf": "XLU",
+        "signals": {
+          "momentum_5d": {
+            "direction": "UP",
+            "confidence": 0.314,
+            "return_pct": 1.57
+          },
+          "momentum_20d": {
+            "direction": "UP",
+            "confidence": 0.382,
+            "return_pct": 1.908
           }
         },
         "summary": "both_up"

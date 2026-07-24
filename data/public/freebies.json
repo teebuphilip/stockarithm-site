@@ -1,19 +1,19 @@
 {
   "schema_version": "v1",
-  "date": "2026-07-23",
-  "generated_at": "2026-07-23T23:50:36Z",
+  "date": "2026-07-24",
+  "generated_at": "2026-07-24T23:54:30Z",
   "spotlight_1": {
-    "algo_id": "simple_monthly",
-    "name": "Quantified Simple Monthly Rotation",
+    "algo_id": "dmsr",
+    "name": "Antonacci Dual Momentum Sector Rotation",
     "family": "core_rotation",
     "algo_type": "normal",
-    "thesis_one_liner": "Quantified Simple Monthly Rotation tests whether systematic price rotation can capture persistent sector momentum better than passive market exposure.",
-    "ytd_pct": 10.11,
-    "ret_30d_pct": 1.58,
+    "thesis_one_liner": "Antonacci Dual Momentum Sector Rotation tests whether systematic price rotation can capture persistent sector momentum better than passive market exposure.",
+    "ytd_pct": 5.85,
+    "ret_30d_pct": 1.61,
     "status": "promoted",
-    "beat_spy": true,
-    "trade_count": 5,
-    "teaser_hook": "V1 backtested signal beating 90%+ of retail strategies",
+    "beat_spy": false,
+    "trade_count": 33,
+    "teaser_hook": "Academically validated signal with live trading receipts",
     "source": "watchlist"
   },
   "spotlight_2": {
@@ -22,8 +22,8 @@
     "family": "travel_mobility",
     "algo_type": "crazy",
     "thesis_one_liner": "Uber Mobility Index tests whether source data can identify travel and mobility demand changes before transport-linked sectors reprice.",
-    "ytd_pct": 4.71,
-    "ret_30d_pct": 0.62,
+    "ytd_pct": 5.24,
+    "ret_30d_pct": 0.46,
     "status": "live_only",
     "beat_spy": false,
     "trade_count": 30,
@@ -31,10 +31,6 @@
     "source": "watchlist"
   },
   "previous_14_days": [
-    "dmsr",
-    "mortgage-rate-housing-proxy",
-    "misery-rotation",
-    "housing-permit-velocity",
     "high-yield-spread-regime",
     "simple_monthly",
     "uber-mobility",
@@ -44,6 +40,10 @@
     "dmsr",
     "mortgage-rate-housing-proxy",
     "simple_monthly",
+    "uber-mobility",
+    "simple_monthly",
+    "uber-mobility",
+    "dmsr",
     "uber-mobility"
   ],
   "pool_stats": {

@@ -1,40 +1,36 @@
 {
   "schema_version": "v1",
-  "date": "2026-08-03",
-  "generated_at": "2026-08-03T23:56:33Z",
+  "date": "2026-08-04",
+  "generated_at": "2026-08-04T23:51:14Z",
   "spotlight_1": {
-    "algo_id": "high-yield-spread-regime",
-    "name": "High Yield Spread Regime",
-    "family": "core_rotation",
+    "algo_id": "retail-sales-momentum",
+    "name": "Retail Sales Momentum",
+    "family": "consumer_stress",
     "algo_type": "crazy",
-    "thesis_one_liner": "Recent momentum leader with 1.0% 30D return",
-    "ytd_pct": 0.0,
-    "ret_30d_pct": 0.99,
+    "thesis_one_liner": "Retail Sales Momentum tests whether consumer behavior can reveal consumer stress or demand rotation before it shows up in sector performance.",
+    "ytd_pct": 3.65,
+    "ret_30d_pct": 0.73,
     "status": "live_only",
-    "beat_spy": null,
-    "trade_count": 2,
+    "beat_spy": false,
+    "trade_count": 14,
     "teaser_hook": "Alternative data experiment tracked live in public",
-    "source": "rolling"
+    "source": "watchlist"
   },
   "spotlight_2": {
-    "algo_id": "insider-trading-signals",
-    "name": "Insider Trading Signals",
-    "family": "core_rotation",
+    "algo_id": "truck-tonnage",
+    "name": "Truck Tonnage Index",
+    "family": "freight_logistics",
     "algo_type": "crazy",
-    "thesis_one_liner": "Recent momentum leader with 0.2% 30D return",
-    "ytd_pct": 0.0,
-    "ret_30d_pct": 0.23,
+    "thesis_one_liner": "Truck Tonnage Index tests whether logistics activity can reveal real-economy demand shifts before they appear in sector ETF momentum.",
+    "ytd_pct": 3.47,
+    "ret_30d_pct": 0.2,
     "status": "live_only",
-    "beat_spy": null,
-    "trade_count": 31,
+    "beat_spy": false,
+    "trade_count": 2,
     "teaser_hook": "Alternative data experiment tracked live in public",
-    "source": "rolling"
+    "source": "watchlist"
   },
   "previous_14_days": [
-    "dmsr",
-    "mortgage-rate-housing-proxy",
-    "dmsr",
-    "mortgage-rate-housing-proxy",
     "simple_monthly",
     "uber-mobility",
     "simple_monthly",
@@ -44,13 +40,17 @@
     "dmsr",
     "uber-mobility",
     "high-yield-spread-regime",
-    "insider-trading-signals"
+    "insider-trading-signals",
+    "daily-surge-in-google-trends-searches-for-electric-vehicle-c",
+    "oil-price-momentum-reversal-energy-sector-bounce",
+    "retail-sales-momentum",
+    "truck-tonnage"
   ],
   "pool_stats": {
-    "total_pool_size": 16,
+    "total_pool_size": 12,
     "promoted_count": 3,
-    "watchlist_count": 6,
-    "rolling_count": 7
+    "watchlist_count": 9,
+    "rolling_count": 0
   },
   "meta": {
     "anti_repeat_days": 14,

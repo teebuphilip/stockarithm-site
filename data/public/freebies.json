@@ -1,40 +1,36 @@
 {
   "schema_version": "v1",
-  "date": "2026-08-21",
-  "generated_at": "2026-08-21T23:11:26Z",
+  "date": "2026-08-24",
+  "generated_at": "2026-08-24T23:14:20Z",
   "spotlight_1": {
-    "algo_id": "copper-momentum",
-    "name": "Copper Momentum",
-    "family": "macro_input_pressure",
+    "algo_id": "freight-rail-carloads",
+    "name": "Freight Rail Carloads",
+    "family": "core_rotation",
     "algo_type": "crazy",
-    "thesis_one_liner": "Copper Momentum tests whether source data can expose input-cost, demand, or regime pressure before sector ETFs fully react.",
-    "ytd_pct": 2.7,
-    "ret_30d_pct": 2.66,
+    "thesis_one_liner": "Recent momentum leader with 0.7% 30D return",
+    "ytd_pct": 0.0,
+    "ret_30d_pct": 0.74,
     "status": "live_only",
-    "beat_spy": false,
+    "beat_spy": null,
     "trade_count": 10,
-    "teaser_hook": "Live-only experiment with 2.7% recent momentum",
-    "source": "watchlist"
+    "teaser_hook": "Alternative data experiment tracked live in public",
+    "source": "rolling"
   },
   "spotlight_2": {
-    "algo_id": "liquor",
-    "name": "Liquor Store Leading Indicator",
-    "family": "local_economy_weirdness",
+    "algo_id": "insider-trading-signals",
+    "name": "Insider Trading Signals",
+    "family": "core_rotation",
     "algo_type": "crazy",
-    "thesis_one_liner": "Liquor Store Leading Indicator tests whether local activity anomalies can surface demand stress before it reaches sector ETF prices.",
-    "ytd_pct": -2.18,
-    "ret_30d_pct": 2.24,
+    "thesis_one_liner": "Recent momentum leader with 0.8% 30D return",
+    "ytd_pct": 0.0,
+    "ret_30d_pct": 0.84,
     "status": "live_only",
-    "beat_spy": false,
-    "trade_count": 14,
-    "teaser_hook": "Live-only experiment with 2.2% recent momentum",
-    "source": "watchlist"
+    "beat_spy": null,
+    "trade_count": 37,
+    "teaser_hook": "Alternative data experiment tracked live in public",
+    "source": "rolling"
   },
   "previous_14_days": [
-    "freight-rail-carloads",
-    "port-container-volume",
-    "port-container-volume",
-    "job-posting-acceleration",
     "port-container-volume",
     "simple_monthly",
     "port-container-volume",
@@ -44,13 +40,17 @@
     "lumber-momentum",
     "high-yield-spread-regime",
     "copper-momentum",
-    "liquor"
+    "liquor",
+    "dmsr",
+    "retail-sales-momentum",
+    "freight-rail-carloads",
+    "insider-trading-signals"
   ],
   "pool_stats": {
-    "total_pool_size": 16,
+    "total_pool_size": 15,
     "promoted_count": 3,
-    "watchlist_count": 13,
-    "rolling_count": 0
+    "watchlist_count": 6,
+    "rolling_count": 6
   },
   "meta": {
     "anti_repeat_days": 14,

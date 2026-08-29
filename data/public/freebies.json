@@ -1,40 +1,36 @@
 {
   "schema_version": "v1",
-  "date": "2026-08-28",
-  "generated_at": "2026-08-28T06:36:25Z",
+  "date": "2026-08-29",
+  "generated_at": "2026-08-29T04:07:36Z",
   "spotlight_1": {
     "algo_id": "simple_monthly",
     "name": "Quantified Simple Monthly Rotation",
     "family": "core_rotation",
     "algo_type": "normal",
     "thesis_one_liner": "Quantified Simple Monthly Rotation tests whether systematic price rotation can capture persistent sector momentum better than passive market exposure.",
-    "ytd_pct": 8.21,
-    "ret_30d_pct": -2.38,
+    "ytd_pct": 7.2,
+    "ret_30d_pct": -3.29,
     "status": "promoted",
     "beat_spy": false,
     "trade_count": 5,
     "teaser_hook": "Academically validated signal with live trading receipts",
-    "source": "promoted"
+    "source": "watchlist"
   },
   "spotlight_2": {
-    "algo_id": "lumber-momentum",
-    "name": "Lumber Momentum",
+    "algo_id": "high-yield-spread-regime",
+    "name": "High Yield Spread Regime",
     "family": "macro_input_pressure",
     "algo_type": "crazy",
-    "thesis_one_liner": "Lumber Momentum tests whether source data can expose input-cost, demand, or regime pressure before sector ETFs fully react.",
-    "ytd_pct": 0.88,
-    "ret_30d_pct": 1.53,
+    "thesis_one_liner": "High Yield Spread Regime tests whether macro data can expose input-cost, demand, or regime pressure before sector ETFs fully react.",
+    "ytd_pct": 5.81,
+    "ret_30d_pct": 0.25,
     "status": "live_only",
     "beat_spy": false,
-    "trade_count": 14,
+    "trade_count": 2,
     "teaser_hook": "Alternative data experiment tracked live in public",
     "source": "watchlist"
   },
   "previous_14_days": [
-    "freight-rail-carloads",
-    "insider-trading-signals",
-    "copper-momentum",
-    "high-yield-spread-regime",
     "simple_monthly",
     "lumber-momentum",
     "simple_monthly",
@@ -44,13 +40,17 @@
     "high-yield-spread-regime",
     "truck-tonnage",
     "simple_monthly",
-    "lumber-momentum"
+    "lumber-momentum",
+    "dmsr",
+    "retail-sales-momentum",
+    "simple_monthly",
+    "high-yield-spread-regime"
   ],
   "pool_stats": {
-    "total_pool_size": 11,
+    "total_pool_size": 13,
     "promoted_count": 3,
-    "watchlist_count": 8,
-    "rolling_count": 0
+    "watchlist_count": 6,
+    "rolling_count": 4
   },
   "meta": {
     "anti_repeat_days": 14,

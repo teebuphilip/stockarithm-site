@@ -1,6 +1,6 @@
 {
   "schema_version": "v1",
-  "generated_at": "2026-08-28T06:36:14Z",
+  "generated_at": "2026-08-29T04:07:25Z",
   "algos": [
     {
       "schema_version": "v1",
@@ -15,13 +15,51 @@
       "thesis_one_liner": "Spikes in urgent plumbing searches reveal consumer stress and rising demand for home repair services.",
       "thesis_source": "spec",
       "ytd_pct": -0.1,
-      "days_running": 139,
+      "days_running": 140,
       "beat_spy": false,
-      "spy_pct": 13.47,
-      "alpha_pct": -13.57,
+      "spy_pct": NaN,
+      "alpha_pct": NaN,
       "ret_30d_pct": 0.0,
       "spy_delta_30d_pct": -4.08,
-      "last_snapshot": "2026-08-28",
+      "last_snapshot": "2026-08-29",
+      "new_algo_date": null,
+      "comparator": {
+        "primary_etf": "XLY",
+        "signals": {
+          "momentum_5d": {
+            "direction": "DOWN",
+            "confidence": 0.137,
+            "return_pct": -0.686
+          },
+          "momentum_20d": {
+            "direction": "UP",
+            "confidence": 0.621,
+            "return_pct": 3.105
+          }
+        },
+        "summary": "mixed"
+      }
+    },
+    {
+      "schema_version": "v1",
+      "key": "crazy:retail-roulette",
+      "algo_type": "crazy",
+      "algo_id": "retail-roulette",
+      "name": "Retail Roulette",
+      "family": "consumer_stress",
+      "status": "failed",
+      "evidence_class": "v1_backtested",
+      "rebalance_frequency": "daily",
+      "thesis_one_liner": "Retail stocks exhibit high volatility and frequent swings in investor sentiment, often leading to sharp drawdowns and bounces.",
+      "thesis_source": "spec",
+      "ytd_pct": -0.21,
+      "days_running": 173,
+      "beat_spy": false,
+      "spy_pct": NaN,
+      "alpha_pct": NaN,
+      "ret_30d_pct": -0.05,
+      "spy_delta_30d_pct": -4.13,
+      "last_snapshot": "2026-08-29",
       "new_algo_date": null,
       "comparator": {
         "primary_etf": "XLY",
@@ -52,14 +90,14 @@
       "rebalance_frequency": "weekly",
       "thesis_one_liner": "Rising news volume on coal shortages signals rising commodity input costs for materials companies.",
       "thesis_source": "spec",
-      "ytd_pct": -0.21,
-      "days_running": 139,
+      "ytd_pct": -0.22,
+      "days_running": 140,
       "beat_spy": false,
-      "spy_pct": 13.47,
-      "alpha_pct": -13.68,
-      "ret_30d_pct": -0.13,
-      "spy_delta_30d_pct": -4.22,
-      "last_snapshot": "2026-08-28",
+      "spy_pct": NaN,
+      "alpha_pct": NaN,
+      "ret_30d_pct": -0.14,
+      "spy_delta_30d_pct": -4.23,
+      "last_snapshot": "2026-08-29",
       "new_algo_date": null,
       "comparator": {
         "primary_etf": "XLB",
@@ -80,82 +118,6 @@
     },
     {
       "schema_version": "v1",
-      "key": "crazy:retail-roulette",
-      "algo_type": "crazy",
-      "algo_id": "retail-roulette",
-      "name": "Retail Roulette",
-      "family": "consumer_stress",
-      "status": "failed",
-      "evidence_class": "v1_backtested",
-      "rebalance_frequency": "daily",
-      "thesis_one_liner": "Retail stocks exhibit high volatility and frequent swings in investor sentiment, often leading to sharp drawdowns and bounces.",
-      "thesis_source": "spec",
-      "ytd_pct": -0.21,
-      "days_running": 172,
-      "beat_spy": false,
-      "spy_pct": 13.47,
-      "alpha_pct": -13.68,
-      "ret_30d_pct": -0.05,
-      "spy_delta_30d_pct": -4.13,
-      "last_snapshot": "2026-08-28",
-      "new_algo_date": null,
-      "comparator": {
-        "primary_etf": "XLY",
-        "signals": {
-          "momentum_5d": {
-            "direction": "DOWN",
-            "confidence": 0.137,
-            "return_pct": -0.686
-          },
-          "momentum_20d": {
-            "direction": "UP",
-            "confidence": 0.621,
-            "return_pct": 3.105
-          }
-        },
-        "summary": "mixed"
-      }
-    },
-    {
-      "schema_version": "v1",
-      "key": "crazy:xlc-weekly-google-trends-surge-in-5g-rollout",
-      "algo_type": "crazy",
-      "algo_id": "xlc-weekly-google-trends-surge-in-5g-rollout",
-      "name": "Xlc Weekly Google Trends Surge In 5g Rollout",
-      "family": "attention_sentiment",
-      "status": "parked",
-      "evidence_class": "pending_seed",
-      "rebalance_frequency": "weekly",
-      "thesis_one_liner": "Rising interest in 5G deployment correlates with communication sector ETF strength.",
-      "thesis_source": "spec",
-      "ytd_pct": -0.41,
-      "days_running": 172,
-      "beat_spy": false,
-      "spy_pct": 13.47,
-      "alpha_pct": -13.88,
-      "ret_30d_pct": 0.0,
-      "spy_delta_30d_pct": -4.08,
-      "last_snapshot": "2026-08-28",
-      "new_algo_date": null,
-      "comparator": {
-        "primary_etf": "XLC",
-        "signals": {
-          "momentum_5d": {
-            "direction": "UP",
-            "confidence": 0.132,
-            "return_pct": 0.66
-          },
-          "momentum_20d": {
-            "direction": "UP",
-            "confidence": 0.906,
-            "return_pct": 4.532
-          }
-        },
-        "summary": "both_up"
-      }
-    },
-    {
-      "schema_version": "v1",
       "key": "crazy:daily-spike-in-rss-news-counts-on-corporate-dividend-cuts",
       "algo_type": "crazy",
       "algo_id": "daily-spike-in-rss-news-counts-on-corporate-dividend-cuts",
@@ -167,13 +129,13 @@
       "thesis_one_liner": "Spikes in dividend cut announcements signal deteriorating corporate cash flow, recession expectations, and capital preservation; correlates with broad market weakness.",
       "thesis_source": "spec",
       "ytd_pct": -0.41,
-      "days_running": 139,
+      "days_running": 140,
       "beat_spy": false,
-      "spy_pct": 13.47,
-      "alpha_pct": -13.88,
+      "spy_pct": NaN,
+      "alpha_pct": NaN,
       "ret_30d_pct": -0.1,
       "spy_delta_30d_pct": -4.19,
-      "last_snapshot": "2026-08-28",
+      "last_snapshot": "2026-08-29",
       "new_algo_date": null,
       "comparator": {
         "primary_etf": "XLF",
@@ -194,6 +156,44 @@
     },
     {
       "schema_version": "v1",
+      "key": "crazy:xlc-weekly-google-trends-surge-in-5g-rollout",
+      "algo_type": "crazy",
+      "algo_id": "xlc-weekly-google-trends-surge-in-5g-rollout",
+      "name": "Xlc Weekly Google Trends Surge In 5g Rollout",
+      "family": "attention_sentiment",
+      "status": "parked",
+      "evidence_class": "pending_seed",
+      "rebalance_frequency": "weekly",
+      "thesis_one_liner": "Rising interest in 5G deployment correlates with communication sector ETF strength.",
+      "thesis_source": "spec",
+      "ytd_pct": -0.41,
+      "days_running": 173,
+      "beat_spy": false,
+      "spy_pct": NaN,
+      "alpha_pct": NaN,
+      "ret_30d_pct": 0.0,
+      "spy_delta_30d_pct": -4.08,
+      "last_snapshot": "2026-08-29",
+      "new_algo_date": null,
+      "comparator": {
+        "primary_etf": "XLC",
+        "signals": {
+          "momentum_5d": {
+            "direction": "UP",
+            "confidence": 0.132,
+            "return_pct": 0.66
+          },
+          "momentum_20d": {
+            "direction": "UP",
+            "confidence": 0.906,
+            "return_pct": 4.532
+          }
+        },
+        "summary": "both_up"
+      }
+    },
+    {
+      "schema_version": "v1",
       "key": "crazy:xlb-weekly-rss-news-count-spike-on-commodity-shortage",
       "algo_type": "crazy",
       "algo_id": "xlb-weekly-rss-news-count-spike-on-commodity-shortage",
@@ -205,13 +205,13 @@
       "thesis_one_liner": "News spikes mentioning commodity shortages tend to lift materials sector ETFs as prices rise.",
       "thesis_source": "spec",
       "ytd_pct": -0.42,
-      "days_running": 172,
+      "days_running": 173,
       "beat_spy": false,
-      "spy_pct": 13.47,
-      "alpha_pct": -13.89,
+      "spy_pct": NaN,
+      "alpha_pct": NaN,
       "ret_30d_pct": -0.05,
       "spy_delta_30d_pct": -4.13,
-      "last_snapshot": "2026-08-28",
+      "last_snapshot": "2026-08-29",
       "new_algo_date": null,
       "comparator": {
         "primary_etf": "XLB",
@@ -243,507 +243,13 @@
       "thesis_one_liner": "After a weekly drawdown exceeding 5%, XLE often rebounds sharply the following week as energy prices stabilize.",
       "thesis_source": "spec",
       "ytd_pct": -0.44,
-      "days_running": 172,
+      "days_running": 173,
       "beat_spy": false,
-      "spy_pct": 13.47,
-      "alpha_pct": -13.91,
+      "spy_pct": NaN,
+      "alpha_pct": NaN,
       "ret_30d_pct": -0.04,
       "spy_delta_30d_pct": -4.12,
-      "last_snapshot": "2026-08-28",
-      "new_algo_date": null,
-      "comparator": {
-        "primary_etf": "XLE",
-        "signals": {
-          "momentum_5d": {
-            "direction": "DOWN",
-            "confidence": 0.458,
-            "return_pct": -2.29
-          },
-          "momentum_20d": {
-            "direction": "UP",
-            "confidence": 1.0,
-            "return_pct": 5.648
-          }
-        },
-        "summary": "mixed"
-      }
-    },
-    {
-      "schema_version": "v1",
-      "key": "crazy:xlb-daily-volatility-contraction-breakout",
-      "algo_type": "crazy",
-      "algo_id": "xlb-daily-volatility-contraction-breakout",
-      "name": "Xlb Daily Volatility Contraction Breakout",
-      "family": "macro_input_pressure",
-      "status": "parked",
-      "evidence_class": "pending_seed",
-      "rebalance_frequency": "daily",
-      "thesis_one_liner": "Periods of low volatility contraction in materials ETFs often precede explosive directional moves.",
-      "thesis_source": "spec",
-      "ytd_pct": 0.0,
-      "days_running": 172,
-      "beat_spy": false,
-      "spy_pct": 13.47,
-      "alpha_pct": -13.47,
-      "ret_30d_pct": 0.0,
-      "spy_delta_30d_pct": -4.08,
-      "last_snapshot": "2026-08-28",
-      "new_algo_date": null,
-      "comparator": {
-        "primary_etf": "XLB",
-        "signals": {
-          "momentum_5d": {
-            "direction": "UP",
-            "confidence": 0.309,
-            "return_pct": 1.545
-          },
-          "momentum_20d": {
-            "direction": "UP",
-            "confidence": 0.616,
-            "return_pct": 3.079
-          }
-        },
-        "summary": "both_up"
-      }
-    },
-    {
-      "schema_version": "v1",
-      "key": "crazy:weekly-surge-in-google-trends-for-last-minute-flight-deals-s",
-      "algo_type": "crazy",
-      "algo_id": "weekly-surge-in-google-trends-for-last-minute-flight-deals-s",
-      "name": "Weekly Surge In Google Trends For Last Minute Flight Deals Signals Travel Demand Rebound",
-      "family": "travel_mobility",
-      "status": "parked",
-      "evidence_class": "pending_seed",
-      "rebalance_frequency": "weekly",
-      "thesis_one_liner": "A spike in last minute flight deal searches indicates spontaneous travel intentions increasing soon.",
-      "thesis_source": "spec",
-      "ytd_pct": 0.0,
-      "days_running": 139,
-      "beat_spy": false,
-      "spy_pct": 13.47,
-      "alpha_pct": -13.47,
-      "ret_30d_pct": 0.0,
-      "spy_delta_30d_pct": -4.08,
-      "last_snapshot": "2026-08-28",
-      "new_algo_date": null,
-      "comparator": {
-        "primary_etf": "XLY",
-        "signals": {
-          "momentum_5d": {
-            "direction": "DOWN",
-            "confidence": 0.137,
-            "return_pct": -0.686
-          },
-          "momentum_20d": {
-            "direction": "UP",
-            "confidence": 0.621,
-            "return_pct": 3.105
-          }
-        },
-        "summary": "mixed"
-      }
-    },
-    {
-      "schema_version": "v1",
-      "key": "crazy:weekly-rss-count-spike-on-warehouse-worker-injury-reports",
-      "algo_type": "crazy",
-      "algo_id": "weekly-rss-count-spike-on-warehouse-worker-injury-reports",
-      "name": "Weekly Rss Count Spike On Warehouse Worker Injury Reports",
-      "family": "labor_jobs",
-      "status": "parked",
-      "evidence_class": "pending_seed",
-      "rebalance_frequency": "weekly",
-      "thesis_one_liner": "Spikes in reported warehouse worker injuries signal labor market stress, wage pressure, and operational cost escalation in logistics; presages margin compression.",
-      "thesis_source": "spec",
-      "ytd_pct": 0.0,
-      "days_running": 139,
-      "beat_spy": false,
-      "spy_pct": 13.47,
-      "alpha_pct": -13.47,
-      "ret_30d_pct": 0.0,
-      "spy_delta_30d_pct": -4.08,
-      "last_snapshot": "2026-08-28",
-      "new_algo_date": null,
-      "comparator": {
-        "primary_etf": "XLI",
-        "signals": {
-          "momentum_5d": {
-            "direction": "DOWN",
-            "confidence": 0.108,
-            "return_pct": -0.54
-          },
-          "momentum_20d": {
-            "direction": "UP",
-            "confidence": 0.046,
-            "return_pct": 0.23
-          }
-        },
-        "summary": "mixed"
-      }
-    },
-    {
-      "schema_version": "v1",
-      "key": "crazy:weekly-rise-in-usgs-earthquake-activity-near-major-ports-sig",
-      "algo_type": "crazy",
-      "algo_id": "weekly-rise-in-usgs-earthquake-activity-near-major-ports-sig",
-      "name": "Weekly Rise In Usgs Earthquake Activity Near Major Ports Signals Potential Freight Disruptions",
-      "family": "freight_logistics",
-      "status": "parked",
-      "evidence_class": "pending_seed",
-      "rebalance_frequency": "weekly",
-      "thesis_one_liner": "Increased seismic activity near key ports can disrupt freight logistics and shipping throughput.",
-      "thesis_source": "spec",
-      "ytd_pct": 0.0,
-      "days_running": 139,
-      "beat_spy": false,
-      "spy_pct": 13.47,
-      "alpha_pct": -13.47,
-      "ret_30d_pct": 0.0,
-      "spy_delta_30d_pct": -4.08,
-      "last_snapshot": "2026-08-28",
-      "new_algo_date": null,
-      "comparator": {
-        "primary_etf": "XLI",
-        "signals": {
-          "momentum_5d": {
-            "direction": "DOWN",
-            "confidence": 0.108,
-            "return_pct": -0.54
-          },
-          "momentum_20d": {
-            "direction": "UP",
-            "confidence": 0.046,
-            "return_pct": 0.23
-          }
-        },
-        "summary": "mixed"
-      }
-    },
-    {
-      "schema_version": "v1",
-      "key": "crazy:weekly-rise-in-google-trends-for-solar-panel-installation-de",
-      "algo_type": "crazy",
-      "algo_id": "weekly-rise-in-google-trends-for-solar-panel-installation-de",
-      "name": "Weekly Rise In Google Trends For Solar Panel Installation Delay Signals Supply Chain Issues In Green Energy",
-      "family": "macro_input_pressure",
-      "status": "parked",
-      "evidence_class": "pending_seed",
-      "rebalance_frequency": "weekly",
-      "thesis_one_liner": "Growing searches for solar installation delays indicate supply chain bottlenecks impacting green energy demand.",
-      "thesis_source": "spec",
-      "ytd_pct": 0.0,
-      "days_running": 139,
-      "beat_spy": false,
-      "spy_pct": 13.47,
-      "alpha_pct": -13.47,
-      "ret_30d_pct": 0.0,
-      "spy_delta_30d_pct": -4.08,
-      "last_snapshot": "2026-08-28",
-      "new_algo_date": null,
-      "comparator": {
-        "primary_etf": "XLE",
-        "signals": {
-          "momentum_5d": {
-            "direction": "DOWN",
-            "confidence": 0.458,
-            "return_pct": -2.29
-          },
-          "momentum_20d": {
-            "direction": "UP",
-            "confidence": 1.0,
-            "return_pct": 5.648
-          }
-        },
-        "summary": "mixed"
-      }
-    },
-    {
-      "schema_version": "v1",
-      "key": "crazy:weekly-rise-in-google-trends-for-freight-train-delays-signal",
-      "algo_type": "crazy",
-      "algo_id": "weekly-rise-in-google-trends-for-freight-train-delays-signal",
-      "name": "Weekly Rise In Google Trends For Freight Train Delays Signals Logistics Bottlenecks",
-      "family": "freight_logistics",
-      "status": "parked",
-      "evidence_class": "pending_seed",
-      "rebalance_frequency": "weekly",
-      "thesis_one_liner": "Increased freight train delay searches indicate supply chain slowdowns impacting industrial logistics.",
-      "thesis_source": "spec",
-      "ytd_pct": 0.0,
-      "days_running": 139,
-      "beat_spy": false,
-      "spy_pct": 13.47,
-      "alpha_pct": -13.47,
-      "ret_30d_pct": 0.0,
-      "spy_delta_30d_pct": -4.08,
-      "last_snapshot": "2026-08-28",
-      "new_algo_date": null,
-      "comparator": {
-        "primary_etf": "XLI",
-        "signals": {
-          "momentum_5d": {
-            "direction": "DOWN",
-            "confidence": 0.108,
-            "return_pct": -0.54
-          },
-          "momentum_20d": {
-            "direction": "UP",
-            "confidence": 0.046,
-            "return_pct": 0.23
-          }
-        },
-        "summary": "mixed"
-      }
-    },
-    {
-      "schema_version": "v1",
-      "key": "crazy:weekly-jump-in-google-trends-for-warehouse-automation-jobs-s",
-      "algo_type": "crazy",
-      "algo_id": "weekly-jump-in-google-trends-for-warehouse-automation-jobs-s",
-      "name": "Weekly Jump In Google Trends For Warehouse Automation Jobs Signals Labor Substitution Pressure",
-      "family": "labor_jobs",
-      "status": "parked",
-      "evidence_class": "pending_seed",
-      "rebalance_frequency": "weekly",
-      "thesis_one_liner": "Growing interest in warehouse automation jobs signals rising automation adoption reducing labor demand.",
-      "thesis_source": "spec",
-      "ytd_pct": 0.0,
-      "days_running": 139,
-      "beat_spy": false,
-      "spy_pct": 13.47,
-      "alpha_pct": -13.47,
-      "ret_30d_pct": 0.0,
-      "spy_delta_30d_pct": -4.08,
-      "last_snapshot": "2026-08-28",
-      "new_algo_date": null,
-      "comparator": {
-        "primary_etf": "XLI",
-        "signals": {
-          "momentum_5d": {
-            "direction": "DOWN",
-            "confidence": 0.108,
-            "return_pct": -0.54
-          },
-          "momentum_20d": {
-            "direction": "UP",
-            "confidence": 0.046,
-            "return_pct": 0.23
-          }
-        },
-        "summary": "mixed"
-      }
-    },
-    {
-      "schema_version": "v1",
-      "key": "crazy:weekly-jump-in-google-trends-for-truck-driver-shortage-signa",
-      "algo_type": "crazy",
-      "algo_id": "weekly-jump-in-google-trends-for-truck-driver-shortage-signa",
-      "name": "Weekly Jump In Google Trends For Truck Driver Shortage Signals Labor Stress In Transportation",
-      "family": "labor_jobs",
-      "status": "parked",
-      "evidence_class": "pending_seed",
-      "rebalance_frequency": "weekly",
-      "thesis_one_liner": "Rising searches for truck driver shortage indicate labor tightness impacting freight logistics and supply chain.",
-      "thesis_source": "spec",
-      "ytd_pct": 0.0,
-      "days_running": 139,
-      "beat_spy": false,
-      "spy_pct": 13.47,
-      "alpha_pct": -13.47,
-      "ret_30d_pct": 0.0,
-      "spy_delta_30d_pct": -4.08,
-      "last_snapshot": "2026-08-28",
-      "new_algo_date": null,
-      "comparator": {
-        "primary_etf": "XLI",
-        "signals": {
-          "momentum_5d": {
-            "direction": "DOWN",
-            "confidence": 0.108,
-            "return_pct": -0.54
-          },
-          "momentum_20d": {
-            "direction": "UP",
-            "confidence": 0.046,
-            "return_pct": 0.23
-          }
-        },
-        "summary": "mixed"
-      }
-    },
-    {
-      "schema_version": "v1",
-      "key": "crazy:weekly-jump-in-google-trends-for-home-moving-truck-rental-de",
-      "algo_type": "crazy",
-      "algo_id": "weekly-jump-in-google-trends-for-home-moving-truck-rental-de",
-      "name": "Weekly Jump In Google Trends For Home Moving Truck Rental Demand Signals Housing Market Activity",
-      "family": "local_economy_weirdness",
-      "status": "parked",
-      "evidence_class": "pending_seed",
-      "rebalance_frequency": "weekly",
-      "thesis_one_liner": "Higher demand for moving truck rentals indicates rising residential relocations and housing market activity.",
-      "thesis_source": "spec",
-      "ytd_pct": 0.0,
-      "days_running": 139,
-      "beat_spy": false,
-      "spy_pct": 13.47,
-      "alpha_pct": -13.47,
-      "ret_30d_pct": 0.0,
-      "spy_delta_30d_pct": -4.08,
-      "last_snapshot": "2026-08-28",
-      "new_algo_date": null,
-      "comparator": {
-        "primary_etf": "XLRE",
-        "signals": {
-          "momentum_5d": {
-            "direction": "DOWN",
-            "confidence": 0.186,
-            "return_pct": -0.932
-          },
-          "momentum_20d": {
-            "direction": "DOWN",
-            "confidence": 0.283,
-            "return_pct": -1.413
-          }
-        },
-        "summary": "mixed"
-      }
-    },
-    {
-      "schema_version": "v1",
-      "key": "crazy:weekly-google-trends-surge-in-pest-control-searches",
-      "algo_type": "crazy",
-      "algo_id": "weekly-google-trends-surge-in-pest-control-searches",
-      "name": "Weekly Google Trends Surge In Pest Control Searches",
-      "family": "local_economy_weirdness",
-      "status": "parked",
-      "evidence_class": "pending_seed",
-      "rebalance_frequency": "weekly",
-      "thesis_one_liner": "Spikes in pest control searches correlate with seasonal property stress and localized economic downturn; homeowners prioritize pest mitigation when neighborhood conditions deteriorate or rental markets tighten.",
-      "thesis_source": "spec",
-      "ytd_pct": 0.0,
-      "days_running": 139,
-      "beat_spy": false,
-      "spy_pct": 13.47,
-      "alpha_pct": -13.47,
-      "ret_30d_pct": 0.0,
-      "spy_delta_30d_pct": -4.08,
-      "last_snapshot": "2026-08-28",
-      "new_algo_date": null,
-      "comparator": {
-        "primary_etf": "XLRE",
-        "signals": {
-          "momentum_5d": {
-            "direction": "DOWN",
-            "confidence": 0.186,
-            "return_pct": -0.932
-          },
-          "momentum_20d": {
-            "direction": "DOWN",
-            "confidence": 0.283,
-            "return_pct": -1.413
-          }
-        },
-        "summary": "mixed"
-      }
-    },
-    {
-      "schema_version": "v1",
-      "key": "crazy:weekly-ev-charger-expansion-in-underserved-regions",
-      "algo_type": "crazy",
-      "algo_id": "weekly-ev-charger-expansion-in-underserved-regions",
-      "name": "Weekly Ev Charger Expansion In Underserved Regions",
-      "family": "travel_mobility",
-      "status": "parked",
-      "evidence_class": "pending_seed",
-      "rebalance_frequency": "weekly",
-      "thesis_one_liner": "Acceleration in charger deployment outside major metro areas signals government subsidy stimulation and broadening EV adoption; correlates with XLE weakness and XLK strength.",
-      "thesis_source": "spec",
-      "ytd_pct": 0.0,
-      "days_running": 139,
-      "beat_spy": false,
-      "spy_pct": 13.47,
-      "alpha_pct": -13.47,
-      "ret_30d_pct": 0.0,
-      "spy_delta_30d_pct": -4.08,
-      "last_snapshot": "2026-08-28",
-      "new_algo_date": null,
-      "comparator": {
-        "primary_etf": "XLE",
-        "signals": {
-          "momentum_5d": {
-            "direction": "DOWN",
-            "confidence": 0.458,
-            "return_pct": -2.29
-          },
-          "momentum_20d": {
-            "direction": "UP",
-            "confidence": 1.0,
-            "return_pct": 5.648
-          }
-        },
-        "summary": "mixed"
-      }
-    },
-    {
-      "schema_version": "v1",
-      "key": "crazy:materials-sector-weekly-volatility-contraction-breakout",
-      "algo_type": "crazy",
-      "algo_id": "materials-sector-weekly-volatility-contraction-breakout",
-      "name": "Materials Sector Weekly Volatility Contraction Breakout",
-      "family": "political_insider_filing",
-      "status": "parked",
-      "evidence_class": "pending_seed",
-      "rebalance_frequency": "weekly",
-      "thesis_one_liner": "When weekly realized volatility contracts below 50% of its 20-week average, a breakout in price often follows.",
-      "thesis_source": "spec",
-      "ytd_pct": 0.0,
-      "days_running": 167,
-      "beat_spy": false,
-      "spy_pct": 13.47,
-      "alpha_pct": -13.47,
-      "ret_30d_pct": 0.0,
-      "spy_delta_30d_pct": -4.08,
-      "last_snapshot": "2026-08-28",
-      "new_algo_date": null,
-      "comparator": {
-        "primary_etf": "XLB",
-        "signals": {
-          "momentum_5d": {
-            "direction": "UP",
-            "confidence": 0.309,
-            "return_pct": 1.545
-          },
-          "momentum_20d": {
-            "direction": "UP",
-            "confidence": 0.616,
-            "return_pct": 3.079
-          }
-        },
-        "summary": "both_up"
-      }
-    },
-    {
-      "schema_version": "v1",
-      "key": "crazy:energy-sector-sudden-weekly-volatility-spike",
-      "algo_type": "crazy",
-      "algo_id": "energy-sector-sudden-weekly-volatility-spike",
-      "name": "Energy Sector Sudden Weekly Volatility Spike",
-      "family": "political_insider_filing",
-      "status": "parked",
-      "evidence_class": "pending_seed",
-      "rebalance_frequency": "weekly",
-      "thesis_one_liner": "A 50%+ weekly spike in realized volatility often precedes strong directional moves in energy stocks.",
-      "thesis_source": "spec",
-      "ytd_pct": 0.0,
-      "days_running": 167,
-      "beat_spy": false,
-      "spy_pct": 13.47,
-      "alpha_pct": -13.47,
-      "ret_30d_pct": 0.0,
-      "spy_delta_30d_pct": -4.08,
-      "last_snapshot": "2026-08-28",
+      "last_snapshot": "2026-08-29",
       "new_algo_date": null,
       "comparator": {
         "primary_etf": "XLE",
@@ -775,13 +281,13 @@
       "thesis_one_liner": "A spike in downgrade news signals rising credit risk perception and possible sector rotation to defensive assets.",
       "thesis_source": "spec",
       "ytd_pct": 0.0,
-      "days_running": 139,
+      "days_running": 140,
       "beat_spy": false,
-      "spy_pct": 13.47,
-      "alpha_pct": -13.47,
+      "spy_pct": NaN,
+      "alpha_pct": NaN,
       "ret_30d_pct": 0.0,
       "spy_delta_30d_pct": -4.08,
-      "last_snapshot": "2026-08-28",
+      "last_snapshot": "2026-08-29",
       "new_algo_date": null,
       "comparator": {
         "primary_etf": "XLF",
@@ -802,37 +308,37 @@
     },
     {
       "schema_version": "v1",
-      "key": "crazy:daily-surge-in-google-trends-for-emergency-food-delivery-sig",
+      "key": "crazy:daily-jump-in-google-trends-for-bank-account-overdraft-fees",
       "algo_type": "crazy",
-      "algo_id": "daily-surge-in-google-trends-for-emergency-food-delivery-sig",
-      "name": "Daily Surge In Google Trends For Emergency Food Delivery Signals Consumer Stress Lifting Staples Demand",
+      "algo_id": "daily-jump-in-google-trends-for-bank-account-overdraft-fees",
+      "name": "Daily Jump In Google Trends For Bank Account Overdraft Fees",
       "family": "consumer_stress",
       "status": "parked",
       "evidence_class": "pending_seed",
       "rebalance_frequency": "daily",
-      "thesis_one_liner": "Sudden increase in emergency food delivery searches signals consumer stress and elevated food demand.",
+      "thesis_one_liner": "Spikes in overdraft fee searches signal liquidity crises and account shortfalls among consumers; precedes weakness in consumer discretionary spending and loan demand.",
       "thesis_source": "spec",
       "ytd_pct": 0.0,
-      "days_running": 139,
+      "days_running": 140,
       "beat_spy": false,
-      "spy_pct": 13.47,
-      "alpha_pct": -13.47,
+      "spy_pct": NaN,
+      "alpha_pct": NaN,
       "ret_30d_pct": 0.0,
       "spy_delta_30d_pct": -4.08,
-      "last_snapshot": "2026-08-28",
+      "last_snapshot": "2026-08-29",
       "new_algo_date": null,
       "comparator": {
-        "primary_etf": "XLP",
+        "primary_etf": "XLY",
         "signals": {
           "momentum_5d": {
             "direction": "DOWN",
-            "confidence": 0.056,
-            "return_pct": -0.281
+            "confidence": 0.137,
+            "return_pct": -0.686
           },
           "momentum_20d": {
-            "direction": "DOWN",
-            "confidence": 0.091,
-            "return_pct": -0.456
+            "direction": "UP",
+            "confidence": 0.621,
+            "return_pct": 3.105
           }
         },
         "summary": "mixed"
@@ -851,13 +357,13 @@
       "thesis_one_liner": "Spikes in EV charger outage searches indicate infrastructure issues creating stress in green tech adoption.",
       "thesis_source": "spec",
       "ytd_pct": 0.0,
-      "days_running": 139,
+      "days_running": 140,
       "beat_spy": false,
-      "spy_pct": 13.47,
-      "alpha_pct": -13.47,
+      "spy_pct": NaN,
+      "alpha_pct": NaN,
       "ret_30d_pct": 0.0,
       "spy_delta_30d_pct": -4.08,
-      "last_snapshot": "2026-08-28",
+      "last_snapshot": "2026-08-29",
       "new_algo_date": null,
       "comparator": {
         "primary_etf": "XLC",
@@ -878,37 +384,37 @@
     },
     {
       "schema_version": "v1",
-      "key": "crazy:daily-stock-price-volatility-spike-in-xlu-relative-to-spy",
+      "key": "crazy:daily-surge-in-google-trends-for-emergency-food-delivery-sig",
       "algo_type": "crazy",
-      "algo_id": "daily-stock-price-volatility-spike-in-xlu-relative-to-spy",
-      "name": "Daily Stock Price Volatility Spike In Xlu Relative To Spy",
-      "family": "macro_input_pressure",
+      "algo_id": "daily-surge-in-google-trends-for-emergency-food-delivery-sig",
+      "name": "Daily Surge In Google Trends For Emergency Food Delivery Signals Consumer Stress Lifting Staples Demand",
+      "family": "consumer_stress",
       "status": "parked",
       "evidence_class": "pending_seed",
       "rebalance_frequency": "daily",
-      "thesis_one_liner": "Utilities volatility spikes when energy cost shocks or grid stress events create input price uncertainty; relative volatility surge precedes defensive sector rotation.",
+      "thesis_one_liner": "Sudden increase in emergency food delivery searches signals consumer stress and elevated food demand.",
       "thesis_source": "spec",
       "ytd_pct": 0.0,
-      "days_running": 139,
+      "days_running": 140,
       "beat_spy": false,
-      "spy_pct": 13.47,
-      "alpha_pct": -13.47,
+      "spy_pct": NaN,
+      "alpha_pct": NaN,
       "ret_30d_pct": 0.0,
       "spy_delta_30d_pct": -4.08,
-      "last_snapshot": "2026-08-28",
+      "last_snapshot": "2026-08-29",
       "new_algo_date": null,
       "comparator": {
-        "primary_etf": "XLU",
+        "primary_etf": "XLP",
         "signals": {
           "momentum_5d": {
             "direction": "DOWN",
-            "confidence": 0.27,
-            "return_pct": -1.348
+            "confidence": 0.056,
+            "return_pct": -0.281
           },
           "momentum_20d": {
             "direction": "DOWN",
-            "confidence": 0.663,
-            "return_pct": -3.314
+            "confidence": 0.091,
+            "return_pct": -0.456
           }
         },
         "summary": "mixed"
@@ -916,24 +422,24 @@
     },
     {
       "schema_version": "v1",
-      "key": "crazy:daily-jump-in-google-trends-for-warehouse-worker-strike-sign",
+      "key": "crazy:weekly-rise-in-google-trends-for-freight-train-delays-signal",
       "algo_type": "crazy",
-      "algo_id": "daily-jump-in-google-trends-for-warehouse-worker-strike-sign",
-      "name": "Daily Jump In Google Trends For Warehouse Worker Strike Signals Labor Stress In Logistics",
-      "family": "labor_jobs",
+      "algo_id": "weekly-rise-in-google-trends-for-freight-train-delays-signal",
+      "name": "Weekly Rise In Google Trends For Freight Train Delays Signals Logistics Bottlenecks",
+      "family": "freight_logistics",
       "status": "parked",
       "evidence_class": "pending_seed",
-      "rebalance_frequency": "daily",
-      "thesis_one_liner": "Rising strike-related searches reflect potential labor disruptions in logistics-heavy sectors.",
+      "rebalance_frequency": "weekly",
+      "thesis_one_liner": "Increased freight train delay searches indicate supply chain slowdowns impacting industrial logistics.",
       "thesis_source": "spec",
       "ytd_pct": 0.0,
-      "days_running": 139,
+      "days_running": 140,
       "beat_spy": false,
-      "spy_pct": 13.47,
-      "alpha_pct": -13.47,
+      "spy_pct": NaN,
+      "alpha_pct": NaN,
       "ret_30d_pct": 0.0,
       "spy_delta_30d_pct": -4.08,
-      "last_snapshot": "2026-08-28",
+      "last_snapshot": "2026-08-29",
       "new_algo_date": null,
       "comparator": {
         "primary_etf": "XLI",
@@ -954,24 +460,518 @@
     },
     {
       "schema_version": "v1",
-      "key": "crazy:daily-jump-in-google-trends-for-bank-account-overdraft-fees",
+      "key": "crazy:weekly-rise-in-usgs-earthquake-activity-near-major-ports-sig",
       "algo_type": "crazy",
-      "algo_id": "daily-jump-in-google-trends-for-bank-account-overdraft-fees",
-      "name": "Daily Jump In Google Trends For Bank Account Overdraft Fees",
-      "family": "consumer_stress",
+      "algo_id": "weekly-rise-in-usgs-earthquake-activity-near-major-ports-sig",
+      "name": "Weekly Rise In Usgs Earthquake Activity Near Major Ports Signals Potential Freight Disruptions",
+      "family": "freight_logistics",
+      "status": "parked",
+      "evidence_class": "pending_seed",
+      "rebalance_frequency": "weekly",
+      "thesis_one_liner": "Increased seismic activity near key ports can disrupt freight logistics and shipping throughput.",
+      "thesis_source": "spec",
+      "ytd_pct": 0.0,
+      "days_running": 140,
+      "beat_spy": false,
+      "spy_pct": NaN,
+      "alpha_pct": NaN,
+      "ret_30d_pct": 0.0,
+      "spy_delta_30d_pct": -4.08,
+      "last_snapshot": "2026-08-29",
+      "new_algo_date": null,
+      "comparator": {
+        "primary_etf": "XLI",
+        "signals": {
+          "momentum_5d": {
+            "direction": "DOWN",
+            "confidence": 0.108,
+            "return_pct": -0.54
+          },
+          "momentum_20d": {
+            "direction": "UP",
+            "confidence": 0.046,
+            "return_pct": 0.23
+          }
+        },
+        "summary": "mixed"
+      }
+    },
+    {
+      "schema_version": "v1",
+      "key": "crazy:daily-jump-in-google-trends-for-warehouse-worker-strike-sign",
+      "algo_type": "crazy",
+      "algo_id": "daily-jump-in-google-trends-for-warehouse-worker-strike-sign",
+      "name": "Daily Jump In Google Trends For Warehouse Worker Strike Signals Labor Stress In Logistics",
+      "family": "labor_jobs",
       "status": "parked",
       "evidence_class": "pending_seed",
       "rebalance_frequency": "daily",
-      "thesis_one_liner": "Spikes in overdraft fee searches signal liquidity crises and account shortfalls among consumers; precedes weakness in consumer discretionary spending and loan demand.",
+      "thesis_one_liner": "Rising strike-related searches reflect potential labor disruptions in logistics-heavy sectors.",
       "thesis_source": "spec",
       "ytd_pct": 0.0,
-      "days_running": 139,
+      "days_running": 140,
       "beat_spy": false,
-      "spy_pct": 13.47,
-      "alpha_pct": -13.47,
+      "spy_pct": NaN,
+      "alpha_pct": NaN,
       "ret_30d_pct": 0.0,
       "spy_delta_30d_pct": -4.08,
-      "last_snapshot": "2026-08-28",
+      "last_snapshot": "2026-08-29",
+      "new_algo_date": null,
+      "comparator": {
+        "primary_etf": "XLI",
+        "signals": {
+          "momentum_5d": {
+            "direction": "DOWN",
+            "confidence": 0.108,
+            "return_pct": -0.54
+          },
+          "momentum_20d": {
+            "direction": "UP",
+            "confidence": 0.046,
+            "return_pct": 0.23
+          }
+        },
+        "summary": "mixed"
+      }
+    },
+    {
+      "schema_version": "v1",
+      "key": "crazy:weekly-jump-in-google-trends-for-truck-driver-shortage-signa",
+      "algo_type": "crazy",
+      "algo_id": "weekly-jump-in-google-trends-for-truck-driver-shortage-signa",
+      "name": "Weekly Jump In Google Trends For Truck Driver Shortage Signals Labor Stress In Transportation",
+      "family": "labor_jobs",
+      "status": "parked",
+      "evidence_class": "pending_seed",
+      "rebalance_frequency": "weekly",
+      "thesis_one_liner": "Rising searches for truck driver shortage indicate labor tightness impacting freight logistics and supply chain.",
+      "thesis_source": "spec",
+      "ytd_pct": 0.0,
+      "days_running": 140,
+      "beat_spy": false,
+      "spy_pct": NaN,
+      "alpha_pct": NaN,
+      "ret_30d_pct": 0.0,
+      "spy_delta_30d_pct": -4.08,
+      "last_snapshot": "2026-08-29",
+      "new_algo_date": null,
+      "comparator": {
+        "primary_etf": "XLI",
+        "signals": {
+          "momentum_5d": {
+            "direction": "DOWN",
+            "confidence": 0.108,
+            "return_pct": -0.54
+          },
+          "momentum_20d": {
+            "direction": "UP",
+            "confidence": 0.046,
+            "return_pct": 0.23
+          }
+        },
+        "summary": "mixed"
+      }
+    },
+    {
+      "schema_version": "v1",
+      "key": "crazy:weekly-jump-in-google-trends-for-warehouse-automation-jobs-s",
+      "algo_type": "crazy",
+      "algo_id": "weekly-jump-in-google-trends-for-warehouse-automation-jobs-s",
+      "name": "Weekly Jump In Google Trends For Warehouse Automation Jobs Signals Labor Substitution Pressure",
+      "family": "labor_jobs",
+      "status": "parked",
+      "evidence_class": "pending_seed",
+      "rebalance_frequency": "weekly",
+      "thesis_one_liner": "Growing interest in warehouse automation jobs signals rising automation adoption reducing labor demand.",
+      "thesis_source": "spec",
+      "ytd_pct": 0.0,
+      "days_running": 140,
+      "beat_spy": false,
+      "spy_pct": NaN,
+      "alpha_pct": NaN,
+      "ret_30d_pct": 0.0,
+      "spy_delta_30d_pct": -4.08,
+      "last_snapshot": "2026-08-29",
+      "new_algo_date": null,
+      "comparator": {
+        "primary_etf": "XLI",
+        "signals": {
+          "momentum_5d": {
+            "direction": "DOWN",
+            "confidence": 0.108,
+            "return_pct": -0.54
+          },
+          "momentum_20d": {
+            "direction": "UP",
+            "confidence": 0.046,
+            "return_pct": 0.23
+          }
+        },
+        "summary": "mixed"
+      }
+    },
+    {
+      "schema_version": "v1",
+      "key": "crazy:weekly-rss-count-spike-on-warehouse-worker-injury-reports",
+      "algo_type": "crazy",
+      "algo_id": "weekly-rss-count-spike-on-warehouse-worker-injury-reports",
+      "name": "Weekly Rss Count Spike On Warehouse Worker Injury Reports",
+      "family": "labor_jobs",
+      "status": "parked",
+      "evidence_class": "pending_seed",
+      "rebalance_frequency": "weekly",
+      "thesis_one_liner": "Spikes in reported warehouse worker injuries signal labor market stress, wage pressure, and operational cost escalation in logistics; presages margin compression.",
+      "thesis_source": "spec",
+      "ytd_pct": 0.0,
+      "days_running": 140,
+      "beat_spy": false,
+      "spy_pct": NaN,
+      "alpha_pct": NaN,
+      "ret_30d_pct": 0.0,
+      "spy_delta_30d_pct": -4.08,
+      "last_snapshot": "2026-08-29",
+      "new_algo_date": null,
+      "comparator": {
+        "primary_etf": "XLI",
+        "signals": {
+          "momentum_5d": {
+            "direction": "DOWN",
+            "confidence": 0.108,
+            "return_pct": -0.54
+          },
+          "momentum_20d": {
+            "direction": "UP",
+            "confidence": 0.046,
+            "return_pct": 0.23
+          }
+        },
+        "summary": "mixed"
+      }
+    },
+    {
+      "schema_version": "v1",
+      "key": "crazy:weekly-google-trends-surge-in-pest-control-searches",
+      "algo_type": "crazy",
+      "algo_id": "weekly-google-trends-surge-in-pest-control-searches",
+      "name": "Weekly Google Trends Surge In Pest Control Searches",
+      "family": "local_economy_weirdness",
+      "status": "parked",
+      "evidence_class": "pending_seed",
+      "rebalance_frequency": "weekly",
+      "thesis_one_liner": "Spikes in pest control searches correlate with seasonal property stress and localized economic downturn; homeowners prioritize pest mitigation when neighborhood conditions deteriorate or rental markets tighten.",
+      "thesis_source": "spec",
+      "ytd_pct": 0.0,
+      "days_running": 140,
+      "beat_spy": false,
+      "spy_pct": NaN,
+      "alpha_pct": NaN,
+      "ret_30d_pct": 0.0,
+      "spy_delta_30d_pct": -4.08,
+      "last_snapshot": "2026-08-29",
+      "new_algo_date": null,
+      "comparator": {
+        "primary_etf": "XLRE",
+        "signals": {
+          "momentum_5d": {
+            "direction": "DOWN",
+            "confidence": 0.186,
+            "return_pct": -0.932
+          },
+          "momentum_20d": {
+            "direction": "DOWN",
+            "confidence": 0.283,
+            "return_pct": -1.413
+          }
+        },
+        "summary": "mixed"
+      }
+    },
+    {
+      "schema_version": "v1",
+      "key": "crazy:weekly-jump-in-google-trends-for-home-moving-truck-rental-de",
+      "algo_type": "crazy",
+      "algo_id": "weekly-jump-in-google-trends-for-home-moving-truck-rental-de",
+      "name": "Weekly Jump In Google Trends For Home Moving Truck Rental Demand Signals Housing Market Activity",
+      "family": "local_economy_weirdness",
+      "status": "parked",
+      "evidence_class": "pending_seed",
+      "rebalance_frequency": "weekly",
+      "thesis_one_liner": "Higher demand for moving truck rentals indicates rising residential relocations and housing market activity.",
+      "thesis_source": "spec",
+      "ytd_pct": 0.0,
+      "days_running": 140,
+      "beat_spy": false,
+      "spy_pct": NaN,
+      "alpha_pct": NaN,
+      "ret_30d_pct": 0.0,
+      "spy_delta_30d_pct": -4.08,
+      "last_snapshot": "2026-08-29",
+      "new_algo_date": null,
+      "comparator": {
+        "primary_etf": "XLRE",
+        "signals": {
+          "momentum_5d": {
+            "direction": "DOWN",
+            "confidence": 0.186,
+            "return_pct": -0.932
+          },
+          "momentum_20d": {
+            "direction": "DOWN",
+            "confidence": 0.283,
+            "return_pct": -1.413
+          }
+        },
+        "summary": "mixed"
+      }
+    },
+    {
+      "schema_version": "v1",
+      "key": "crazy:daily-stock-price-volatility-spike-in-xlu-relative-to-spy",
+      "algo_type": "crazy",
+      "algo_id": "daily-stock-price-volatility-spike-in-xlu-relative-to-spy",
+      "name": "Daily Stock Price Volatility Spike In Xlu Relative To Spy",
+      "family": "macro_input_pressure",
+      "status": "parked",
+      "evidence_class": "pending_seed",
+      "rebalance_frequency": "daily",
+      "thesis_one_liner": "Utilities volatility spikes when energy cost shocks or grid stress events create input price uncertainty; relative volatility surge precedes defensive sector rotation.",
+      "thesis_source": "spec",
+      "ytd_pct": 0.0,
+      "days_running": 140,
+      "beat_spy": false,
+      "spy_pct": NaN,
+      "alpha_pct": NaN,
+      "ret_30d_pct": 0.0,
+      "spy_delta_30d_pct": -4.08,
+      "last_snapshot": "2026-08-29",
+      "new_algo_date": null,
+      "comparator": {
+        "primary_etf": "XLU",
+        "signals": {
+          "momentum_5d": {
+            "direction": "DOWN",
+            "confidence": 0.27,
+            "return_pct": -1.348
+          },
+          "momentum_20d": {
+            "direction": "DOWN",
+            "confidence": 0.663,
+            "return_pct": -3.314
+          }
+        },
+        "summary": "mixed"
+      }
+    },
+    {
+      "schema_version": "v1",
+      "key": "crazy:weekly-rise-in-google-trends-for-solar-panel-installation-de",
+      "algo_type": "crazy",
+      "algo_id": "weekly-rise-in-google-trends-for-solar-panel-installation-de",
+      "name": "Weekly Rise In Google Trends For Solar Panel Installation Delay Signals Supply Chain Issues In Green Energy",
+      "family": "macro_input_pressure",
+      "status": "parked",
+      "evidence_class": "pending_seed",
+      "rebalance_frequency": "weekly",
+      "thesis_one_liner": "Growing searches for solar installation delays indicate supply chain bottlenecks impacting green energy demand.",
+      "thesis_source": "spec",
+      "ytd_pct": 0.0,
+      "days_running": 140,
+      "beat_spy": false,
+      "spy_pct": NaN,
+      "alpha_pct": NaN,
+      "ret_30d_pct": 0.0,
+      "spy_delta_30d_pct": -4.08,
+      "last_snapshot": "2026-08-29",
+      "new_algo_date": null,
+      "comparator": {
+        "primary_etf": "XLE",
+        "signals": {
+          "momentum_5d": {
+            "direction": "DOWN",
+            "confidence": 0.458,
+            "return_pct": -2.29
+          },
+          "momentum_20d": {
+            "direction": "UP",
+            "confidence": 1.0,
+            "return_pct": 5.648
+          }
+        },
+        "summary": "mixed"
+      }
+    },
+    {
+      "schema_version": "v1",
+      "key": "crazy:xlb-daily-volatility-contraction-breakout",
+      "algo_type": "crazy",
+      "algo_id": "xlb-daily-volatility-contraction-breakout",
+      "name": "Xlb Daily Volatility Contraction Breakout",
+      "family": "macro_input_pressure",
+      "status": "parked",
+      "evidence_class": "pending_seed",
+      "rebalance_frequency": "daily",
+      "thesis_one_liner": "Periods of low volatility contraction in materials ETFs often precede explosive directional moves.",
+      "thesis_source": "spec",
+      "ytd_pct": 0.0,
+      "days_running": 173,
+      "beat_spy": false,
+      "spy_pct": NaN,
+      "alpha_pct": NaN,
+      "ret_30d_pct": 0.0,
+      "spy_delta_30d_pct": -4.08,
+      "last_snapshot": "2026-08-29",
+      "new_algo_date": null,
+      "comparator": {
+        "primary_etf": "XLB",
+        "signals": {
+          "momentum_5d": {
+            "direction": "UP",
+            "confidence": 0.309,
+            "return_pct": 1.545
+          },
+          "momentum_20d": {
+            "direction": "UP",
+            "confidence": 0.616,
+            "return_pct": 3.079
+          }
+        },
+        "summary": "both_up"
+      }
+    },
+    {
+      "schema_version": "v1",
+      "key": "crazy:energy-sector-sudden-weekly-volatility-spike",
+      "algo_type": "crazy",
+      "algo_id": "energy-sector-sudden-weekly-volatility-spike",
+      "name": "Energy Sector Sudden Weekly Volatility Spike",
+      "family": "political_insider_filing",
+      "status": "parked",
+      "evidence_class": "pending_seed",
+      "rebalance_frequency": "weekly",
+      "thesis_one_liner": "A 50%+ weekly spike in realized volatility often precedes strong directional moves in energy stocks.",
+      "thesis_source": "spec",
+      "ytd_pct": 0.0,
+      "days_running": 168,
+      "beat_spy": false,
+      "spy_pct": NaN,
+      "alpha_pct": NaN,
+      "ret_30d_pct": 0.0,
+      "spy_delta_30d_pct": -4.08,
+      "last_snapshot": "2026-08-29",
+      "new_algo_date": null,
+      "comparator": {
+        "primary_etf": "XLE",
+        "signals": {
+          "momentum_5d": {
+            "direction": "DOWN",
+            "confidence": 0.458,
+            "return_pct": -2.29
+          },
+          "momentum_20d": {
+            "direction": "UP",
+            "confidence": 1.0,
+            "return_pct": 5.648
+          }
+        },
+        "summary": "mixed"
+      }
+    },
+    {
+      "schema_version": "v1",
+      "key": "crazy:materials-sector-weekly-volatility-contraction-breakout",
+      "algo_type": "crazy",
+      "algo_id": "materials-sector-weekly-volatility-contraction-breakout",
+      "name": "Materials Sector Weekly Volatility Contraction Breakout",
+      "family": "political_insider_filing",
+      "status": "parked",
+      "evidence_class": "pending_seed",
+      "rebalance_frequency": "weekly",
+      "thesis_one_liner": "When weekly realized volatility contracts below 50% of its 20-week average, a breakout in price often follows.",
+      "thesis_source": "spec",
+      "ytd_pct": 0.0,
+      "days_running": 168,
+      "beat_spy": false,
+      "spy_pct": NaN,
+      "alpha_pct": NaN,
+      "ret_30d_pct": 0.0,
+      "spy_delta_30d_pct": -4.08,
+      "last_snapshot": "2026-08-29",
+      "new_algo_date": null,
+      "comparator": {
+        "primary_etf": "XLB",
+        "signals": {
+          "momentum_5d": {
+            "direction": "UP",
+            "confidence": 0.309,
+            "return_pct": 1.545
+          },
+          "momentum_20d": {
+            "direction": "UP",
+            "confidence": 0.616,
+            "return_pct": 3.079
+          }
+        },
+        "summary": "both_up"
+      }
+    },
+    {
+      "schema_version": "v1",
+      "key": "crazy:weekly-ev-charger-expansion-in-underserved-regions",
+      "algo_type": "crazy",
+      "algo_id": "weekly-ev-charger-expansion-in-underserved-regions",
+      "name": "Weekly Ev Charger Expansion In Underserved Regions",
+      "family": "travel_mobility",
+      "status": "parked",
+      "evidence_class": "pending_seed",
+      "rebalance_frequency": "weekly",
+      "thesis_one_liner": "Acceleration in charger deployment outside major metro areas signals government subsidy stimulation and broadening EV adoption; correlates with XLE weakness and XLK strength.",
+      "thesis_source": "spec",
+      "ytd_pct": 0.0,
+      "days_running": 140,
+      "beat_spy": false,
+      "spy_pct": NaN,
+      "alpha_pct": NaN,
+      "ret_30d_pct": 0.0,
+      "spy_delta_30d_pct": -4.08,
+      "last_snapshot": "2026-08-29",
+      "new_algo_date": null,
+      "comparator": {
+        "primary_etf": "XLE",
+        "signals": {
+          "momentum_5d": {
+            "direction": "DOWN",
+            "confidence": 0.458,
+            "return_pct": -2.29
+          },
+          "momentum_20d": {
+            "direction": "UP",
+            "confidence": 1.0,
+            "return_pct": 5.648
+          }
+        },
+        "summary": "mixed"
+      }
+    },
+    {
+      "schema_version": "v1",
+      "key": "crazy:weekly-surge-in-google-trends-for-last-minute-flight-deals-s",
+      "algo_type": "crazy",
+      "algo_id": "weekly-surge-in-google-trends-for-last-minute-flight-deals-s",
+      "name": "Weekly Surge In Google Trends For Last Minute Flight Deals Signals Travel Demand Rebound",
+      "family": "travel_mobility",
+      "status": "parked",
+      "evidence_class": "pending_seed",
+      "rebalance_frequency": "weekly",
+      "thesis_one_liner": "A spike in last minute flight deal searches indicates spontaneous travel intentions increasing soon.",
+      "thesis_source": "spec",
+      "ytd_pct": 0.0,
+      "days_running": 140,
+      "beat_spy": false,
+      "spy_pct": NaN,
+      "alpha_pct": NaN,
+      "ret_30d_pct": 0.0,
+      "spy_delta_30d_pct": -4.08,
+      "last_snapshot": "2026-08-29",
       "new_algo_date": null,
       "comparator": {
         "primary_etf": "XLY",

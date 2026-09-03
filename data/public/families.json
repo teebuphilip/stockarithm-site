@@ -1,17 +1,17 @@
 {
   "schema_version": "v1",
-  "generated_at": "2026-09-02T00:48:57Z",
+  "generated_at": "2026-09-03T00:54:08Z",
   "families": {
     "attention_sentiment": {
       "family": "attention_sentiment",
-      "count": 101,
+      "count": 102,
       "by_status": {
-        "live_only": 53,
+        "live_only": 54,
         "parked": 4,
         "sandbox": 44
       },
       "by_evidence_class": {
-        "live_receipts_only": 53,
+        "live_receipts_only": 54,
         "needs_history": 44,
         "pending_seed": 4
       },
@@ -29,29 +29,29 @@
           "thesis_one_liner": "Weekly Google Trends index for EV purchase intent searches drops >40% below 20-week moving average, signaling consumer demand cliff.",
           "thesis_source": "spec",
           "ytd_pct": 0.04,
-          "days_running": 79,
+          "days_running": 80,
           "beat_spy": false,
-          "spy_pct": 12.1,
-          "alpha_pct": -12.06,
+          "spy_pct": NaN,
+          "alpha_pct": NaN,
           "ret_30d_pct": 0.0,
           "spy_delta_30d_pct": -0.54,
-          "last_snapshot": "2026-09-02",
+          "last_snapshot": "2026-09-03",
           "new_algo_date": null,
           "comparator": {
             "primary_etf": "XLK",
             "signals": {
               "momentum_5d": {
                 "direction": "UP",
-                "confidence": 0.399,
-                "return_pct": 1.994
+                "confidence": 0.209,
+                "return_pct": 1.045
               },
               "momentum_20d": {
-                "direction": "UP",
-                "confidence": 0.629,
-                "return_pct": 3.145
+                "direction": "DOWN",
+                "confidence": 0.349,
+                "return_pct": -1.744
               }
             },
-            "summary": "both_up"
+            "summary": "mixed"
           }
         },
         {
@@ -67,64 +67,64 @@
           "thesis_one_liner": "Spikes in Google search interest for enterprise cybersecurity and zero-trust architecture precede major cybersecurity software vendor earnings beats and capex guidance raises.",
           "thesis_source": "spec",
           "ytd_pct": 0.03,
-          "days_running": 81,
+          "days_running": 82,
           "beat_spy": false,
-          "spy_pct": 12.1,
-          "alpha_pct": -12.07,
+          "spy_pct": NaN,
+          "alpha_pct": NaN,
           "ret_30d_pct": 0.0,
           "spy_delta_30d_pct": -0.54,
-          "last_snapshot": "2026-09-02",
+          "last_snapshot": "2026-09-03",
           "new_algo_date": null,
           "comparator": {
             "primary_etf": "XLK",
             "signals": {
               "momentum_5d": {
                 "direction": "UP",
-                "confidence": 0.399,
-                "return_pct": 1.994
+                "confidence": 0.209,
+                "return_pct": 1.045
               },
               "momentum_20d": {
-                "direction": "UP",
-                "confidence": 0.629,
-                "return_pct": 3.145
+                "direction": "DOWN",
+                "confidence": 0.349,
+                "return_pct": -1.744
               }
             },
-            "summary": "both_up"
+            "summary": "mixed"
           }
         },
         {
           "schema_version": "v1",
-          "key": "crazy:biotech-drug-approval-sentiment-spike-via-news-rss-signals-h",
+          "key": "crazy:ai-chatbot-hype-surge-triggers-tech-sector-rally",
           "algo_type": "crazy",
-          "algo_id": "biotech-drug-approval-sentiment-spike-via-news-rss-signals-h",
-          "name": "Biotech Drug Approval Sentiment Spike Via News Rss Signals Healthcare Rally",
+          "algo_id": "ai-chatbot-hype-surge-triggers-tech-sector-rally",
+          "name": "Ai Chatbot Hype Surge Triggers Tech Sector Rally",
           "family": "attention_sentiment",
-          "status": "live_only",
-          "evidence_class": "live_receipts_only",
-          "rebalance_frequency": "daily",
-          "thesis_one_liner": "Daily spikes in news mentions of drug approvals and trial successes (>50% rise in RSS counts) correlate with positive biotech sentiment shifts.",
+          "status": "sandbox",
+          "evidence_class": "needs_history",
+          "rebalance_frequency": "weekly",
+          "thesis_one_liner": "Spikes in AI/chatbot searches correlate with retail investor attention shifts toward tech and AI-exposed companies.",
           "thesis_source": "spec",
-          "ytd_pct": -0.0,
-          "days_running": 73,
+          "ytd_pct": 0.0,
+          "days_running": 115,
           "beat_spy": false,
-          "spy_pct": 12.1,
-          "alpha_pct": -12.1,
-          "ret_30d_pct": -0.0,
+          "spy_pct": NaN,
+          "alpha_pct": NaN,
+          "ret_30d_pct": 0.0,
           "spy_delta_30d_pct": -0.54,
-          "last_snapshot": "2026-09-02",
+          "last_snapshot": "2026-09-03",
           "new_algo_date": null,
           "comparator": {
-            "primary_etf": "XLV",
+            "primary_etf": "XLK",
             "signals": {
               "momentum_5d": {
-                "direction": "DOWN",
-                "confidence": 0.413,
-                "return_pct": -2.065
+                "direction": "UP",
+                "confidence": 0.209,
+                "return_pct": 1.045
               },
               "momentum_20d": {
-                "direction": "UP",
-                "confidence": 1.0,
-                "return_pct": 5.904
+                "direction": "DOWN",
+                "confidence": 0.349,
+                "return_pct": -1.744
               }
             },
             "summary": "mixed"
@@ -143,13 +143,13 @@
           "thesis_one_liner": "A surge in layoff news increases market risk perception, pressuring financial stocks.",
           "thesis_source": "spec",
           "ytd_pct": 0.0,
-          "days_running": 89,
+          "days_running": 90,
           "beat_spy": false,
-          "spy_pct": 12.1,
-          "alpha_pct": -12.1,
+          "spy_pct": NaN,
+          "alpha_pct": NaN,
           "ret_30d_pct": 0.0,
           "spy_delta_30d_pct": -0.54,
-          "last_snapshot": "2026-09-02",
+          "last_snapshot": "2026-09-03",
           "new_algo_date": null,
           "comparator": {
             "primary_etf": "XLF",
@@ -170,40 +170,40 @@
         },
         {
           "schema_version": "v1",
-          "key": "crazy:ai-chatbot-hype-surge-triggers-tech-sector-rally",
+          "key": "crazy:biotech-drug-approval-sentiment-spike-via-news-rss-signals-h",
           "algo_type": "crazy",
-          "algo_id": "ai-chatbot-hype-surge-triggers-tech-sector-rally",
-          "name": "Ai Chatbot Hype Surge Triggers Tech Sector Rally",
+          "algo_id": "biotech-drug-approval-sentiment-spike-via-news-rss-signals-h",
+          "name": "Biotech Drug Approval Sentiment Spike Via News Rss Signals Healthcare Rally",
           "family": "attention_sentiment",
-          "status": "sandbox",
-          "evidence_class": "needs_history",
-          "rebalance_frequency": "weekly",
-          "thesis_one_liner": "Spikes in AI/chatbot searches correlate with retail investor attention shifts toward tech and AI-exposed companies.",
+          "status": "live_only",
+          "evidence_class": "live_receipts_only",
+          "rebalance_frequency": "daily",
+          "thesis_one_liner": "Daily spikes in news mentions of drug approvals and trial successes (>50% rise in RSS counts) correlate with positive biotech sentiment shifts.",
           "thesis_source": "spec",
-          "ytd_pct": 0.0,
-          "days_running": 114,
+          "ytd_pct": -0.0,
+          "days_running": 74,
           "beat_spy": false,
-          "spy_pct": 12.1,
-          "alpha_pct": -12.1,
-          "ret_30d_pct": 0.0,
+          "spy_pct": NaN,
+          "alpha_pct": NaN,
+          "ret_30d_pct": -0.0,
           "spy_delta_30d_pct": -0.54,
-          "last_snapshot": "2026-09-02",
+          "last_snapshot": "2026-09-03",
           "new_algo_date": null,
           "comparator": {
-            "primary_etf": "XLK",
+            "primary_etf": "XLV",
             "signals": {
               "momentum_5d": {
-                "direction": "UP",
-                "confidence": 0.399,
-                "return_pct": 1.994
+                "direction": "DOWN",
+                "confidence": 0.413,
+                "return_pct": -2.065
               },
               "momentum_20d": {
                 "direction": "UP",
-                "confidence": 0.629,
-                "return_pct": 3.145
+                "confidence": 1.0,
+                "return_pct": 5.904
               }
             },
-            "summary": "both_up"
+            "summary": "mixed"
           }
         }
       ]
@@ -237,13 +237,13 @@
           "thesis_one_liner": "Retail Sales Momentum tests whether consumer behavior can reveal consumer stress or demand rotation before it shows up in sector performance.",
           "thesis_source": "derived",
           "ytd_pct": 1.72,
-          "days_running": 179,
+          "days_running": 180,
           "beat_spy": false,
-          "spy_pct": 12.1,
-          "alpha_pct": -10.38,
-          "ret_30d_pct": -0.17,
-          "spy_delta_30d_pct": -0.72,
-          "last_snapshot": "2026-09-02",
+          "spy_pct": NaN,
+          "alpha_pct": NaN,
+          "ret_30d_pct": -1.86,
+          "spy_delta_30d_pct": -2.41,
+          "last_snapshot": "2026-09-03",
           "new_algo_date": null,
           "comparator": null
         },
@@ -260,13 +260,13 @@
           "thesis_one_liner": "Increasing concern over food price inflation signals stress on consumers and rotation into defensive staples.",
           "thesis_source": "spec",
           "ytd_pct": 0.06,
-          "days_running": 67,
+          "days_running": 68,
           "beat_spy": false,
-          "spy_pct": 12.1,
-          "alpha_pct": -12.04,
+          "spy_pct": NaN,
+          "alpha_pct": NaN,
           "ret_30d_pct": 0.0,
           "spy_delta_30d_pct": -0.54,
-          "last_snapshot": "2026-09-02",
+          "last_snapshot": "2026-09-03",
           "new_algo_date": null,
           "comparator": {
             "primary_etf": "XLP",
@@ -277,9 +277,9 @@
                 "return_pct": -1.468
               },
               "momentum_20d": {
-                "direction": "UP",
-                "confidence": 0.092,
-                "return_pct": 0.46
+                "direction": "DOWN",
+                "confidence": 0.028,
+                "return_pct": -0.141
               }
             },
             "summary": "mixed"
@@ -298,13 +298,13 @@
           "thesis_one_liner": "Increased emergency dental queries indicate rising consumer health emergencies and cost stress.",
           "thesis_source": "spec",
           "ytd_pct": 0.05,
-          "days_running": 151,
+          "days_running": 152,
           "beat_spy": false,
-          "spy_pct": 12.1,
-          "alpha_pct": -12.04,
+          "spy_pct": NaN,
+          "alpha_pct": NaN,
           "ret_30d_pct": 0.0,
           "spy_delta_30d_pct": -0.54,
-          "last_snapshot": "2026-09-02",
+          "last_snapshot": "2026-09-03",
           "new_algo_date": null,
           "comparator": {
             "primary_etf": "XLV",
@@ -336,13 +336,13 @@
           "thesis_one_liner": "Rising search interest in temporary layoffs presages consumer income uncertainty.",
           "thesis_source": "spec",
           "ytd_pct": 0.05,
-          "days_running": 70,
+          "days_running": 71,
           "beat_spy": false,
-          "spy_pct": 12.1,
-          "alpha_pct": -12.05,
+          "spy_pct": NaN,
+          "alpha_pct": NaN,
           "ret_30d_pct": 0.0,
           "spy_delta_30d_pct": -0.54,
-          "last_snapshot": "2026-09-02",
+          "last_snapshot": "2026-09-03",
           "new_algo_date": null,
           "comparator": {
             "primary_etf": "XLP",
@@ -353,9 +353,9 @@
                 "return_pct": -1.468
               },
               "momentum_20d": {
-                "direction": "UP",
-                "confidence": 0.092,
-                "return_pct": 0.46
+                "direction": "DOWN",
+                "confidence": 0.028,
+                "return_pct": -0.141
               }
             },
             "summary": "mixed"
@@ -374,26 +374,26 @@
           "thesis_one_liner": "Spike in searches for used car pricing signals consumer anxiety about vehicle affordability and resale values, often preceding used car market weakness.",
           "thesis_source": "spec",
           "ytd_pct": 0.04,
-          "days_running": 159,
+          "days_running": 160,
           "beat_spy": false,
-          "spy_pct": 12.1,
-          "alpha_pct": -12.06,
+          "spy_pct": NaN,
+          "alpha_pct": NaN,
           "ret_30d_pct": 0.0,
           "spy_delta_30d_pct": -0.54,
-          "last_snapshot": "2026-09-02",
+          "last_snapshot": "2026-09-03",
           "new_algo_date": null,
           "comparator": {
             "primary_etf": "XLY",
             "signals": {
               "momentum_5d": {
                 "direction": "DOWN",
-                "confidence": 0.627,
-                "return_pct": -3.136
+                "confidence": 0.57,
+                "return_pct": -2.849
               },
               "momentum_20d": {
                 "direction": "DOWN",
-                "confidence": 0.612,
-                "return_pct": -3.062
+                "confidence": 0.626,
+                "return_pct": -3.128
               }
             },
             "summary": "mixed"
@@ -425,13 +425,13 @@
           "thesis_one_liner": "Algo Biscotti (Unconditional Loyalty) tests whether systematic price rotation can capture persistent sector momentum better than passive market exposure.",
           "thesis_source": "derived",
           "ytd_pct": 22.12,
-          "days_running": 180,
-          "beat_spy": true,
-          "spy_pct": 12.1,
-          "alpha_pct": 10.03,
-          "ret_30d_pct": 10.17,
-          "spy_delta_30d_pct": 9.63,
-          "last_snapshot": "2026-09-02",
+          "days_running": 181,
+          "beat_spy": false,
+          "spy_pct": NaN,
+          "alpha_pct": NaN,
+          "ret_30d_pct": 10.68,
+          "spy_delta_30d_pct": 10.14,
+          "last_snapshot": "2026-09-03",
           "new_algo_date": null,
           "comparator": null
         },
@@ -448,13 +448,13 @@
           "thesis_one_liner": "Antonacci Dual Momentum Sector Rotation tests whether systematic price rotation can capture persistent sector momentum better than passive market exposure.",
           "thesis_source": "derived",
           "ytd_pct": 8.06,
-          "days_running": 180,
+          "days_running": 181,
           "beat_spy": false,
-          "spy_pct": 12.1,
-          "alpha_pct": -4.04,
-          "ret_30d_pct": 2.13,
-          "spy_delta_30d_pct": 1.58,
-          "last_snapshot": "2026-09-02",
+          "spy_pct": NaN,
+          "alpha_pct": NaN,
+          "ret_30d_pct": 0.65,
+          "spy_delta_30d_pct": 0.11,
+          "last_snapshot": "2026-09-03",
           "new_algo_date": null,
           "comparator": null
         },
@@ -471,13 +471,13 @@
           "thesis_one_liner": "Algo Baileymol (Chaos Monger) tests whether systematic price rotation can capture persistent sector momentum better than passive market exposure.",
           "thesis_source": "derived",
           "ytd_pct": 5.51,
-          "days_running": 180,
+          "days_running": 181,
           "beat_spy": false,
-          "spy_pct": 12.1,
-          "alpha_pct": -6.59,
-          "ret_30d_pct": 0.39,
-          "spy_delta_30d_pct": -0.15,
-          "last_snapshot": "2026-09-02",
+          "spy_pct": NaN,
+          "alpha_pct": NaN,
+          "ret_30d_pct": -1.27,
+          "spy_delta_30d_pct": -1.81,
+          "last_snapshot": "2026-09-03",
           "new_algo_date": null,
           "comparator": null
         },
@@ -494,13 +494,13 @@
           "thesis_one_liner": "Quantified Simple Monthly Rotation tests whether systematic price rotation can capture persistent sector momentum better than passive market exposure.",
           "thesis_source": "derived",
           "ytd_pct": 4.53,
-          "days_running": 180,
+          "days_running": 181,
           "beat_spy": false,
-          "spy_pct": 12.1,
-          "alpha_pct": -7.57,
-          "ret_30d_pct": -5.69,
-          "spy_delta_30d_pct": -6.24,
-          "last_snapshot": "2026-09-02",
+          "spy_pct": NaN,
+          "alpha_pct": NaN,
+          "ret_30d_pct": -7.33,
+          "spy_delta_30d_pct": -7.88,
+          "last_snapshot": "2026-09-03",
           "new_algo_date": null,
           "comparator": null
         },
@@ -517,13 +517,13 @@
           "thesis_one_liner": "Faber Momentum Rotation tests whether systematic price rotation can capture persistent sector momentum better than passive market exposure.",
           "thesis_source": "derived",
           "ytd_pct": 1.33,
-          "days_running": 180,
+          "days_running": 181,
           "beat_spy": false,
-          "spy_pct": 12.1,
-          "alpha_pct": -10.76,
-          "ret_30d_pct": -0.92,
-          "spy_delta_30d_pct": -1.46,
-          "last_snapshot": "2026-09-02",
+          "spy_pct": NaN,
+          "alpha_pct": NaN,
+          "ret_30d_pct": -3.04,
+          "spy_delta_30d_pct": -3.59,
+          "last_snapshot": "2026-09-03",
           "new_algo_date": null,
           "comparator": null
         }
@@ -556,13 +556,13 @@
           "thesis_one_liner": "Truck Tonnage Index tests whether logistics activity can reveal real-economy demand shifts before they appear in sector ETF momentum.",
           "thesis_source": "derived",
           "ytd_pct": 0.15,
-          "days_running": 179,
+          "days_running": 180,
           "beat_spy": false,
-          "spy_pct": 12.1,
-          "alpha_pct": -11.95,
-          "ret_30d_pct": -1.95,
-          "spy_delta_30d_pct": -2.49,
-          "last_snapshot": "2026-09-02",
+          "spy_pct": NaN,
+          "alpha_pct": NaN,
+          "ret_30d_pct": -3.2,
+          "spy_delta_30d_pct": -3.75,
+          "last_snapshot": "2026-09-03",
           "new_algo_date": null,
           "comparator": null
         },
@@ -579,26 +579,26 @@
           "thesis_one_liner": "A sudden increase in earthquake tremors near major freight hubs can disrupt logistics and shipping routes, impacting industrial production.",
           "thesis_source": "spec",
           "ytd_pct": 0.04,
-          "days_running": 146,
+          "days_running": 147,
           "beat_spy": false,
-          "spy_pct": 12.1,
-          "alpha_pct": -12.06,
+          "spy_pct": NaN,
+          "alpha_pct": NaN,
           "ret_30d_pct": 0.0,
           "spy_delta_30d_pct": -0.54,
-          "last_snapshot": "2026-09-02",
+          "last_snapshot": "2026-09-03",
           "new_algo_date": null,
           "comparator": {
             "primary_etf": "XLI",
             "signals": {
               "momentum_5d": {
                 "direction": "DOWN",
-                "confidence": 0.701,
-                "return_pct": -3.503
+                "confidence": 0.636,
+                "return_pct": -3.178
               },
               "momentum_20d": {
                 "direction": "DOWN",
                 "confidence": 1.0,
-                "return_pct": -5.694
+                "return_pct": -7.334
               }
             },
             "summary": "mixed"
@@ -617,64 +617,26 @@
           "thesis_one_liner": "A sudden increase in earthquakes near key port hubs can disrupt freight logistics and container throughput.",
           "thesis_source": "spec",
           "ytd_pct": 0.03,
-          "days_running": 98,
+          "days_running": 99,
           "beat_spy": false,
-          "spy_pct": 12.1,
-          "alpha_pct": -12.07,
+          "spy_pct": NaN,
+          "alpha_pct": NaN,
           "ret_30d_pct": 0.0,
           "spy_delta_30d_pct": -0.54,
-          "last_snapshot": "2026-09-02",
+          "last_snapshot": "2026-09-03",
           "new_algo_date": null,
           "comparator": {
             "primary_etf": "XLI",
             "signals": {
               "momentum_5d": {
                 "direction": "DOWN",
-                "confidence": 0.701,
-                "return_pct": -3.503
+                "confidence": 0.636,
+                "return_pct": -3.178
               },
               "momentum_20d": {
                 "direction": "DOWN",
                 "confidence": 1.0,
-                "return_pct": -5.694
-              }
-            },
-            "summary": "mixed"
-          }
-        },
-        {
-          "schema_version": "v1",
-          "key": "crazy:commercial-truck-auction-volume-rss-surge",
-          "algo_type": "crazy",
-          "algo_id": "commercial-truck-auction-volume-rss-surge",
-          "name": "Commercial Truck Auction Volume Rss Surge",
-          "family": "freight_logistics",
-          "status": "sandbox",
-          "evidence_class": "needs_history",
-          "rebalance_frequency": "weekly",
-          "thesis_one_liner": "Surges in commercial truck auction volume signal fleet downsizing, equipment depreciation pressure, and logistics contraction.",
-          "thesis_source": "spec",
-          "ytd_pct": 0.0,
-          "days_running": 115,
-          "beat_spy": false,
-          "spy_pct": 12.1,
-          "alpha_pct": -12.1,
-          "ret_30d_pct": 0.0,
-          "spy_delta_30d_pct": -0.54,
-          "last_snapshot": "2026-09-02",
-          "new_algo_date": null,
-          "comparator": {
-            "primary_etf": "XLI",
-            "signals": {
-              "momentum_5d": {
-                "direction": "DOWN",
-                "confidence": 0.701,
-                "return_pct": -3.503
-              },
-              "momentum_20d": {
-                "direction": "DOWN",
-                "confidence": 1.0,
-                "return_pct": -5.694
+                "return_pct": -7.334
               }
             },
             "summary": "mixed"
@@ -693,29 +655,67 @@
           "thesis_one_liner": "Cardboard Box Index tests whether source data can reveal real-economy demand shifts before they appear in sector ETF momentum.",
           "thesis_source": "derived",
           "ytd_pct": 0.0,
-          "days_running": 179,
+          "days_running": 180,
           "beat_spy": false,
-          "spy_pct": 12.1,
-          "alpha_pct": -12.1,
+          "spy_pct": NaN,
+          "alpha_pct": NaN,
           "ret_30d_pct": 0.0,
           "spy_delta_30d_pct": -0.54,
-          "last_snapshot": "2026-09-02",
+          "last_snapshot": "2026-09-03",
           "new_algo_date": null,
           "comparator": null
+        },
+        {
+          "schema_version": "v1",
+          "key": "crazy:commercial-truck-auction-volume-rss-surge",
+          "algo_type": "crazy",
+          "algo_id": "commercial-truck-auction-volume-rss-surge",
+          "name": "Commercial Truck Auction Volume Rss Surge",
+          "family": "freight_logistics",
+          "status": "sandbox",
+          "evidence_class": "needs_history",
+          "rebalance_frequency": "weekly",
+          "thesis_one_liner": "Surges in commercial truck auction volume signal fleet downsizing, equipment depreciation pressure, and logistics contraction.",
+          "thesis_source": "spec",
+          "ytd_pct": 0.0,
+          "days_running": 116,
+          "beat_spy": false,
+          "spy_pct": NaN,
+          "alpha_pct": NaN,
+          "ret_30d_pct": 0.0,
+          "spy_delta_30d_pct": -0.54,
+          "last_snapshot": "2026-09-03",
+          "new_algo_date": null,
+          "comparator": {
+            "primary_etf": "XLI",
+            "signals": {
+              "momentum_5d": {
+                "direction": "DOWN",
+                "confidence": 0.636,
+                "return_pct": -3.178
+              },
+              "momentum_20d": {
+                "direction": "DOWN",
+                "confidence": 1.0,
+                "return_pct": -7.334
+              }
+            },
+            "summary": "mixed"
+          }
         }
       ]
     },
     "labor_jobs": {
       "family": "labor_jobs",
-      "count": 101,
+      "count": 102,
       "by_status": {
         "live_only": 48,
         "parked": 4,
-        "sandbox": 49
+        "sandbox": 50
       },
       "by_evidence_class": {
         "live_receipts_only": 48,
-        "needs_history": 49,
+        "needs_history": 50,
         "pending_seed": 4
       },
       "leaders": [
@@ -732,13 +732,13 @@
           "thesis_one_liner": "Job Posting Acceleration tests whether labor-market activity can flag hiring pressure, layoffs, or wage-cycle shifts before sector momentum adjusts.",
           "thesis_source": "derived",
           "ytd_pct": 0.43,
-          "days_running": 179,
+          "days_running": 180,
           "beat_spy": false,
-          "spy_pct": 12.1,
-          "alpha_pct": -11.67,
-          "ret_30d_pct": -0.16,
-          "spy_delta_30d_pct": -0.7,
-          "last_snapshot": "2026-09-02",
+          "spy_pct": NaN,
+          "alpha_pct": NaN,
+          "ret_30d_pct": -1.85,
+          "spy_delta_30d_pct": -2.39,
+          "last_snapshot": "2026-09-03",
           "new_algo_date": null,
           "comparator": null
         },
@@ -754,27 +754,27 @@
           "rebalance_frequency": "weekly",
           "thesis_one_liner": "When combined search interest in unemployment + layoff terms spikes >40% above 52-week baseline in a single week, consumer anxiety peaks.",
           "thesis_source": "spec",
-          "ytd_pct": 0.09,
-          "days_running": 161,
+          "ytd_pct": 0.08,
+          "days_running": 162,
           "beat_spy": false,
-          "spy_pct": 12.1,
-          "alpha_pct": -12.01,
-          "ret_30d_pct": -0.01,
-          "spy_delta_30d_pct": -0.55,
-          "last_snapshot": "2026-09-02",
+          "spy_pct": NaN,
+          "alpha_pct": NaN,
+          "ret_30d_pct": -0.02,
+          "spy_delta_30d_pct": -0.56,
+          "last_snapshot": "2026-09-03",
           "new_algo_date": null,
           "comparator": {
             "primary_etf": "XLY",
             "signals": {
               "momentum_5d": {
                 "direction": "DOWN",
-                "confidence": 0.627,
-                "return_pct": -3.136
+                "confidence": 0.57,
+                "return_pct": -2.849
               },
               "momentum_20d": {
                 "direction": "DOWN",
-                "confidence": 0.612,
-                "return_pct": -3.062
+                "confidence": 0.626,
+                "return_pct": -3.128
               }
             },
             "summary": "mixed"
@@ -793,29 +793,29 @@
           "thesis_one_liner": "Rising interest in job automation topics reflects labor market anxieties and potential tech sector disruption concerns.",
           "thesis_source": "spec",
           "ytd_pct": 0.08,
-          "days_running": 75,
+          "days_running": 76,
           "beat_spy": false,
-          "spy_pct": 12.1,
-          "alpha_pct": -12.02,
+          "spy_pct": NaN,
+          "alpha_pct": NaN,
           "ret_30d_pct": 0.0,
           "spy_delta_30d_pct": -0.54,
-          "last_snapshot": "2026-09-02",
+          "last_snapshot": "2026-09-03",
           "new_algo_date": null,
           "comparator": {
             "primary_etf": "XLK",
             "signals": {
               "momentum_5d": {
                 "direction": "UP",
-                "confidence": 0.399,
-                "return_pct": 1.994
+                "confidence": 0.209,
+                "return_pct": 1.045
               },
               "momentum_20d": {
-                "direction": "UP",
-                "confidence": 0.629,
-                "return_pct": 3.145
+                "direction": "DOWN",
+                "confidence": 0.349,
+                "return_pct": -1.744
               }
             },
-            "summary": "both_up"
+            "summary": "mixed"
           }
         },
         {
@@ -831,29 +831,29 @@
           "thesis_one_liner": "Rising interest in returning to office often signals changing corporate policies impacting tech productivity and sentiment.",
           "thesis_source": "spec",
           "ytd_pct": 0.06,
-          "days_running": 100,
+          "days_running": 101,
           "beat_spy": false,
-          "spy_pct": 12.1,
-          "alpha_pct": -12.04,
+          "spy_pct": NaN,
+          "alpha_pct": NaN,
           "ret_30d_pct": 0.0,
           "spy_delta_30d_pct": -0.54,
-          "last_snapshot": "2026-09-02",
+          "last_snapshot": "2026-09-03",
           "new_algo_date": null,
           "comparator": {
             "primary_etf": "XLK",
             "signals": {
               "momentum_5d": {
                 "direction": "UP",
-                "confidence": 0.399,
-                "return_pct": 1.994
+                "confidence": 0.209,
+                "return_pct": 1.045
               },
               "momentum_20d": {
-                "direction": "UP",
-                "confidence": 0.629,
-                "return_pct": 3.145
+                "direction": "DOWN",
+                "confidence": 0.349,
+                "return_pct": -1.744
               }
             },
-            "summary": "both_up"
+            "summary": "mixed"
           }
         },
         {
@@ -869,26 +869,26 @@
           "thesis_one_liner": "Spikes in manufacturing job and hiring searches (>35% week-over-week rise) signal labor demand cycles and industrial capacity expansion phases.",
           "thesis_source": "spec",
           "ytd_pct": 0.03,
-          "days_running": 73,
+          "days_running": 74,
           "beat_spy": false,
-          "spy_pct": 12.1,
-          "alpha_pct": -12.07,
+          "spy_pct": NaN,
+          "alpha_pct": NaN,
           "ret_30d_pct": 0.0,
           "spy_delta_30d_pct": -0.54,
-          "last_snapshot": "2026-09-02",
+          "last_snapshot": "2026-09-03",
           "new_algo_date": null,
           "comparator": {
             "primary_etf": "XLI",
             "signals": {
               "momentum_5d": {
                 "direction": "DOWN",
-                "confidence": 0.701,
-                "return_pct": -3.503
+                "confidence": 0.636,
+                "return_pct": -3.178
               },
               "momentum_20d": {
                 "direction": "DOWN",
                 "confidence": 1.0,
-                "return_pct": -5.694
+                "return_pct": -7.334
               }
             },
             "summary": "mixed"
@@ -900,13 +900,13 @@
       "family": "local_economy_weirdness",
       "count": 120,
       "by_status": {
-        "live_only": 51,
+        "live_only": 52,
         "parked": 2,
-        "sandbox": 67
+        "sandbox": 66
       },
       "by_evidence_class": {
-        "live_receipts_only": 51,
-        "needs_history": 67,
+        "live_receipts_only": 52,
+        "needs_history": 66,
         "pending_seed": 2
       },
       "leaders": [
@@ -923,67 +923,29 @@
           "thesis_one_liner": "Growing interest in warehouse automation indicates accelerating industrial technology adoption and capex.",
           "thesis_source": "spec",
           "ytd_pct": 0.08,
-          "days_running": 108,
+          "days_running": 109,
           "beat_spy": false,
-          "spy_pct": 12.1,
-          "alpha_pct": -12.02,
+          "spy_pct": NaN,
+          "alpha_pct": NaN,
           "ret_30d_pct": 0.0,
           "spy_delta_30d_pct": -0.54,
-          "last_snapshot": "2026-09-02",
+          "last_snapshot": "2026-09-03",
           "new_algo_date": null,
           "comparator": {
             "primary_etf": "XLI",
             "signals": {
               "momentum_5d": {
                 "direction": "DOWN",
-                "confidence": 0.701,
-                "return_pct": -3.503
+                "confidence": 0.636,
+                "return_pct": -3.178
               },
               "momentum_20d": {
                 "direction": "DOWN",
                 "confidence": 1.0,
-                "return_pct": -5.694
+                "return_pct": -7.334
               }
             },
             "summary": "mixed"
-          }
-        },
-        {
-          "schema_version": "v1",
-          "key": "crazy:weekly-google-trends-surge-for-solar-panel-installation-sign",
-          "algo_type": "crazy",
-          "algo_id": "weekly-google-trends-surge-for-solar-panel-installation-sign",
-          "name": "Weekly Google Trends Surge For Solar Panel Installation Signals Green Energy Sector Strength",
-          "family": "local_economy_weirdness",
-          "status": "live_only",
-          "evidence_class": "live_receipts_only",
-          "rebalance_frequency": "weekly",
-          "thesis_one_liner": "Rising interest in solar installations reflects increased consumer and commercial investment in renewables.",
-          "thesis_source": "spec",
-          "ytd_pct": 0.07,
-          "days_running": 107,
-          "beat_spy": false,
-          "spy_pct": 12.1,
-          "alpha_pct": -12.03,
-          "ret_30d_pct": 0.0,
-          "spy_delta_30d_pct": -0.54,
-          "last_snapshot": "2026-09-02",
-          "new_algo_date": null,
-          "comparator": {
-            "primary_etf": "XLE",
-            "signals": {
-              "momentum_5d": {
-                "direction": "UP",
-                "confidence": 0.873,
-                "return_pct": 4.367
-              },
-              "momentum_20d": {
-                "direction": "UP",
-                "confidence": 1.0,
-                "return_pct": 10.68
-              }
-            },
-            "summary": "both_up"
           }
         },
         {
@@ -999,13 +961,13 @@
           "thesis_one_liner": "Clusters of moderate earthquakes in populated regions trigger immediate insurance claim filings and property damage estimates, creating short-term sector rotation into insurance and repair stocks.",
           "thesis_source": "spec",
           "ytd_pct": 0.07,
-          "days_running": 157,
+          "days_running": 158,
           "beat_spy": false,
-          "spy_pct": 12.1,
-          "alpha_pct": -12.03,
+          "spy_pct": NaN,
+          "alpha_pct": NaN,
           "ret_30d_pct": 0.0,
           "spy_delta_30d_pct": -0.54,
-          "last_snapshot": "2026-09-02",
+          "last_snapshot": "2026-09-03",
           "new_algo_date": null,
           "comparator": {
             "primary_etf": "XLF",
@@ -1026,6 +988,44 @@
         },
         {
           "schema_version": "v1",
+          "key": "crazy:weekly-google-trends-surge-for-solar-panel-installation-sign",
+          "algo_type": "crazy",
+          "algo_id": "weekly-google-trends-surge-for-solar-panel-installation-sign",
+          "name": "Weekly Google Trends Surge For Solar Panel Installation Signals Green Energy Sector Strength",
+          "family": "local_economy_weirdness",
+          "status": "live_only",
+          "evidence_class": "live_receipts_only",
+          "rebalance_frequency": "weekly",
+          "thesis_one_liner": "Rising interest in solar installations reflects increased consumer and commercial investment in renewables.",
+          "thesis_source": "spec",
+          "ytd_pct": 0.07,
+          "days_running": 108,
+          "beat_spy": false,
+          "spy_pct": NaN,
+          "alpha_pct": NaN,
+          "ret_30d_pct": 0.0,
+          "spy_delta_30d_pct": -0.54,
+          "last_snapshot": "2026-09-03",
+          "new_algo_date": null,
+          "comparator": {
+            "primary_etf": "XLE",
+            "signals": {
+              "momentum_5d": {
+                "direction": "UP",
+                "confidence": 0.873,
+                "return_pct": 4.367
+              },
+              "momentum_20d": {
+                "direction": "UP",
+                "confidence": 1.0,
+                "return_pct": 10.68
+              }
+            },
+            "summary": "both_up"
+          }
+        },
+        {
+          "schema_version": "v1",
           "key": "crazy:earthquake-activity-cluster-signal-for-insurance-and-utility",
           "algo_type": "crazy",
           "algo_id": "earthquake-activity-cluster-signal-for-insurance-and-utility",
@@ -1037,26 +1037,26 @@
           "thesis_one_liner": "Weekly earthquake count in California, Pacific Northwest, or Intermountain zones exceeds historical median by >60%, signaling heightened seismic risk.",
           "thesis_source": "spec",
           "ytd_pct": 0.05,
-          "days_running": 119,
+          "days_running": 120,
           "beat_spy": false,
-          "spy_pct": 12.1,
-          "alpha_pct": -12.05,
+          "spy_pct": NaN,
+          "alpha_pct": NaN,
           "ret_30d_pct": 0.0,
           "spy_delta_30d_pct": -0.54,
-          "last_snapshot": "2026-09-02",
+          "last_snapshot": "2026-09-03",
           "new_algo_date": null,
           "comparator": {
             "primary_etf": "XLU",
             "signals": {
               "momentum_5d": {
                 "direction": "DOWN",
-                "confidence": 0.305,
-                "return_pct": -1.527
+                "confidence": 0.346,
+                "return_pct": -1.732
               },
               "momentum_20d": {
                 "direction": "DOWN",
-                "confidence": 0.812,
-                "return_pct": -4.058
+                "confidence": 0.703,
+                "return_pct": -3.514
               }
             },
             "summary": "mixed"
@@ -1075,26 +1075,26 @@
           "thesis_one_liner": "Sudden increase in seismic activity near key ports can disrupt freight logistics and supply chains temporarily.",
           "thesis_source": "spec",
           "ytd_pct": 0.03,
-          "days_running": 104,
+          "days_running": 105,
           "beat_spy": false,
-          "spy_pct": 12.1,
-          "alpha_pct": -12.07,
+          "spy_pct": NaN,
+          "alpha_pct": NaN,
           "ret_30d_pct": 0.0,
           "spy_delta_30d_pct": -0.54,
-          "last_snapshot": "2026-09-02",
+          "last_snapshot": "2026-09-03",
           "new_algo_date": null,
           "comparator": {
             "primary_etf": "XLI",
             "signals": {
               "momentum_5d": {
                 "direction": "DOWN",
-                "confidence": 0.701,
-                "return_pct": -3.503
+                "confidence": 0.636,
+                "return_pct": -3.178
               },
               "momentum_20d": {
                 "direction": "DOWN",
                 "confidence": 1.0,
-                "return_pct": -5.694
+                "return_pct": -7.334
               }
             },
             "summary": "mixed"
@@ -1137,7 +1137,7 @@
           "alpha_pct": null,
           "ret_30d_pct": null,
           "spy_delta_30d_pct": null,
-          "last_snapshot": "2026-09-02",
+          "last_snapshot": "2026-09-03",
           "new_algo_date": null,
           "comparator": null
         },
@@ -1154,13 +1154,13 @@
           "thesis_one_liner": "High Yield Spread Regime tests whether macro data can expose input-cost, demand, or regime pressure before sector ETFs fully react.",
           "thesis_source": "derived",
           "ytd_pct": 4.32,
-          "days_running": 179,
+          "days_running": 180,
           "beat_spy": false,
-          "spy_pct": 12.1,
-          "alpha_pct": -7.78,
-          "ret_30d_pct": -1.16,
-          "spy_delta_30d_pct": -1.7,
-          "last_snapshot": "2026-09-02",
+          "spy_pct": NaN,
+          "alpha_pct": NaN,
+          "ret_30d_pct": -1.55,
+          "spy_delta_30d_pct": -2.09,
+          "last_snapshot": "2026-09-03",
           "new_algo_date": null,
           "comparator": null
         },
@@ -1177,13 +1177,13 @@
           "thesis_one_liner": "Housing Permit Velocity tests whether source data can expose input-cost, demand, or regime pressure before sector ETFs fully react.",
           "thesis_source": "derived",
           "ytd_pct": 0.43,
-          "days_running": 179,
+          "days_running": 180,
           "beat_spy": false,
-          "spy_pct": 12.1,
-          "alpha_pct": -11.67,
-          "ret_30d_pct": -1.01,
-          "spy_delta_30d_pct": -1.56,
-          "last_snapshot": "2026-09-02",
+          "spy_pct": NaN,
+          "alpha_pct": NaN,
+          "ret_30d_pct": -1.09,
+          "spy_delta_30d_pct": -1.63,
+          "last_snapshot": "2026-09-03",
           "new_algo_date": null,
           "comparator": null
         },
@@ -1200,13 +1200,13 @@
           "thesis_one_liner": "Significant earthquake events can trigger increased aftershock activity, which may signal volatility and uncertainty in energy and industrial sectors.",
           "thesis_source": "spec",
           "ytd_pct": 0.05,
-          "days_running": 173,
+          "days_running": 174,
           "beat_spy": false,
-          "spy_pct": 12.1,
-          "alpha_pct": -12.05,
+          "spy_pct": NaN,
+          "alpha_pct": NaN,
           "ret_30d_pct": 0.0,
           "spy_delta_30d_pct": -0.54,
-          "last_snapshot": "2026-09-02",
+          "last_snapshot": "2026-09-03",
           "new_algo_date": null,
           "comparator": {
             "primary_etf": "XLE",
@@ -1238,13 +1238,13 @@
           "thesis_one_liner": "Sudden daily spikes in EV charging wait time searches indicate infrastructure constraints limiting green tech adoption.",
           "thesis_source": "spec",
           "ytd_pct": 0.04,
-          "days_running": 85,
+          "days_running": 86,
           "beat_spy": false,
-          "spy_pct": 12.1,
-          "alpha_pct": -12.06,
+          "spy_pct": NaN,
+          "alpha_pct": NaN,
           "ret_30d_pct": 0.0,
           "spy_delta_30d_pct": -0.54,
-          "last_snapshot": "2026-09-02",
+          "last_snapshot": "2026-09-03",
           "new_algo_date": null,
           "comparator": {
             "primary_etf": "XLC",
@@ -1294,13 +1294,13 @@
           "thesis_one_liner": "Daily CRE distress news count spikes >150% above 20-day average, then fades by >60% day-over-day 3-5 days later.",
           "thesis_source": "spec",
           "ytd_pct": 0.04,
-          "days_running": 105,
+          "days_running": 106,
           "beat_spy": false,
-          "spy_pct": 12.1,
-          "alpha_pct": -12.05,
+          "spy_pct": NaN,
+          "alpha_pct": NaN,
           "ret_30d_pct": 0.01,
           "spy_delta_30d_pct": -0.53,
-          "last_snapshot": "2026-09-02",
+          "last_snapshot": "2026-09-03",
           "new_algo_date": null,
           "comparator": {
             "primary_etf": "XLF",
@@ -1332,13 +1332,13 @@
           "thesis_one_liner": "When XLB weekly returns decouple negatively from SPY returns for 2 consecutive weeks, a rebound in XLB often follows.",
           "thesis_source": "spec",
           "ytd_pct": 0.03,
-          "days_running": 173,
+          "days_running": 174,
           "beat_spy": false,
-          "spy_pct": 12.1,
-          "alpha_pct": -12.07,
+          "spy_pct": NaN,
+          "alpha_pct": NaN,
           "ret_30d_pct": 0.0,
           "spy_delta_30d_pct": -0.54,
-          "last_snapshot": "2026-09-02",
+          "last_snapshot": "2026-09-03",
           "new_algo_date": null,
           "comparator": {
             "primary_etf": "XLB",
@@ -1359,6 +1359,52 @@
         },
         {
           "schema_version": "v1",
+          "key": "crazy:bankruptcy-filing-rate",
+          "algo_type": "crazy",
+          "algo_id": "bankruptcy-filing-rate",
+          "name": "Bankruptcy Filing Rate",
+          "family": "political_insider_filing",
+          "status": "sandbox",
+          "evidence_class": "needs_history",
+          "rebalance_frequency": "monthly",
+          "thesis_one_liner": "Bankruptcy Filing Rate tests whether filing or policy activity can expose forced flows or informed positioning before broad sector moves.",
+          "thesis_source": "derived",
+          "ytd_pct": 0.0,
+          "days_running": 180,
+          "beat_spy": false,
+          "spy_pct": NaN,
+          "alpha_pct": NaN,
+          "ret_30d_pct": 0.0,
+          "spy_delta_30d_pct": -0.54,
+          "last_snapshot": "2026-09-03",
+          "new_algo_date": null,
+          "comparator": null
+        },
+        {
+          "schema_version": "v1",
+          "key": "crazy:congress",
+          "algo_type": "crazy",
+          "algo_id": "congress",
+          "name": "Congress Trading Fade",
+          "family": "political_insider_filing",
+          "status": "sandbox",
+          "evidence_class": "needs_history",
+          "rebalance_frequency": "daily",
+          "thesis_one_liner": "Congress Trading Fade tests whether filing or policy activity can expose forced flows or informed positioning before broad sector moves.",
+          "thesis_source": "derived",
+          "ytd_pct": 0.0,
+          "days_running": 180,
+          "beat_spy": false,
+          "spy_pct": NaN,
+          "alpha_pct": NaN,
+          "ret_30d_pct": 0.0,
+          "spy_delta_30d_pct": -0.54,
+          "last_snapshot": "2026-09-03",
+          "new_algo_date": null,
+          "comparator": null
+        },
+        {
+          "schema_version": "v1",
           "key": "crazy:energy-sector-sudden-weekly-volatility-spike",
           "algo_type": "crazy",
           "algo_id": "energy-sector-sudden-weekly-volatility-spike",
@@ -1370,13 +1416,13 @@
           "thesis_one_liner": "A 50%+ weekly spike in realized volatility often precedes strong directional moves in energy stocks.",
           "thesis_source": "spec",
           "ytd_pct": 0.0,
-          "days_running": 170,
+          "days_running": 171,
           "beat_spy": false,
-          "spy_pct": 12.1,
-          "alpha_pct": -12.1,
+          "spy_pct": NaN,
+          "alpha_pct": NaN,
           "ret_30d_pct": 0.0,
           "spy_delta_30d_pct": -0.54,
-          "last_snapshot": "2026-09-02",
+          "last_snapshot": "2026-09-03",
           "new_algo_date": null,
           "comparator": {
             "primary_etf": "XLE",
@@ -1394,65 +1440,19 @@
             },
             "summary": "both_up"
           }
-        },
-        {
-          "schema_version": "v1",
-          "key": "crazy:congress",
-          "algo_type": "crazy",
-          "algo_id": "congress",
-          "name": "Congress Trading Fade",
-          "family": "political_insider_filing",
-          "status": "sandbox",
-          "evidence_class": "needs_history",
-          "rebalance_frequency": "daily",
-          "thesis_one_liner": "Congress Trading Fade tests whether filing or policy activity can expose forced flows or informed positioning before broad sector moves.",
-          "thesis_source": "derived",
-          "ytd_pct": 0.0,
-          "days_running": 179,
-          "beat_spy": false,
-          "spy_pct": 12.1,
-          "alpha_pct": -12.1,
-          "ret_30d_pct": 0.0,
-          "spy_delta_30d_pct": -0.54,
-          "last_snapshot": "2026-09-02",
-          "new_algo_date": null,
-          "comparator": null
-        },
-        {
-          "schema_version": "v1",
-          "key": "crazy:bankruptcy-filing-rate",
-          "algo_type": "crazy",
-          "algo_id": "bankruptcy-filing-rate",
-          "name": "Bankruptcy Filing Rate",
-          "family": "political_insider_filing",
-          "status": "sandbox",
-          "evidence_class": "needs_history",
-          "rebalance_frequency": "monthly",
-          "thesis_one_liner": "Bankruptcy Filing Rate tests whether filing or policy activity can expose forced flows or informed positioning before broad sector moves.",
-          "thesis_source": "derived",
-          "ytd_pct": 0.0,
-          "days_running": 179,
-          "beat_spy": false,
-          "spy_pct": 12.1,
-          "alpha_pct": -12.1,
-          "ret_30d_pct": 0.0,
-          "spy_delta_30d_pct": -0.54,
-          "last_snapshot": "2026-09-02",
-          "new_algo_date": null,
-          "comparator": null
         }
       ]
     },
     "travel_mobility": {
       "family": "travel_mobility",
-      "count": 61,
+      "count": 62,
       "by_status": {
-        "live_only": 18,
+        "live_only": 19,
         "parked": 2,
         "sandbox": 41
       },
       "by_evidence_class": {
-        "live_receipts_only": 18,
+        "live_receipts_only": 19,
         "needs_history": 41,
         "pending_seed": 2
       },
@@ -1470,49 +1470,87 @@
           "thesis_one_liner": "Uber Mobility Index tests whether source data can identify travel and mobility demand changes before transport-linked sectors reprice.",
           "thesis_source": "derived",
           "ytd_pct": 0.86,
-          "days_running": 179,
+          "days_running": 180,
           "beat_spy": false,
-          "spy_pct": 12.1,
-          "alpha_pct": -11.24,
-          "ret_30d_pct": -3.27,
-          "spy_delta_30d_pct": -3.81,
-          "last_snapshot": "2026-09-02",
+          "spy_pct": NaN,
+          "alpha_pct": NaN,
+          "ret_30d_pct": -3.34,
+          "spy_delta_30d_pct": -3.89,
+          "last_snapshot": "2026-09-03",
           "new_algo_date": null,
           "comparator": null
         },
         {
           "schema_version": "v1",
-          "key": "crazy:airport-passenger-traffic-surge-from-google-trends-spring-br",
+          "key": "crazy:airbnbhotel-booking-search-surge-signals-travel-spending-con",
           "algo_type": "crazy",
-          "algo_id": "airport-passenger-traffic-surge-from-google-trends-spring-br",
-          "name": "Airport Passenger Traffic Surge From Google Trends Spring Break Bookings",
+          "algo_id": "airbnbhotel-booking-search-surge-signals-travel-spending-con",
+          "name": "Airbnbhotel Booking Search Surge Signals Travel Spending Confidence Return",
           "family": "travel_mobility",
-          "status": "live_only",
-          "evidence_class": "live_receipts_only",
+          "status": "sandbox",
+          "evidence_class": "needs_history",
           "rebalance_frequency": "weekly",
-          "thesis_one_liner": "In February-March, spikes in spring break travel searches lead actual bookings by 1-2 weeks, signaling near-term surge in travel/hospitality demand.",
+          "thesis_one_liner": "Simultaneous surge in travel-booking searches indicates consumers are confident and allocating discretionary spending to leisure travel, a classic risk-on sentiment signal.",
           "thesis_source": "spec",
-          "ytd_pct": -0.0,
-          "days_running": 126,
+          "ytd_pct": 0.0,
+          "days_running": 77,
           "beat_spy": false,
-          "spy_pct": 12.1,
-          "alpha_pct": -12.1,
+          "spy_pct": NaN,
+          "alpha_pct": NaN,
           "ret_30d_pct": 0.0,
           "spy_delta_30d_pct": -0.54,
-          "last_snapshot": "2026-09-02",
+          "last_snapshot": "2026-09-03",
           "new_algo_date": null,
           "comparator": {
             "primary_etf": "XLY",
             "signals": {
               "momentum_5d": {
                 "direction": "DOWN",
-                "confidence": 0.627,
-                "return_pct": -3.136
+                "confidence": 0.57,
+                "return_pct": -2.849
               },
               "momentum_20d": {
                 "direction": "DOWN",
-                "confidence": 0.612,
-                "return_pct": -3.062
+                "confidence": 0.626,
+                "return_pct": -3.128
+              }
+            },
+            "summary": "mixed"
+          }
+        },
+        {
+          "schema_version": "v1",
+          "key": "crazy:airline-fuel-cost-volatility-expansion",
+          "algo_type": "crazy",
+          "algo_id": "airline-fuel-cost-volatility-expansion",
+          "name": "Airline Fuel Cost Volatility Expansion",
+          "family": "travel_mobility",
+          "status": "sandbox",
+          "evidence_class": "needs_history",
+          "rebalance_frequency": "daily",
+          "thesis_one_liner": "When XLE 20-day volatility exceeds 25% while XLU 20-day volatility stays <15%, airline cost uncertainty spikes, pressuring airline margins and travel demand.",
+          "thesis_source": "spec",
+          "ytd_pct": 0.0,
+          "days_running": 150,
+          "beat_spy": false,
+          "spy_pct": NaN,
+          "alpha_pct": NaN,
+          "ret_30d_pct": 0.0,
+          "spy_delta_30d_pct": -0.54,
+          "last_snapshot": "2026-09-03",
+          "new_algo_date": null,
+          "comparator": {
+            "primary_etf": "XLY",
+            "signals": {
+              "momentum_5d": {
+                "direction": "DOWN",
+                "confidence": 0.57,
+                "return_pct": -2.849
+              },
+              "momentum_20d": {
+                "direction": "DOWN",
+                "confidence": 0.626,
+                "return_pct": -3.128
               }
             },
             "summary": "mixed"
@@ -1531,87 +1569,49 @@
           "thesis_one_liner": "Airline Load Factor Proxy tests whether source data can identify travel and mobility demand changes before transport-linked sectors reprice.",
           "thesis_source": "derived",
           "ytd_pct": 0.0,
-          "days_running": 179,
+          "days_running": 180,
           "beat_spy": false,
-          "spy_pct": 12.1,
-          "alpha_pct": -12.1,
+          "spy_pct": NaN,
+          "alpha_pct": NaN,
           "ret_30d_pct": 0.0,
           "spy_delta_30d_pct": -0.54,
-          "last_snapshot": "2026-09-02",
+          "last_snapshot": "2026-09-03",
           "new_algo_date": null,
           "comparator": null
         },
         {
           "schema_version": "v1",
-          "key": "crazy:airline-fuel-cost-volatility-expansion",
+          "key": "crazy:airport-passenger-traffic-surge-from-google-trends-spring-br",
           "algo_type": "crazy",
-          "algo_id": "airline-fuel-cost-volatility-expansion",
-          "name": "Airline Fuel Cost Volatility Expansion",
+          "algo_id": "airport-passenger-traffic-surge-from-google-trends-spring-br",
+          "name": "Airport Passenger Traffic Surge From Google Trends Spring Break Bookings",
           "family": "travel_mobility",
-          "status": "sandbox",
-          "evidence_class": "needs_history",
-          "rebalance_frequency": "daily",
-          "thesis_one_liner": "When XLE 20-day volatility exceeds 25% while XLU 20-day volatility stays <15%, airline cost uncertainty spikes, pressuring airline margins and travel demand.",
-          "thesis_source": "spec",
-          "ytd_pct": 0.0,
-          "days_running": 149,
-          "beat_spy": false,
-          "spy_pct": 12.1,
-          "alpha_pct": -12.1,
-          "ret_30d_pct": 0.0,
-          "spy_delta_30d_pct": -0.54,
-          "last_snapshot": "2026-09-02",
-          "new_algo_date": null,
-          "comparator": {
-            "primary_etf": "XLY",
-            "signals": {
-              "momentum_5d": {
-                "direction": "DOWN",
-                "confidence": 0.627,
-                "return_pct": -3.136
-              },
-              "momentum_20d": {
-                "direction": "DOWN",
-                "confidence": 0.612,
-                "return_pct": -3.062
-              }
-            },
-            "summary": "mixed"
-          }
-        },
-        {
-          "schema_version": "v1",
-          "key": "crazy:airbnbhotel-booking-search-surge-signals-travel-spending-con",
-          "algo_type": "crazy",
-          "algo_id": "airbnbhotel-booking-search-surge-signals-travel-spending-con",
-          "name": "Airbnbhotel Booking Search Surge Signals Travel Spending Confidence Return",
-          "family": "travel_mobility",
-          "status": "sandbox",
-          "evidence_class": "needs_history",
+          "status": "live_only",
+          "evidence_class": "live_receipts_only",
           "rebalance_frequency": "weekly",
-          "thesis_one_liner": "Simultaneous surge in travel-booking searches indicates consumers are confident and allocating discretionary spending to leisure travel, a classic risk-on sentiment signal.",
+          "thesis_one_liner": "In February-March, spikes in spring break travel searches lead actual bookings by 1-2 weeks, signaling near-term surge in travel/hospitality demand.",
           "thesis_source": "spec",
-          "ytd_pct": 0.0,
-          "days_running": 76,
+          "ytd_pct": -0.0,
+          "days_running": 127,
           "beat_spy": false,
-          "spy_pct": 12.1,
-          "alpha_pct": -12.1,
+          "spy_pct": NaN,
+          "alpha_pct": NaN,
           "ret_30d_pct": 0.0,
           "spy_delta_30d_pct": -0.54,
-          "last_snapshot": "2026-09-02",
+          "last_snapshot": "2026-09-03",
           "new_algo_date": null,
           "comparator": {
             "primary_etf": "XLY",
             "signals": {
               "momentum_5d": {
                 "direction": "DOWN",
-                "confidence": 0.627,
-                "return_pct": -3.136
+                "confidence": 0.57,
+                "return_pct": -2.849
               },
               "momentum_20d": {
                 "direction": "DOWN",
-                "confidence": 0.612,
-                "return_pct": -3.062
+                "confidence": 0.626,
+                "return_pct": -3.128
               }
             },
             "summary": "mixed"

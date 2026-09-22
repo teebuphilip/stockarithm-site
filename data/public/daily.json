@@ -1,102 +1,102 @@
 {
   "schema_version": "v1",
-  "run_date": "2026-09-19",
-  "generated_at": "2026-09-19T00:54:48Z",
+  "run_date": "2026-09-22",
+  "generated_at": "2026-09-22T01:23:39Z",
   "counts": {
-    "total": 921,
+    "total": 924,
     "normal": 5,
-    "crazy": 916,
-    "watchlist": 400,
+    "crazy": 919,
+    "watchlist": 404,
     "promoted": 0,
     "graveyard": 41
   },
   "by_status": {
     "backtest_weak": 6,
     "failed": 16,
-    "live_only": 394,
+    "live_only": 398,
     "parked": 25,
-    "sandbox": 480
+    "sandbox": 479
   },
   "by_evidence_class": {
-    "live_receipts_only": 394,
-    "needs_history": 468,
+    "live_receipts_only": 398,
+    "needs_history": 467,
     "pending_seed": 25,
     "v1_backtested": 34
   },
   "new_algos_today": [],
   "top_bullish_etfs": [
-    "XLK",
     "XLY",
-    "XLI"
+    "XLK",
+    "XLP"
   ],
   "top_bearish_etfs": [
+    "XLV",
     "XLF",
-    "XLC",
-    "XLRE"
+    "XLC"
   ],
   "ticker_count": 105,
-  "signal_count": 921,
+  "signal_count": 924,
   "sector_summary": {
     "XLK": {
       "etf": "XLK",
       "sector": "Technology",
-      "composite": "14 of 81",
+      "composite": "10 of 88",
       "composite_label": "BEARISH",
       "composite_color": "red",
-      "bullish_pct": 17
+      "bullish_pct": 11
     },
     "XLV": {
       "etf": "XLV",
       "sector": "Healthcare",
-      "composite": "5 of 71",
+      "composite": "2 of 78",
       "composite_label": "BEARISH",
       "composite_color": "red",
-      "bullish_pct": 7
+      "bullish_pct": 3
     },
     "XLF": {
       "etf": "XLF",
       "sector": "Financial Services",
-      "composite": "5 of 92",
+      "composite": "3 of 98",
       "composite_label": "BEARISH",
       "composite_color": "red",
-      "bullish_pct": 5
+      "bullish_pct": 3
     },
     "XLY": {
       "etf": "XLY",
       "sector": "Consumer Cyclical",
-      "composite": "15 of 137",
+      "composite": "22 of 134",
       "composite_label": "BEARISH",
       "composite_color": "red",
-      "bullish_pct": 11
+      "bullish_pct": 16
     },
     "XLI": {
       "etf": "XLI",
       "sector": "Industrials",
-      "composite": "16 of 140",
+      "composite": "14 of 147",
       "composite_label": "BEARISH",
       "composite_color": "red",
-      "bullish_pct": 11
+      "bullish_pct": 10
     },
     "XLC": {
       "etf": "XLC",
       "sector": "Communication Services",
-      "composite": "3 of 65",
+      "composite": "1 of 71",
       "composite_label": "BEARISH",
       "composite_color": "red",
-      "bullish_pct": 5
+      "bullish_pct": 1
     },
     "XLP": {
       "etf": "XLP",
       "sector": "Consumer Defensive",
-      "composite": "7 of 98",
+      "composite": "11 of 100",
       "composite_label": "BEARISH",
       "composite_color": "red",
-      "bullish_pct": 7
+      "bullish_pct": 11
     },
     "XLE": {
       "etf": "XLE",
       "sector": "Energy",
-      "composite": "5 of 85",
+      "composite": "5 of 89",
       "composite_label": "BEARISH",
       "composite_color": "red",
       "bullish_pct": 6
@@ -104,26 +104,26 @@
     "XLB": {
       "etf": "XLB",
       "sector": "Basic Materials",
-      "composite": "5 of 73",
+      "composite": "7 of 75",
       "composite_label": "BEARISH",
       "composite_color": "red",
-      "bullish_pct": 7
+      "bullish_pct": 9
     },
     "XLRE": {
       "etf": "XLRE",
       "sector": "Real Estate",
-      "composite": "2 of 69",
+      "composite": "4 of 72",
       "composite_label": "BEARISH",
       "composite_color": "red",
-      "bullish_pct": 3
+      "bullish_pct": 6
     },
     "XLU": {
       "etf": "XLU",
       "sector": "Utilities",
-      "composite": "6 of 87",
+      "composite": "8 of 90",
       "composite_label": "BEARISH",
       "composite_color": "red",
-      "bullish_pct": 7
+      "bullish_pct": 9
     }
   },
   "top_live_ytd": [
@@ -139,14 +139,14 @@
       "rebalance_frequency": "monthly_eom",
       "thesis_one_liner": "Algo Biscotti (Unconditional Loyalty) tests whether source data can expose input-cost, demand, or regime pressure before sector ETFs fully react.",
       "thesis_source": "derived",
-      "ytd_pct": 21.96,
+      "ytd_pct": 21.64,
       "days_running": 0,
       "beat_spy": null,
       "spy_pct": null,
       "alpha_pct": null,
       "ret_30d_pct": null,
       "spy_delta_30d_pct": null,
-      "last_snapshot": "2026-09-19",
+      "last_snapshot": "2026-09-22",
       "new_algo_date": null,
       "comparator": null
     },
@@ -162,14 +162,14 @@
       "rebalance_frequency": "monthly_eom",
       "thesis_one_liner": "Algo Biscotti (Unconditional Loyalty) tests whether systematic price rotation can capture persistent sector momentum better than passive market exposure.",
       "thesis_source": "derived",
-      "ytd_pct": 21.58,
-      "days_running": 188,
+      "ytd_pct": 21.26,
+      "days_running": 189,
       "beat_spy": false,
       "spy_pct": NaN,
       "alpha_pct": NaN,
-      "ret_30d_pct": 1.15,
-      "spy_delta_30d_pct": 1.78,
-      "last_snapshot": "2026-09-19",
+      "ret_30d_pct": 1.9,
+      "spy_delta_30d_pct": 2.61,
+      "last_snapshot": "2026-09-22",
       "new_algo_date": null,
       "comparator": null
     },
@@ -185,14 +185,14 @@
       "rebalance_frequency": "monthly_eom",
       "thesis_one_liner": "Antonacci Dual Momentum Sector Rotation tests whether systematic price rotation can capture persistent sector momentum better than passive market exposure.",
       "thesis_source": "derived",
-      "ytd_pct": 8.0,
-      "days_running": 188,
+      "ytd_pct": 8.23,
+      "days_running": 189,
       "beat_spy": false,
       "spy_pct": NaN,
       "alpha_pct": NaN,
-      "ret_30d_pct": -0.44,
-      "spy_delta_30d_pct": 0.19,
-      "last_snapshot": "2026-09-19",
+      "ret_30d_pct": 0.56,
+      "spy_delta_30d_pct": 1.27,
+      "last_snapshot": "2026-09-22",
       "new_algo_date": null,
       "comparator": null
     },
@@ -208,37 +208,14 @@
       "rebalance_frequency": "weekly",
       "thesis_one_liner": "Algo Baileymol (Chaos Monger) tests whether systematic price rotation can capture persistent sector momentum better than passive market exposure.",
       "thesis_source": "derived",
-      "ytd_pct": 5.42,
-      "days_running": 188,
+      "ytd_pct": 5.62,
+      "days_running": 189,
       "beat_spy": false,
       "spy_pct": NaN,
       "alpha_pct": NaN,
-      "ret_30d_pct": -1.48,
-      "spy_delta_30d_pct": -0.85,
-      "last_snapshot": "2026-09-19",
-      "new_algo_date": null,
-      "comparator": null
-    },
-    {
-      "schema_version": "v1",
-      "key": "crazy:high-yield-spread-regime",
-      "algo_type": "crazy",
-      "algo_id": "high-yield-spread-regime",
-      "name": "High Yield Spread Regime",
-      "family": "macro_input_pressure",
-      "status": "live_only",
-      "evidence_class": "live_receipts_only",
-      "rebalance_frequency": "monthly",
-      "thesis_one_liner": "High Yield Spread Regime tests whether macro data can expose input-cost, demand, or regime pressure before sector ETFs fully react.",
-      "thesis_source": "derived",
-      "ytd_pct": 2.32,
-      "days_running": 187,
-      "beat_spy": false,
-      "spy_pct": NaN,
-      "alpha_pct": NaN,
-      "ret_30d_pct": -2.32,
-      "spy_delta_30d_pct": -1.69,
-      "last_snapshot": "2026-09-19",
+      "ret_30d_pct": -0.28,
+      "spy_delta_30d_pct": 0.43,
+      "last_snapshot": "2026-09-22",
       "new_algo_date": null,
       "comparator": null
     },
@@ -254,37 +231,37 @@
       "rebalance_frequency": "monthly_eom",
       "thesis_one_liner": "Quantified Simple Monthly Rotation tests whether systematic price rotation can capture persistent sector momentum better than passive market exposure.",
       "thesis_source": "derived",
-      "ytd_pct": 2.28,
-      "days_running": 188,
+      "ytd_pct": 2.73,
+      "days_running": 189,
       "beat_spy": false,
       "spy_pct": NaN,
       "alpha_pct": NaN,
-      "ret_30d_pct": -5.99,
-      "spy_delta_30d_pct": -5.35,
-      "last_snapshot": "2026-09-19",
+      "ret_30d_pct": -5.17,
+      "spy_delta_30d_pct": -4.46,
+      "last_snapshot": "2026-09-22",
       "new_algo_date": null,
       "comparator": null
     },
     {
       "schema_version": "v1",
-      "key": "crazy:retail-sales-momentum",
+      "key": "crazy:high-yield-spread-regime",
       "algo_type": "crazy",
-      "algo_id": "retail-sales-momentum",
-      "name": "Retail Sales Momentum",
-      "family": "consumer_stress",
+      "algo_id": "high-yield-spread-regime",
+      "name": "High Yield Spread Regime",
+      "family": "macro_input_pressure",
       "status": "live_only",
       "evidence_class": "live_receipts_only",
       "rebalance_frequency": "monthly",
-      "thesis_one_liner": "Retail Sales Momentum tests whether consumer behavior can reveal consumer stress or demand rotation before it shows up in sector performance.",
+      "thesis_one_liner": "High Yield Spread Regime tests whether macro data can expose input-cost, demand, or regime pressure before sector ETFs fully react.",
       "thesis_source": "derived",
-      "ytd_pct": 1.46,
-      "days_running": 187,
+      "ytd_pct": 2.19,
+      "days_running": 188,
       "beat_spy": false,
       "spy_pct": NaN,
       "alpha_pct": NaN,
-      "ret_30d_pct": -0.87,
-      "spy_delta_30d_pct": -0.23,
-      "last_snapshot": "2026-09-19",
+      "ret_30d_pct": -3.8,
+      "spy_delta_30d_pct": -3.09,
+      "last_snapshot": "2026-09-22",
       "new_algo_date": null,
       "comparator": null
     },
@@ -300,14 +277,37 @@
       "rebalance_frequency": "monthly_eom",
       "thesis_one_liner": "Faber Momentum Rotation tests whether systematic price rotation can capture persistent sector momentum better than passive market exposure.",
       "thesis_source": "derived",
-      "ytd_pct": 1.44,
+      "ytd_pct": 1.87,
+      "days_running": 189,
+      "beat_spy": false,
+      "spy_pct": NaN,
+      "alpha_pct": NaN,
+      "ret_30d_pct": 0.01,
+      "spy_delta_30d_pct": 0.72,
+      "last_snapshot": "2026-09-22",
+      "new_algo_date": null,
+      "comparator": null
+    },
+    {
+      "schema_version": "v1",
+      "key": "crazy:retail-sales-momentum",
+      "algo_type": "crazy",
+      "algo_id": "retail-sales-momentum",
+      "name": "Retail Sales Momentum",
+      "family": "consumer_stress",
+      "status": "live_only",
+      "evidence_class": "live_receipts_only",
+      "rebalance_frequency": "monthly",
+      "thesis_one_liner": "Retail Sales Momentum tests whether consumer behavior can reveal consumer stress or demand rotation before it shows up in sector performance.",
+      "thesis_source": "derived",
+      "ytd_pct": 1.63,
       "days_running": 188,
       "beat_spy": false,
       "spy_pct": NaN,
       "alpha_pct": NaN,
-      "ret_30d_pct": -1.09,
-      "spy_delta_30d_pct": -0.46,
-      "last_snapshot": "2026-09-19",
+      "ret_30d_pct": -0.67,
+      "spy_delta_30d_pct": 0.04,
+      "last_snapshot": "2026-09-22",
       "new_algo_date": null,
       "comparator": null
     },
@@ -324,26 +324,26 @@
       "thesis_one_liner": "Rising interest in job automation topics reflects labor market anxieties and potential tech sector disruption concerns.",
       "thesis_source": "spec",
       "ytd_pct": 0.08,
-      "days_running": 83,
+      "days_running": 84,
       "beat_spy": false,
       "spy_pct": NaN,
       "alpha_pct": NaN,
       "ret_30d_pct": 0.0,
-      "spy_delta_30d_pct": 0.63,
-      "last_snapshot": "2026-09-19",
+      "spy_delta_30d_pct": 0.71,
+      "last_snapshot": "2026-09-22",
       "new_algo_date": null,
       "comparator": {
         "primary_etf": "XLK",
         "signals": {
           "momentum_5d": {
             "direction": "UP",
-            "confidence": 0.307,
-            "return_pct": 1.533
+            "confidence": 0.206,
+            "return_pct": 1.028
           },
           "momentum_20d": {
             "direction": "UP",
-            "confidence": 0.481,
-            "return_pct": 2.407
+            "confidence": 0.71,
+            "return_pct": 3.55
           }
         },
         "summary": "both_up"
@@ -362,26 +362,26 @@
       "thesis_one_liner": "Rising office space subleases indicate reduced demand for commercial real estate, signaling tech sector caution.",
       "thesis_source": "spec",
       "ytd_pct": 0.08,
-      "days_running": 112,
+      "days_running": 113,
       "beat_spy": false,
       "spy_pct": NaN,
       "alpha_pct": NaN,
       "ret_30d_pct": 0.08,
-      "spy_delta_30d_pct": 0.71,
-      "last_snapshot": "2026-09-19",
+      "spy_delta_30d_pct": 0.79,
+      "last_snapshot": "2026-09-22",
       "new_algo_date": null,
       "comparator": {
         "primary_etf": "XLK",
         "signals": {
           "momentum_5d": {
             "direction": "UP",
-            "confidence": 0.307,
-            "return_pct": 1.533
+            "confidence": 0.206,
+            "return_pct": 1.028
           },
           "momentum_20d": {
             "direction": "UP",
-            "confidence": 0.481,
-            "return_pct": 2.407
+            "confidence": 0.71,
+            "return_pct": 3.55
           }
         },
         "summary": "both_up"
@@ -389,78 +389,78 @@
     }
   ],
   "rolling_30d": {
-    "as_of": "2026-09-19T00:54:46.924410",
-    "spy_ret_30d_pct": -0.63,
+    "as_of": "2026-09-22T01:23:37.405781",
+    "spy_ret_30d_pct": -0.71,
     "leaders": [
       {
         "algo_id": "biscotti",
         "name": "Algo Biscotti (Unconditional Loyalty)",
         "algo_type": "normal",
-        "ret_30d_pct": 1.15,
-        "vs_spy_30d_pct": 1.78
+        "ret_30d_pct": 1.9,
+        "vs_spy_30d_pct": 2.61
       },
       {
         "algo_id": "biscotti-crazy",
         "name": "Algo Biscotti (Unconditional Loyalty) (alt)",
         "algo_type": "crazy",
-        "ret_30d_pct": 1.15,
-        "vs_spy_30d_pct": 1.78
+        "ret_30d_pct": 1.9,
+        "vs_spy_30d_pct": 2.61
+      },
+      {
+        "algo_id": "dmsr",
+        "name": "Antonacci Dual Momentum Sector Rotation",
+        "algo_type": "normal",
+        "ret_30d_pct": 0.56,
+        "vs_spy_30d_pct": 1.27
+      },
+      {
+        "algo_id": "baileymol-crazy",
+        "name": "Chaos Rotation Lab",
+        "algo_type": "crazy",
+        "ret_30d_pct": 0.3,
+        "vs_spy_30d_pct": 1.01
+      },
+      {
+        "algo_id": "vix-fear-rotation",
+        "name": "VIX Fear Rotation",
+        "algo_type": "crazy",
+        "ret_30d_pct": 0.21,
+        "vs_spy_30d_pct": 0.92
+      },
+      {
+        "algo_id": "vix-term-structure",
+        "name": "VIX Term Structure",
+        "algo_type": "crazy",
+        "ret_30d_pct": 0.21,
+        "vs_spy_30d_pct": 0.92
       },
       {
         "algo_id": "daily-surge-in-rss-news-count-for-corporate-office-space-sub",
         "name": "Daily Surge In Rss News Count For Corporate Office Space Sublease Signals Technology Sector Weakness",
         "algo_type": "crazy",
         "ret_30d_pct": 0.08,
-        "vs_spy_30d_pct": 0.71
+        "vs_spy_30d_pct": 0.79
       },
       {
-        "algo_id": "weekly-rise-in-google-trends-interest-for-food-delivery-dela",
-        "name": "Weekly Rise In Google Trends Interest For Food Delivery Delay Signals Bearish Xlp",
+        "algo_id": "oil-refinery-outage-news-volume-surge-signals-energy-sector-",
+        "name": "Oil Refinery Outage News Volume Surge Signals Energy Sector Supply Constraint Trade",
         "algo_type": "crazy",
-        "ret_30d_pct": 0.04,
-        "vs_spy_30d_pct": 0.67
-      },
-      {
-        "algo_id": "retail-foot-traffic-collapse-rss-news-surge-signals-consumer",
-        "name": "Retail Foot Traffic Collapse Rss News Surge Signals Consumer Sector Weakness",
-        "algo_type": "crazy",
-        "ret_30d_pct": 0.03,
-        "vs_spy_30d_pct": 0.66
+        "ret_30d_pct": 0.07,
+        "vs_spy_30d_pct": 0.78
       },
       {
         "algo_id": "google-trends-surge-for-home-improvement-signals-consumer-di",
         "name": "Google Trends Surge For Home Improvement Signals Consumer Discretionary Rally",
         "algo_type": "crazy",
         "ret_30d_pct": 0.03,
-        "vs_spy_30d_pct": 0.66
-      },
-      {
-        "algo_id": "weekly-surge-in-rss-news-counts-mentioning-warehouse-automat",
-        "name": "Weekly Surge In Rss News Counts Mentioning Warehouse Automation Investment Signals Industrial Tech Demand",
-        "algo_type": "crazy",
-        "ret_30d_pct": 0.02,
-        "vs_spy_30d_pct": 0.65
-      },
-      {
-        "algo_id": "baileymol-crazy",
-        "name": "Chaos Rotation Lab",
-        "algo_type": "crazy",
-        "ret_30d_pct": 0.02,
-        "vs_spy_30d_pct": 0.65
+        "vs_spy_30d_pct": 0.74
       },
       {
         "algo_id": "weekly-surge-in-google-trends-for-diy-roof-repair-signals-co",
         "name": "Weekly Surge In Google Trends For Diy Roof Repair Signals Consumer Stress Lifting Industrial Sector",
         "algo_type": "crazy",
         "ret_30d_pct": 0.02,
-        "vs_spy_30d_pct": 0.65
-      },
-      {
-        "algo_id": "weekly-google-trends-surge-in-searches-for-diesel-fuel-price",
-        "name": "Weekly Google Trends Surge In Searches For Diesel Fuel Price Increase",
-        "algo_type": "crazy",
-        "ret_30d_pct": 0.02,
-        "vs_spy_30d_pct": 0.65
+        "vs_spy_30d_pct": 0.73
       }
     ]
   }

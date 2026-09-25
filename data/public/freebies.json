@@ -1,15 +1,15 @@
 {
   "schema_version": "v1",
-  "date": "2026-09-24",
-  "generated_at": "2026-09-24T01:07:05Z",
+  "date": "2026-09-25",
+  "generated_at": "2026-09-25T01:03:49Z",
   "spotlight_1": {
     "algo_id": "dmsr",
     "name": "Antonacci Dual Momentum Sector Rotation",
     "family": "core_rotation",
     "algo_type": "normal",
-    "thesis_one_liner": "Recent momentum leader with 0.4% 30D return",
+    "thesis_one_liner": "Recent momentum leader with 0.2% 30D return",
     "ytd_pct": 0.0,
-    "ret_30d_pct": 0.44,
+    "ret_30d_pct": 0.22,
     "status": "live_only",
     "beat_spy": null,
     "trade_count": 33,
@@ -17,24 +17,20 @@
     "source": "rolling"
   },
   "spotlight_2": {
-    "algo_id": "retail-sales-momentum",
-    "name": "Retail Sales Momentum",
-    "family": "consumer_stress",
+    "algo_id": "daily-surge-in-rss-news-count-for-corporate-office-space-sub",
+    "name": "Daily Surge In Rss News Count For Corporate Office Space Sublease Signals Technology Sector Weakness",
+    "family": "core_rotation",
     "algo_type": "crazy",
-    "thesis_one_liner": "Retail Sales Momentum tests whether consumer behavior can reveal consumer stress or demand rotation before it shows up in sector performance.",
-    "ytd_pct": 3.08,
-    "ret_30d_pct": 0.54,
+    "thesis_one_liner": "Recent momentum leader with 0.1% 30D return",
+    "ytd_pct": 0.0,
+    "ret_30d_pct": 0.08,
     "status": "live_only",
-    "beat_spy": false,
-    "trade_count": 14,
+    "beat_spy": null,
+    "trade_count": 4,
     "teaser_hook": "Alternative data experiment tracked live in public",
-    "source": "watchlist"
+    "source": "rolling"
   },
   "previous_14_days": [
-    "weekly-surge-in-rss-news-counts-mentioning-warehouse-automat",
-    "weekly-rise-in-google-trends-interest-for-food-delivery-dela",
-    "weekly-surge-in-google-trends-for-diy-roof-repair-signals-co",
-    "dmsr",
     "oil-refinery-outage-news-volume-surge-signals-energy-sector-",
     "weekly-surge-in-google-trends-for-diy-roof-repair-signals-co",
     "oil-refinery-outage-news-volume-surge-signals-energy-sector-",
@@ -44,12 +40,16 @@
     "faber",
     "retail-sales-momentum",
     "dmsr",
-    "retail-sales-momentum"
+    "retail-sales-momentum",
+    "dmsr",
+    "retail-sales-momentum",
+    "dmsr",
+    "daily-surge-in-rss-news-count-for-corporate-office-space-sub"
   ],
   "pool_stats": {
-    "total_pool_size": 10,
+    "total_pool_size": 9,
     "promoted_count": 0,
-    "watchlist_count": 4,
+    "watchlist_count": 3,
     "rolling_count": 6
   },
   "meta": {

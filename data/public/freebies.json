@@ -1,40 +1,36 @@
 {
   "schema_version": "v1",
-  "date": "2026-09-25",
-  "generated_at": "2026-09-25T01:03:49Z",
+  "date": "2026-09-26",
+  "generated_at": "2026-09-26T01:06:34Z",
   "spotlight_1": {
-    "algo_id": "dmsr",
-    "name": "Antonacci Dual Momentum Sector Rotation",
-    "family": "core_rotation",
-    "algo_type": "normal",
-    "thesis_one_liner": "Recent momentum leader with 0.2% 30D return",
-    "ytd_pct": 0.0,
-    "ret_30d_pct": 0.22,
-    "status": "live_only",
-    "beat_spy": null,
-    "trade_count": 33,
-    "teaser_hook": "Alternative data experiment tracked live in public",
-    "source": "rolling"
-  },
-  "spotlight_2": {
-    "algo_id": "daily-surge-in-rss-news-count-for-corporate-office-space-sub",
-    "name": "Daily Surge In Rss News Count For Corporate Office Space Sublease Signals Technology Sector Weakness",
+    "algo_id": "oil-refinery-outage-news-volume-surge-signals-energy-sector-",
+    "name": "Oil Refinery Outage News Volume Surge Signals Energy Sector Supply Constraint Trade",
     "family": "core_rotation",
     "algo_type": "crazy",
     "thesis_one_liner": "Recent momentum leader with 0.1% 30D return",
     "ytd_pct": 0.0,
-    "ret_30d_pct": 0.08,
+    "ret_30d_pct": 0.07,
     "status": "live_only",
     "beat_spy": null,
-    "trade_count": 4,
+    "trade_count": 28,
     "teaser_hook": "Alternative data experiment tracked live in public",
     "source": "rolling"
   },
+  "spotlight_2": {
+    "algo_id": "dmsr",
+    "name": "Antonacci Dual Momentum Sector Rotation",
+    "family": "core_rotation",
+    "algo_type": "normal",
+    "thesis_one_liner": "Antonacci Dual Momentum Sector Rotation tests whether systematic price rotation can capture persistent sector momentum better than passive market exposure.",
+    "ytd_pct": 7.96,
+    "ret_30d_pct": 0.08,
+    "status": "live_only",
+    "beat_spy": false,
+    "trade_count": 33,
+    "teaser_hook": "Alternative data experiment tracked live in public",
+    "source": "watchlist"
+  },
   "previous_14_days": [
-    "oil-refinery-outage-news-volume-surge-signals-energy-sector-",
-    "weekly-surge-in-google-trends-for-diy-roof-repair-signals-co",
-    "oil-refinery-outage-news-volume-surge-signals-energy-sector-",
-    "weekly-surge-in-google-trends-for-diy-roof-repair-signals-co",
     "retail-sales-momentum",
     "misery-rotation",
     "faber",
@@ -44,13 +40,17 @@
     "dmsr",
     "retail-sales-momentum",
     "dmsr",
-    "daily-surge-in-rss-news-count-for-corporate-office-space-sub"
+    "daily-surge-in-rss-news-count-for-corporate-office-space-sub",
+    "dmsr",
+    "daily-surge-in-rss-news-count-for-corporate-office-space-sub",
+    "oil-refinery-outage-news-volume-surge-signals-energy-sector-",
+    "dmsr"
   ],
   "pool_stats": {
-    "total_pool_size": 9,
+    "total_pool_size": 8,
     "promoted_count": 0,
     "watchlist_count": 3,
-    "rolling_count": 6
+    "rolling_count": 5
   },
   "meta": {
     "anti_repeat_days": 14,

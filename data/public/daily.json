@@ -1,32 +1,32 @@
 {
   "schema_version": "v1",
-  "run_date": "2026-10-01",
-  "generated_at": "2026-10-01T01:50:17Z",
+  "run_date": "2026-10-02",
+  "generated_at": "2026-10-02T02:04:32Z",
   "counts": {
-    "total": 962,
+    "total": 966,
     "normal": 5,
-    "crazy": 957,
-    "watchlist": 424,
+    "crazy": 961,
+    "watchlist": 426,
     "promoted": 0,
     "graveyard": 41
   },
   "by_status": {
     "backtest_weak": 6,
     "failed": 16,
-    "live_only": 418,
+    "live_only": 420,
     "parked": 25,
-    "sandbox": 497
+    "sandbox": 499
   },
   "by_evidence_class": {
-    "live_receipts_only": 418,
-    "needs_history": 485,
+    "live_receipts_only": 420,
+    "needs_history": 487,
     "pending_seed": 25,
     "v1_backtested": 34
   },
   "new_algos_today": [],
   "top_bullish_etfs": [
+    "XLU",
     "XLK",
-    "XLY",
     "XLP"
   ],
   "top_bearish_etfs": [
@@ -35,95 +35,95 @@
     "XLRE"
   ],
   "ticker_count": 105,
-  "signal_count": 962,
+  "signal_count": 966,
   "sector_summary": {
     "XLK": {
       "etf": "XLK",
       "sector": "Technology",
-      "composite": "15 of 82",
-      "composite_label": "BEARISH",
-      "composite_color": "red",
-      "bullish_pct": 18
-    },
-    "XLV": {
-      "etf": "XLV",
-      "sector": "Healthcare",
-      "composite": "4 of 75",
-      "composite_label": "BEARISH",
-      "composite_color": "red",
-      "bullish_pct": 5
-    },
-    "XLF": {
-      "etf": "XLF",
-      "sector": "Financial Services",
-      "composite": "7 of 95",
-      "composite_label": "BEARISH",
-      "composite_color": "red",
-      "bullish_pct": 7
-    },
-    "XLY": {
-      "etf": "XLY",
-      "sector": "Consumer Cyclical",
-      "composite": "18 of 142",
+      "composite": "10 of 76",
       "composite_label": "BEARISH",
       "composite_color": "red",
       "bullish_pct": 13
     },
+    "XLV": {
+      "etf": "XLV",
+      "sector": "Healthcare",
+      "composite": "4 of 64",
+      "composite_label": "BEARISH",
+      "composite_color": "red",
+      "bullish_pct": 6
+    },
+    "XLF": {
+      "etf": "XLF",
+      "sector": "Financial Services",
+      "composite": "8 of 83",
+      "composite_label": "BEARISH",
+      "composite_color": "red",
+      "bullish_pct": 10
+    },
+    "XLY": {
+      "etf": "XLY",
+      "sector": "Consumer Cyclical",
+      "composite": "12 of 137",
+      "composite_label": "BEARISH",
+      "composite_color": "red",
+      "bullish_pct": 9
+    },
     "XLI": {
       "etf": "XLI",
       "sector": "Industrials",
-      "composite": "11 of 147",
+      "composite": "11 of 137",
       "composite_label": "BEARISH",
       "composite_color": "red",
-      "bullish_pct": 7
+      "bullish_pct": 8
     },
     "XLC": {
       "etf": "XLC",
       "sector": "Communication Services",
-      "composite": "1 of 69",
+      "composite": "1 of 58",
       "composite_label": "BEARISH",
       "composite_color": "red",
-      "bullish_pct": 1
+      "bullish_pct": 2
     },
     "XLP": {
       "etf": "XLP",
       "sector": "Consumer Defensive",
-      "composite": "12 of 100",
+      "composite": "10 of 92",
       "composite_label": "BEARISH",
       "composite_color": "red",
-      "bullish_pct": 12
+      "bullish_pct": 11
     },
     "XLE": {
       "etf": "XLE",
       "sector": "Energy",
-      "composite": "4 of 87",
+      "composite": "3 of 77",
       "composite_label": "BEARISH",
       "composite_color": "red",
-      "bullish_pct": 5
+      "bullish_pct": 4
     },
     "XLB": {
       "etf": "XLB",
       "sector": "Basic Materials",
-      "composite": "5 of 74",
+      "composite": "5 of 63",
       "composite_label": "BEARISH",
       "composite_color": "red",
-      "bullish_pct": 7
+      "bullish_pct": 8
     },
     "XLRE": {
       "etf": "XLRE",
       "sector": "Real Estate",
-      "composite": "1 of 72",
+      "composite": "1 of 61",
       "composite_label": "BEARISH",
       "composite_color": "red",
-      "bullish_pct": 1
+      "bullish_pct": 2
     },
     "XLU": {
       "etf": "XLU",
       "sector": "Utilities",
-      "composite": "9 of 89",
+      "composite": "11 of 76",
       "composite_label": "BEARISH",
       "composite_color": "red",
-      "bullish_pct": 10
+      "bullish_pct": 14
     }
   },
   "top_live_ytd": [
@@ -139,14 +139,14 @@
       "rebalance_frequency": "monthly_eom",
       "thesis_one_liner": "Algo Biscotti (Unconditional Loyalty) tests whether source data can expose input-cost, demand, or regime pressure before sector ETFs fully react.",
       "thesis_source": "derived",
-      "ytd_pct": 9.73,
+      "ytd_pct": 10.39,
       "days_running": 0,
       "beat_spy": null,
       "spy_pct": null,
       "alpha_pct": null,
       "ret_30d_pct": null,
       "spy_delta_30d_pct": null,
-      "last_snapshot": "2026-10-01",
+      "last_snapshot": "2026-10-02",
       "new_algo_date": null,
       "comparator": null
     },
@@ -162,14 +162,14 @@
       "rebalance_frequency": "monthly_eom",
       "thesis_one_liner": "Algo Biscotti (Unconditional Loyalty) tests whether systematic price rotation can capture persistent sector momentum better than passive market exposure.",
       "thesis_source": "derived",
-      "ytd_pct": 9.38,
-      "days_running": 196,
+      "ytd_pct": 10.05,
+      "days_running": 197,
       "beat_spy": false,
-      "spy_pct": 12.5,
-      "alpha_pct": -3.12,
-      "ret_30d_pct": -10.22,
-      "spy_delta_30d_pct": -9.9,
-      "last_snapshot": "2026-10-01",
+      "spy_pct": 12.7,
+      "alpha_pct": -2.65,
+      "ret_30d_pct": -9.68,
+      "spy_delta_30d_pct": -10.22,
+      "last_snapshot": "2026-10-02",
       "new_algo_date": null,
       "comparator": null
     },
@@ -185,14 +185,14 @@
       "rebalance_frequency": "weekly",
       "thesis_one_liner": "Algo Baileymol (Chaos Monger) tests whether systematic price rotation can capture persistent sector momentum better than passive market exposure.",
       "thesis_source": "derived",
-      "ytd_pct": 6.17,
-      "days_running": 196,
+      "ytd_pct": 6.57,
+      "days_running": 197,
       "beat_spy": false,
-      "spy_pct": 12.5,
-      "alpha_pct": -6.33,
-      "ret_30d_pct": -0.33,
-      "spy_delta_30d_pct": -0.01,
-      "last_snapshot": "2026-10-01",
+      "spy_pct": 12.7,
+      "alpha_pct": -6.14,
+      "ret_30d_pct": 0.04,
+      "spy_delta_30d_pct": -0.5,
+      "last_snapshot": "2026-10-02",
       "new_algo_date": null,
       "comparator": null
     },
@@ -208,14 +208,14 @@
       "rebalance_frequency": "monthly_eom",
       "thesis_one_liner": "Antonacci Dual Momentum Sector Rotation tests whether systematic price rotation can capture persistent sector momentum better than passive market exposure.",
       "thesis_source": "derived",
-      "ytd_pct": 5.44,
-      "days_running": 196,
+      "ytd_pct": 5.89,
+      "days_running": 197,
       "beat_spy": false,
-      "spy_pct": 12.5,
-      "alpha_pct": -7.06,
-      "ret_30d_pct": -2.88,
-      "spy_delta_30d_pct": -2.55,
-      "last_snapshot": "2026-10-01",
+      "spy_pct": 12.7,
+      "alpha_pct": -6.81,
+      "ret_30d_pct": -2.46,
+      "spy_delta_30d_pct": -3.0,
+      "last_snapshot": "2026-10-02",
       "new_algo_date": null,
       "comparator": null
     },
@@ -231,14 +231,14 @@
       "rebalance_frequency": "monthly_eom",
       "thesis_one_liner": "Quantified Simple Monthly Rotation tests whether systematic price rotation can capture persistent sector momentum better than passive market exposure.",
       "thesis_source": "derived",
-      "ytd_pct": 2.99,
-      "days_running": 196,
+      "ytd_pct": 4.07,
+      "days_running": 197,
       "beat_spy": false,
-      "spy_pct": 12.5,
-      "alpha_pct": -9.52,
-      "ret_30d_pct": -2.51,
-      "spy_delta_30d_pct": -2.18,
-      "last_snapshot": "2026-10-01",
+      "spy_pct": 12.7,
+      "alpha_pct": -8.63,
+      "ret_30d_pct": -1.49,
+      "spy_delta_30d_pct": -2.03,
+      "last_snapshot": "2026-10-02",
       "new_algo_date": null,
       "comparator": null
     },
@@ -254,14 +254,14 @@
       "rebalance_frequency": "monthly",
       "thesis_one_liner": "Retail Sales Momentum tests whether consumer behavior can reveal consumer stress or demand rotation before it shows up in sector performance.",
       "thesis_source": "derived",
-      "ytd_pct": 2.06,
-      "days_running": 195,
+      "ytd_pct": 2.45,
+      "days_running": 196,
       "beat_spy": false,
-      "spy_pct": 12.5,
-      "alpha_pct": -10.44,
-      "ret_30d_pct": -0.74,
-      "spy_delta_30d_pct": -0.41,
-      "last_snapshot": "2026-10-01",
+      "spy_pct": 12.7,
+      "alpha_pct": -10.25,
+      "ret_30d_pct": -0.36,
+      "spy_delta_30d_pct": -0.9,
+      "last_snapshot": "2026-10-02",
       "new_algo_date": null,
       "comparator": null
     },
@@ -277,14 +277,14 @@
       "rebalance_frequency": "monthly_eom",
       "thesis_one_liner": "Faber Momentum Rotation tests whether systematic price rotation can capture persistent sector momentum better than passive market exposure.",
       "thesis_source": "derived",
-      "ytd_pct": 1.86,
-      "days_running": 196,
+      "ytd_pct": 2.08,
+      "days_running": 197,
       "beat_spy": false,
-      "spy_pct": 12.5,
-      "alpha_pct": -10.65,
-      "ret_30d_pct": -0.25,
-      "spy_delta_30d_pct": 0.08,
-      "last_snapshot": "2026-10-01",
+      "spy_pct": 12.7,
+      "alpha_pct": -10.63,
+      "ret_30d_pct": -0.03,
+      "spy_delta_30d_pct": -0.57,
+      "last_snapshot": "2026-10-02",
       "new_algo_date": null,
       "comparator": null
     },
@@ -300,54 +300,16 @@
       "rebalance_frequency": "daily",
       "thesis_one_liner": "VIX Term Structure tests whether source data can detect attention shifts before they are fully reflected in sector ETF prices.",
       "thesis_source": "derived",
-      "ytd_pct": 0.12,
-      "days_running": 186,
+      "ytd_pct": 0.59,
+      "days_running": 187,
       "beat_spy": false,
-      "spy_pct": 12.5,
-      "alpha_pct": -12.38,
-      "ret_30d_pct": 0.16,
-      "spy_delta_30d_pct": 0.49,
-      "last_snapshot": "2026-10-01",
+      "spy_pct": 12.7,
+      "alpha_pct": -12.11,
+      "ret_30d_pct": 0.64,
+      "spy_delta_30d_pct": 0.1,
+      "last_snapshot": "2026-10-02",
       "new_algo_date": null,
       "comparator": null
-    },
-    {
-      "schema_version": "v1",
-      "key": "crazy:weekly-google-trends-surge-for-job-automation-signals-xlk-we",
-      "algo_type": "crazy",
-      "algo_id": "weekly-google-trends-surge-for-job-automation-signals-xlk-we",
-      "name": "Weekly Google Trends Surge For Job Automation Signals Xlk Weakness",
-      "family": "labor_jobs",
-      "status": "live_only",
-      "evidence_class": "live_receipts_only",
-      "rebalance_frequency": "weekly",
-      "thesis_one_liner": "Rising interest in job automation topics reflects labor market anxieties and potential tech sector disruption concerns.",
-      "thesis_source": "spec",
-      "ytd_pct": 0.08,
-      "days_running": 91,
-      "beat_spy": false,
-      "spy_pct": 12.5,
-      "alpha_pct": -12.42,
-      "ret_30d_pct": 0.0,
-      "spy_delta_30d_pct": 0.33,
-      "last_snapshot": "2026-10-01",
-      "new_algo_date": null,
-      "comparator": {
-        "primary_etf": "XLK",
-        "signals": {
-          "momentum_5d": {
-            "direction": "UP",
-            "confidence": 0.042,
-            "return_pct": 0.21
-          },
-          "momentum_20d": {
-            "direction": "UP",
-            "confidence": 1.0,
-            "return_pct": 6.719
-          }
-        },
-        "summary": "both_up"
-      }
     },
     {
       "schema_version": "v1",
@@ -362,26 +324,64 @@
       "thesis_one_liner": "Rising office space subleases indicate reduced demand for commercial real estate, signaling tech sector caution.",
       "thesis_source": "spec",
       "ytd_pct": 0.08,
-      "days_running": 120,
+      "days_running": 121,
       "beat_spy": false,
-      "spy_pct": 12.5,
-      "alpha_pct": -12.42,
+      "spy_pct": 12.7,
+      "alpha_pct": -12.62,
       "ret_30d_pct": 0.08,
-      "spy_delta_30d_pct": 0.41,
-      "last_snapshot": "2026-10-01",
+      "spy_delta_30d_pct": -0.46,
+      "last_snapshot": "2026-10-02",
       "new_algo_date": null,
       "comparator": {
         "primary_etf": "XLK",
         "signals": {
           "momentum_5d": {
             "direction": "UP",
-            "confidence": 0.042,
-            "return_pct": 0.21
+            "confidence": 0.318,
+            "return_pct": 1.592
           },
           "momentum_20d": {
             "direction": "UP",
             "confidence": 1.0,
-            "return_pct": 6.719
+            "return_pct": 7.865
+          }
+        },
+        "summary": "both_up"
+      }
+    },
+    {
+      "schema_version": "v1",
+      "key": "crazy:weekly-google-trends-surge-for-job-automation-signals-xlk-we",
+      "algo_type": "crazy",
+      "algo_id": "weekly-google-trends-surge-for-job-automation-signals-xlk-we",
+      "name": "Weekly Google Trends Surge For Job Automation Signals Xlk Weakness",
+      "family": "labor_jobs",
+      "status": "live_only",
+      "evidence_class": "live_receipts_only",
+      "rebalance_frequency": "weekly",
+      "thesis_one_liner": "Rising interest in job automation topics reflects labor market anxieties and potential tech sector disruption concerns.",
+      "thesis_source": "spec",
+      "ytd_pct": 0.08,
+      "days_running": 92,
+      "beat_spy": false,
+      "spy_pct": 12.7,
+      "alpha_pct": -12.63,
+      "ret_30d_pct": 0.0,
+      "spy_delta_30d_pct": -0.54,
+      "last_snapshot": "2026-10-02",
+      "new_algo_date": null,
+      "comparator": {
+        "primary_etf": "XLK",
+        "signals": {
+          "momentum_5d": {
+            "direction": "UP",
+            "confidence": 0.318,
+            "return_pct": 1.592
+          },
+          "momentum_20d": {
+            "direction": "UP",
+            "confidence": 1.0,
+            "return_pct": 7.865
           }
         },
         "summary": "both_up"
@@ -389,78 +389,78 @@
     }
   ],
   "rolling_30d": {
-    "as_of": "2026-10-01T01:50:15.884134",
-    "spy_ret_30d_pct": -0.33,
+    "as_of": "2026-10-02T02:04:30.599388",
+    "spy_ret_30d_pct": 0.54,
     "leaders": [
       {
         "algo_id": "vix-fear-rotation",
         "name": "VIX Fear Rotation",
         "algo_type": "crazy",
-        "ret_30d_pct": 0.17,
-        "vs_spy_30d_pct": 0.49
+        "ret_30d_pct": 0.64,
+        "vs_spy_30d_pct": 0.1
       },
       {
         "algo_id": "vix-term-structure",
         "name": "VIX Term Structure",
         "algo_type": "crazy",
-        "ret_30d_pct": 0.16,
-        "vs_spy_30d_pct": 0.49
+        "ret_30d_pct": 0.64,
+        "vs_spy_30d_pct": 0.1
       },
       {
         "algo_id": "daily-surge-in-rss-news-count-for-corporate-office-space-sub",
         "name": "Daily Surge In Rss News Count For Corporate Office Space Sublease Signals Technology Sector Weakness",
         "algo_type": "crazy",
         "ret_30d_pct": 0.08,
-        "vs_spy_30d_pct": 0.41
+        "vs_spy_30d_pct": -0.46
       },
       {
         "algo_id": "daily-spike-in-rss-news-feed-for-semiconductor-chip-shortage",
         "name": "Daily Spike In Rss News Feed For Semiconductor Chip Shortage Signals Tech Sector Volatility",
         "algo_type": "crazy",
         "ret_30d_pct": 0.05,
-        "vs_spy_30d_pct": 0.38
+        "vs_spy_30d_pct": -0.48
       },
       {
         "algo_id": "oil-refinery-outage-news-volume-surge-signals-energy-sector-",
         "name": "Oil Refinery Outage News Volume Surge Signals Energy Sector Supply Constraint Trade",
         "algo_type": "crazy",
         "ret_30d_pct": 0.05,
-        "vs_spy_30d_pct": 0.38
+        "vs_spy_30d_pct": -0.49
       },
       {
         "algo_id": "google-trends-spike-for-mortgage-refinance-signals-financial",
         "name": "Google Trends Spike For Mortgage Refinance Signals Financial Sector Rotation",
         "algo_type": "crazy",
-        "ret_30d_pct": 0.03,
-        "vs_spy_30d_pct": 0.36
+        "ret_30d_pct": 0.04,
+        "vs_spy_30d_pct": -0.5
       },
       {
         "algo_id": "google-trends-surge-for-home-improvement-signals-consumer-di",
         "name": "Google Trends Surge For Home Improvement Signals Consumer Discretionary Rally",
         "algo_type": "crazy",
-        "ret_30d_pct": 0.03,
-        "vs_spy_30d_pct": 0.36
+        "ret_30d_pct": 0.04,
+        "vs_spy_30d_pct": -0.5
       },
       {
-        "algo_id": "consumer-stress-google-trends-spike-for-debt-consolidation-d",
-        "name": "Consumer Stress Google Trends Spike For Debt Consolidation Drives Xlf Rotation",
-        "algo_type": "crazy",
-        "ret_30d_pct": 0.02,
-        "vs_spy_30d_pct": 0.35
+        "algo_id": "baileymol",
+        "name": "Algo Baileymol (Chaos Monger)",
+        "algo_type": "normal",
+        "ret_30d_pct": 0.04,
+        "vs_spy_30d_pct": -0.5
       },
       {
         "algo_id": "rental-car-shortage-volatility-spike",
         "name": "Rental Car Shortage Volatility Spike",
         "algo_type": "crazy",
         "ret_30d_pct": 0.02,
-        "vs_spy_30d_pct": 0.35
+        "vs_spy_30d_pct": -0.52
       },
       {
         "algo_id": "daily-spike-in-google-trends-searches-for-airline-flight-del",
         "name": "Daily Spike In Google Trends Searches For Airline Flight Delay Compensation",
         "algo_type": "crazy",
         "ret_30d_pct": 0.02,
-        "vs_spy_30d_pct": 0.35
+        "vs_spy_30d_pct": -0.52
       }
     ]
   }

@@ -1,40 +1,36 @@
 {
   "schema_version": "v1",
-  "date": "2026-10-14",
-  "generated_at": "2026-10-14T01:43:20Z",
+  "date": "2026-10-15",
+  "generated_at": "2026-10-15T01:11:44Z",
   "spotlight_1": {
-    "algo_id": "liquor",
-    "name": "Liquor Store Leading Indicator",
+    "algo_id": "dmsr",
+    "name": "Antonacci Dual Momentum Sector Rotation",
     "family": "core_rotation",
-    "algo_type": "crazy",
-    "thesis_one_liner": "Recent momentum leader with 0.6% 30D return",
-    "ytd_pct": 0.0,
-    "ret_30d_pct": 0.55,
+    "algo_type": "normal",
+    "thesis_one_liner": "Antonacci Dual Momentum Sector Rotation tests whether systematic price rotation can capture persistent sector momentum better than passive market exposure.",
+    "ytd_pct": 8.21,
+    "ret_30d_pct": -0.49,
     "status": "live_only",
-    "beat_spy": null,
-    "trade_count": 18,
+    "beat_spy": false,
+    "trade_count": 39,
     "teaser_hook": "Alternative data experiment tracked live in public",
-    "source": "rolling"
+    "source": "watchlist"
   },
   "spotlight_2": {
-    "algo_id": "mortgage-rate-housing-proxy",
-    "name": "Mortgage Rate Housing Proxy",
-    "family": "core_rotation",
+    "algo_id": "high-yield-spread-regime",
+    "name": "High Yield Spread Regime",
+    "family": "macro_input_pressure",
     "algo_type": "crazy",
-    "thesis_one_liner": "Recent momentum leader with 0.1% 30D return",
-    "ytd_pct": 0.0,
-    "ret_30d_pct": 0.07,
+    "thesis_one_liner": "High Yield Spread Regime tests whether macro data can expose input-cost, demand, or regime pressure before sector ETFs fully react.",
+    "ytd_pct": 3.19,
+    "ret_30d_pct": -0.65,
     "status": "live_only",
-    "beat_spy": null,
-    "trade_count": 10,
+    "beat_spy": false,
+    "trade_count": 6,
     "teaser_hook": "Alternative data experiment tracked live in public",
-    "source": "rolling"
+    "source": "watchlist"
   },
   "previous_14_days": [
-    "dmsr",
-    "oil-refinery-outage-news-volume-surge-signals-energy-sector-",
-    "retail-sales-momentum",
-    "faber",
     "daily-spike-in-rss-news-feed-for-semiconductor-chip-shortage",
     "misery-rotation",
     "faber",
@@ -44,13 +40,17 @@
     "oil-refinery-outage-news-volume-surge-signals-energy-sector-",
     "retail-sales-momentum",
     "liquor",
-    "mortgage-rate-housing-proxy"
+    "mortgage-rate-housing-proxy",
+    "retail-sales-momentum",
+    "mortgage-rate-housing-proxy",
+    "dmsr",
+    "high-yield-spread-regime"
   ],
   "pool_stats": {
-    "total_pool_size": 13,
+    "total_pool_size": 14,
     "promoted_count": 0,
     "watchlist_count": 6,
-    "rolling_count": 7
+    "rolling_count": 8
   },
   "meta": {
     "anti_repeat_days": 14,

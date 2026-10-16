@@ -1,40 +1,36 @@
 {
   "schema_version": "v1",
-  "date": "2026-10-15",
-  "generated_at": "2026-10-15T01:11:44Z",
+  "date": "2026-10-16",
+  "generated_at": "2026-10-16T01:01:18Z",
   "spotlight_1": {
-    "algo_id": "dmsr",
-    "name": "Antonacci Dual Momentum Sector Rotation",
+    "algo_id": "truck-tonnage",
+    "name": "Truck Tonnage Index",
     "family": "core_rotation",
-    "algo_type": "normal",
-    "thesis_one_liner": "Antonacci Dual Momentum Sector Rotation tests whether systematic price rotation can capture persistent sector momentum better than passive market exposure.",
-    "ytd_pct": 8.21,
-    "ret_30d_pct": -0.49,
+    "algo_type": "crazy",
+    "thesis_one_liner": "Recent momentum leader with 1.0% 30D return",
+    "ytd_pct": 0.0,
+    "ret_30d_pct": 0.99,
     "status": "live_only",
-    "beat_spy": false,
-    "trade_count": 39,
+    "beat_spy": null,
+    "trade_count": 10,
     "teaser_hook": "Alternative data experiment tracked live in public",
-    "source": "watchlist"
+    "source": "rolling"
   },
   "spotlight_2": {
-    "algo_id": "high-yield-spread-regime",
-    "name": "High Yield Spread Regime",
-    "family": "macro_input_pressure",
+    "algo_id": "housing-permit-velocity",
+    "name": "Housing Permit Velocity",
+    "family": "core_rotation",
     "algo_type": "crazy",
-    "thesis_one_liner": "High Yield Spread Regime tests whether macro data can expose input-cost, demand, or regime pressure before sector ETFs fully react.",
-    "ytd_pct": 3.19,
-    "ret_30d_pct": -0.65,
+    "thesis_one_liner": "Recent momentum leader with 1.0% 30D return",
+    "ytd_pct": 0.0,
+    "ret_30d_pct": 0.99,
     "status": "live_only",
-    "beat_spy": false,
-    "trade_count": 6,
+    "beat_spy": null,
+    "trade_count": 18,
     "teaser_hook": "Alternative data experiment tracked live in public",
-    "source": "watchlist"
+    "source": "rolling"
   },
   "previous_14_days": [
-    "daily-spike-in-rss-news-feed-for-semiconductor-chip-shortage",
-    "misery-rotation",
-    "faber",
-    "retail-sales-momentum",
     "consumer-sentiment",
     "insider-trading-signals",
     "oil-refinery-outage-news-volume-surge-signals-energy-sector-",
@@ -44,13 +40,17 @@
     "retail-sales-momentum",
     "mortgage-rate-housing-proxy",
     "dmsr",
-    "high-yield-spread-regime"
+    "high-yield-spread-regime",
+    "uber-mobility",
+    "job-posting-acceleration",
+    "truck-tonnage",
+    "housing-permit-velocity"
   ],
   "pool_stats": {
-    "total_pool_size": 14,
+    "total_pool_size": 12,
     "promoted_count": 0,
-    "watchlist_count": 6,
-    "rolling_count": 8
+    "watchlist_count": 5,
+    "rolling_count": 7
   },
   "meta": {
     "anti_repeat_days": 14,

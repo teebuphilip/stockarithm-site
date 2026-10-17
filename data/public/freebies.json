@@ -1,39 +1,36 @@
 {
   "schema_version": "v1",
-  "date": "2026-10-16",
-  "generated_at": "2026-10-16T01:01:18Z",
+  "date": "2026-10-17",
+  "generated_at": "2026-10-17T01:03:44Z",
   "spotlight_1": {
-    "algo_id": "truck-tonnage",
-    "name": "Truck Tonnage Index",
-    "family": "core_rotation",
+    "algo_id": "finra-dark-pool-signal",
+    "name": "FINRA Dark Pool Signal",
+    "family": "political_insider_filing",
     "algo_type": "crazy",
-    "thesis_one_liner": "Recent momentum leader with 1.0% 30D return",
-    "ytd_pct": 0.0,
-    "ret_30d_pct": 0.99,
+    "thesis_one_liner": "FINRA Dark Pool Signal tests whether filing or policy activity can expose forced flows or informed positioning before broad sector moves.",
+    "ytd_pct": -4.67,
+    "ret_30d_pct": 1.67,
     "status": "live_only",
-    "beat_spy": null,
-    "trade_count": 10,
+    "beat_spy": false,
+    "trade_count": 66,
     "teaser_hook": "Alternative data experiment tracked live in public",
-    "source": "rolling"
+    "source": "watchlist"
   },
   "spotlight_2": {
-    "algo_id": "housing-permit-velocity",
-    "name": "Housing Permit Velocity",
-    "family": "core_rotation",
+    "algo_id": "misery-rotation",
+    "name": "Misery Rotation",
+    "family": "macro_input_pressure",
     "algo_type": "crazy",
-    "thesis_one_liner": "Recent momentum leader with 1.0% 30D return",
-    "ytd_pct": 0.0,
-    "ret_30d_pct": 0.99,
+    "thesis_one_liner": "Misery Rotation tests whether source data can expose input-cost, demand, or regime pressure before sector ETFs fully react.",
+    "ytd_pct": -2.8,
+    "ret_30d_pct": 1.57,
     "status": "live_only",
-    "beat_spy": null,
-    "trade_count": 18,
+    "beat_spy": false,
+    "trade_count": 14,
     "teaser_hook": "Alternative data experiment tracked live in public",
-    "source": "rolling"
+    "source": "watchlist"
   },
   "previous_14_days": [
-    "consumer-sentiment",
-    "insider-trading-signals",
-    "oil-refinery-outage-news-volume-surge-signals-energy-sector-",
     "retail-sales-momentum",
     "liquor",
     "mortgage-rate-housing-proxy",
@@ -44,13 +41,16 @@
     "uber-mobility",
     "job-posting-acceleration",
     "truck-tonnage",
-    "housing-permit-velocity"
+    "housing-permit-velocity",
+    "faber",
+    "finra-dark-pool-signal",
+    "misery-rotation"
   ],
   "pool_stats": {
-    "total_pool_size": 12,
+    "total_pool_size": 14,
     "promoted_count": 0,
-    "watchlist_count": 5,
-    "rolling_count": 7
+    "watchlist_count": 14,
+    "rolling_count": 0
   },
   "meta": {
     "anti_repeat_days": 14,

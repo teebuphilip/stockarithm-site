@@ -1,8 +1,8 @@
 {
   "schema_version": "v1",
-  "generated_at": "2026-10-24T01:24:19Z",
+  "generated_at": "2026-10-24T01:30:13Z",
   "counts": {
-    "total": 1034,
+    "total": 1040,
     "beating_spy": 1
   },
   "algos": [
@@ -38366,6 +38366,234 @@
           }
         },
         "summary": "mixed"
+      }
+    },
+    {
+      "schema_version": "v1",
+      "key": "crazy:weekly-surge-in-google-trends-for-home-security-system-insta",
+      "algo_type": "crazy",
+      "algo_id": "weekly-surge-in-google-trends-for-home-security-system-insta",
+      "name": "Weekly Surge In Google Trends For Home Security System Installations Signals Consumer Discretionary Outperformance",
+      "family": "attention_sentiment",
+      "status": "sandbox",
+      "evidence_class": "needs_history",
+      "rebalance_frequency": "weekly",
+      "thesis_one_liner": "Increased interest in home security installations precedes discretionary sector strength as consumers invest in home improvement.",
+      "thesis_source": "spec",
+      "ytd_pct": 0.0,
+      "days_running": 0,
+      "beat_spy": null,
+      "spy_pct": null,
+      "alpha_pct": null,
+      "ret_30d_pct": 0.0,
+      "spy_delta_30d_pct": 1.02,
+      "last_snapshot": "2026-10-23",
+      "new_algo_date": null,
+      "comparator": {
+        "primary_etf": "XLY",
+        "signals": {
+          "momentum_5d": {
+            "direction": "UP",
+            "confidence": 0.114,
+            "return_pct": 0.569
+          },
+          "momentum_20d": {
+            "direction": "UP",
+            "confidence": 0.459,
+            "return_pct": 2.297
+          }
+        },
+        "summary": "both_up"
+      }
+    },
+    {
+      "schema_version": "v1",
+      "key": "crazy:weekly-rise-in-google-trends-for-utility-bill-payment-assist",
+      "algo_type": "crazy",
+      "algo_id": "weekly-rise-in-google-trends-for-utility-bill-payment-assist",
+      "name": "Weekly Rise In Google Trends For Utility Bill Payment Assistance Searches Signals Utility Sector Outperformance",
+      "family": "consumer_stress",
+      "status": "sandbox",
+      "evidence_class": "needs_history",
+      "rebalance_frequency": "weekly",
+      "thesis_one_liner": "Rising search interest in utility bill assistance indicates consumer stress but utilities outperform as demand remains stable and defensive.",
+      "thesis_source": "spec",
+      "ytd_pct": 0.0,
+      "days_running": 0,
+      "beat_spy": null,
+      "spy_pct": null,
+      "alpha_pct": null,
+      "ret_30d_pct": 0.0,
+      "spy_delta_30d_pct": 1.02,
+      "last_snapshot": "2026-10-23",
+      "new_algo_date": null,
+      "comparator": {
+        "primary_etf": "XLU",
+        "signals": {
+          "momentum_5d": {
+            "direction": "UP",
+            "confidence": 0.166,
+            "return_pct": 0.829
+          },
+          "momentum_20d": {
+            "direction": "UP",
+            "confidence": 1.0,
+            "return_pct": 7.72
+          }
+        },
+        "summary": "both_up"
+      }
+    },
+    {
+      "schema_version": "v1",
+      "key": "crazy:weekly-drop-in-google-trends-for-credit-card-debt-searches-s",
+      "algo_type": "crazy",
+      "algo_id": "weekly-drop-in-google-trends-for-credit-card-debt-searches-s",
+      "name": "Weekly Drop In Google Trends For Credit Card Debt Searches Signals Financial Sector Rally",
+      "family": "consumer_stress",
+      "status": "sandbox",
+      "evidence_class": "needs_history",
+      "rebalance_frequency": "weekly",
+      "thesis_one_liner": "Decreasing consumer searches on credit card debt indicate easing financial stress, often leading to financial sector outperformance.",
+      "thesis_source": "spec",
+      "ytd_pct": 0.0,
+      "days_running": 0,
+      "beat_spy": null,
+      "spy_pct": null,
+      "alpha_pct": null,
+      "ret_30d_pct": 0.0,
+      "spy_delta_30d_pct": 1.02,
+      "last_snapshot": "2026-10-23",
+      "new_algo_date": null,
+      "comparator": {
+        "primary_etf": "XLF",
+        "signals": {
+          "momentum_5d": {
+            "direction": "UP",
+            "confidence": 0.137,
+            "return_pct": 0.684
+          },
+          "momentum_20d": {
+            "direction": "UP",
+            "confidence": 0.387,
+            "return_pct": 1.933
+          }
+        },
+        "summary": "both_up"
+      }
+    },
+    {
+      "schema_version": "v1",
+      "key": "crazy:surge-in-google-trends-for-renewable-energy-job-postings-sig",
+      "algo_type": "crazy",
+      "algo_id": "surge-in-google-trends-for-renewable-energy-job-postings-sig",
+      "name": "Surge In Google Trends For Renewable Energy Job Postings Signals Energy Sector Rotation",
+      "family": "labor_jobs",
+      "status": "sandbox",
+      "evidence_class": "needs_history",
+      "rebalance_frequency": "weekly",
+      "thesis_one_liner": "Rising interest in renewable energy jobs signals increased capex and hiring in energy transition companies, leading to energy sector outperformance.",
+      "thesis_source": "spec",
+      "ytd_pct": 0.0,
+      "days_running": 0,
+      "beat_spy": null,
+      "spy_pct": null,
+      "alpha_pct": null,
+      "ret_30d_pct": 0.0,
+      "spy_delta_30d_pct": 1.02,
+      "last_snapshot": "2026-10-23",
+      "new_algo_date": null,
+      "comparator": {
+        "primary_etf": "XLE",
+        "signals": {
+          "momentum_5d": {
+            "direction": "UP",
+            "confidence": 0.319,
+            "return_pct": 1.597
+          },
+          "momentum_20d": {
+            "direction": "UP",
+            "confidence": 1.0,
+            "return_pct": 11.75
+          }
+        },
+        "summary": "both_up"
+      }
+    },
+    {
+      "schema_version": "v1",
+      "key": "crazy:google-trends-surge-in-industrial-safety-equipment-searches-",
+      "algo_type": "crazy",
+      "algo_id": "google-trends-surge-in-industrial-safety-equipment-searches-",
+      "name": "Google Trends Surge In Industrial Safety Equipment Searches Signals Industrials Outperformance In Stable Regime",
+      "family": "attention_sentiment",
+      "status": "sandbox",
+      "evidence_class": "needs_history",
+      "rebalance_frequency": "weekly",
+      "thesis_one_liner": "Rising search interest in industrial safety equipment reflects capex and operational improvements, leading industrials to outperform in low volatility regimes.",
+      "thesis_source": "spec",
+      "ytd_pct": 0.0,
+      "days_running": 0,
+      "beat_spy": null,
+      "spy_pct": null,
+      "alpha_pct": null,
+      "ret_30d_pct": 0.0,
+      "spy_delta_30d_pct": 1.02,
+      "last_snapshot": "2026-10-23",
+      "new_algo_date": null,
+      "comparator": {
+        "primary_etf": "XLI",
+        "signals": {
+          "momentum_5d": {
+            "direction": "DOWN",
+            "confidence": 0.374,
+            "return_pct": -1.872
+          },
+          "momentum_20d": {
+            "direction": "DOWN",
+            "confidence": 0.682,
+            "return_pct": -3.409
+          }
+        },
+        "summary": "mixed"
+      }
+    },
+    {
+      "schema_version": "v1",
+      "key": "crazy:consumer-stress-spike-followed-by-rapid-normalization-signal",
+      "algo_type": "crazy",
+      "algo_id": "consumer-stress-spike-followed-by-rapid-normalization-signal",
+      "name": "Consumer Stress Spike Followed By Rapid Normalization Signals Staples Outperformance",
+      "family": "consumer_stress",
+      "status": "sandbox",
+      "evidence_class": "needs_history",
+      "rebalance_frequency": "weekly",
+      "thesis_one_liner": "A sharp surge in consumer stress related searches followed by a quick drop signals consumers have resolved or adjusted, often leading staples to outperform as spending stabilizes.",
+      "thesis_source": "spec",
+      "ytd_pct": 0.0,
+      "days_running": 0,
+      "beat_spy": null,
+      "spy_pct": null,
+      "alpha_pct": null,
+      "ret_30d_pct": 0.0,
+      "spy_delta_30d_pct": 1.02,
+      "last_snapshot": "2026-10-23",
+      "new_algo_date": null,
+      "comparator": {
+        "primary_etf": "XLP",
+        "signals": {
+          "momentum_5d": {
+            "direction": "UP",
+            "confidence": 0.146,
+            "return_pct": 0.73
+          },
+          "momentum_20d": {
+            "direction": "UP",
+            "confidence": 1.0,
+            "return_pct": 7.555
+          }
+        },
+        "summary": "both_up"
       }
     }
   ]

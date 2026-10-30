@@ -1,8 +1,22 @@
 {
   "schema_version": "v1",
   "date": "2026-10-24",
-  "generated_at": "2026-10-24T01:24:19Z",
+  "generated_at": "2026-10-24T01:30:13Z",
   "spotlight_1": {
+    "algo_id": "high-yield-spread-regime",
+    "name": "High Yield Spread Regime",
+    "family": "macro_input_pressure",
+    "algo_type": "crazy",
+    "thesis_one_liner": "High Yield Spread Regime tests whether macro data can expose input-cost, demand, or regime pressure before sector ETFs fully react.",
+    "ytd_pct": 5.99,
+    "ret_30d_pct": 4.2,
+    "status": "live_only",
+    "beat_spy": false,
+    "trade_count": 6,
+    "teaser_hook": "Live-only experiment with 4.2% recent momentum",
+    "source": "watchlist"
+  },
+  "spotlight_2": {
     "algo_id": "mortgage-rate-housing-proxy",
     "name": "Mortgage Rate Housing Proxy",
     "family": "consumer_stress",
@@ -16,23 +30,7 @@
     "teaser_hook": "Live-only experiment with 5.6% recent momentum",
     "source": "watchlist"
   },
-  "spotlight_2": {
-    "algo_id": "lumber-momentum",
-    "name": "Lumber Momentum",
-    "family": "macro_input_pressure",
-    "algo_type": "crazy",
-    "thesis_one_liner": "Lumber Momentum tests whether source data can expose input-cost, demand, or regime pressure before sector ETFs fully react.",
-    "ytd_pct": -2.13,
-    "ret_30d_pct": 1.73,
-    "status": "live_only",
-    "beat_spy": false,
-    "trade_count": 14,
-    "teaser_hook": "Alternative data experiment tracked live in public",
-    "source": "watchlist"
-  },
   "previous_14_days": [
-    "high-yield-spread-regime",
-    "job-posting-acceleration",
     "dmsr",
     "uber-mobility",
     "insider-trading-signals",
@@ -44,7 +42,9 @@
     "faber",
     "finra-dark-pool-signal",
     "mortgage-rate-housing-proxy",
-    "lumber-momentum"
+    "lumber-momentum",
+    "high-yield-spread-regime",
+    "mortgage-rate-housing-proxy"
   ],
   "pool_stats": {
     "total_pool_size": 13,

@@ -1,6 +1,6 @@
 {
   "schema_version": "v1",
-  "generated_at": "2026-11-06T03:03:08Z",
+  "generated_at": "2026-11-07T02:40:20Z",
   "algos": [
     {
       "schema_version": "v1",
@@ -14,14 +14,14 @@
       "rebalance_frequency": "weekly",
       "thesis_one_liner": "Algo Baileymol (Chaos Monger) tests whether systematic price rotation can capture persistent sector momentum better than passive market exposure.",
       "thesis_source": "derived",
-      "ytd_pct": 2.25,
-      "days_running": 217,
+      "ytd_pct": 2.7,
+      "days_running": 218,
       "beat_spy": false,
-      "spy_pct": 8.13,
-      "alpha_pct": -5.88,
-      "ret_30d_pct": -5.55,
-      "spy_delta_30d_pct": 0.37,
-      "last_snapshot": "2026-11-06",
+      "spy_pct": 8.47,
+      "alpha_pct": -5.77,
+      "ret_30d_pct": -4.94,
+      "spy_delta_30d_pct": 0.46,
+      "last_snapshot": "2026-11-07",
       "new_algo_date": null,
       "comparator": null
     },
@@ -38,67 +38,29 @@
       "thesis_one_liner": "When technology sector (XLK) falls sharply and utilities (XLU) simultaneously outperform over a 3-day window, it signals panic-driven rotation into defensive yields and lowest-volatility names.",
       "thesis_source": "spec",
       "ytd_pct": 0.01,
-      "days_running": 113,
+      "days_running": 114,
       "beat_spy": false,
-      "spy_pct": 8.13,
-      "alpha_pct": -8.13,
-      "ret_30d_pct": 0.03,
-      "spy_delta_30d_pct": 5.95,
-      "last_snapshot": "2026-11-06",
+      "spy_pct": 8.47,
+      "alpha_pct": -8.46,
+      "ret_30d_pct": 0.04,
+      "spy_delta_30d_pct": 5.44,
+      "last_snapshot": "2026-11-07",
       "new_algo_date": null,
       "comparator": {
         "primary_etf": "XLU",
         "signals": {
           "momentum_5d": {
-            "direction": "UP",
-            "confidence": 0.074,
-            "return_pct": 0.371
+            "direction": "DOWN",
+            "confidence": 0.138,
+            "return_pct": -0.691
           },
           "momentum_20d": {
             "direction": "UP",
-            "confidence": 1.0,
-            "return_pct": 5.43
+            "confidence": 0.831,
+            "return_pct": 4.154
           }
         },
-        "summary": "both_up"
-      }
-    },
-    {
-      "schema_version": "v1",
-      "key": "crazy:daily-surge-in-rss-news-counts-for-corporate-bond-downgrade-",
-      "algo_type": "crazy",
-      "algo_id": "daily-surge-in-rss-news-counts-for-corporate-bond-downgrade-",
-      "name": "Daily Surge In Rss News Counts For Corporate Bond Downgrade Signals Credit Stress Rotation",
-      "family": "attention_sentiment",
-      "status": "parked",
-      "evidence_class": "pending_seed",
-      "rebalance_frequency": "daily",
-      "thesis_one_liner": "A spike in downgrade news signals rising credit risk perception and possible sector rotation to defensive assets.",
-      "thesis_source": "spec",
-      "ytd_pct": -0.01,
-      "days_running": 179,
-      "beat_spy": false,
-      "spy_pct": 8.13,
-      "alpha_pct": -8.14,
-      "ret_30d_pct": -0.01,
-      "spy_delta_30d_pct": 5.91,
-      "last_snapshot": "2026-11-06",
-      "new_algo_date": null,
-      "comparator": {
-        "primary_etf": "XLF",
-        "signals": {
-          "momentum_5d": {
-            "direction": "UP",
-            "confidence": 0.197,
-            "return_pct": 0.983
-          },
-          "momentum_20d": {
-            "direction": "UP",
-            "confidence": 1.0,
-            "return_pct": 6.03
-          }
-        },
-        "summary": "both_up"
+        "summary": "mixed"
       }
     },
     {
@@ -114,26 +76,26 @@
       "thesis_one_liner": "Sharp copper price declines (>4% in 2 days) signal weakening global manufacturing demand and industrial capex pullback expectations, often preceding industrial sector underperformance.",
       "thesis_source": "spec",
       "ytd_pct": -0.01,
-      "days_running": 120,
+      "days_running": 121,
       "beat_spy": false,
-      "spy_pct": 8.13,
-      "alpha_pct": -8.14,
+      "spy_pct": 8.47,
+      "alpha_pct": -8.48,
       "ret_30d_pct": -0.01,
-      "spy_delta_30d_pct": 5.91,
-      "last_snapshot": "2026-11-06",
+      "spy_delta_30d_pct": 5.38,
+      "last_snapshot": "2026-11-07",
       "new_algo_date": null,
       "comparator": {
         "primary_etf": "XLI",
         "signals": {
           "momentum_5d": {
             "direction": "DOWN",
-            "confidence": 0.9,
-            "return_pct": -4.502
+            "confidence": 0.565,
+            "return_pct": -2.826
           },
           "momentum_20d": {
             "direction": "DOWN",
-            "confidence": 0.704,
-            "return_pct": -3.521
+            "confidence": 0.778,
+            "return_pct": -3.888
           }
         },
         "summary": "mixed"
@@ -152,29 +114,67 @@
       "thesis_one_liner": "When CRB rallies >3% weekly while broad equity index stays flat, it signals input cost pressure.",
       "thesis_source": "spec",
       "ytd_pct": -0.01,
-      "days_running": 138,
+      "days_running": 139,
       "beat_spy": false,
-      "spy_pct": 8.13,
-      "alpha_pct": -8.14,
+      "spy_pct": 8.47,
+      "alpha_pct": -8.48,
       "ret_30d_pct": 0.0,
-      "spy_delta_30d_pct": 5.92,
-      "last_snapshot": "2026-11-06",
+      "spy_delta_30d_pct": 5.39,
+      "last_snapshot": "2026-11-07",
       "new_algo_date": null,
       "comparator": {
         "primary_etf": "XLI",
         "signals": {
           "momentum_5d": {
             "direction": "DOWN",
-            "confidence": 0.9,
-            "return_pct": -4.502
+            "confidence": 0.565,
+            "return_pct": -2.826
           },
           "momentum_20d": {
             "direction": "DOWN",
-            "confidence": 0.704,
-            "return_pct": -3.521
+            "confidence": 0.778,
+            "return_pct": -3.888
           }
         },
         "summary": "mixed"
+      }
+    },
+    {
+      "schema_version": "v1",
+      "key": "crazy:daily-surge-in-rss-news-counts-for-corporate-bond-downgrade-",
+      "algo_type": "crazy",
+      "algo_id": "daily-surge-in-rss-news-counts-for-corporate-bond-downgrade-",
+      "name": "Daily Surge In Rss News Counts For Corporate Bond Downgrade Signals Credit Stress Rotation",
+      "family": "attention_sentiment",
+      "status": "parked",
+      "evidence_class": "pending_seed",
+      "rebalance_frequency": "daily",
+      "thesis_one_liner": "A spike in downgrade news signals rising credit risk perception and possible sector rotation to defensive assets.",
+      "thesis_source": "spec",
+      "ytd_pct": -0.05,
+      "days_running": 180,
+      "beat_spy": false,
+      "spy_pct": 8.47,
+      "alpha_pct": -8.52,
+      "ret_30d_pct": -0.05,
+      "spy_delta_30d_pct": 5.35,
+      "last_snapshot": "2026-11-07",
+      "new_algo_date": null,
+      "comparator": {
+        "primary_etf": "XLF",
+        "signals": {
+          "momentum_5d": {
+            "direction": "UP",
+            "confidence": 0.23,
+            "return_pct": 1.15
+          },
+          "momentum_20d": {
+            "direction": "UP",
+            "confidence": 0.888,
+            "return_pct": 4.44
+          }
+        },
+        "summary": "both_up"
       }
     },
     {
@@ -190,26 +190,26 @@
       "thesis_one_liner": "Spikes in urgent plumbing searches reveal consumer stress and rising demand for home repair services.",
       "thesis_source": "spec",
       "ytd_pct": -0.1,
-      "days_running": 179,
+      "days_running": 180,
       "beat_spy": false,
-      "spy_pct": 8.13,
-      "alpha_pct": -8.23,
+      "spy_pct": 8.47,
+      "alpha_pct": -8.57,
       "ret_30d_pct": 0.0,
-      "spy_delta_30d_pct": 5.92,
-      "last_snapshot": "2026-11-06",
+      "spy_delta_30d_pct": 5.39,
+      "last_snapshot": "2026-11-07",
       "new_algo_date": null,
       "comparator": {
         "primary_etf": "XLY",
         "signals": {
           "momentum_5d": {
             "direction": "UP",
-            "confidence": 0.248,
-            "return_pct": 1.239
+            "confidence": 0.381,
+            "return_pct": 1.907
           },
           "momentum_20d": {
             "direction": "UP",
-            "confidence": 1.0,
-            "return_pct": 5.308
+            "confidence": 0.838,
+            "return_pct": 4.191
           }
         },
         "summary": "both_up"
@@ -228,26 +228,26 @@
       "thesis_one_liner": "When VIX drops 3+ points in a single day while the financial sector (XLF) simultaneously gaps down, it signals a washout in financial stocks despite falling macro volatility\u2014often creating a mean-reversion bounce within days.",
       "thesis_source": "spec",
       "ytd_pct": -0.13,
-      "days_running": 197,
+      "days_running": 198,
       "beat_spy": false,
-      "spy_pct": 8.13,
-      "alpha_pct": -8.27,
+      "spy_pct": 8.47,
+      "alpha_pct": -8.6,
       "ret_30d_pct": 0.0,
-      "spy_delta_30d_pct": 5.92,
-      "last_snapshot": "2026-11-06",
+      "spy_delta_30d_pct": 5.39,
+      "last_snapshot": "2026-11-07",
       "new_algo_date": null,
       "comparator": {
         "primary_etf": "XLF",
         "signals": {
           "momentum_5d": {
             "direction": "UP",
-            "confidence": 0.197,
-            "return_pct": 0.983
+            "confidence": 0.23,
+            "return_pct": 1.15
           },
           "momentum_20d": {
             "direction": "UP",
-            "confidence": 1.0,
-            "return_pct": 6.03
+            "confidence": 0.888,
+            "return_pct": 4.44
           }
         },
         "summary": "both_up"
@@ -266,67 +266,29 @@
       "thesis_one_liner": "VIX spikes >25 while XLF underperforms SPY by >2%, then reverses sharply as Fed rate-cut expectations emerge, driving financials outperformance.",
       "thesis_source": "spec",
       "ytd_pct": -0.13,
-      "days_running": 202,
+      "days_running": 203,
       "beat_spy": false,
-      "spy_pct": 8.13,
-      "alpha_pct": -8.27,
+      "spy_pct": 8.47,
+      "alpha_pct": -8.6,
       "ret_30d_pct": 0.0,
-      "spy_delta_30d_pct": 5.92,
-      "last_snapshot": "2026-11-06",
+      "spy_delta_30d_pct": 5.39,
+      "last_snapshot": "2026-11-07",
       "new_algo_date": null,
       "comparator": {
         "primary_etf": "XLF",
         "signals": {
           "momentum_5d": {
             "direction": "UP",
-            "confidence": 0.197,
-            "return_pct": 0.983
+            "confidence": 0.23,
+            "return_pct": 1.15
           },
           "momentum_20d": {
             "direction": "UP",
-            "confidence": 1.0,
-            "return_pct": 6.03
+            "confidence": 0.888,
+            "return_pct": 4.44
           }
         },
         "summary": "both_up"
-      }
-    },
-    {
-      "schema_version": "v1",
-      "key": "crazy:oil-price-crash-below-50-day-ma-signals-energy-sector-mean-r",
-      "algo_type": "crazy",
-      "algo_id": "oil-price-crash-below-50-day-ma-signals-energy-sector-mean-r",
-      "name": "Oil Price Crash Below 50-day Ma Signals Energy Sector Mean Reversion Bounce",
-      "family": "macro_input_pressure",
-      "status": "failed",
-      "evidence_class": "v1_backtested",
-      "rebalance_frequency": "daily",
-      "thesis_one_liner": "Daily WTI crude closes >5% below its 50-day moving average in a single session, triggering oversold mean-reversion signals in energy stocks.",
-      "thesis_source": "spec",
-      "ytd_pct": -0.17,
-      "days_running": 108,
-      "beat_spy": false,
-      "spy_pct": 8.13,
-      "alpha_pct": -8.3,
-      "ret_30d_pct": -0.17,
-      "spy_delta_30d_pct": 5.75,
-      "last_snapshot": "2026-11-06",
-      "new_algo_date": null,
-      "comparator": {
-        "primary_etf": "XLE",
-        "signals": {
-          "momentum_5d": {
-            "direction": "DOWN",
-            "confidence": 1.0,
-            "return_pct": -10.304
-          },
-          "momentum_20d": {
-            "direction": "DOWN",
-            "confidence": 1.0,
-            "return_pct": -5.533
-          }
-        },
-        "summary": "mixed"
       }
     },
     {
@@ -342,13 +304,13 @@
       "thesis_one_liner": "When XLK underperforms XLV by >4% over 5 consecutive trading days, it often signals fear-driven rotation into defensive healthcare; subsequent mean reversion favors tech outperformance.",
       "thesis_source": "spec",
       "ytd_pct": -0.18,
-      "days_running": 195,
+      "days_running": 196,
       "beat_spy": false,
-      "spy_pct": 8.13,
-      "alpha_pct": -8.31,
+      "spy_pct": 8.47,
+      "alpha_pct": -8.65,
       "ret_30d_pct": 0.0,
-      "spy_delta_30d_pct": 5.92,
-      "last_snapshot": "2026-11-06",
+      "spy_delta_30d_pct": 5.39,
+      "last_snapshot": "2026-11-07",
       "new_algo_date": null,
       "comparator": {
         "primary_etf": "XLK",
@@ -356,12 +318,50 @@
           "momentum_5d": {
             "direction": "DOWN",
             "confidence": 1.0,
-            "return_pct": -13.966
+            "return_pct": -8.228
           },
           "momentum_20d": {
             "direction": "DOWN",
             "confidence": 1.0,
-            "return_pct": -17.899
+            "return_pct": -17.124
+          }
+        },
+        "summary": "mixed"
+      }
+    },
+    {
+      "schema_version": "v1",
+      "key": "crazy:oil-price-crash-below-50-day-ma-signals-energy-sector-mean-r",
+      "algo_type": "crazy",
+      "algo_id": "oil-price-crash-below-50-day-ma-signals-energy-sector-mean-r",
+      "name": "Oil Price Crash Below 50-day Ma Signals Energy Sector Mean Reversion Bounce",
+      "family": "macro_input_pressure",
+      "status": "failed",
+      "evidence_class": "v1_backtested",
+      "rebalance_frequency": "daily",
+      "thesis_one_liner": "Daily WTI crude closes >5% below its 50-day moving average in a single session, triggering oversold mean-reversion signals in energy stocks.",
+      "thesis_source": "spec",
+      "ytd_pct": -0.18,
+      "days_running": 109,
+      "beat_spy": false,
+      "spy_pct": 8.47,
+      "alpha_pct": -8.65,
+      "ret_30d_pct": -0.18,
+      "spy_delta_30d_pct": 5.22,
+      "last_snapshot": "2026-11-07",
+      "new_algo_date": null,
+      "comparator": {
+        "primary_etf": "XLE",
+        "signals": {
+          "momentum_5d": {
+            "direction": "DOWN",
+            "confidence": 1.0,
+            "return_pct": -11.997
+          },
+          "momentum_20d": {
+            "direction": "DOWN",
+            "confidence": 1.0,
+            "return_pct": -5.317
           }
         },
         "summary": "mixed"
@@ -380,13 +380,13 @@
       "thesis_one_liner": "Semiconductors often experience large daily price jumps, which can signal speculative froth and increased risk of a pullback.",
       "thesis_source": "spec",
       "ytd_pct": -0.2,
-      "days_running": 210,
+      "days_running": 211,
       "beat_spy": false,
-      "spy_pct": 8.13,
-      "alpha_pct": -8.33,
+      "spy_pct": 8.47,
+      "alpha_pct": -8.67,
       "ret_30d_pct": 0.0,
-      "spy_delta_30d_pct": 5.92,
-      "last_snapshot": "2026-11-06",
+      "spy_delta_30d_pct": 5.39,
+      "last_snapshot": "2026-11-07",
       "new_algo_date": null,
       "comparator": {
         "primary_etf": "XLK",
@@ -394,12 +394,12 @@
           "momentum_5d": {
             "direction": "DOWN",
             "confidence": 1.0,
-            "return_pct": -13.966
+            "return_pct": -8.228
           },
           "momentum_20d": {
             "direction": "DOWN",
             "confidence": 1.0,
-            "return_pct": -17.899
+            "return_pct": -17.124
           }
         },
         "summary": "mixed"
@@ -418,13 +418,13 @@
       "thesis_one_liner": "When crude oil closes down 3+ days straight but bounces 2%+ on the 4th day and XLE lags, mean reversion pressure builds; XLE outperforms over next 5 days.",
       "thesis_source": "spec",
       "ytd_pct": -0.31,
-      "days_running": 199,
+      "days_running": 200,
       "beat_spy": false,
-      "spy_pct": 8.13,
-      "alpha_pct": -8.44,
+      "spy_pct": 8.47,
+      "alpha_pct": -8.78,
       "ret_30d_pct": -0.2,
-      "spy_delta_30d_pct": 5.71,
-      "last_snapshot": "2026-11-06",
+      "spy_delta_30d_pct": 5.19,
+      "last_snapshot": "2026-11-07",
       "new_algo_date": null,
       "comparator": {
         "primary_etf": "XLE",
@@ -432,12 +432,12 @@
           "momentum_5d": {
             "direction": "DOWN",
             "confidence": 1.0,
-            "return_pct": -10.304
+            "return_pct": -11.997
           },
           "momentum_20d": {
             "direction": "DOWN",
             "confidence": 1.0,
-            "return_pct": -5.533
+            "return_pct": -5.317
           }
         },
         "summary": "mixed"
@@ -456,26 +456,26 @@
       "thesis_one_liner": "Rising news volume on coal shortages signals rising commodity input costs for materials companies.",
       "thesis_source": "spec",
       "ytd_pct": -0.35,
-      "days_running": 179,
+      "days_running": 180,
       "beat_spy": false,
-      "spy_pct": 8.13,
-      "alpha_pct": -8.48,
+      "spy_pct": 8.47,
+      "alpha_pct": -8.82,
       "ret_30d_pct": 0.03,
-      "spy_delta_30d_pct": 5.94,
-      "last_snapshot": "2026-11-06",
+      "spy_delta_30d_pct": 5.42,
+      "last_snapshot": "2026-11-07",
       "new_algo_date": null,
       "comparator": {
         "primary_etf": "XLB",
         "signals": {
           "momentum_5d": {
             "direction": "DOWN",
-            "confidence": 0.076,
-            "return_pct": -0.381
+            "confidence": 0.3,
+            "return_pct": -1.498
           },
           "momentum_20d": {
             "direction": "UP",
             "confidence": 1.0,
-            "return_pct": 6.211
+            "return_pct": 5.098
           }
         },
         "summary": "mixed"
@@ -494,29 +494,29 @@
       "thesis_one_liner": "A gap down of more than 1.5% that fills (closes back above previous day's close) within 3 days often leads to short-term rallies.",
       "thesis_source": "spec",
       "ytd_pct": -0.45,
-      "days_running": 210,
+      "days_running": 211,
       "beat_spy": false,
-      "spy_pct": 8.13,
-      "alpha_pct": -8.58,
-      "ret_30d_pct": 0.02,
-      "spy_delta_30d_pct": 5.94,
-      "last_snapshot": "2026-11-06",
+      "spy_pct": 8.47,
+      "alpha_pct": -8.92,
+      "ret_30d_pct": 0.03,
+      "spy_delta_30d_pct": 5.43,
+      "last_snapshot": "2026-11-07",
       "new_algo_date": null,
       "comparator": {
         "primary_etf": "XLU",
         "signals": {
           "momentum_5d": {
-            "direction": "UP",
-            "confidence": 0.074,
-            "return_pct": 0.371
+            "direction": "DOWN",
+            "confidence": 0.138,
+            "return_pct": -0.691
           },
           "momentum_20d": {
             "direction": "UP",
-            "confidence": 1.0,
-            "return_pct": 5.43
+            "confidence": 0.831,
+            "return_pct": 4.154
           }
         },
-        "summary": "both_up"
+        "summary": "mixed"
       }
     },
     {
@@ -532,26 +532,26 @@
       "thesis_one_liner": "Rising interest in 5G deployment correlates with communication sector ETF strength.",
       "thesis_source": "spec",
       "ytd_pct": -0.47,
-      "days_running": 212,
+      "days_running": 213,
       "beat_spy": false,
-      "spy_pct": 8.13,
-      "alpha_pct": -8.6,
+      "spy_pct": 8.47,
+      "alpha_pct": -8.94,
       "ret_30d_pct": 0.0,
-      "spy_delta_30d_pct": 5.92,
-      "last_snapshot": "2026-11-06",
+      "spy_delta_30d_pct": 5.39,
+      "last_snapshot": "2026-11-07",
       "new_algo_date": null,
       "comparator": {
         "primary_etf": "XLC",
         "signals": {
           "momentum_5d": {
             "direction": "UP",
-            "confidence": 0.619,
-            "return_pct": 3.093
+            "confidence": 0.979,
+            "return_pct": 4.895
           },
           "momentum_20d": {
             "direction": "DOWN",
             "confidence": 1.0,
-            "return_pct": -6.897
+            "return_pct": -5.064
           }
         },
         "summary": "mixed"
@@ -570,26 +570,26 @@
       "thesis_one_liner": "Retail stocks exhibit high volatility and frequent swings in investor sentiment, often leading to sharp drawdowns and bounces.",
       "thesis_source": "spec",
       "ytd_pct": -0.53,
-      "days_running": 212,
+      "days_running": 213,
       "beat_spy": false,
-      "spy_pct": 8.13,
-      "alpha_pct": -8.66,
-      "ret_30d_pct": -0.31,
-      "spy_delta_30d_pct": 5.6,
-      "last_snapshot": "2026-11-06",
+      "spy_pct": 8.47,
+      "alpha_pct": -9.0,
+      "ret_30d_pct": -0.29,
+      "spy_delta_30d_pct": 5.11,
+      "last_snapshot": "2026-11-07",
       "new_algo_date": null,
       "comparator": {
         "primary_etf": "XLY",
         "signals": {
           "momentum_5d": {
             "direction": "UP",
-            "confidence": 0.248,
-            "return_pct": 1.239
+            "confidence": 0.381,
+            "return_pct": 1.907
           },
           "momentum_20d": {
             "direction": "UP",
-            "confidence": 1.0,
-            "return_pct": 5.308
+            "confidence": 0.838,
+            "return_pct": 4.191
           }
         },
         "summary": "both_up"
@@ -607,14 +607,14 @@
       "rebalance_frequency": "daily",
       "thesis_one_liner": "Oil futures curve flips from contango to backwardation, indicating supply concerns and near-term demand pressure from energy-intensive sectors.",
       "thesis_source": "spec",
-      "ytd_pct": -0.56,
-      "days_running": 124,
+      "ytd_pct": -0.57,
+      "days_running": 125,
       "beat_spy": false,
-      "spy_pct": 8.13,
-      "alpha_pct": -8.7,
-      "ret_30d_pct": -0.23,
-      "spy_delta_30d_pct": 5.68,
-      "last_snapshot": "2026-11-06",
+      "spy_pct": 8.47,
+      "alpha_pct": -9.04,
+      "ret_30d_pct": -0.24,
+      "spy_delta_30d_pct": 5.15,
+      "last_snapshot": "2026-11-07",
       "new_algo_date": null,
       "comparator": {
         "primary_etf": "XLE",
@@ -622,12 +622,12 @@
           "momentum_5d": {
             "direction": "DOWN",
             "confidence": 1.0,
-            "return_pct": -10.304
+            "return_pct": -11.997
           },
           "momentum_20d": {
             "direction": "DOWN",
             "confidence": 1.0,
-            "return_pct": -5.533
+            "return_pct": -5.317
           }
         },
         "summary": "mixed"
@@ -646,13 +646,13 @@
       "thesis_one_liner": "After a weekly drawdown exceeding 5%, XLE often rebounds sharply the following week as energy prices stabilize.",
       "thesis_source": "spec",
       "ytd_pct": -0.6,
-      "days_running": 212,
+      "days_running": 213,
       "beat_spy": false,
-      "spy_pct": 8.13,
-      "alpha_pct": -8.73,
+      "spy_pct": 8.47,
+      "alpha_pct": -9.07,
       "ret_30d_pct": -0.16,
-      "spy_delta_30d_pct": 5.76,
-      "last_snapshot": "2026-11-06",
+      "spy_delta_30d_pct": 5.24,
+      "last_snapshot": "2026-11-07",
       "new_algo_date": null,
       "comparator": {
         "primary_etf": "XLE",
@@ -660,12 +660,12 @@
           "momentum_5d": {
             "direction": "DOWN",
             "confidence": 1.0,
-            "return_pct": -10.304
+            "return_pct": -11.997
           },
           "momentum_20d": {
             "direction": "DOWN",
             "confidence": 1.0,
-            "return_pct": -5.533
+            "return_pct": -5.317
           }
         },
         "summary": "mixed"
@@ -684,26 +684,26 @@
       "thesis_one_liner": "20-day rolling volatility of copper futures rises >35% above its 60-day baseline, signaling uncertainty in industrial demand or supply chain stress.",
       "thesis_source": "spec",
       "ytd_pct": -0.66,
-      "days_running": 142,
+      "days_running": 143,
       "beat_spy": false,
-      "spy_pct": 8.13,
-      "alpha_pct": -8.78,
+      "spy_pct": 8.47,
+      "alpha_pct": -9.12,
       "ret_30d_pct": -0.11,
-      "spy_delta_30d_pct": 5.8,
-      "last_snapshot": "2026-11-06",
+      "spy_delta_30d_pct": 5.28,
+      "last_snapshot": "2026-11-07",
       "new_algo_date": null,
       "comparator": {
         "primary_etf": "XLB",
         "signals": {
           "momentum_5d": {
             "direction": "DOWN",
-            "confidence": 0.076,
-            "return_pct": -0.381
+            "confidence": 0.3,
+            "return_pct": -1.498
           },
           "momentum_20d": {
             "direction": "UP",
             "confidence": 1.0,
-            "return_pct": 6.211
+            "return_pct": 5.098
           }
         },
         "summary": "mixed"
@@ -721,27 +721,27 @@
       "rebalance_frequency": "daily",
       "thesis_one_liner": "Spikes in dividend cut announcements signal deteriorating corporate cash flow, recession expectations, and capital preservation; correlates with broad market weakness.",
       "thesis_source": "spec",
-      "ytd_pct": -0.79,
-      "days_running": 179,
+      "ytd_pct": -0.83,
+      "days_running": 180,
       "beat_spy": false,
-      "spy_pct": 8.13,
-      "alpha_pct": -8.92,
-      "ret_30d_pct": -0.02,
-      "spy_delta_30d_pct": 5.89,
-      "last_snapshot": "2026-11-06",
+      "spy_pct": 8.47,
+      "alpha_pct": -9.3,
+      "ret_30d_pct": -0.05,
+      "spy_delta_30d_pct": 5.34,
+      "last_snapshot": "2026-11-07",
       "new_algo_date": null,
       "comparator": {
         "primary_etf": "XLF",
         "signals": {
           "momentum_5d": {
             "direction": "UP",
-            "confidence": 0.197,
-            "return_pct": 0.983
+            "confidence": 0.23,
+            "return_pct": 1.15
           },
           "momentum_20d": {
             "direction": "UP",
-            "confidence": 1.0,
-            "return_pct": 6.03
+            "confidence": 0.888,
+            "return_pct": 4.44
           }
         },
         "summary": "both_up"
@@ -760,26 +760,26 @@
       "thesis_one_liner": "News spikes mentioning commodity shortages tend to lift materials sector ETFs as prices rise.",
       "thesis_source": "spec",
       "ytd_pct": -0.89,
-      "days_running": 212,
+      "days_running": 213,
       "beat_spy": false,
-      "spy_pct": 8.13,
-      "alpha_pct": -9.03,
-      "ret_30d_pct": -0.25,
-      "spy_delta_30d_pct": 5.67,
-      "last_snapshot": "2026-11-06",
+      "spy_pct": 8.47,
+      "alpha_pct": -9.36,
+      "ret_30d_pct": -0.16,
+      "spy_delta_30d_pct": 5.23,
+      "last_snapshot": "2026-11-07",
       "new_algo_date": null,
       "comparator": {
         "primary_etf": "XLB",
         "signals": {
           "momentum_5d": {
             "direction": "DOWN",
-            "confidence": 0.076,
-            "return_pct": -0.381
+            "confidence": 0.3,
+            "return_pct": -1.498
           },
           "momentum_20d": {
             "direction": "UP",
             "confidence": 1.0,
-            "return_pct": 6.211
+            "return_pct": 5.098
           }
         },
         "summary": "mixed"
@@ -798,26 +798,26 @@
       "thesis_one_liner": "Periods of low volatility contraction in materials ETFs often precede explosive directional moves.",
       "thesis_source": "spec",
       "ytd_pct": 0.0,
-      "days_running": 212,
+      "days_running": 213,
       "beat_spy": false,
-      "spy_pct": 8.13,
-      "alpha_pct": -8.13,
+      "spy_pct": 8.47,
+      "alpha_pct": -8.47,
       "ret_30d_pct": 0.0,
-      "spy_delta_30d_pct": 5.92,
-      "last_snapshot": "2026-11-06",
+      "spy_delta_30d_pct": 5.39,
+      "last_snapshot": "2026-11-07",
       "new_algo_date": null,
       "comparator": {
         "primary_etf": "XLB",
         "signals": {
           "momentum_5d": {
             "direction": "DOWN",
-            "confidence": 0.076,
-            "return_pct": -0.381
+            "confidence": 0.3,
+            "return_pct": -1.498
           },
           "momentum_20d": {
             "direction": "UP",
             "confidence": 1.0,
-            "return_pct": 6.211
+            "return_pct": 5.098
           }
         },
         "summary": "mixed"
@@ -836,26 +836,26 @@
       "thesis_one_liner": "A spike in last minute flight deal searches indicates spontaneous travel intentions increasing soon.",
       "thesis_source": "spec",
       "ytd_pct": 0.0,
-      "days_running": 179,
+      "days_running": 180,
       "beat_spy": false,
-      "spy_pct": 8.13,
-      "alpha_pct": -8.13,
+      "spy_pct": 8.47,
+      "alpha_pct": -8.47,
       "ret_30d_pct": 0.0,
-      "spy_delta_30d_pct": 5.92,
-      "last_snapshot": "2026-11-06",
+      "spy_delta_30d_pct": 5.39,
+      "last_snapshot": "2026-11-07",
       "new_algo_date": null,
       "comparator": {
         "primary_etf": "XLY",
         "signals": {
           "momentum_5d": {
             "direction": "UP",
-            "confidence": 0.248,
-            "return_pct": 1.239
+            "confidence": 0.381,
+            "return_pct": 1.907
           },
           "momentum_20d": {
             "direction": "UP",
-            "confidence": 1.0,
-            "return_pct": 5.308
+            "confidence": 0.838,
+            "return_pct": 4.191
           }
         },
         "summary": "both_up"
@@ -874,26 +874,26 @@
       "thesis_one_liner": "Spikes in reported warehouse worker injuries signal labor market stress, wage pressure, and operational cost escalation in logistics; presages margin compression.",
       "thesis_source": "spec",
       "ytd_pct": 0.0,
-      "days_running": 179,
+      "days_running": 180,
       "beat_spy": false,
-      "spy_pct": 8.13,
-      "alpha_pct": -8.13,
+      "spy_pct": 8.47,
+      "alpha_pct": -8.47,
       "ret_30d_pct": 0.0,
-      "spy_delta_30d_pct": 5.92,
-      "last_snapshot": "2026-11-06",
+      "spy_delta_30d_pct": 5.39,
+      "last_snapshot": "2026-11-07",
       "new_algo_date": null,
       "comparator": {
         "primary_etf": "XLI",
         "signals": {
           "momentum_5d": {
             "direction": "DOWN",
-            "confidence": 0.9,
-            "return_pct": -4.502
+            "confidence": 0.565,
+            "return_pct": -2.826
           },
           "momentum_20d": {
             "direction": "DOWN",
-            "confidence": 0.704,
-            "return_pct": -3.521
+            "confidence": 0.778,
+            "return_pct": -3.888
           }
         },
         "summary": "mixed"
@@ -912,26 +912,26 @@
       "thesis_one_liner": "Increased seismic activity near key ports can disrupt freight logistics and shipping throughput.",
       "thesis_source": "spec",
       "ytd_pct": 0.0,
-      "days_running": 179,
+      "days_running": 180,
       "beat_spy": false,
-      "spy_pct": 8.13,
-      "alpha_pct": -8.13,
+      "spy_pct": 8.47,
+      "alpha_pct": -8.47,
       "ret_30d_pct": 0.0,
-      "spy_delta_30d_pct": 5.92,
-      "last_snapshot": "2026-11-06",
+      "spy_delta_30d_pct": 5.39,
+      "last_snapshot": "2026-11-07",
       "new_algo_date": null,
       "comparator": {
         "primary_etf": "XLI",
         "signals": {
           "momentum_5d": {
             "direction": "DOWN",
-            "confidence": 0.9,
-            "return_pct": -4.502
+            "confidence": 0.565,
+            "return_pct": -2.826
           },
           "momentum_20d": {
             "direction": "DOWN",
-            "confidence": 0.704,
-            "return_pct": -3.521
+            "confidence": 0.778,
+            "return_pct": -3.888
           }
         },
         "summary": "mixed"
@@ -950,13 +950,13 @@
       "thesis_one_liner": "Growing searches for solar installation delays indicate supply chain bottlenecks impacting green energy demand.",
       "thesis_source": "spec",
       "ytd_pct": 0.0,
-      "days_running": 179,
+      "days_running": 180,
       "beat_spy": false,
-      "spy_pct": 8.13,
-      "alpha_pct": -8.13,
+      "spy_pct": 8.47,
+      "alpha_pct": -8.47,
       "ret_30d_pct": 0.0,
-      "spy_delta_30d_pct": 5.92,
-      "last_snapshot": "2026-11-06",
+      "spy_delta_30d_pct": 5.39,
+      "last_snapshot": "2026-11-07",
       "new_algo_date": null,
       "comparator": {
         "primary_etf": "XLE",
@@ -964,12 +964,12 @@
           "momentum_5d": {
             "direction": "DOWN",
             "confidence": 1.0,
-            "return_pct": -10.304
+            "return_pct": -11.997
           },
           "momentum_20d": {
             "direction": "DOWN",
             "confidence": 1.0,
-            "return_pct": -5.533
+            "return_pct": -5.317
           }
         },
         "summary": "mixed"
@@ -988,26 +988,26 @@
       "thesis_one_liner": "Increased freight train delay searches indicate supply chain slowdowns impacting industrial logistics.",
       "thesis_source": "spec",
       "ytd_pct": 0.0,
-      "days_running": 179,
+      "days_running": 180,
       "beat_spy": false,
-      "spy_pct": 8.13,
-      "alpha_pct": -8.13,
+      "spy_pct": 8.47,
+      "alpha_pct": -8.47,
       "ret_30d_pct": 0.0,
-      "spy_delta_30d_pct": 5.92,
-      "last_snapshot": "2026-11-06",
+      "spy_delta_30d_pct": 5.39,
+      "last_snapshot": "2026-11-07",
       "new_algo_date": null,
       "comparator": {
         "primary_etf": "XLI",
         "signals": {
           "momentum_5d": {
             "direction": "DOWN",
-            "confidence": 0.9,
-            "return_pct": -4.502
+            "confidence": 0.565,
+            "return_pct": -2.826
           },
           "momentum_20d": {
             "direction": "DOWN",
-            "confidence": 0.704,
-            "return_pct": -3.521
+            "confidence": 0.778,
+            "return_pct": -3.888
           }
         },
         "summary": "mixed"
@@ -1026,26 +1026,26 @@
       "thesis_one_liner": "Growing interest in warehouse automation jobs signals rising automation adoption reducing labor demand.",
       "thesis_source": "spec",
       "ytd_pct": 0.0,
-      "days_running": 179,
+      "days_running": 180,
       "beat_spy": false,
-      "spy_pct": 8.13,
-      "alpha_pct": -8.13,
+      "spy_pct": 8.47,
+      "alpha_pct": -8.47,
       "ret_30d_pct": 0.0,
-      "spy_delta_30d_pct": 5.92,
-      "last_snapshot": "2026-11-06",
+      "spy_delta_30d_pct": 5.39,
+      "last_snapshot": "2026-11-07",
       "new_algo_date": null,
       "comparator": {
         "primary_etf": "XLI",
         "signals": {
           "momentum_5d": {
             "direction": "DOWN",
-            "confidence": 0.9,
-            "return_pct": -4.502
+            "confidence": 0.565,
+            "return_pct": -2.826
           },
           "momentum_20d": {
             "direction": "DOWN",
-            "confidence": 0.704,
-            "return_pct": -3.521
+            "confidence": 0.778,
+            "return_pct": -3.888
           }
         },
         "summary": "mixed"
@@ -1064,26 +1064,26 @@
       "thesis_one_liner": "Rising searches for truck driver shortage indicate labor tightness impacting freight logistics and supply chain.",
       "thesis_source": "spec",
       "ytd_pct": 0.0,
-      "days_running": 179,
+      "days_running": 180,
       "beat_spy": false,
-      "spy_pct": 8.13,
-      "alpha_pct": -8.13,
+      "spy_pct": 8.47,
+      "alpha_pct": -8.47,
       "ret_30d_pct": 0.0,
-      "spy_delta_30d_pct": 5.92,
-      "last_snapshot": "2026-11-06",
+      "spy_delta_30d_pct": 5.39,
+      "last_snapshot": "2026-11-07",
       "new_algo_date": null,
       "comparator": {
         "primary_etf": "XLI",
         "signals": {
           "momentum_5d": {
             "direction": "DOWN",
-            "confidence": 0.9,
-            "return_pct": -4.502
+            "confidence": 0.565,
+            "return_pct": -2.826
           },
           "momentum_20d": {
             "direction": "DOWN",
-            "confidence": 0.704,
-            "return_pct": -3.521
+            "confidence": 0.778,
+            "return_pct": -3.888
           }
         },
         "summary": "mixed"
@@ -1102,26 +1102,26 @@
       "thesis_one_liner": "Higher demand for moving truck rentals indicates rising residential relocations and housing market activity.",
       "thesis_source": "spec",
       "ytd_pct": 0.0,
-      "days_running": 179,
+      "days_running": 180,
       "beat_spy": false,
-      "spy_pct": 8.13,
-      "alpha_pct": -8.13,
+      "spy_pct": 8.47,
+      "alpha_pct": -8.47,
       "ret_30d_pct": 0.0,
-      "spy_delta_30d_pct": 5.92,
-      "last_snapshot": "2026-11-06",
+      "spy_delta_30d_pct": 5.39,
+      "last_snapshot": "2026-11-07",
       "new_algo_date": null,
       "comparator": {
         "primary_etf": "XLRE",
         "signals": {
           "momentum_5d": {
             "direction": "UP",
-            "confidence": 0.576,
-            "return_pct": 2.88
+            "confidence": 0.385,
+            "return_pct": 1.923
           },
           "momentum_20d": {
             "direction": "UP",
             "confidence": 1.0,
-            "return_pct": 8.446
+            "return_pct": 5.744
           }
         },
         "summary": "both_up"
@@ -1140,26 +1140,26 @@
       "thesis_one_liner": "Spikes in pest control searches correlate with seasonal property stress and localized economic downturn; homeowners prioritize pest mitigation when neighborhood conditions deteriorate or rental markets tighten.",
       "thesis_source": "spec",
       "ytd_pct": 0.0,
-      "days_running": 179,
+      "days_running": 180,
       "beat_spy": false,
-      "spy_pct": 8.13,
-      "alpha_pct": -8.13,
+      "spy_pct": 8.47,
+      "alpha_pct": -8.47,
       "ret_30d_pct": 0.0,
-      "spy_delta_30d_pct": 5.92,
-      "last_snapshot": "2026-11-06",
+      "spy_delta_30d_pct": 5.39,
+      "last_snapshot": "2026-11-07",
       "new_algo_date": null,
       "comparator": {
         "primary_etf": "XLRE",
         "signals": {
           "momentum_5d": {
             "direction": "UP",
-            "confidence": 0.576,
-            "return_pct": 2.88
+            "confidence": 0.385,
+            "return_pct": 1.923
           },
           "momentum_20d": {
             "direction": "UP",
             "confidence": 1.0,
-            "return_pct": 8.446
+            "return_pct": 5.744
           }
         },
         "summary": "both_up"
@@ -1178,13 +1178,13 @@
       "thesis_one_liner": "Acceleration in charger deployment outside major metro areas signals government subsidy stimulation and broadening EV adoption; correlates with XLE weakness and XLK strength.",
       "thesis_source": "spec",
       "ytd_pct": 0.0,
-      "days_running": 179,
+      "days_running": 180,
       "beat_spy": false,
-      "spy_pct": 8.13,
-      "alpha_pct": -8.13,
+      "spy_pct": 8.47,
+      "alpha_pct": -8.47,
       "ret_30d_pct": 0.0,
-      "spy_delta_30d_pct": 5.92,
-      "last_snapshot": "2026-11-06",
+      "spy_delta_30d_pct": 5.39,
+      "last_snapshot": "2026-11-07",
       "new_algo_date": null,
       "comparator": {
         "primary_etf": "XLE",
@@ -1192,12 +1192,12 @@
           "momentum_5d": {
             "direction": "DOWN",
             "confidence": 1.0,
-            "return_pct": -10.304
+            "return_pct": -11.997
           },
           "momentum_20d": {
             "direction": "DOWN",
             "confidence": 1.0,
-            "return_pct": -5.533
+            "return_pct": -5.317
           }
         },
         "summary": "mixed"
@@ -1216,26 +1216,26 @@
       "thesis_one_liner": "When weekly realized volatility contracts below 50% of its 20-week average, a breakout in price often follows.",
       "thesis_source": "spec",
       "ytd_pct": 0.0,
-      "days_running": 207,
+      "days_running": 208,
       "beat_spy": false,
-      "spy_pct": 8.13,
-      "alpha_pct": -8.13,
+      "spy_pct": 8.47,
+      "alpha_pct": -8.47,
       "ret_30d_pct": 0.0,
-      "spy_delta_30d_pct": 5.92,
-      "last_snapshot": "2026-11-06",
+      "spy_delta_30d_pct": 5.39,
+      "last_snapshot": "2026-11-07",
       "new_algo_date": null,
       "comparator": {
         "primary_etf": "XLB",
         "signals": {
           "momentum_5d": {
             "direction": "DOWN",
-            "confidence": 0.076,
-            "return_pct": -0.381
+            "confidence": 0.3,
+            "return_pct": -1.498
           },
           "momentum_20d": {
             "direction": "UP",
             "confidence": 1.0,
-            "return_pct": 6.211
+            "return_pct": 5.098
           }
         },
         "summary": "mixed"
@@ -1254,26 +1254,26 @@
       "thesis_one_liner": "Lumber futures can experience wild price swings that outpace the broader market, often correcting sharply after a rapid run-up.",
       "thesis_source": "spec",
       "ytd_pct": 0.0,
-      "days_running": 210,
+      "days_running": 211,
       "beat_spy": false,
-      "spy_pct": 8.13,
-      "alpha_pct": -8.13,
+      "spy_pct": 8.47,
+      "alpha_pct": -8.47,
       "ret_30d_pct": 0.0,
-      "spy_delta_30d_pct": 5.92,
-      "last_snapshot": "2026-11-06",
+      "spy_delta_30d_pct": 5.39,
+      "last_snapshot": "2026-11-07",
       "new_algo_date": null,
       "comparator": {
         "primary_etf": "XLB",
         "signals": {
           "momentum_5d": {
             "direction": "DOWN",
-            "confidence": 0.076,
-            "return_pct": -0.381
+            "confidence": 0.3,
+            "return_pct": -1.498
           },
           "momentum_20d": {
             "direction": "UP",
             "confidence": 1.0,
-            "return_pct": 6.211
+            "return_pct": 5.098
           }
         },
         "summary": "mixed"
@@ -1292,13 +1292,13 @@
       "thesis_one_liner": "A 50%+ weekly spike in realized volatility often precedes strong directional moves in energy stocks.",
       "thesis_source": "spec",
       "ytd_pct": 0.0,
-      "days_running": 207,
+      "days_running": 208,
       "beat_spy": false,
-      "spy_pct": 8.13,
-      "alpha_pct": -8.13,
+      "spy_pct": 8.47,
+      "alpha_pct": -8.47,
       "ret_30d_pct": 0.0,
-      "spy_delta_30d_pct": 5.92,
-      "last_snapshot": "2026-11-06",
+      "spy_delta_30d_pct": 5.39,
+      "last_snapshot": "2026-11-07",
       "new_algo_date": null,
       "comparator": {
         "primary_etf": "XLE",
@@ -1306,12 +1306,12 @@
           "momentum_5d": {
             "direction": "DOWN",
             "confidence": 1.0,
-            "return_pct": -10.304
+            "return_pct": -11.997
           },
           "momentum_20d": {
             "direction": "DOWN",
             "confidence": 1.0,
-            "return_pct": -5.533
+            "return_pct": -5.317
           }
         },
         "summary": "mixed"
@@ -1330,26 +1330,26 @@
       "thesis_one_liner": "Sudden increase in emergency food delivery searches signals consumer stress and elevated food demand.",
       "thesis_source": "spec",
       "ytd_pct": 0.0,
-      "days_running": 179,
+      "days_running": 180,
       "beat_spy": false,
-      "spy_pct": 8.13,
-      "alpha_pct": -8.13,
+      "spy_pct": 8.47,
+      "alpha_pct": -8.47,
       "ret_30d_pct": 0.0,
-      "spy_delta_30d_pct": 5.92,
-      "last_snapshot": "2026-11-06",
+      "spy_delta_30d_pct": 5.39,
+      "last_snapshot": "2026-11-07",
       "new_algo_date": null,
       "comparator": {
         "primary_etf": "XLP",
         "signals": {
           "momentum_5d": {
             "direction": "UP",
-            "confidence": 0.696,
-            "return_pct": 3.482
+            "confidence": 0.148,
+            "return_pct": 0.738
           },
           "momentum_20d": {
             "direction": "UP",
             "confidence": 1.0,
-            "return_pct": 9.386
+            "return_pct": 7.971
           }
         },
         "summary": "both_up"
@@ -1368,26 +1368,26 @@
       "thesis_one_liner": "Spikes in EV charger outage searches indicate infrastructure issues creating stress in green tech adoption.",
       "thesis_source": "spec",
       "ytd_pct": 0.0,
-      "days_running": 179,
+      "days_running": 180,
       "beat_spy": false,
-      "spy_pct": 8.13,
-      "alpha_pct": -8.13,
+      "spy_pct": 8.47,
+      "alpha_pct": -8.47,
       "ret_30d_pct": 0.0,
-      "spy_delta_30d_pct": 5.92,
-      "last_snapshot": "2026-11-06",
+      "spy_delta_30d_pct": 5.39,
+      "last_snapshot": "2026-11-07",
       "new_algo_date": null,
       "comparator": {
         "primary_etf": "XLC",
         "signals": {
           "momentum_5d": {
             "direction": "UP",
-            "confidence": 0.619,
-            "return_pct": 3.093
+            "confidence": 0.979,
+            "return_pct": 4.895
           },
           "momentum_20d": {
             "direction": "DOWN",
             "confidence": 1.0,
-            "return_pct": -6.897
+            "return_pct": -5.064
           }
         },
         "summary": "mixed"
@@ -1406,29 +1406,29 @@
       "thesis_one_liner": "Utilities volatility spikes when energy cost shocks or grid stress events create input price uncertainty; relative volatility surge precedes defensive sector rotation.",
       "thesis_source": "spec",
       "ytd_pct": 0.0,
-      "days_running": 179,
+      "days_running": 180,
       "beat_spy": false,
-      "spy_pct": 8.13,
-      "alpha_pct": -8.13,
+      "spy_pct": 8.47,
+      "alpha_pct": -8.47,
       "ret_30d_pct": 0.0,
-      "spy_delta_30d_pct": 5.92,
-      "last_snapshot": "2026-11-06",
+      "spy_delta_30d_pct": 5.39,
+      "last_snapshot": "2026-11-07",
       "new_algo_date": null,
       "comparator": {
         "primary_etf": "XLU",
         "signals": {
           "momentum_5d": {
-            "direction": "UP",
-            "confidence": 0.074,
-            "return_pct": 0.371
+            "direction": "DOWN",
+            "confidence": 0.138,
+            "return_pct": -0.691
           },
           "momentum_20d": {
             "direction": "UP",
-            "confidence": 1.0,
-            "return_pct": 5.43
+            "confidence": 0.831,
+            "return_pct": 4.154
           }
         },
-        "summary": "both_up"
+        "summary": "mixed"
       }
     },
     {
@@ -1444,26 +1444,26 @@
       "thesis_one_liner": "Rising strike-related searches reflect potential labor disruptions in logistics-heavy sectors.",
       "thesis_source": "spec",
       "ytd_pct": 0.0,
-      "days_running": 179,
+      "days_running": 180,
       "beat_spy": false,
-      "spy_pct": 8.13,
-      "alpha_pct": -8.13,
+      "spy_pct": 8.47,
+      "alpha_pct": -8.47,
       "ret_30d_pct": 0.0,
-      "spy_delta_30d_pct": 5.92,
-      "last_snapshot": "2026-11-06",
+      "spy_delta_30d_pct": 5.39,
+      "last_snapshot": "2026-11-07",
       "new_algo_date": null,
       "comparator": {
         "primary_etf": "XLI",
         "signals": {
           "momentum_5d": {
             "direction": "DOWN",
-            "confidence": 0.9,
-            "return_pct": -4.502
+            "confidence": 0.565,
+            "return_pct": -2.826
           },
           "momentum_20d": {
             "direction": "DOWN",
-            "confidence": 0.704,
-            "return_pct": -3.521
+            "confidence": 0.778,
+            "return_pct": -3.888
           }
         },
         "summary": "mixed"
@@ -1482,26 +1482,26 @@
       "thesis_one_liner": "Spikes in overdraft fee searches signal liquidity crises and account shortfalls among consumers; precedes weakness in consumer discretionary spending and loan demand.",
       "thesis_source": "spec",
       "ytd_pct": 0.0,
-      "days_running": 179,
+      "days_running": 180,
       "beat_spy": false,
-      "spy_pct": 8.13,
-      "alpha_pct": -8.13,
+      "spy_pct": 8.47,
+      "alpha_pct": -8.47,
       "ret_30d_pct": 0.0,
-      "spy_delta_30d_pct": 5.92,
-      "last_snapshot": "2026-11-06",
+      "spy_delta_30d_pct": 5.39,
+      "last_snapshot": "2026-11-07",
       "new_algo_date": null,
       "comparator": {
         "primary_etf": "XLY",
         "signals": {
           "momentum_5d": {
             "direction": "UP",
-            "confidence": 0.248,
-            "return_pct": 1.239
+            "confidence": 0.381,
+            "return_pct": 1.907
           },
           "momentum_20d": {
             "direction": "UP",
-            "confidence": 1.0,
-            "return_pct": 5.308
+            "confidence": 0.838,
+            "return_pct": 4.191
           }
         },
         "summary": "both_up"
@@ -1520,26 +1520,26 @@
       "thesis_one_liner": "Cryptocurrency prices often experience sharp sell-offs in times of market stress, signaling a broader retreat from risk assets.",
       "thesis_source": "spec",
       "ytd_pct": 0.0,
-      "days_running": 210,
+      "days_running": 211,
       "beat_spy": false,
-      "spy_pct": 8.13,
-      "alpha_pct": -8.13,
+      "spy_pct": 8.47,
+      "alpha_pct": -8.47,
       "ret_30d_pct": 0.0,
-      "spy_delta_30d_pct": 5.92,
-      "last_snapshot": "2026-11-06",
+      "spy_delta_30d_pct": 5.39,
+      "last_snapshot": "2026-11-07",
       "new_algo_date": null,
       "comparator": {
         "primary_etf": "XLC",
         "signals": {
           "momentum_5d": {
             "direction": "UP",
-            "confidence": 0.619,
-            "return_pct": 3.093
+            "confidence": 0.979,
+            "return_pct": 4.895
           },
           "momentum_20d": {
             "direction": "DOWN",
             "confidence": 1.0,
-            "return_pct": -6.897
+            "return_pct": -5.064
           }
         },
         "summary": "mixed"

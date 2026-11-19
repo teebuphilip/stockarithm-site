@@ -1,19 +1,19 @@
 {
   "schema_version": "v1",
-  "generated_at": "2026-11-18T04:10:51Z",
+  "generated_at": "2026-11-19T04:04:48Z",
   "families": {
     "attention_sentiment": {
       "family": "attention_sentiment",
       "count": 174,
       "by_status": {
         "failed": 3,
-        "live_only": 85,
+        "live_only": 86,
         "parked": 4,
-        "sandbox": 82
+        "sandbox": 81
       },
       "by_evidence_class": {
-        "live_receipts_only": 85,
-        "needs_history": 81,
+        "live_receipts_only": 86,
+        "needs_history": 80,
         "pending_seed": 4,
         "v1_backtested": 4
       },
@@ -30,27 +30,27 @@
           "rebalance_frequency": "weekly",
           "thesis_one_liner": "Rising news coverage indicates increasing corporate spending on logistics automation technology.",
           "thesis_source": "spec",
-          "ytd_pct": -0.25,
-          "days_running": 152,
+          "ytd_pct": -0.26,
+          "days_running": 153,
           "beat_spy": false,
-          "spy_pct": 8.05,
-          "alpha_pct": -8.3,
-          "ret_30d_pct": -0.12,
-          "spy_delta_30d_pct": 4.32,
-          "last_snapshot": "2026-11-18",
+          "spy_pct": 7.72,
+          "alpha_pct": -7.98,
+          "ret_30d_pct": -0.14,
+          "spy_delta_30d_pct": 4.6,
+          "last_snapshot": "2026-11-19",
           "new_algo_date": null,
           "comparator": {
             "primary_etf": "XLI",
             "signals": {
               "momentum_5d": {
                 "direction": "DOWN",
-                "confidence": 0.472,
-                "return_pct": -2.359
+                "confidence": 0.738,
+                "return_pct": -3.691
               },
               "momentum_20d": {
                 "direction": "DOWN",
-                "confidence": 0.246,
-                "return_pct": -1.229
+                "confidence": 0.434,
+                "return_pct": -2.169
               }
             },
             "summary": "mixed"
@@ -69,26 +69,26 @@
           "thesis_one_liner": "Increased news coverage about office reopenings indicates shift towards hybrid work and tech sector activity normalization.",
           "thesis_source": "spec",
           "ytd_pct": -0.39,
-          "days_running": 152,
+          "days_running": 153,
           "beat_spy": false,
-          "spy_pct": 8.05,
-          "alpha_pct": -8.44,
+          "spy_pct": 7.72,
+          "alpha_pct": -8.11,
           "ret_30d_pct": -0.22,
-          "spy_delta_30d_pct": 4.22,
-          "last_snapshot": "2026-11-18",
+          "spy_delta_30d_pct": 4.52,
+          "last_snapshot": "2026-11-19",
           "new_algo_date": null,
           "comparator": {
             "primary_etf": "XLK",
             "signals": {
               "momentum_5d": {
                 "direction": "DOWN",
-                "confidence": 0.669,
-                "return_pct": -3.345
+                "confidence": 1.0,
+                "return_pct": -6.051
               },
               "momentum_20d": {
                 "direction": "DOWN",
                 "confidence": 1.0,
-                "return_pct": -11.961
+                "return_pct": -13.117
               }
             },
             "summary": "mixed"
@@ -106,27 +106,27 @@
           "rebalance_frequency": "weekly",
           "thesis_one_liner": "Rising interest in 5G deployment correlates with communication sector ETF strength.",
           "thesis_source": "spec",
-          "ytd_pct": -0.47,
-          "days_running": 220,
+          "ytd_pct": -0.48,
+          "days_running": 221,
           "beat_spy": false,
-          "spy_pct": 8.05,
-          "alpha_pct": -8.52,
-          "ret_30d_pct": 0.0,
-          "spy_delta_30d_pct": 4.44,
-          "last_snapshot": "2026-11-18",
+          "spy_pct": 7.72,
+          "alpha_pct": -8.2,
+          "ret_30d_pct": -0.01,
+          "spy_delta_30d_pct": 4.72,
+          "last_snapshot": "2026-11-19",
           "new_algo_date": null,
           "comparator": {
             "primary_etf": "XLC",
             "signals": {
               "momentum_5d": {
                 "direction": "DOWN",
-                "confidence": 0.464,
-                "return_pct": -2.32
+                "confidence": 0.556,
+                "return_pct": -2.781
               },
               "momentum_20d": {
                 "direction": "DOWN",
-                "confidence": 0.895,
-                "return_pct": -4.474
+                "confidence": 0.622,
+                "return_pct": -3.111
               }
             },
             "summary": "mixed"
@@ -144,27 +144,27 @@
           "rebalance_frequency": "weekly",
           "thesis_one_liner": "Rising flu-related searches often precede increased healthcare sector activity and defensive buying in XLV.",
           "thesis_source": "spec",
-          "ytd_pct": -0.48,
-          "days_running": 220,
+          "ytd_pct": -0.49,
+          "days_running": 221,
           "beat_spy": false,
-          "spy_pct": 8.05,
-          "alpha_pct": -8.53,
-          "ret_30d_pct": -0.16,
-          "spy_delta_30d_pct": 4.28,
-          "last_snapshot": "2026-11-18",
+          "spy_pct": 7.72,
+          "alpha_pct": -8.21,
+          "ret_30d_pct": -0.17,
+          "spy_delta_30d_pct": 4.56,
+          "last_snapshot": "2026-11-19",
           "new_algo_date": null,
           "comparator": {
             "primary_etf": "XLV",
             "signals": {
               "momentum_5d": {
                 "direction": "DOWN",
-                "confidence": 0.385,
-                "return_pct": -1.927
+                "confidence": 0.823,
+                "return_pct": -4.117
               },
               "momentum_20d": {
                 "direction": "UP",
-                "confidence": 0.603,
-                "return_pct": 3.014
+                "confidence": 0.249,
+                "return_pct": 1.246
               }
             },
             "summary": "mixed"
@@ -183,26 +183,26 @@
           "thesis_one_liner": "News spikes mentioning commodity shortages tend to lift materials sector ETFs as prices rise.",
           "thesis_source": "spec",
           "ytd_pct": -0.99,
-          "days_running": 220,
+          "days_running": 221,
           "beat_spy": false,
-          "spy_pct": 8.05,
-          "alpha_pct": -9.04,
+          "spy_pct": 7.72,
+          "alpha_pct": -8.71,
           "ret_30d_pct": -0.27,
-          "spy_delta_30d_pct": 4.17,
-          "last_snapshot": "2026-11-18",
+          "spy_delta_30d_pct": 4.47,
+          "last_snapshot": "2026-11-19",
           "new_algo_date": null,
           "comparator": {
             "primary_etf": "XLB",
             "signals": {
               "momentum_5d": {
                 "direction": "DOWN",
-                "confidence": 0.761,
-                "return_pct": -3.803
+                "confidence": 0.966,
+                "return_pct": -4.828
               },
               "momentum_20d": {
                 "direction": "DOWN",
-                "confidence": 0.152,
-                "return_pct": -0.761
+                "confidence": 0.335,
+                "return_pct": -1.676
               }
             },
             "summary": "mixed"
@@ -239,26 +239,26 @@
           "thesis_one_liner": "Rising DIY bicycle repair searches suggest consumer stress on transportation costs or preference for alternative commuting.",
           "thesis_source": "spec",
           "ytd_pct": -0.16,
-          "days_running": 197,
+          "days_running": 198,
           "beat_spy": false,
-          "spy_pct": 8.05,
-          "alpha_pct": -8.21,
+          "spy_pct": 7.72,
+          "alpha_pct": -7.87,
           "ret_30d_pct": -0.02,
-          "spy_delta_30d_pct": 4.42,
-          "last_snapshot": "2026-11-18",
+          "spy_delta_30d_pct": 4.71,
+          "last_snapshot": "2026-11-19",
           "new_algo_date": null,
           "comparator": {
             "primary_etf": "XLY",
             "signals": {
               "momentum_5d": {
                 "direction": "DOWN",
-                "confidence": 0.653,
-                "return_pct": -3.263
+                "confidence": 0.296,
+                "return_pct": -1.479
               },
               "momentum_20d": {
                 "direction": "UP",
-                "confidence": 0.277,
-                "return_pct": 1.385
+                "confidence": 0.635,
+                "return_pct": 3.177
               }
             },
             "summary": "mixed"
@@ -277,26 +277,26 @@
           "thesis_one_liner": "Rising interest in DIY electronics repair suggests consumers delaying new purchases but engaging with tech products.",
           "thesis_source": "spec",
           "ytd_pct": -0.38,
-          "days_running": 210,
+          "days_running": 211,
           "beat_spy": false,
-          "spy_pct": 8.05,
-          "alpha_pct": -8.43,
+          "spy_pct": 7.72,
+          "alpha_pct": -8.1,
           "ret_30d_pct": 0.0,
-          "spy_delta_30d_pct": 4.44,
-          "last_snapshot": "2026-11-18",
+          "spy_delta_30d_pct": 4.73,
+          "last_snapshot": "2026-11-19",
           "new_algo_date": null,
           "comparator": {
             "primary_etf": "XLK",
             "signals": {
               "momentum_5d": {
                 "direction": "DOWN",
-                "confidence": 0.669,
-                "return_pct": -3.345
+                "confidence": 1.0,
+                "return_pct": -6.051
               },
               "momentum_20d": {
                 "direction": "DOWN",
                 "confidence": 1.0,
-                "return_pct": -11.961
+                "return_pct": -13.117
               }
             },
             "summary": "mixed"
@@ -314,27 +314,27 @@
           "rebalance_frequency": "weekly",
           "thesis_one_liner": "Rising interest in home improvement loans often signals increased consumer willingness to spend on discretionary housing-related retail items.",
           "thesis_source": "spec",
-          "ytd_pct": -0.75,
-          "days_running": 210,
+          "ytd_pct": -0.76,
+          "days_running": 211,
           "beat_spy": false,
-          "spy_pct": 8.05,
-          "alpha_pct": -8.8,
-          "ret_30d_pct": -0.34,
-          "spy_delta_30d_pct": 4.1,
-          "last_snapshot": "2026-11-18",
+          "spy_pct": 7.72,
+          "alpha_pct": -8.48,
+          "ret_30d_pct": -0.35,
+          "spy_delta_30d_pct": 4.39,
+          "last_snapshot": "2026-11-19",
           "new_algo_date": null,
           "comparator": {
             "primary_etf": "XLY",
             "signals": {
               "momentum_5d": {
                 "direction": "DOWN",
-                "confidence": 0.653,
-                "return_pct": -3.263
+                "confidence": 0.296,
+                "return_pct": -1.479
               },
               "momentum_20d": {
                 "direction": "UP",
-                "confidence": 0.277,
-                "return_pct": 1.385
+                "confidence": 0.635,
+                "return_pct": 3.177
               }
             },
             "summary": "mixed"
@@ -353,29 +353,29 @@
           "thesis_one_liner": "Rising news coverage about coupon usage correlates with consumer attempts to stretch budgets, often preceding staples sector strength.",
           "thesis_source": "spec",
           "ytd_pct": -0.87,
-          "days_running": 165,
+          "days_running": 166,
           "beat_spy": false,
-          "spy_pct": 8.05,
-          "alpha_pct": -8.92,
+          "spy_pct": 7.72,
+          "alpha_pct": -8.59,
           "ret_30d_pct": 0.1,
-          "spy_delta_30d_pct": 4.54,
-          "last_snapshot": "2026-11-18",
+          "spy_delta_30d_pct": 4.83,
+          "last_snapshot": "2026-11-19",
           "new_algo_date": null,
           "comparator": {
             "primary_etf": "XLP",
             "signals": {
               "momentum_5d": {
-                "direction": "UP",
-                "confidence": 0.094,
-                "return_pct": 0.472
+                "direction": "DOWN",
+                "confidence": 0.059,
+                "return_pct": -0.295
               },
               "momentum_20d": {
                 "direction": "UP",
-                "confidence": 0.846,
-                "return_pct": 4.228
+                "confidence": 0.934,
+                "return_pct": 4.672
               }
             },
-            "summary": "both_up"
+            "summary": "mixed"
           }
         },
         {
@@ -390,27 +390,27 @@
           "rebalance_frequency": "weekly",
           "thesis_one_liner": "An uptick in DIY home repair searches often precedes increased discretionary spending on home improvement and related retail sectors.",
           "thesis_source": "spec",
-          "ytd_pct": -1.62,
-          "days_running": 212,
+          "ytd_pct": -1.57,
+          "days_running": 213,
           "beat_spy": false,
-          "spy_pct": 8.05,
-          "alpha_pct": -9.67,
-          "ret_30d_pct": -0.3,
-          "spy_delta_30d_pct": 4.14,
-          "last_snapshot": "2026-11-18",
+          "spy_pct": 7.72,
+          "alpha_pct": -9.29,
+          "ret_30d_pct": -0.25,
+          "spy_delta_30d_pct": 4.49,
+          "last_snapshot": "2026-11-19",
           "new_algo_date": null,
           "comparator": {
             "primary_etf": "XLY",
             "signals": {
               "momentum_5d": {
                 "direction": "DOWN",
-                "confidence": 0.653,
-                "return_pct": -3.263
+                "confidence": 0.296,
+                "return_pct": -1.479
               },
               "momentum_20d": {
                 "direction": "UP",
-                "confidence": 0.277,
-                "return_pct": 1.385
+                "confidence": 0.635,
+                "return_pct": 3.177
               }
             },
             "summary": "mixed"
@@ -443,14 +443,14 @@
           "rebalance_frequency": "monthly_eom",
           "thesis_one_liner": "Algo Biscotti (Unconditional Loyalty) tests whether systematic price rotation can capture persistent sector momentum better than passive market exposure.",
           "thesis_source": "derived",
-          "ytd_pct": 20.42,
-          "days_running": 225,
+          "ytd_pct": 20.78,
+          "days_running": 226,
           "beat_spy": true,
-          "spy_pct": 8.05,
-          "alpha_pct": 12.37,
-          "ret_30d_pct": 2.87,
-          "spy_delta_30d_pct": 7.31,
-          "last_snapshot": "2026-11-18",
+          "spy_pct": 7.72,
+          "alpha_pct": 13.06,
+          "ret_30d_pct": 3.17,
+          "spy_delta_30d_pct": 7.91,
+          "last_snapshot": "2026-11-19",
           "new_algo_date": null,
           "comparator": null
         },
@@ -466,37 +466,14 @@
           "rebalance_frequency": "monthly_eom",
           "thesis_one_liner": "Faber Momentum Rotation tests whether systematic price rotation can capture persistent sector momentum better than passive market exposure.",
           "thesis_source": "derived",
-          "ytd_pct": 6.25,
-          "days_running": 225,
+          "ytd_pct": 4.29,
+          "days_running": 226,
           "beat_spy": false,
-          "spy_pct": 8.05,
-          "alpha_pct": -1.8,
-          "ret_30d_pct": -0.93,
-          "spy_delta_30d_pct": 3.51,
-          "last_snapshot": "2026-11-18",
-          "new_algo_date": null,
-          "comparator": null
-        },
-        {
-          "schema_version": "v1",
-          "key": "normal:dmsr",
-          "algo_type": "normal",
-          "algo_id": "dmsr",
-          "name": "Antonacci Dual Momentum Sector Rotation",
-          "family": "core_rotation",
-          "status": "live_only",
-          "evidence_class": "live_receipts_only",
-          "rebalance_frequency": "monthly_eom",
-          "thesis_one_liner": "Antonacci Dual Momentum Sector Rotation tests whether systematic price rotation can capture persistent sector momentum better than passive market exposure.",
-          "thesis_source": "derived",
-          "ytd_pct": 4.43,
-          "days_running": 225,
-          "beat_spy": false,
-          "spy_pct": 8.05,
-          "alpha_pct": -3.62,
-          "ret_30d_pct": -3.26,
-          "spy_delta_30d_pct": 1.18,
-          "last_snapshot": "2026-11-18",
+          "spy_pct": 7.72,
+          "alpha_pct": -3.43,
+          "ret_30d_pct": -2.76,
+          "spy_delta_30d_pct": 1.97,
+          "last_snapshot": "2026-11-19",
           "new_algo_date": null,
           "comparator": null
         },
@@ -512,14 +489,37 @@
           "rebalance_frequency": "weekly",
           "thesis_one_liner": "Algo Baileymol (Chaos Monger) tests whether systematic price rotation can capture persistent sector momentum better than passive market exposure.",
           "thesis_source": "derived",
-          "ytd_pct": 2.27,
-          "days_running": 225,
+          "ytd_pct": 3.0,
+          "days_running": 226,
           "beat_spy": false,
-          "spy_pct": 8.05,
-          "alpha_pct": -5.78,
-          "ret_30d_pct": -2.46,
-          "spy_delta_30d_pct": 1.98,
-          "last_snapshot": "2026-11-18",
+          "spy_pct": 7.72,
+          "alpha_pct": -4.72,
+          "ret_30d_pct": -1.76,
+          "spy_delta_30d_pct": 2.97,
+          "last_snapshot": "2026-11-19",
+          "new_algo_date": null,
+          "comparator": null
+        },
+        {
+          "schema_version": "v1",
+          "key": "normal:dmsr",
+          "algo_type": "normal",
+          "algo_id": "dmsr",
+          "name": "Antonacci Dual Momentum Sector Rotation",
+          "family": "core_rotation",
+          "status": "live_only",
+          "evidence_class": "live_receipts_only",
+          "rebalance_frequency": "monthly_eom",
+          "thesis_one_liner": "Antonacci Dual Momentum Sector Rotation tests whether systematic price rotation can capture persistent sector momentum better than passive market exposure.",
+          "thesis_source": "derived",
+          "ytd_pct": 2.99,
+          "days_running": 226,
+          "beat_spy": false,
+          "spy_pct": 7.72,
+          "alpha_pct": -4.73,
+          "ret_30d_pct": -4.6,
+          "spy_delta_30d_pct": 0.13,
+          "last_snapshot": "2026-11-19",
           "new_algo_date": null,
           "comparator": null
         },
@@ -535,14 +535,14 @@
           "rebalance_frequency": "monthly_eom",
           "thesis_one_liner": "Quantified Simple Monthly Rotation tests whether systematic price rotation can capture persistent sector momentum better than passive market exposure.",
           "thesis_source": "derived",
-          "ytd_pct": -14.11,
-          "days_running": 225,
+          "ytd_pct": -13.82,
+          "days_running": 226,
           "beat_spy": false,
-          "spy_pct": 8.05,
-          "alpha_pct": -22.16,
-          "ret_30d_pct": -11.02,
-          "spy_delta_30d_pct": -6.57,
-          "last_snapshot": "2026-11-18",
+          "spy_pct": 7.72,
+          "alpha_pct": -21.54,
+          "ret_30d_pct": -10.72,
+          "spy_delta_30d_pct": -5.98,
+          "last_snapshot": "2026-11-19",
           "new_algo_date": null,
           "comparator": null
         }
@@ -574,27 +574,27 @@
           "rebalance_frequency": "weekly",
           "thesis_one_liner": "Increased news coverage on warehouse capacity issues signals supply chain constraints and industrial sector pressure.",
           "thesis_source": "spec",
-          "ytd_pct": -1.15,
-          "days_running": 165,
+          "ytd_pct": -1.16,
+          "days_running": 166,
           "beat_spy": false,
-          "spy_pct": 8.05,
-          "alpha_pct": -9.2,
-          "ret_30d_pct": -0.16,
-          "spy_delta_30d_pct": 4.28,
-          "last_snapshot": "2026-11-18",
+          "spy_pct": 7.72,
+          "alpha_pct": -8.88,
+          "ret_30d_pct": -0.17,
+          "spy_delta_30d_pct": 4.56,
+          "last_snapshot": "2026-11-19",
           "new_algo_date": null,
           "comparator": {
             "primary_etf": "XLI",
             "signals": {
               "momentum_5d": {
                 "direction": "DOWN",
-                "confidence": 0.472,
-                "return_pct": -2.359
+                "confidence": 0.738,
+                "return_pct": -3.691
               },
               "momentum_20d": {
                 "direction": "DOWN",
-                "confidence": 0.246,
-                "return_pct": -1.229
+                "confidence": 0.434,
+                "return_pct": -2.169
               }
             },
             "summary": "mixed"
@@ -613,26 +613,26 @@
           "thesis_one_liner": "Increased news mentions of trucking labor shortages highlight capacity constraints hurting freight and industrial operations.",
           "thesis_source": "spec",
           "ytd_pct": -1.17,
-          "days_running": 147,
+          "days_running": 148,
           "beat_spy": false,
-          "spy_pct": 8.05,
-          "alpha_pct": -9.22,
+          "spy_pct": 7.72,
+          "alpha_pct": -8.89,
           "ret_30d_pct": -0.24,
-          "spy_delta_30d_pct": 4.2,
-          "last_snapshot": "2026-11-18",
+          "spy_delta_30d_pct": 4.49,
+          "last_snapshot": "2026-11-19",
           "new_algo_date": null,
           "comparator": {
             "primary_etf": "XLI",
             "signals": {
               "momentum_5d": {
                 "direction": "DOWN",
-                "confidence": 0.472,
-                "return_pct": -2.359
+                "confidence": 0.738,
+                "return_pct": -3.691
               },
               "momentum_20d": {
                 "direction": "DOWN",
-                "confidence": 0.246,
-                "return_pct": -1.229
+                "confidence": 0.434,
+                "return_pct": -2.169
               }
             },
             "summary": "mixed"
@@ -651,26 +651,26 @@
           "thesis_one_liner": "Increase in congestion news signals supply chain bottlenecks and industrial sector pressure.",
           "thesis_source": "spec",
           "ytd_pct": -1.34,
-          "days_running": 170,
+          "days_running": 171,
           "beat_spy": false,
-          "spy_pct": 8.05,
-          "alpha_pct": -9.39,
+          "spy_pct": 7.72,
+          "alpha_pct": -9.06,
           "ret_30d_pct": -0.38,
-          "spy_delta_30d_pct": 4.07,
-          "last_snapshot": "2026-11-18",
+          "spy_delta_30d_pct": 4.36,
+          "last_snapshot": "2026-11-19",
           "new_algo_date": null,
           "comparator": {
             "primary_etf": "XLI",
             "signals": {
               "momentum_5d": {
                 "direction": "DOWN",
-                "confidence": 0.472,
-                "return_pct": -2.359
+                "confidence": 0.738,
+                "return_pct": -3.691
               },
               "momentum_20d": {
                 "direction": "DOWN",
-                "confidence": 0.246,
-                "return_pct": -1.229
+                "confidence": 0.434,
+                "return_pct": -2.169
               }
             },
             "summary": "mixed"
@@ -689,26 +689,26 @@
           "thesis_one_liner": "Rising interest in driver shortages may indicate near-term shipping bottlenecks affecting industrial goods movement.",
           "thesis_source": "spec",
           "ytd_pct": 0.0,
-          "days_running": 121,
+          "days_running": 122,
           "beat_spy": false,
-          "spy_pct": 8.05,
-          "alpha_pct": -8.05,
+          "spy_pct": 7.72,
+          "alpha_pct": -7.72,
           "ret_30d_pct": 0.0,
-          "spy_delta_30d_pct": 4.44,
-          "last_snapshot": "2026-11-18",
+          "spy_delta_30d_pct": 4.73,
+          "last_snapshot": "2026-11-19",
           "new_algo_date": null,
           "comparator": {
             "primary_etf": "XLI",
             "signals": {
               "momentum_5d": {
                 "direction": "DOWN",
-                "confidence": 0.472,
-                "return_pct": -2.359
+                "confidence": 0.738,
+                "return_pct": -3.691
               },
               "momentum_20d": {
                 "direction": "DOWN",
-                "confidence": 0.246,
-                "return_pct": -1.229
+                "confidence": 0.434,
+                "return_pct": -2.169
               }
             },
             "summary": "mixed"
@@ -727,26 +727,26 @@
           "thesis_one_liner": "A rise in searches for freight container backlog indicates growing logistics bottlenecks, often preceding industrial sector stress.",
           "thesis_source": "spec",
           "ytd_pct": 0.0,
-          "days_running": 192,
+          "days_running": 193,
           "beat_spy": false,
-          "spy_pct": 8.05,
-          "alpha_pct": -8.05,
+          "spy_pct": 7.72,
+          "alpha_pct": -7.72,
           "ret_30d_pct": 0.0,
-          "spy_delta_30d_pct": 4.44,
-          "last_snapshot": "2026-11-18",
+          "spy_delta_30d_pct": 4.73,
+          "last_snapshot": "2026-11-19",
           "new_algo_date": null,
           "comparator": {
             "primary_etf": "XLI",
             "signals": {
               "momentum_5d": {
                 "direction": "DOWN",
-                "confidence": 0.472,
-                "return_pct": -2.359
+                "confidence": 0.738,
+                "return_pct": -3.691
               },
               "momentum_20d": {
                 "direction": "DOWN",
-                "confidence": 0.246,
-                "return_pct": -1.229
+                "confidence": 0.434,
+                "return_pct": -2.169
               }
             },
             "summary": "mixed"
@@ -781,26 +781,26 @@
           "thesis_one_liner": "Increased strike news heightens risk of supply chain delays and cost inflation in industrials.",
           "thesis_source": "spec",
           "ytd_pct": 0.01,
-          "days_running": 138,
+          "days_running": 139,
           "beat_spy": false,
-          "spy_pct": 8.05,
-          "alpha_pct": -8.04,
+          "spy_pct": 7.72,
+          "alpha_pct": -7.71,
           "ret_30d_pct": 0.08,
-          "spy_delta_30d_pct": 4.52,
-          "last_snapshot": "2026-11-18",
+          "spy_delta_30d_pct": 4.81,
+          "last_snapshot": "2026-11-19",
           "new_algo_date": null,
           "comparator": {
             "primary_etf": "XLI",
             "signals": {
               "momentum_5d": {
                 "direction": "DOWN",
-                "confidence": 0.472,
-                "return_pct": -2.359
+                "confidence": 0.738,
+                "return_pct": -3.691
               },
               "momentum_20d": {
                 "direction": "DOWN",
-                "confidence": 0.246,
-                "return_pct": -1.229
+                "confidence": 0.434,
+                "return_pct": -2.169
               }
             },
             "summary": "mixed"
@@ -819,26 +819,26 @@
           "thesis_one_liner": "Increased interest in truck driver strikes often precedes actual labor actions disrupting freight transport.",
           "thesis_source": "spec",
           "ytd_pct": -0.17,
-          "days_running": 195,
+          "days_running": 196,
           "beat_spy": false,
-          "spy_pct": 8.05,
-          "alpha_pct": -8.22,
+          "spy_pct": 7.72,
+          "alpha_pct": -7.89,
           "ret_30d_pct": 0.0,
-          "spy_delta_30d_pct": 4.44,
-          "last_snapshot": "2026-11-18",
+          "spy_delta_30d_pct": 4.73,
+          "last_snapshot": "2026-11-19",
           "new_algo_date": null,
           "comparator": {
             "primary_etf": "XLI",
             "signals": {
               "momentum_5d": {
                 "direction": "DOWN",
-                "confidence": 0.472,
-                "return_pct": -2.359
+                "confidence": 0.738,
+                "return_pct": -3.691
               },
               "momentum_20d": {
                 "direction": "DOWN",
-                "confidence": 0.246,
-                "return_pct": -1.229
+                "confidence": 0.434,
+                "return_pct": -2.169
               }
             },
             "summary": "mixed"
@@ -857,26 +857,26 @@
           "thesis_one_liner": "Growing demand for warehouse labor indicates rising industrial activity and goods movement.",
           "thesis_source": "spec",
           "ytd_pct": -1.25,
-          "days_running": 210,
+          "days_running": 211,
           "beat_spy": false,
-          "spy_pct": 8.05,
-          "alpha_pct": -9.3,
+          "spy_pct": 7.72,
+          "alpha_pct": -8.97,
           "ret_30d_pct": -0.14,
-          "spy_delta_30d_pct": 4.3,
-          "last_snapshot": "2026-11-18",
+          "spy_delta_30d_pct": 4.59,
+          "last_snapshot": "2026-11-19",
           "new_algo_date": null,
           "comparator": {
             "primary_etf": "XLI",
             "signals": {
               "momentum_5d": {
                 "direction": "DOWN",
-                "confidence": 0.472,
-                "return_pct": -2.359
+                "confidence": 0.738,
+                "return_pct": -3.691
               },
               "momentum_20d": {
                 "direction": "DOWN",
-                "confidence": 0.246,
-                "return_pct": -1.229
+                "confidence": 0.434,
+                "return_pct": -2.169
               }
             },
             "summary": "mixed"
@@ -895,26 +895,26 @@
           "thesis_one_liner": "Rising tech job postings signal sector hiring confidence and growth, often driving tech sector relative strength versus SPY.",
           "thesis_source": "spec",
           "ytd_pct": 0.0,
-          "days_running": 89,
+          "days_running": 90,
           "beat_spy": false,
-          "spy_pct": 8.05,
-          "alpha_pct": -8.05,
+          "spy_pct": 7.72,
+          "alpha_pct": -7.72,
           "ret_30d_pct": 0.0,
-          "spy_delta_30d_pct": 4.44,
-          "last_snapshot": "2026-11-18",
+          "spy_delta_30d_pct": 4.73,
+          "last_snapshot": "2026-11-19",
           "new_algo_date": null,
           "comparator": {
             "primary_etf": "XLK",
             "signals": {
               "momentum_5d": {
                 "direction": "DOWN",
-                "confidence": 0.669,
-                "return_pct": -3.345
+                "confidence": 1.0,
+                "return_pct": -6.051
               },
               "momentum_20d": {
                 "direction": "DOWN",
                 "confidence": 1.0,
-                "return_pct": -11.961
+                "return_pct": -13.117
               }
             },
             "summary": "mixed"
@@ -933,26 +933,26 @@
           "thesis_one_liner": "An increase in searches for warehouse worker shortage suggests rising labor scarcity in logistics-heavy sectors.",
           "thesis_source": "spec",
           "ytd_pct": 0.0,
-          "days_running": 195,
+          "days_running": 196,
           "beat_spy": false,
-          "spy_pct": 8.05,
-          "alpha_pct": -8.05,
+          "spy_pct": 7.72,
+          "alpha_pct": -7.72,
           "ret_30d_pct": 0.0,
-          "spy_delta_30d_pct": 4.44,
-          "last_snapshot": "2026-11-18",
+          "spy_delta_30d_pct": 4.73,
+          "last_snapshot": "2026-11-19",
           "new_algo_date": null,
           "comparator": {
             "primary_etf": "XLI",
             "signals": {
               "momentum_5d": {
                 "direction": "DOWN",
-                "confidence": 0.472,
-                "return_pct": -2.359
+                "confidence": 0.738,
+                "return_pct": -3.691
               },
               "momentum_20d": {
                 "direction": "DOWN",
-                "confidence": 0.246,
-                "return_pct": -1.229
+                "confidence": 0.434,
+                "return_pct": -2.169
               }
             },
             "summary": "mixed"
@@ -986,27 +986,27 @@
           "rebalance_frequency": "weekly",
           "thesis_one_liner": "Rising searches for water outages reflect infrastructure stress that can hurt real estate demand and value.",
           "thesis_source": "spec",
-          "ytd_pct": -0.7,
-          "days_running": 210,
+          "ytd_pct": -0.71,
+          "days_running": 211,
           "beat_spy": false,
-          "spy_pct": 8.05,
-          "alpha_pct": -8.74,
+          "spy_pct": 7.72,
+          "alpha_pct": -8.42,
           "ret_30d_pct": -0.24,
-          "spy_delta_30d_pct": 4.2,
-          "last_snapshot": "2026-11-18",
+          "spy_delta_30d_pct": 4.49,
+          "last_snapshot": "2026-11-19",
           "new_algo_date": null,
           "comparator": {
             "primary_etf": "XLRE",
             "signals": {
               "momentum_5d": {
                 "direction": "DOWN",
-                "confidence": 0.444,
-                "return_pct": -2.221
+                "confidence": 0.435,
+                "return_pct": -2.175
               },
               "momentum_20d": {
                 "direction": "UP",
-                "confidence": 0.571,
-                "return_pct": 2.855
+                "confidence": 0.742,
+                "return_pct": 3.709
               }
             },
             "summary": "mixed"
@@ -1024,27 +1024,27 @@
           "rebalance_frequency": "weekly",
           "thesis_one_liner": "Rising news coverage on commodity shortages signals supply chain disruptions and cost pressures for industrial firms.",
           "thesis_source": "spec",
-          "ytd_pct": -0.89,
-          "days_running": 171,
+          "ytd_pct": -0.9,
+          "days_running": 172,
           "beat_spy": false,
-          "spy_pct": 8.05,
-          "alpha_pct": -8.94,
-          "ret_30d_pct": -0.39,
-          "spy_delta_30d_pct": 4.05,
-          "last_snapshot": "2026-11-18",
+          "spy_pct": 7.72,
+          "alpha_pct": -8.62,
+          "ret_30d_pct": -0.4,
+          "spy_delta_30d_pct": 4.33,
+          "last_snapshot": "2026-11-19",
           "new_algo_date": null,
           "comparator": {
             "primary_etf": "XLI",
             "signals": {
               "momentum_5d": {
                 "direction": "DOWN",
-                "confidence": 0.472,
-                "return_pct": -2.359
+                "confidence": 0.738,
+                "return_pct": -3.691
               },
               "momentum_20d": {
                 "direction": "DOWN",
-                "confidence": 0.246,
-                "return_pct": -1.229
+                "confidence": 0.434,
+                "return_pct": -2.169
               }
             },
             "summary": "mixed"
@@ -1063,13 +1063,13 @@
           "thesis_one_liner": "Yelp Closure Velocity tests whether local activity anomalies can surface demand stress before it reaches sector ETF prices.",
           "thesis_source": "derived",
           "ytd_pct": 0.0,
-          "days_running": 215,
+          "days_running": 216,
           "beat_spy": false,
-          "spy_pct": 8.05,
-          "alpha_pct": -8.05,
+          "spy_pct": 7.72,
+          "alpha_pct": -7.72,
           "ret_30d_pct": 0.0,
-          "spy_delta_30d_pct": 4.44,
-          "last_snapshot": "2026-11-18",
+          "spy_delta_30d_pct": 4.73,
+          "last_snapshot": "2026-11-19",
           "new_algo_date": null,
           "comparator": null
         },
@@ -1086,26 +1086,26 @@
           "thesis_one_liner": "Rising searches indicate localized small business financial stress, often a precursor to reduced local economic activity.",
           "thesis_source": "spec",
           "ytd_pct": 0.0,
-          "days_running": 121,
+          "days_running": 122,
           "beat_spy": false,
-          "spy_pct": 8.05,
-          "alpha_pct": -8.05,
+          "spy_pct": 7.72,
+          "alpha_pct": -7.72,
           "ret_30d_pct": 0.0,
-          "spy_delta_30d_pct": 4.44,
-          "last_snapshot": "2026-11-18",
+          "spy_delta_30d_pct": 4.73,
+          "last_snapshot": "2026-11-19",
           "new_algo_date": null,
           "comparator": {
             "primary_etf": "XLF",
             "signals": {
               "momentum_5d": {
                 "direction": "DOWN",
-                "confidence": 0.419,
-                "return_pct": -2.093
+                "confidence": 0.754,
+                "return_pct": -3.769
               },
               "momentum_20d": {
                 "direction": "UP",
-                "confidence": 0.485,
-                "return_pct": 2.423
+                "confidence": 0.136,
+                "return_pct": 0.678
               }
             },
             "summary": "mixed"
@@ -1124,26 +1124,26 @@
           "thesis_one_liner": "Growing interest in rent strikes signals tenant distress and potential challenges for residential real estate earnings.",
           "thesis_source": "spec",
           "ytd_pct": 0.0,
-          "days_running": 147,
+          "days_running": 148,
           "beat_spy": false,
-          "spy_pct": 8.05,
-          "alpha_pct": -8.05,
+          "spy_pct": 7.72,
+          "alpha_pct": -7.72,
           "ret_30d_pct": 0.0,
-          "spy_delta_30d_pct": 4.44,
-          "last_snapshot": "2026-11-18",
+          "spy_delta_30d_pct": 4.73,
+          "last_snapshot": "2026-11-19",
           "new_algo_date": null,
           "comparator": {
             "primary_etf": "XLRE",
             "signals": {
               "momentum_5d": {
                 "direction": "DOWN",
-                "confidence": 0.444,
-                "return_pct": -2.221
+                "confidence": 0.435,
+                "return_pct": -2.175
               },
               "momentum_20d": {
                 "direction": "UP",
-                "confidence": 0.571,
-                "return_pct": 2.855
+                "confidence": 0.742,
+                "return_pct": 3.709
               }
             },
             "summary": "mixed"
@@ -1180,27 +1180,27 @@
           "rebalance_frequency": "weekly",
           "thesis_one_liner": "Rising news on solar installations indicates accelerating renewable energy investment trends.",
           "thesis_source": "spec",
-          "ytd_pct": -0.62,
-          "days_running": 142,
+          "ytd_pct": -0.63,
+          "days_running": 143,
           "beat_spy": false,
-          "spy_pct": 8.05,
-          "alpha_pct": -8.67,
-          "ret_30d_pct": -0.17,
-          "spy_delta_30d_pct": 4.27,
-          "last_snapshot": "2026-11-18",
+          "spy_pct": 7.72,
+          "alpha_pct": -8.35,
+          "ret_30d_pct": -0.18,
+          "spy_delta_30d_pct": 4.55,
+          "last_snapshot": "2026-11-19",
           "new_algo_date": null,
           "comparator": {
             "primary_etf": "XLE",
             "signals": {
               "momentum_5d": {
-                "direction": "UP",
-                "confidence": 0.37,
-                "return_pct": 1.849
+                "direction": "DOWN",
+                "confidence": 0.656,
+                "return_pct": -3.282
               },
               "momentum_20d": {
                 "direction": "DOWN",
                 "confidence": 1.0,
-                "return_pct": -6.782
+                "return_pct": -10.079
               }
             },
             "summary": "mixed"
@@ -1219,26 +1219,26 @@
           "thesis_one_liner": "Unexpected daily surges in electricity demand tend to lift utilities ETFs as prices and revenues rise.",
           "thesis_source": "spec",
           "ytd_pct": -0.86,
-          "days_running": 220,
+          "days_running": 221,
           "beat_spy": false,
-          "spy_pct": 8.05,
-          "alpha_pct": -8.91,
+          "spy_pct": 7.72,
+          "alpha_pct": -8.58,
           "ret_30d_pct": -0.12,
-          "spy_delta_30d_pct": 4.32,
-          "last_snapshot": "2026-11-18",
+          "spy_delta_30d_pct": 4.62,
+          "last_snapshot": "2026-11-19",
           "new_algo_date": null,
           "comparator": {
             "primary_etf": "XLU",
             "signals": {
               "momentum_5d": {
                 "direction": "DOWN",
-                "confidence": 0.142,
-                "return_pct": -0.709
+                "confidence": 0.123,
+                "return_pct": -0.616
               },
               "momentum_20d": {
                 "direction": "UP",
-                "confidence": 0.735,
-                "return_pct": 3.677
+                "confidence": 0.738,
+                "return_pct": 3.69
               }
             },
             "summary": "mixed"
@@ -1257,13 +1257,13 @@
           "thesis_one_liner": "Yield Curve Regime tests whether macro data can expose input-cost, demand, or regime pressure before sector ETFs fully react.",
           "thesis_source": "derived",
           "ytd_pct": 0.0,
-          "days_running": 224,
+          "days_running": 225,
           "beat_spy": false,
-          "spy_pct": 8.05,
-          "alpha_pct": -8.05,
+          "spy_pct": 7.72,
+          "alpha_pct": -7.72,
           "ret_30d_pct": 0.0,
-          "spy_delta_30d_pct": 4.44,
-          "last_snapshot": "2026-11-18",
+          "spy_delta_30d_pct": 4.73,
+          "last_snapshot": "2026-11-19",
           "new_algo_date": null,
           "comparator": null
         },
@@ -1280,26 +1280,26 @@
           "thesis_one_liner": "Significant weekly temperature drops often increase utility demand, lifting XLU prices.",
           "thesis_source": "spec",
           "ytd_pct": 0.0,
-          "days_running": 220,
+          "days_running": 221,
           "beat_spy": false,
-          "spy_pct": 8.05,
-          "alpha_pct": -8.05,
+          "spy_pct": 7.72,
+          "alpha_pct": -7.72,
           "ret_30d_pct": 0.0,
-          "spy_delta_30d_pct": 4.44,
-          "last_snapshot": "2026-11-18",
+          "spy_delta_30d_pct": 4.73,
+          "last_snapshot": "2026-11-19",
           "new_algo_date": null,
           "comparator": {
             "primary_etf": "XLU",
             "signals": {
               "momentum_5d": {
                 "direction": "DOWN",
-                "confidence": 0.142,
-                "return_pct": -0.709
+                "confidence": 0.123,
+                "return_pct": -0.616
               },
               "momentum_20d": {
                 "direction": "UP",
-                "confidence": 0.735,
-                "return_pct": 3.677
+                "confidence": 0.738,
+                "return_pct": 3.69
               }
             },
             "summary": "mixed"
@@ -1318,26 +1318,26 @@
           "thesis_one_liner": "Increased interest in remote work tools often indicates changes in workforce trends that can impact technology and services sectors.",
           "thesis_source": "spec",
           "ytd_pct": 0.0,
-          "days_running": 222,
+          "days_running": 223,
           "beat_spy": false,
-          "spy_pct": 8.05,
-          "alpha_pct": -8.05,
+          "spy_pct": 7.72,
+          "alpha_pct": -7.72,
           "ret_30d_pct": 0.0,
-          "spy_delta_30d_pct": 4.44,
-          "last_snapshot": "2026-11-18",
+          "spy_delta_30d_pct": 4.73,
+          "last_snapshot": "2026-11-19",
           "new_algo_date": null,
           "comparator": {
             "primary_etf": "XLY",
             "signals": {
               "momentum_5d": {
                 "direction": "DOWN",
-                "confidence": 0.653,
-                "return_pct": -3.263
+                "confidence": 0.296,
+                "return_pct": -1.479
               },
               "momentum_20d": {
                 "direction": "UP",
-                "confidence": 0.277,
-                "return_pct": 1.385
+                "confidence": 0.635,
+                "return_pct": 3.177
               }
             },
             "summary": "mixed"
@@ -1375,26 +1375,26 @@
           "thesis_one_liner": "Sharp rises in home-buying related searches often precede increased real estate market activity.",
           "thesis_source": "spec",
           "ytd_pct": -0.39,
-          "days_running": 222,
+          "days_running": 223,
           "beat_spy": false,
-          "spy_pct": 8.05,
-          "alpha_pct": -8.44,
+          "spy_pct": 7.72,
+          "alpha_pct": -8.11,
           "ret_30d_pct": -0.12,
-          "spy_delta_30d_pct": 4.33,
-          "last_snapshot": "2026-11-18",
+          "spy_delta_30d_pct": 4.62,
+          "last_snapshot": "2026-11-19",
           "new_algo_date": null,
           "comparator": {
             "primary_etf": "XLRE",
             "signals": {
               "momentum_5d": {
                 "direction": "DOWN",
-                "confidence": 0.444,
-                "return_pct": -2.221
+                "confidence": 0.435,
+                "return_pct": -2.175
               },
               "momentum_20d": {
                 "direction": "UP",
-                "confidence": 0.571,
-                "return_pct": 2.855
+                "confidence": 0.742,
+                "return_pct": 3.709
               }
             },
             "summary": "mixed"
@@ -1413,26 +1413,26 @@
           "thesis_one_liner": "Increasing news volume about green energy policy uncertainty creates rotation pressure away from utilities reliant on subsidies.",
           "thesis_source": "spec",
           "ytd_pct": 0.0,
-          "days_running": 117,
+          "days_running": 118,
           "beat_spy": false,
-          "spy_pct": 8.05,
-          "alpha_pct": -8.05,
+          "spy_pct": 7.72,
+          "alpha_pct": -7.72,
           "ret_30d_pct": 0.0,
-          "spy_delta_30d_pct": 4.44,
-          "last_snapshot": "2026-11-18",
+          "spy_delta_30d_pct": 4.73,
+          "last_snapshot": "2026-11-19",
           "new_algo_date": null,
           "comparator": {
             "primary_etf": "XLU",
             "signals": {
               "momentum_5d": {
                 "direction": "DOWN",
-                "confidence": 0.142,
-                "return_pct": -0.709
+                "confidence": 0.123,
+                "return_pct": -0.616
               },
               "momentum_20d": {
                 "direction": "UP",
-                "confidence": 0.735,
-                "return_pct": 3.677
+                "confidence": 0.738,
+                "return_pct": 3.69
               }
             },
             "summary": "mixed"
@@ -1451,26 +1451,26 @@
           "thesis_one_liner": "Rising news volume on semiconductor export controls heightens geopolitical risk and supply chain uncertainty.",
           "thesis_source": "spec",
           "ytd_pct": 0.0,
-          "days_running": 117,
+          "days_running": 118,
           "beat_spy": false,
-          "spy_pct": 8.05,
-          "alpha_pct": -8.05,
+          "spy_pct": 7.72,
+          "alpha_pct": -7.72,
           "ret_30d_pct": 0.0,
-          "spy_delta_30d_pct": 4.44,
-          "last_snapshot": "2026-11-18",
+          "spy_delta_30d_pct": 4.73,
+          "last_snapshot": "2026-11-19",
           "new_algo_date": null,
           "comparator": {
             "primary_etf": "XLK",
             "signals": {
               "momentum_5d": {
                 "direction": "DOWN",
-                "confidence": 0.669,
-                "return_pct": -3.345
+                "confidence": 1.0,
+                "return_pct": -6.051
               },
               "momentum_20d": {
                 "direction": "DOWN",
                 "confidence": 1.0,
-                "return_pct": -11.961
+                "return_pct": -13.117
               }
             },
             "summary": "mixed"
@@ -1489,26 +1489,26 @@
           "thesis_one_liner": "A steep weekly temperature decline often drives higher utility demand, boosting utility stock performance.",
           "thesis_source": "spec",
           "ytd_pct": 0.0,
-          "days_running": 222,
+          "days_running": 223,
           "beat_spy": false,
-          "spy_pct": 8.05,
-          "alpha_pct": -8.05,
+          "spy_pct": 7.72,
+          "alpha_pct": -7.72,
           "ret_30d_pct": 0.0,
-          "spy_delta_30d_pct": 4.44,
-          "last_snapshot": "2026-11-18",
+          "spy_delta_30d_pct": 4.73,
+          "last_snapshot": "2026-11-19",
           "new_algo_date": null,
           "comparator": {
             "primary_etf": "XLU",
             "signals": {
               "momentum_5d": {
                 "direction": "DOWN",
-                "confidence": 0.142,
-                "return_pct": -0.709
+                "confidence": 0.123,
+                "return_pct": -0.616
               },
               "momentum_20d": {
                 "direction": "UP",
-                "confidence": 0.735,
-                "return_pct": 3.677
+                "confidence": 0.738,
+                "return_pct": 3.69
               }
             },
             "summary": "mixed"
@@ -1527,26 +1527,26 @@
           "thesis_one_liner": "A daily 5%+ increase in EV charger counts correlates with tech sector optimism driven by green technology adoption.",
           "thesis_source": "spec",
           "ytd_pct": 0.0,
-          "days_running": 218,
+          "days_running": 219,
           "beat_spy": false,
-          "spy_pct": 8.05,
-          "alpha_pct": -8.05,
+          "spy_pct": 7.72,
+          "alpha_pct": -7.72,
           "ret_30d_pct": 0.0,
-          "spy_delta_30d_pct": 4.44,
-          "last_snapshot": "2026-11-18",
+          "spy_delta_30d_pct": 4.73,
+          "last_snapshot": "2026-11-19",
           "new_algo_date": null,
           "comparator": {
             "primary_etf": "XLK",
             "signals": {
               "momentum_5d": {
                 "direction": "DOWN",
-                "confidence": 0.669,
-                "return_pct": -3.345
+                "confidence": 1.0,
+                "return_pct": -6.051
               },
               "momentum_20d": {
                 "direction": "DOWN",
                 "confidence": 1.0,
-                "return_pct": -11.961
+                "return_pct": -13.117
               }
             },
             "summary": "mixed"
@@ -1582,26 +1582,26 @@
           "thesis_one_liner": "Increased search interest in moving companies indicates heightened consumer relocation activity, often boosting demand for home improvement and discretionary spending.",
           "thesis_source": "spec",
           "ytd_pct": -0.02,
-          "days_running": 163,
+          "days_running": 164,
           "beat_spy": false,
-          "spy_pct": 8.05,
-          "alpha_pct": -8.07,
+          "spy_pct": 7.72,
+          "alpha_pct": -7.74,
           "ret_30d_pct": 0.0,
-          "spy_delta_30d_pct": 4.44,
-          "last_snapshot": "2026-11-18",
+          "spy_delta_30d_pct": 4.73,
+          "last_snapshot": "2026-11-19",
           "new_algo_date": null,
           "comparator": {
             "primary_etf": "XLY",
             "signals": {
               "momentum_5d": {
                 "direction": "DOWN",
-                "confidence": 0.653,
-                "return_pct": -3.263
+                "confidence": 0.296,
+                "return_pct": -1.479
               },
               "momentum_20d": {
                 "direction": "UP",
-                "confidence": 0.277,
-                "return_pct": 1.385
+                "confidence": 0.635,
+                "return_pct": 3.177
               }
             },
             "summary": "mixed"
@@ -1620,26 +1620,26 @@
           "thesis_one_liner": "Rising interest in last-minute vacation deals often signals consumer uncertainty and delayed travel plans.",
           "thesis_source": "spec",
           "ytd_pct": -0.18,
-          "days_running": 130,
+          "days_running": 131,
           "beat_spy": false,
-          "spy_pct": 8.05,
-          "alpha_pct": -8.23,
+          "spy_pct": 7.72,
+          "alpha_pct": -7.9,
           "ret_30d_pct": 0.0,
-          "spy_delta_30d_pct": 4.44,
-          "last_snapshot": "2026-11-18",
+          "spy_delta_30d_pct": 4.73,
+          "last_snapshot": "2026-11-19",
           "new_algo_date": null,
           "comparator": {
             "primary_etf": "XLY",
             "signals": {
               "momentum_5d": {
                 "direction": "DOWN",
-                "confidence": 0.653,
-                "return_pct": -3.263
+                "confidence": 0.296,
+                "return_pct": -1.479
               },
               "momentum_20d": {
                 "direction": "UP",
-                "confidence": 0.277,
-                "return_pct": 1.385
+                "confidence": 0.635,
+                "return_pct": 3.177
               }
             },
             "summary": "mixed"
@@ -1658,26 +1658,26 @@
           "thesis_one_liner": "Rising interest in commuting strikes indicates potential disruption to travel and consumer discretionary spending.",
           "thesis_source": "spec",
           "ytd_pct": -0.56,
-          "days_running": 210,
+          "days_running": 211,
           "beat_spy": false,
-          "spy_pct": 8.05,
-          "alpha_pct": -8.61,
+          "spy_pct": 7.72,
+          "alpha_pct": -8.28,
           "ret_30d_pct": 0.0,
-          "spy_delta_30d_pct": 4.44,
-          "last_snapshot": "2026-11-18",
+          "spy_delta_30d_pct": 4.73,
+          "last_snapshot": "2026-11-19",
           "new_algo_date": null,
           "comparator": {
             "primary_etf": "XLY",
             "signals": {
               "momentum_5d": {
                 "direction": "DOWN",
-                "confidence": 0.653,
-                "return_pct": -3.263
+                "confidence": 0.296,
+                "return_pct": -1.479
               },
               "momentum_20d": {
                 "direction": "UP",
-                "confidence": 0.277,
-                "return_pct": 1.385
+                "confidence": 0.635,
+                "return_pct": 3.177
               }
             },
             "summary": "mixed"
@@ -1696,26 +1696,26 @@
           "thesis_one_liner": "An increase in searches for moving companies suggests higher household relocations, boosting industrial goods demand and transport services.",
           "thesis_source": "spec",
           "ytd_pct": 0.0,
-          "days_running": 120,
+          "days_running": 121,
           "beat_spy": false,
-          "spy_pct": 8.05,
-          "alpha_pct": -8.05,
+          "spy_pct": 7.72,
+          "alpha_pct": -7.72,
           "ret_30d_pct": 0.0,
-          "spy_delta_30d_pct": 4.44,
-          "last_snapshot": "2026-11-18",
+          "spy_delta_30d_pct": 4.73,
+          "last_snapshot": "2026-11-19",
           "new_algo_date": null,
           "comparator": {
             "primary_etf": "XLI",
             "signals": {
               "momentum_5d": {
                 "direction": "DOWN",
-                "confidence": 0.472,
-                "return_pct": -2.359
+                "confidence": 0.738,
+                "return_pct": -3.691
               },
               "momentum_20d": {
                 "direction": "DOWN",
-                "confidence": 0.246,
-                "return_pct": -1.229
+                "confidence": 0.434,
+                "return_pct": -2.169
               }
             },
             "summary": "mixed"
@@ -1734,26 +1734,26 @@
           "thesis_one_liner": "A sudden rise in last-minute vacation rental searches indicates an imminent travel demand surge.",
           "thesis_source": "spec",
           "ytd_pct": 0.0,
-          "days_running": 170,
+          "days_running": 171,
           "beat_spy": false,
-          "spy_pct": 8.05,
-          "alpha_pct": -8.05,
+          "spy_pct": 7.72,
+          "alpha_pct": -7.72,
           "ret_30d_pct": 0.0,
-          "spy_delta_30d_pct": 4.44,
-          "last_snapshot": "2026-11-18",
+          "spy_delta_30d_pct": 4.73,
+          "last_snapshot": "2026-11-19",
           "new_algo_date": null,
           "comparator": {
             "primary_etf": "XLY",
             "signals": {
               "momentum_5d": {
                 "direction": "DOWN",
-                "confidence": 0.653,
-                "return_pct": -3.263
+                "confidence": 0.296,
+                "return_pct": -1.479
               },
               "momentum_20d": {
                 "direction": "UP",
-                "confidence": 0.277,
-                "return_pct": 1.385
+                "confidence": 0.635,
+                "return_pct": 3.177
               }
             },
             "summary": "mixed"

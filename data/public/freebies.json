@@ -1,40 +1,36 @@
 {
   "schema_version": "v1",
-  "date": "2026-11-21",
-  "generated_at": "2026-11-21T03:42:38Z",
+  "date": "2026-11-24",
+  "generated_at": "2026-11-24T06:38:29Z",
   "spotlight_1": {
-    "algo_id": "mortgage-rate-housing-proxy",
-    "name": "Mortgage Rate Housing Proxy",
-    "family": "consumer_stress",
+    "algo_id": "google-trends-surge-in-used-car-price-searches",
+    "name": "Google Trends Surge In Used Car Price Searches",
+    "family": "core_rotation",
     "algo_type": "crazy",
-    "thesis_one_liner": "Mortgage Rate Housing Proxy tests whether source data can reveal consumer stress or demand rotation before it shows up in sector performance.",
-    "ytd_pct": 1.21,
-    "ret_30d_pct": 1.86,
+    "thesis_one_liner": "Recent momentum leader with 0.1% 30D return",
+    "ytd_pct": 0.0,
+    "ret_30d_pct": 0.07,
     "status": "live_only",
-    "beat_spy": false,
-    "trade_count": 10,
+    "beat_spy": null,
+    "trade_count": 8,
     "teaser_hook": "Alternative data experiment tracked live in public",
-    "source": "watchlist"
+    "source": "rolling"
   },
   "spotlight_2": {
-    "algo_id": "finra-dark-pool-signal",
-    "name": "FINRA Dark Pool Signal",
-    "family": "political_insider_filing",
+    "algo_id": "daily-spike-in-rss-counts-for-new-labor-union-formations-sig",
+    "name": "Daily Spike In Rss Counts For New Labor Union Formations Signals Labor Market Shift",
+    "family": "core_rotation",
     "algo_type": "crazy",
-    "thesis_one_liner": "FINRA Dark Pool Signal tests whether filing or policy activity can expose forced flows or informed positioning before broad sector moves.",
-    "ytd_pct": -2.17,
-    "ret_30d_pct": 1.91,
+    "thesis_one_liner": "Recent momentum leader with 0.1% 30D return",
+    "ytd_pct": 0.0,
+    "ret_30d_pct": 0.08,
     "status": "live_only",
-    "beat_spy": false,
-    "trade_count": 66,
+    "beat_spy": null,
+    "trade_count": 62,
     "teaser_hook": "Alternative data experiment tracked live in public",
-    "source": "watchlist"
+    "source": "rolling"
   },
   "previous_14_days": [
-    "dmsr",
-    "finra-dark-pool-signal",
-    "truck-tonnage",
-    "mortgage-rate-housing-proxy",
     "faber",
     "insider-trading-signals",
     "truck-tonnage",
@@ -44,13 +40,17 @@
     "housing-permit-velocity",
     "liquor",
     "mortgage-rate-housing-proxy",
-    "finra-dark-pool-signal"
+    "finra-dark-pool-signal",
+    "mortgage-rate-housing-proxy",
+    "finra-dark-pool-signal",
+    "google-trends-surge-in-used-car-price-searches",
+    "daily-spike-in-rss-counts-for-new-labor-union-formations-sig"
   ],
   "pool_stats": {
-    "total_pool_size": 10,
+    "total_pool_size": 15,
     "promoted_count": 0,
-    "watchlist_count": 10,
-    "rolling_count": 0
+    "watchlist_count": 6,
+    "rolling_count": 9
   },
   "meta": {
     "anti_repeat_days": 14,
